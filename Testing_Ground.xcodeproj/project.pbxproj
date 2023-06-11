@@ -17,6 +17,18 @@
 		A409889C2A1BF9CD0041BBC7 /* Testing_GroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409889B2A1BF9CD0041BBC7 /* Testing_GroundTests.swift */; };
 		A40988A62A1BF9CD0041BBC7 /* Testing_GroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988A52A1BF9CD0041BBC7 /* Testing_GroundUITests.swift */; };
 		A40988A82A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988A72A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift */; };
+		A4CA1A4C2A3654F200C94D2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A442A3654F200C94D2C /* HomeViewController.swift */; };
+		A4CA1A4D2A3654F200C94D2C /* GradientFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A452A3654F200C94D2C /* GradientFile.swift */; };
+		A4CA1A4E2A3654F200C94D2C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A462A3654F200C94D2C /* SignUpViewController.swift */; };
+		A4CA1A4F2A3654F200C94D2C /* SymptomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A472A3654F200C94D2C /* SymptomViewController.swift */; };
+		A4CA1A502A3654F200C94D2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A482A3654F200C94D2C /* LoginViewController.swift */; };
+		A4CA1A512A3654F200C94D2C /* QualityofLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A492A3654F200C94D2C /* QualityofLifeViewController.swift */; };
+		A4CA1A522A3654F200C94D2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A4A2A3654F200C94D2C /* ProfileViewController.swift */; };
+		A4CA1A532A3654F200C94D2C /* AddMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A4B2A3654F200C94D2C /* AddMedicationViewController.swift */; };
+		A4CA1A582A3654FC00C94D2C /* SymptomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CA1A542A3654FB00C94D2C /* SymptomTableViewCell.xib */; };
+		A4CA1A592A3654FC00C94D2C /* QualityofLifeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CA1A552A3654FB00C94D2C /* QualityofLifeTableViewCell.xib */; };
+		A4CA1A5A2A3654FC00C94D2C /* SymptomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A562A3654FC00C94D2C /* SymptomTableViewCell.swift */; };
+		A4CA1A5B2A3654FC00C94D2C /* QualityofLifeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A572A3654FC00C94D2C /* QualityofLifeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +63,18 @@
 		A40988A12A1BF9CD0041BBC7 /* Testing_GroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Testing_GroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40988A52A1BF9CD0041BBC7 /* Testing_GroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing_GroundUITests.swift; sourceTree = "<group>"; };
 		A40988A72A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing_GroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4CA1A442A3654F200C94D2C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A4CA1A452A3654F200C94D2C /* GradientFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientFile.swift; sourceTree = "<group>"; };
+		A4CA1A462A3654F200C94D2C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A4CA1A472A3654F200C94D2C /* SymptomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomViewController.swift; sourceTree = "<group>"; };
+		A4CA1A482A3654F200C94D2C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A4CA1A492A3654F200C94D2C /* QualityofLifeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QualityofLifeViewController.swift; sourceTree = "<group>"; };
+		A4CA1A4A2A3654F200C94D2C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A4CA1A4B2A3654F200C94D2C /* AddMedicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicationViewController.swift; sourceTree = "<group>"; };
+		A4CA1A542A3654FB00C94D2C /* SymptomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SymptomTableViewCell.xib; sourceTree = "<group>"; };
+		A4CA1A552A3654FB00C94D2C /* QualityofLifeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QualityofLifeTableViewCell.xib; sourceTree = "<group>"; };
+		A4CA1A562A3654FC00C94D2C /* SymptomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomTableViewCell.swift; sourceTree = "<group>"; };
+		A4CA1A572A3654FC00C94D2C /* QualityofLifeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QualityofLifeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +129,18 @@
 				A40988832A1BF9CC0041BBC7 /* SceneDelegate.swift */,
 				A40988852A1BF9CC0041BBC7 /* ViewController.swift */,
 				A40988872A1BF9CC0041BBC7 /* Main.storyboard */,
+				A4CA1A4B2A3654F200C94D2C /* AddMedicationViewController.swift */,
+				A4CA1A452A3654F200C94D2C /* GradientFile.swift */,
+				A4CA1A442A3654F200C94D2C /* HomeViewController.swift */,
+				A4CA1A482A3654F200C94D2C /* LoginViewController.swift */,
+				A4CA1A572A3654FC00C94D2C /* QualityofLifeTableViewCell.swift */,
+				A4CA1A552A3654FB00C94D2C /* QualityofLifeTableViewCell.xib */,
+				A4CA1A562A3654FC00C94D2C /* SymptomTableViewCell.swift */,
+				A4CA1A542A3654FB00C94D2C /* SymptomTableViewCell.xib */,
+				A4CA1A4A2A3654F200C94D2C /* ProfileViewController.swift */,
+				A4CA1A492A3654F200C94D2C /* QualityofLifeViewController.swift */,
+				A4CA1A462A3654F200C94D2C /* SignUpViewController.swift */,
+				A4CA1A472A3654F200C94D2C /* SymptomViewController.swift */,
 				A409888D2A1BF9CD0041BBC7 /* Assets.xcassets */,
 				A409888F2A1BF9CD0041BBC7 /* LaunchScreen.storyboard */,
 				A40988922A1BF9CD0041BBC7 /* Info.plist */,
@@ -235,6 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40988912A1BF9CD0041BBC7 /* LaunchScreen.storyboard in Resources */,
+				A4CA1A592A3654FC00C94D2C /* QualityofLifeTableViewCell.xib in Resources */,
+				A4CA1A582A3654FC00C94D2C /* SymptomTableViewCell.xib in Resources */,
 				A409888E2A1BF9CD0041BBC7 /* Assets.xcassets in Resources */,
 				A40988892A1BF9CC0041BBC7 /* Main.storyboard in Resources */,
 			);
@@ -261,10 +299,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CA1A502A3654F200C94D2C /* LoginViewController.swift in Sources */,
+				A4CA1A4C2A3654F200C94D2C /* HomeViewController.swift in Sources */,
+				A4CA1A4E2A3654F200C94D2C /* SignUpViewController.swift in Sources */,
+				A4CA1A512A3654F200C94D2C /* QualityofLifeViewController.swift in Sources */,
+				A4CA1A5B2A3654FC00C94D2C /* QualityofLifeTableViewCell.swift in Sources */,
+				A4CA1A5A2A3654FC00C94D2C /* SymptomTableViewCell.swift in Sources */,
 				A40988862A1BF9CC0041BBC7 /* ViewController.swift in Sources */,
 				A40988822A1BF9CC0041BBC7 /* AppDelegate.swift in Sources */,
+				A4CA1A522A3654F200C94D2C /* ProfileViewController.swift in Sources */,
+				A4CA1A532A3654F200C94D2C /* AddMedicationViewController.swift in Sources */,
 				A40988842A1BF9CC0041BBC7 /* SceneDelegate.swift in Sources */,
 				A409888C2A1BF9CC0041BBC7 /* Testing_Ground.xcdatamodeld in Sources */,
+				A4CA1A4F2A3654F200C94D2C /* SymptomViewController.swift in Sources */,
+				A4CA1A4D2A3654F200C94D2C /* GradientFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
