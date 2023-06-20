@@ -57,7 +57,7 @@
                                     <color key="baseForegroundColor" red="0.92941176469999998" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="IvN-OH-f0M" kind="show" id="Vfy-HZ-AVe"/>
+                                    <segue destination="IvN-OH-f0M" kind="show" id="t6J-o9-vhm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80G-Zv-O1A">
@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5B-b2-roE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2428" y="-349"/>
         </scene>
         <!--SignUpViewController-->
         <scene sceneID="qIJ-Ea-cpt">
@@ -433,6 +433,26 @@
                                     <color key="baseBackgroundColor" red="0.35083762889999998" green="0.20994244649999999" blue="0.085633689730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laB-f2-0Fb">
+                                <rect key="frame" x="72" y="495" width="242" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Sign In">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.86571762240000005" green="0.51804840949999997" blue="0.21130742020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="EnterButton:" destination="IvN-OH-f0M" eventType="touchUpInside" id="YRR-Ps-gTp"/>
+                                    <segue destination="CUC-Nl-vlO" kind="show" id="abn-rE-uS9"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFN-8o-aNd">
                                 <rect key="frame" x="240" y="0.0" width="243" height="232"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -445,27 +465,12 @@
                                     <color key="baseBackgroundColor" red="0.35083762889999998" green="0.20994244649999999" blue="0.085633689730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laB-f2-0Fb">
-                                <rect key="frame" x="72" y="495" width="242" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Login"/>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.86571762240000005" green="0.51804840949999997" blue="0.21130742020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="EnterButton:" destination="IvN-OH-f0M" eventType="touchUpInside" id="YRR-Ps-gTp"/>
-                                    <segue destination="CUC-Nl-vlO" kind="show" id="Vib-Qr-GWB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gHH-So-0IY"/>
                         <color key="backgroundColor" red="0.6705882353" green="0.7725490196" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.6705882353" green="0.7725490196" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" prompt="Add your details to login" id="fmw-WA-JkD"/>
+                    <navigationItem key="navigationItem" title="Sign In" prompt="Add your details to login" id="fmw-WA-JkD"/>
                     <connections>
                         <outlet property="Password" destination="w6u-X1-JMM" id="YuA-b3-nJ9"/>
                         <outlet property="Username" destination="baR-jx-tC2" id="Rid-Nc-r1u"/>
@@ -473,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baM-ez-iOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2203.8167938931297" y="-296.47887323943661"/>
+            <point key="canvasLocation" x="3278.6259541984732" y="-392.25352112676057"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L8G-Hd-d0f">
@@ -570,7 +575,7 @@
                                     <color key="baseBackgroundColor" red="0.72941176470000002" green="0.43529411759999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="1YO-uZ-qPw" kind="show" id="Vab-gb-1yc"/>
+                                    <segue destination="4O5-VK-X7b" kind="show" id="G5W-C6-n7G"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPe-30-0sX">
@@ -600,7 +605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eF-OX-BqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3751.9083969465646" y="150.70422535211267"/>
+            <point key="canvasLocation" x="4050" y="217"/>
         </scene>
         <!--Your Plan-->
         <scene sceneID="m1C-BT-Qvt">
@@ -627,16 +632,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Etd-FX-nE1" customClass="GradientFile" customModule="Testing_Ground" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="666" width="393" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS5-tB-v8J">
-                                        <rect key="frame" x="116" y="31" width="147" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Save">
-                                            <color key="baseBackgroundColor" red="0.72941176470000002" green="0.43529411759999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
@@ -660,24 +655,8 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Diet">
                                     <color key="baseBackgroundColor" red="0.72941176470000002" green="0.43529411759999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcS-6M-RCq">
-                                <rect key="frame" x="35" y="401" width="117" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Allergies">
-                                    <color key="baseBackgroundColor" red="0.72941176470000002" green="0.43529411759999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95O-La-RBR">
-                                <rect key="frame" x="244" y="401" width="117" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Medications">
-                                    <color key="baseBackgroundColor" red="0.72941176470000002" green="0.43529411759999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="1m8-Tx-fd1" kind="show" id="nAe-L9-5Og"/>
+                                    <segue destination="pi9-HC-qg9" kind="show" id="ZcP-Tg-wbT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqF-IL-rra">
@@ -687,6 +666,20 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Documents">
                                     <color key="baseBackgroundColor" red="0.72941176470000002" green="0.43529411759999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="7Vd-Si-iIE" kind="show" id="Cvx-eU-ynV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95O-La-RBR">
+                                <rect key="frame" x="138" y="409" width="117" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Medications">
+                                    <color key="baseBackgroundColor" red="0.72941176470000002" green="0.43529411759999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1m8-Tx-fd1" kind="show" id="nAe-L9-5Og"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rwa-0l-hYZ"/>
@@ -698,34 +691,10 @@
             </objects>
             <point key="canvasLocation" x="5461.8320610687024" y="-296.47887323943661"/>
         </scene>
-        <!--EOE Education-->
-        <scene sceneID="Pnd-c5-RLc">
-            <objects>
-                <viewController id="1YO-uZ-qPw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ybV-Hr-1BP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtt-sL-ut6">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="baa-fb-Zcm"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="WRN-Ob-JkU"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="QMm-mZ-CQ7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="EOE Education" id="jPA-4L-Aer"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2BX-gZ-wEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3752" y="1237"/>
-        </scene>
-        <!--Add Medications-->
+        <!--Medications-->
         <scene sceneID="ZWm-hb-6G6">
             <objects>
-                <viewController id="1m8-Tx-fd1" sceneMemberID="viewController">
+                <viewController id="1m8-Tx-fd1" userLabel="Medications" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uzp-WJ-mWw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -776,53 +745,53 @@
             </objects>
             <point key="canvasLocation" x="6249.6183206106871" y="-296.47887323943661"/>
         </scene>
-        <!--Medication-->
+        <!--Add Medications-->
         <scene sceneID="D86-3V-iS7">
             <objects>
-                <viewController id="0M3-RU-tSB" customClass="AddMedicationViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0M3-RU-tSB" userLabel="Add Medications" customClass="AddMedicationViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GiH-Q6-r0t">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medication Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMq-2H-pNb">
-                                <rect key="frame" x="16" y="201" width="134" height="21"/>
+                                <rect key="frame" x="16" y="194" width="134" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dosage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny4-rJ-VfL">
-                                <rect key="frame" x="16" y="277" width="105" height="21"/>
+                                <rect key="frame" x="16" y="256" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fq9-IR-upr">
-                                <rect key="frame" x="189" y="277" width="85" height="34"/>
+                                <rect key="frame" x="189" y="249" width="85" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKl-ZL-Odg">
-                                <rect key="frame" x="16" y="356" width="36" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKl-ZL-Odg">
+                                <rect key="frame" x="16" y="305" width="78" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="24e-8l-mIk">
-                                <rect key="frame" x="173" y="334" width="227" height="65"/>
+                                <rect key="frame" x="173" y="283" width="227" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64j-Ze-CY6">
-                                <rect key="frame" x="196" y="201" width="181" height="34"/>
+                                <rect key="frame" x="196" y="187" width="181" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is a note area for special instructions for the medication you are taking" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tnR-Hp-5tg">
-                                <rect key="frame" x="26" y="475" width="340" height="226"/>
+                                <rect key="frame" x="26" y="503" width="340" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -839,7 +808,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3R-Ah-yQG">
-                                <rect key="frame" x="282" y="277" width="88" height="34"/>
+                                <rect key="frame" x="282" y="249" width="88" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <menu key="menu" id="MgC-mm-vha">
                                     <children>
@@ -854,12 +823,36 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNy-ZA-Upf">
-                                <rect key="frame" x="16" y="446" width="46" height="21"/>
+                                <rect key="frame" x="16" y="461" width="46" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amP-VT-ejT">
+                                <rect key="frame" x="16" y="349" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="84D-fj-6q8">
+                                <rect key="frame" x="173" y="327" width="227" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQv-9K-0Qe">
+                                <rect key="frame" x="15" y="399" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="How Often?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5FE-3C-UIy">
+                                <rect key="frame" x="244" y="392" width="104" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gQD-qF-hf6"/>
                         <color key="backgroundColor" red="0.6705882353" green="0.7725490196" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1011,10 +1004,498 @@
             </objects>
             <point key="canvasLocation" x="7596.1832061068699" y="765.49295774647896"/>
         </scene>
+        <!--Education-->
+        <scene sceneID="2V2-XX-oxE">
+            <objects>
+                <viewController storyboardIdentifier="MedicalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4O5-VK-X7b" userLabel="Education" customClass="MedicalViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jSh-FU-Ksc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6g-gx-jpE">
+                                <rect key="frame" x="61" y="168" width="273" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="General Questions">
+                                        <attributes>
+                                            <color key="NSColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzt-bv-NxU">
+                                <rect key="frame" x="15" y="223" width="363" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="What is EoE?" cornerStyle="medium">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.25490196079999999" green="0.37647058820000001" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ym0-er-mGI" kind="show" id="RwM-cW-oSL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-xV-pVe">
+                                <rect key="frame" x="14" y="316" width="363" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="What Causes EoE?" cornerStyle="medium">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.25490196079999999" green="0.37647058820000001" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="GpN-11-xz6" kind="show" id="mYu-OW-fvZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1j7-Qi-LhK">
+                                <rect key="frame" x="14" y="411" width="363" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Who is Affected?" cornerStyle="medium">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.25490196079999999" green="0.37647058820000001" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="dX1-vT-guO" kind="show" id="JRj-aS-Xq3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZe-tY-QSB">
+                                <rect key="frame" x="16" y="599" width="363" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="How is it Diagnosed?" cornerStyle="medium">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.25490196079999999" green="0.37647058820000001" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="4Rl-zd-NgE" kind="show" id="Bbe-u0-wHI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gi-Xg-cyr">
+                                <rect key="frame" x="16" y="691" width="363" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="How is it Treated?" cornerStyle="medium">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.25490196079999999" green="0.37647058820000001" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NMk-Rm-Zdu" kind="show" id="HoN-Fe-wGr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djT-Ea-PIf">
+                                <rect key="frame" x="16" y="503" width="363" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="What are the Symptoms?" cornerStyle="medium">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.25490196079999999" green="0.37647058820000001" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="2lP-cm-MnA" kind="show" id="kTS-YO-cqE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5e-Wg-nRj">
+                                <rect key="frame" x="70" y="77" width="255" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="EoE Education">
+                                        <attributes>
+                                            <color key="NSColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nj5-fd-ala"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1BM-8V-eGM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vV5-i7-B9C" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3752" y="1208"/>
+        </scene>
+        <!--What is EOE-->
+        <scene sceneID="pzv-Iq-V4Q">
+            <objects>
+                <viewController title="SignInViewController" id="ym0-er-mGI" userLabel="What is EOE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zut-bs-M0m">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is EOE?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Ng-Nu-xpY">
+                                <rect key="frame" x="114" y="103" width="164" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemCyanColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyU-lv-O88">
+                                <rect key="frame" x="8" y="230" width="377" height="443"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Eosinophilic esophagitis (EoE), also known as allergic esophagitis is a chronic immune system disease where a white blood cell called Eosinophil builds up in the lining of the tube (Esophagus) that connects your mouth to your stomach. These eosinophils can release chemicals into the surrounding tissues that cause inflammation.
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <color key="textColor" red="0.090196080509999998" green="0.16862745579999999" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EpR-D3-JDY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EOE Education" id="QiE-Ew-t2B">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="01b-dE-uqE"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvn-iH-gFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3697" y="2299"/>
+        </scene>
+        <!--Diet Plan-->
+        <scene sceneID="zra-jS-G9t">
+            <objects>
+                <viewController id="pi9-HC-qg9" userLabel="Diet Plan" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lSi-pp-t5U">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co6-Jg-PQr">
+                                <rect key="frame" x="16" y="230" width="367" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="(Child) is on _____ food elimination diet. ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="27" name="DINCondensed-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOZ-i8-7UF">
+                                <rect key="frame" x="158" y="308" width="83" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Change"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GxX-T6-Nwh">
+                                <rect key="frame" x="16" y="425" width="361" height="393"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM4-iH-xgi">
+                                <rect key="frame" x="159" y="141" width="75" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Diet ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="36" name="ArialNarrow-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Lj-rX-zw4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="co6-Jg-PQr" firstAttribute="leading" secondItem="9Lj-rX-zw4" secondAttribute="leading" constant="16" id="Bcy-bA-pc7"/>
+                            <constraint firstItem="co6-Jg-PQr" firstAttribute="leading" secondItem="9Lj-rX-zw4" secondAttribute="leading" constant="10" id="Mfk-On-k3q"/>
+                            <constraint firstItem="9Lj-rX-zw4" firstAttribute="trailing" secondItem="co6-Jg-PQr" secondAttribute="trailing" constant="10" id="Oz5-t5-T8U"/>
+                            <constraint firstItem="9Lj-rX-zw4" firstAttribute="trailing" secondItem="co6-Jg-PQr" secondAttribute="trailing" constant="16" id="oeK-zn-EkK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QHW-ZE-K0T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Wx-Om-b9d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5188.5496183206105" y="-1082.3943661971832"/>
+        </scene>
+        <!--How is it Diagnosed-->
+        <scene sceneID="hhf-E4-kCE">
+            <objects>
+                <viewController title="SignInViewController" id="4Rl-zd-NgE" userLabel="How is it Diagnosed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Quy-g8-edR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is it Diagnosed?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BFK-ZN-o2t">
+                                <rect key="frame" x="69" y="103" width="253" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemCyanColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMq-vj-r8A">
+                                <rect key="frame" x="8" y="210" width="377" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy is a medical procedure where a flexible tube with a light and camera at the tip is passed through the mouth into the esophagus. This procedure will help visualize the lining of the esophagus and also let your doctor take small tissue samples from the lining of the esophagus to examine under microscope for the presence of eosinophils. In an unaffected individual, there are no eosinophils in the esophagus but in patients with EoE, the tissue samples may show numerous eosinophils and signs of inflammation.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rLu-y5-Pbr"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EOE Education" id="i7b-Aq-Wyw">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="HJL-ej-M9X"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJb-1L-UgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5396.1832061068699" y="1900.7042253521129"/>
+        </scene>
+        <!--How is it Treated-->
+        <scene sceneID="Q3T-af-e2q">
+            <objects>
+                <viewController title="SignInViewController" id="NMk-Rm-Zdu" userLabel="How is it Treated" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pii-tV-RXh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is it Treated?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="noi-wk-cQT">
+                                <rect key="frame" x="89" y="103" width="213" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemCyanColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAd-9c-EzM">
+                                <rect key="frame" x="7" y="167" width="377" height="443"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">There are three main types of treatments available for EoE (as below). Please consult your doctor for a detailed discussion on these options and see what works best for you and your family.
+
+a. Empiric food elimination
+
+b. Medical therapy
+
+c. Elemental diet
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <color key="textColor" red="0.090196080509999998" green="0.16862745579999999" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rrs-xw-rm5"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EOE Education" id="QoA-Eg-lUc">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="kN7-bF-yeu"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AFR-zO-h9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4530.5343511450383" y="1921.8309859154931"/>
+        </scene>
+        <!--Who is Affected-->
+        <scene sceneID="gOV-1V-SmU">
+            <objects>
+                <viewController title="SignInViewController" id="dX1-vT-guO" userLabel="Who is Affected" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2KW-tX-Xrd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqU-P7-j7i">
+                                <rect key="frame" x="8" y="319" width="377" height="214"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">This condition appear to be more common in white males but is being increasingly recognized in patients of all age groups, race and socioeconomic backgrounds. The symptoms however may vary with age.</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Who is Affected?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaE-pD-ovh" userLabel="Who is Affected?">
+                                <rect key="frame" x="92" y="134" width="208" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemCyanColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="btP-es-aCL"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aaE-pD-ovh" firstAttribute="leading" secondItem="btP-es-aCL" secondAttribute="leading" constant="90" id="0qK-9W-Myz"/>
+                            <constraint firstItem="mqU-P7-j7i" firstAttribute="top" secondItem="aaE-pD-ovh" secondAttribute="bottom" constant="100" id="6wJ-Ar-e4S"/>
+                            <constraint firstItem="aaE-pD-ovh" firstAttribute="leading" secondItem="btP-es-aCL" secondAttribute="leading" constant="90" id="CCp-6G-oFW"/>
+                            <constraint firstItem="aaE-pD-ovh" firstAttribute="leading" secondItem="btP-es-aCL" secondAttribute="leading" constant="95" id="Wtu-dI-gpa"/>
+                            <constraint firstItem="aaE-pD-ovh" firstAttribute="top" secondItem="2KW-tX-Xrd" secondAttribute="top" constant="50" id="XmG-Wg-ZQ0"/>
+                            <constraint firstItem="btP-es-aCL" firstAttribute="trailing" secondItem="aaE-pD-ovh" secondAttribute="trailing" constant="95" id="kEd-Fa-iTP"/>
+                            <constraint firstItem="aaE-pD-ovh" firstAttribute="top" secondItem="2KW-tX-Xrd" secondAttribute="top" constant="100" id="zYD-kJ-xT6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="EOE Education" id="HW0-kt-hUu">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="nAa-Pu-XB1"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AG3-me-pXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3055.7251908396947" y="1207.7464788732395"/>
+        </scene>
+        <!--What Are Symptoms-->
+        <scene sceneID="Kfg-hT-eLK">
+            <objects>
+                <viewController title="SignInViewController" id="2lP-cm-MnA" userLabel="What Are Symptoms" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4NM-ox-Dcq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are the Symptoms?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fff-tS-84N">
+                                <rect key="frame" x="44" y="103" width="304" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemCyanColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIF-NX-G38">
+                                <rect key="frame" x="8" y="205" width="377" height="443"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Patients with EoE can experience several symptoms including difficulty in swallowing, choking, food getting stuck in the esophagus and symptoms of gastroesophageal reflux such as vomiting, heartburn and regurgitation. Infants and young children may present with food refusal and poor weight gain and growth.
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <color key="textColor" red="0.090196080509999998" green="0.16862745579999999" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lyu-1R-Qzs"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EOE Education" id="Oex-56-e5M">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="4cc-Ta-2i4"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="35D-6N-NFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4531" y="1208"/>
+        </scene>
+        <!--Documents-->
+        <scene sceneID="vKx-Nc-qNl">
+            <objects>
+                <viewController id="7Vd-Si-iIE" userLabel="Documents" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UCZ-GZ-1d8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uj5-Zd-o2J">
+                                <rect key="frame" x="16" y="219" width="367" height="36"/>
+                                <attributedString key="attributedText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gRD-1N-4s6">
+                                <rect key="frame" x="16" y="425" width="361" height="393"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6R-7l-r64">
+                                <rect key="frame" x="107" y="138" width="185" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Documents">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="36" name="ArialNarrow-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sx-Di-9B7">
+                                <rect key="frame" x="104" y="263" width="191" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Documents"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OeL-it-ar3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OeL-it-ar3" firstAttribute="trailing" secondItem="uj5-Zd-o2J" secondAttribute="trailing" constant="16" id="46H-z8-wIu"/>
+                            <constraint firstItem="uj5-Zd-o2J" firstAttribute="leading" secondItem="OeL-it-ar3" secondAttribute="leading" constant="10" id="U8n-8y-I8h"/>
+                            <constraint firstItem="uj5-Zd-o2J" firstAttribute="leading" secondItem="OeL-it-ar3" secondAttribute="leading" constant="16" id="eks-0x-qSB"/>
+                            <constraint firstItem="OeL-it-ar3" firstAttribute="trailing" secondItem="uj5-Zd-o2J" secondAttribute="trailing" constant="10" id="whf-Nr-0wD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0tt-EW-9Wb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nV-Gd-N4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5909.160305343511" y="-1082.3943661971832"/>
+        </scene>
+        <!--What Causes EOE-->
+        <scene sceneID="V42-cc-i9r">
+            <objects>
+                <viewController title="SignInViewController" id="GpN-11-xz6" userLabel="What Causes EOE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYa-Ys-ZQw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M5-JT-EW6">
+                                <rect key="frame" x="8" y="230" width="377" height="443"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">This condition is usually caused by an immune response to food ingestion. However, the relationship between food allergy and EoE is complex. Unlike many well known food allergens which causes symptoms right after exposure such as hives, lip swelling, vomiting and breathing issues, the EoE allergen induced reactions are often delayed, and can develop over several days making it difficult to pinpoint the specific food allergen. Environmental allergies to substances like pollen, dust, mold and animals also appear to play a role in triggering EoE and exacerbating EoE symptoms.</mutableString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <color key="textColor" red="0.090196080509999998" green="0.16862745579999999" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Causes EOE?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ogM-sP-j5g">
+                                <rect key="frame" x="79" y="103" width="235" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemCyanColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3qD-wz-ZHA"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EOE Education" id="bMZ-eu-IAF">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="sOy-kv-RO1"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j69-ZF-z9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2590" y="2228"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="18g-oF-war"/>
-        <segue reference="Vib-Qr-GWB"/>
+        <segue reference="abn-rE-uS9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
@@ -1025,6 +1506,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
