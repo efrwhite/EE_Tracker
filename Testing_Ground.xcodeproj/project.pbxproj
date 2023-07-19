@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8AC78C1D2A507BF100A4C3FA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C1C2A507BF100A4C3FA /* SignInViewController.swift */; };
+		8AC78C1F2A58831000A4C3FA /* Diet1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C1E2A58831000A4C3FA /* Diet1ViewController.swift */; };
+		8AC78C212A5888D200A4C3FA /* Diet2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C202A5888D200A4C3FA /* Diet2ViewController.swift */; };
+		8AC78C252A58891600A4C3FA /* Diet4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C242A58891600A4C3FA /* Diet4ViewController.swift */; };
+		8AC78C272A58892700A4C3FA /* Diet6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C262A58892700A4C3FA /* Diet6ViewController.swift */; };
+		8AC78C292A5C8FC300A4C3FA /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C282A5C8FC300A4C3FA /* EducationViewController.swift */; };
+		8AC78C2B2A5C9A5B00A4C3FA /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C2A2A5C9A5B00A4C3FA /* MoreInfoViewController.swift */; };
+		8AE1831B2A658D86006517D0 /* WhoIsAffectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1831A2A658D86006517D0 /* WhoIsAffectedViewController.swift */; };
+		8AE1831D2A658DA6006517D0 /* WhatAreSymptomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1831C2A658DA6006517D0 /* WhatAreSymptomsViewController.swift */; };
+		8AE1831F2A658DBD006517D0 /* WhatCausesEOEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1831E2A658DBD006517D0 /* WhatCausesEOEViewController.swift */; };
+		8AE183212A658DD9006517D0 /* WhatIsEOEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183202A658DD9006517D0 /* WhatIsEOEViewController.swift */; };
+		8AE183232A658DF1006517D0 /* HowItsDiagnosedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183222A658DF1006517D0 /* HowItsDiagnosedViewController.swift */; };
+		8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */; };
+		8AE183272A658E3E006517D0 /* EGIDInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */; };
 		A40988822A1BF9CC0041BBC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988812A1BF9CC0041BBC7 /* AppDelegate.swift */; };
 		A40988842A1BF9CC0041BBC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988832A1BF9CC0041BBC7 /* SceneDelegate.swift */; };
 		A40988862A1BF9CC0041BBC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988852A1BF9CC0041BBC7 /* ViewController.swift */; };
@@ -51,6 +64,19 @@
 
 /* Begin PBXFileReference section */
 		8AC78C1C2A507BF100A4C3FA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		8AC78C1E2A58831000A4C3FA /* Diet1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet1ViewController.swift; sourceTree = "<group>"; };
+		8AC78C202A5888D200A4C3FA /* Diet2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet2ViewController.swift; sourceTree = "<group>"; };
+		8AC78C242A58891600A4C3FA /* Diet4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet4ViewController.swift; sourceTree = "<group>"; };
+		8AC78C262A58892700A4C3FA /* Diet6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet6ViewController.swift; sourceTree = "<group>"; };
+		8AC78C282A5C8FC300A4C3FA /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		8AC78C2A2A5C9A5B00A4C3FA /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		8AE1831A2A658D86006517D0 /* WhoIsAffectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsAffectedViewController.swift; sourceTree = "<group>"; };
+		8AE1831C2A658DA6006517D0 /* WhatAreSymptomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatAreSymptomsViewController.swift; sourceTree = "<group>"; };
+		8AE1831E2A658DBD006517D0 /* WhatCausesEOEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatCausesEOEViewController.swift; sourceTree = "<group>"; };
+		8AE183202A658DD9006517D0 /* WhatIsEOEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsEOEViewController.swift; sourceTree = "<group>"; };
+		8AE183222A658DF1006517D0 /* HowItsDiagnosedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItsDiagnosedViewController.swift; sourceTree = "<group>"; };
+		8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItsTreatedViewController.swift; sourceTree = "<group>"; };
+		8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGIDInfoViewController.swift; sourceTree = "<group>"; };
 		A409887E2A1BF9CC0041BBC7 /* Testing_Ground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testing_Ground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40988812A1BF9CC0041BBC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A40988832A1BF9CC0041BBC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +174,19 @@
 				A40988922A1BF9CD0041BBC7 /* Info.plist */,
 				A409888A2A1BF9CC0041BBC7 /* Testing_Ground.xcdatamodeld */,
 				8AC78C1C2A507BF100A4C3FA /* SignInViewController.swift */,
+				8AC78C1E2A58831000A4C3FA /* Diet1ViewController.swift */,
+				8AC78C202A5888D200A4C3FA /* Diet2ViewController.swift */,
+				8AC78C242A58891600A4C3FA /* Diet4ViewController.swift */,
+				8AC78C262A58892700A4C3FA /* Diet6ViewController.swift */,
+				8AC78C282A5C8FC300A4C3FA /* EducationViewController.swift */,
+				8AC78C2A2A5C9A5B00A4C3FA /* MoreInfoViewController.swift */,
+				8AE1831A2A658D86006517D0 /* WhoIsAffectedViewController.swift */,
+				8AE1831C2A658DA6006517D0 /* WhatAreSymptomsViewController.swift */,
+				8AE1831E2A658DBD006517D0 /* WhatCausesEOEViewController.swift */,
+				8AE183202A658DD9006517D0 /* WhatIsEOEViewController.swift */,
+				8AE183222A658DF1006517D0 /* HowItsDiagnosedViewController.swift */,
+				8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */,
+				8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */,
 			);
 			path = Testing_Ground;
 			sourceTree = "<group>";
@@ -304,19 +343,32 @@
 			files = (
 				A4CA1A502A3654F200C94D2C /* LoginViewController.swift in Sources */,
 				A4CA1A4C2A3654F200C94D2C /* HomeViewController.swift in Sources */,
+				8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */,
+				8AE183272A658E3E006517D0 /* EGIDInfoViewController.swift in Sources */,
 				A4CA1A4E2A3654F200C94D2C /* SignUpViewController.swift in Sources */,
+				8AC78C2B2A5C9A5B00A4C3FA /* MoreInfoViewController.swift in Sources */,
+				8AE1831F2A658DBD006517D0 /* WhatCausesEOEViewController.swift in Sources */,
+				8AE183232A658DF1006517D0 /* HowItsDiagnosedViewController.swift in Sources */,
+				8AC78C292A5C8FC300A4C3FA /* EducationViewController.swift in Sources */,
 				A4CA1A512A3654F200C94D2C /* QualityofLifeViewController.swift in Sources */,
+				8AE1831D2A658DA6006517D0 /* WhatAreSymptomsViewController.swift in Sources */,
 				A4CA1A5B2A3654FC00C94D2C /* QualityofLifeTableViewCell.swift in Sources */,
 				A4CA1A5A2A3654FC00C94D2C /* SymptomTableViewCell.swift in Sources */,
 				A40988862A1BF9CC0041BBC7 /* ViewController.swift in Sources */,
+				8AE1831B2A658D86006517D0 /* WhoIsAffectedViewController.swift in Sources */,
 				A40988822A1BF9CC0041BBC7 /* AppDelegate.swift in Sources */,
 				8AC78C1D2A507BF100A4C3FA /* SignInViewController.swift in Sources */,
+				8AC78C272A58892700A4C3FA /* Diet6ViewController.swift in Sources */,
 				A4CA1A522A3654F200C94D2C /* ProfileViewController.swift in Sources */,
+				8AC78C1F2A58831000A4C3FA /* Diet1ViewController.swift in Sources */,
 				A4CA1A532A3654F200C94D2C /* AddMedicationViewController.swift in Sources */,
+				8AC78C212A5888D200A4C3FA /* Diet2ViewController.swift in Sources */,
 				A40988842A1BF9CC0041BBC7 /* SceneDelegate.swift in Sources */,
 				A409888C2A1BF9CC0041BBC7 /* Testing_Ground.xcdatamodeld in Sources */,
+				8AC78C252A58891600A4C3FA /* Diet4ViewController.swift in Sources */,
 				A4CA1A4F2A3654F200C94D2C /* SymptomViewController.swift in Sources */,
 				A4CA1A4D2A3654F200C94D2C /* GradientFile.swift in Sources */,
+				8AE183212A658DD9006517D0 /* WhatIsEOEViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
