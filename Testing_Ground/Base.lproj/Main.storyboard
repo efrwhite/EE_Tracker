@@ -1563,7 +1563,31 @@
             </objects>
             <point key="canvasLocation" x="7738" y="-1309"/>
         </scene>
-        <!--Diet 1-->
+        <!--View Controller-->
+        <scene sceneID="byf-7W-dBM">
+            <objects>
+                <viewController id="2lT-Yp-NPb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GcN-Qc-ikB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER4-Qe-A2y">
+                                <rect key="frame" x="128" y="160" width="173" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iPE-WM-L4n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyj-j4-Vhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9501.5267175572517" y="-1950"/>
+        </scene>
+        <!--Diet Plan-->
         <scene sceneID="Gsu-vk-iwO">
             <objects>
                 <viewController id="Tcd-mR-9cd" userLabel="Diet 1" customClass="Diet1ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
