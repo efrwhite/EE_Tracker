@@ -9,7 +9,7 @@ import UIKit
 
 class QualityofLifeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var pickers: UIPickerView!
+    @IBOutlet weak var ratingText: UITextField!
     @IBOutlet weak var questionlabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,3 +23,4 @@ class QualityofLifeTableViewCell: UITableViewCell {
     }
     
 }
+

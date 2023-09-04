@@ -20,18 +20,20 @@
                         <rect key="frame" x="6" y="0.0" width="245" height="42"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="10"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <pickerView multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WL5-KT-P2k">
-                        <rect key="frame" x="289" y="0.0" width="63" height="44"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    </pickerView>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5n-dL-U7U">
+                        <rect key="frame" x="284" y="2" width="58" height="34"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="textColor" red="0.41756326649999997" green="0.42241865340000001" blue="0.42241865340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="pickers" destination="WL5-KT-P2k" id="H5f-5D-fnd"/>
                 <outlet property="questionlabel" destination="GFI-YN-KxV" id="CMh-JB-DrK"/>
             </connections>
             <point key="canvasLocation" x="125.19083969465649" y="19.014084507042256"/>
