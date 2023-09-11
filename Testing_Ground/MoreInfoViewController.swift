@@ -77,7 +77,7 @@ class MoreInfoViewController: UIViewController {
                 affectedLabel.attributedText = attributedText
 
         
-        borderView.addSubview(affectedLabel)
+
         
         
        
@@ -88,21 +88,6 @@ class MoreInfoViewController: UIViewController {
         affectedLabel.addGestureRecognizer(tapGesture)
         
         
-        // Set up constraints
-        NSLayoutConstraint.activate([
-            borderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            borderView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            borderView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            borderView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            
-            headlineLabel.centerXAnchor.constraint(equalTo: borderView.centerXAnchor),
-            headlineLabel.topAnchor.constraint(equalTo: borderView.topAnchor, constant: 20),
-            
-            affectedLabel.topAnchor.constraint(equalTo: headlineLabel.bottomAnchor, constant: 20),
-            affectedLabel.leadingAnchor.constraint(equalTo: borderView.leadingAnchor, constant: 20),
-            affectedLabel.trailingAnchor.constraint(equalTo: borderView.trailingAnchor, constant: -20),
-            
-        ])
     }
     
     
