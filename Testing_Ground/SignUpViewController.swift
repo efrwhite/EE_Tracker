@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var Mobile: UITextField!
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var ConfirmPassword: UITextField!
-//    var Accounts = [Account]()
+    var Parents = [Parent]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
        
     override func viewDidLoad() {
@@ -66,13 +66,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
         }
         else{
             //Saving Account Information in CoreData
-//            let newAccount = Account(context: self.context)
-//            newAccount.username = Username.text!
-//            newAccount.phone = Mobile.text!
-//            newAccount.email = Email.text!
-//            newAccount.password = Password.text!
-//            self.Accounts.append(newAccount)
-//            self.SaveItems()
+            let newAccount = Parent(context: self.context)
+            newAccount.username = Username.text!
+            newAccount.phone = Mobile.text!
+            newAccount.email = Email.text!
+            newAccount.password = Password.text!
+            self.Parents.append(newAccount)
+            self.SaveItems()
         }
     }
    

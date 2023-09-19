@@ -17,4 +17,7 @@ class HomeViewController: UIViewController {
     }
     
    
+    @IBAction func buttonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "ToHomeProfilePage", sender: self)
+    }
 }

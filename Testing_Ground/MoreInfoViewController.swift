@@ -9,96 +9,49 @@ import Foundation
 import UIKit
 
 class MoreInfoViewController: UIViewController {
-    // Declare the affected label as a class-level property
-    var affectedLabel: UILabel!
     
+    
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Add a border around the entire screen
-        let borderView = UIView()
-        borderView.translatesAutoresizingMaskIntoConstraints = false
-        borderView.layer.borderWidth = 1.0
-        borderView.layer.borderColor = UIColor.black.cgColor
-        view.addSubview(borderView)
-        
-        // Create and configure the headline label
-        let headlineLabel = UILabel()
-        headlineLabel.translatesAutoresizingMaskIntoConstraints = false
-        headlineLabel.text = "Where Can I Find More Information?"
-        headlineLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        borderView.addSubview(headlineLabel)
-        
-        // Create and configure the affected text label
-        affectedLabel = UILabel() // Remove the "let" keyword here
-        affectedLabel.translatesAutoresizingMaskIntoConstraints = false
-        affectedLabel.numberOfLines = 0
-        affectedLabel.textAlignment = .center
-        
-        let attributedText = NSMutableAttributedString(string: """
-                    The following links will take you to additional resources for EoE.
-
-                    North American Society For Pediatric Gastroenterology, Hepatology & Nutrition (NASPGHAN)
-
-                    NASPGHAN - Home
-
-                    American Academy of Allergy, Asthma & Immunology
-
-                    www.aaaai.org
-                    
-                    American Partnership for Eosinophilic Disorders
-
-                    www.apfed.org
-
-                    
-                    """)
-
-                // Set link attributes to make the text appear as clickable links
-                let linkAttributes: [NSAttributedString.Key: Any] = [
-                    .foregroundColor: UIColor.blue,
-                    .underlineStyle: NSUnderlineStyle.single.rawValue
-                ]
-                
-                // NASPGHAN link
-                let naspghanLink = URL(string: "https://naspghan.org")!
-                attributedText.setAttributes(linkAttributes, range: NSRange(location: 94, length: 22))
-                attributedText.addAttribute(.link, value: naspghanLink, range: NSRange(location: 94, length: 22))
-                
-                // aaaai.org link
-                let aaaaiLink = URL(string: "http://www.aaaai.org")!
-                attributedText.setAttributes(linkAttributes, range: NSRange(location: 177, length: 14))
-                attributedText.addAttribute(.link, value: aaaaiLink, range: NSRange(location: 177, length: 14))
-
-                // apfed.org link
-                let apfedLink = URL(string: "http://www.apfed.org")!
-                attributedText.setAttributes(linkAttributes, range: NSRange(location: 245, length: 14))
-                attributedText.addAttribute(.link, value: apfedLink, range: NSRange(location: 245, length: 14))
-
-                affectedLabel.attributedText = attributedText
 
         
 
+
         
-        
-       
-        
-        // Make links clickable
-        affectedLabel.isUserInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openLink(_:)))
-        affectedLabel.addGestureRecognizer(tapGesture)
-        
+//        let attributedText = NSMutableAttributedString(string: """
+//                    The following links will take you to additional resources for EoE.
+//
+//                    North American Society For Pediatric Gastroenterology, Hepatology & Nutrition (NASPGHAN)
+//
+//                        link1
+//
+//                    American Academy of Allergy, Asthma & Immunology
+//                        link2
+//
+//                    American Partnership for Eosinophilic Disorders
+//                        link3
+//
+//                    """)
+//
+//
+//                // NASPGHAN link
+//                let naspghanLink = URL(string: "https://naspghan.org")!
+//
+//
+//                // aaaai.org link
+//                let aaaaiLink = URL(string: "http://www.aaaai.org")!
+//
+//                // apfed.org link
+//                let apfedLink = URL(string: "http://www.apfed.org")!
+        let attributedString = NSMutableAttributedString(string: "North American Society For Pediatric Gastroenterology, Hepatology & Nutrition (NASPGHAN)")
+        let url = URL(string: "https://naspghan.org")!
+
+  
         
     }
     
     
-    @objc func openLink(_ sender: UITapGestureRecognizer) {
-        guard let text = affectedLabel.text else { return }
-        let types: NSTextCheckingResult.CheckingType = .link
-        let detector = try? NSDataDetector(types: types.rawValue)
-        detector?.enumerateMatches(in: text, range: NSRange(text.startIndex..., in: text), using: { (result, _, _) in
-            if let url = result?.url {
-                UIApplication.shared.open(url)
-            }
-        })
-    }
+
 }
