@@ -126,7 +126,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="EnterButton:" destination="tnS-He-ia0" eventType="touchUpInside" id="9xS-pe-4R0"/>
-                                    <segue destination="HuY-2G-98V" kind="show" id="h45-d2-0GF"/>
+                                    <segue destination="HuY-2G-98V" kind="show" identifier="parentSegue" id="SgO-Mw-MPJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyD-K6-all">
@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="-779.38931297709917" y="764.78873239436621"/>
         </scene>
-        <!--ProfileViewController-->
+        <!--ParentViewController-->
         <scene sceneID="tAI-hE-Mwa">
             <objects>
-                <viewController title="ProfileViewController" id="HuY-2G-98V" customClass="ParentViewController" sceneMemberID="viewController">
+                <viewController title="ParentViewController" id="HuY-2G-98V" customClass="ParentViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cil-tp-twe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,21 +184,9 @@
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="selectimage:" destination="HuY-2G-98V" eventType="touchUpInside" id="cgl-Ab-TKd"/>
+                                    <action selector="selectImage:" destination="HuY-2G-98V" eventType="touchUpInside" id="ztm-Cp-jU3"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLr-Gi-Fl1">
-                                <rect key="frame" x="156" y="407" width="171" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prh-J8-h7P">
-                                <rect key="frame" x="156" y="504" width="171" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWh-ci-8SJ">
                                 <rect key="frame" x="37" y="414" width="87" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -206,12 +194,6 @@
                                 <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xc-Bc-aJm">
-                                <rect key="frame" x="156" y="457" width="171" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-Ol-WIz">
                                 <rect key="frame" x="57" y="755" width="277" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -229,7 +211,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveButton:" destination="HuY-2G-98V" eventType="touchUpInside" id="1lQ-wI-d2k"/>
-                                    <segue destination="7AB-bm-094" kind="show" id="dWw-e2-HS0"/>
+                                    <segue destination="7AB-bm-094" kind="show" identifier="childSegue" id="dWw-e2-HS0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firstname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvQ-Zk-LIg">
@@ -251,15 +233,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-hA-wjp">
+                                <rect key="frame" x="205" y="409" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOK-Ey-BCC">
+                                <rect key="frame" x="205" y="510" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-Aw-Rc7">
+                                <rect key="frame" x="205" y="457" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FMc-dt-oh1"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" prompt="Create your profile" id="jR5-0g-90f"/>
                     <connections>
-                        <outlet property="parentFirstName" destination="6xc-Bc-aJm" id="sWm-jV-KpZ"/>
-                        <outlet property="parentLastName" destination="prh-J8-h7P" id="dIV-DU-qAT"/>
-                        <outlet property="parentUserName" destination="aLr-Gi-Fl1" id="qlM-JC-7LR"/>
+                        <outlet property="parentFirstName" destination="zfd-Aw-Rc7" id="7Qs-Lr-m1g"/>
+                        <outlet property="parentLastName" destination="EOK-Ey-BCC" id="vel-6Z-ipd"/>
+                        <outlet property="parentUserName" destination="6cI-hA-wjp" id="but-bT-IQs"/>
                         <outlet property="parentimage" destination="LmZ-CL-1BS" id="HbO-aD-dyT"/>
                     </connections>
                 </viewController>
@@ -267,10 +267,10 @@
             </objects>
             <point key="canvasLocation" x="39" y="1612"/>
         </scene>
-        <!--SignInViewController-->
+        <!--LoginViewController-->
         <scene sceneID="2Gk-9S-9d3">
             <objects>
-                <viewController title="SignInViewController" id="IvN-OH-f0M" customClass="LoginViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LoginViewController" id="IvN-OH-f0M" customClass="LoginViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gjn-xW-rGQ" customClass="loginviewcontroller">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -306,7 +306,7 @@
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="EnterButton:" destination="IvN-OH-f0M" eventType="touchUpInside" id="YRR-Ps-gTp"/>
+                                    <action selector="EnterButton:" destination="IvN-OH-f0M" eventType="touchUpInside" id="9Qb-SA-AOD"/>
                                     <segue destination="CUC-Nl-vlO" kind="show" id="abn-rE-uS9"/>
                                 </connections>
                             </button>
@@ -317,8 +317,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" prompt="Add your details to login" id="fmw-WA-JkD"/>
                     <connections>
-                        <outlet property="Password" destination="w6u-X1-JMM" id="YuA-b3-nJ9"/>
-                        <outlet property="Username" destination="baR-jx-tC2" id="Rid-Nc-r1u"/>
+                        <outlet property="Password" destination="w6u-X1-JMM" id="QSV-95-mo0"/>
+                        <outlet property="Username" destination="baR-jx-tC2" id="X87-8F-7dH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baM-ez-iOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -353,7 +353,7 @@
         <!--HomeViewController-->
         <scene sceneID="fJh-0I-Mmy">
             <objects>
-                <viewController title="HomeViewController" id="CUC-Nl-vlO" sceneMemberID="viewController">
+                <viewController title="HomeViewController" id="CUC-Nl-vlO" customClass="HomeViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJ9-yv-epH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -484,7 +484,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="person.crop.circle.fill" catalog="system" title="Profiles"/>
                                 <connections>
-                                    <segue destination="SPM-L8-qId" kind="show" id="HiZ-kT-kNg"/>
+                                    <action selector="buttonTapped:" destination="CUC-Nl-vlO" eventType="touchUpInside" id="gcM-DP-Xgf"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -2026,8 +2026,8 @@
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="saveButton:" destination="7AB-bm-094" eventType="touchUpInside" id="lee-Qg-07X"/>
-                                    <segue destination="CUC-Nl-vlO" kind="show" id="duz-GK-75e"/>
+                                    <action selector="saveButton:" destination="7AB-bm-094" eventType="touchUpInside" id="5Gf-de-cJb"/>
+                                    <segue destination="CUC-Nl-vlO" kind="show" identifier="homeSegue" id="R3T-0P-bOg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firstname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-KX-s2p">
@@ -2081,16 +2081,17 @@
                         <outlet property="childimage" destination="y1d-4c-qrH" id="bWX-QZ-7U7"/>
                         <outlet property="diettype" destination="5wT-ks-dji" id="gXj-P6-6xP"/>
                         <outlet property="gender" destination="dWW-ss-Gft" id="Npi-Dc-wzp"/>
+                        <outlet property="lastName" destination="csd-ES-Hjg" id="Nys-89-CZt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRq-J7-Eqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="1612"/>
+            <point key="canvasLocation" x="2269" y="658"/>
         </scene>
         <!--HomeProfilePageViewController-->
         <scene sceneID="9hj-MV-jFn">
             <objects>
-                <viewController title="HomeProfilePageViewController" id="SPM-L8-qId" customClass="HomeProfilePageViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeProfilePageViewController" title="HomeProfilePageViewController" id="SPM-L8-qId" customClass="HomeProfilePageViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z18-LM-MBh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2112,6 +2113,12 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="person" catalog="system" title="edit"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGp-7i-PKm">
+                                                    <rect key="frame" x="241" y="4" width="77" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="person.fill.badge.plus" catalog="system" title="add"/>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -2141,6 +2148,7 @@
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.fill.badge.plus" catalog="system" width="128" height="125"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
