@@ -5,24 +5,29 @@
 //  Created by Vivek Vangala on 7/17/23.
 //
 
-import Foundation
 import UIKit
 
 class WhatCausesEOEViewController: UIViewController {
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
+        // Set the font size to 20.0
+        label1.font = UIFont.systemFont(ofSize: 20.0)
+        
         label1.text = """
-                    This condition is usually caused by an immune response to food ingestion. However, the relationship between food allergy and EoE is complex. Unlike many well known food allergens which causes symptoms right after exposure such as hives, lip swelling, vomiting and breathing issues, the EoE allergen induced reactions are often delayed, and can develop over several days making it difficult to pinpoint the specific food allergen. Environmental allergies to substances like pollen, dust, mold and animals also appear to play a role in triggering EoE and exacerbating EoE symptoms.
+            This condition is usually caused by an immune response to food ingestion. However, the relationship between food allergy and EoE is complex. Unlike many well-known food allergens that cause symptoms right after exposure such as hives, lip swelling, vomiting, and breathing issues, the EoE allergen-induced reactions are often delayed, and can develop over several days making it difficult to pinpoint the specific food allergen. Environmental allergies to substances like pollen, dust, mold, and animals also appear to play a role in triggering EoE and exacerbating EoE symptoms.
         """
         
-      
         // Set the label's text to wrap and display the full content
         label1.numberOfLines = 0
         label1.lineBreakMode = .byWordWrapping
+        
+        // Center the label text horizontally
+        label1.textAlignment = .center
         
         // Update the label's frame and size it to fit its content
         label1.sizeToFit()
@@ -30,13 +35,19 @@ class WhatCausesEOEViewController: UIViewController {
         // Add the label to the scrollView's content view
         scrollView.addSubview(label1)
         
-        // Update the scrollView's contentSize to fit the label's frame
-        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: label1.frame.size.height)
+        // Set constraints for the label
+        label1.translatesAutoresizingMaskIntoConstraints = false
         
-    
+        NSLayoutConstraint.activate([
+            // Label constraints
+            label1.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16.0),
+            label1.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16.0),
+            label1.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16.0),
+            label1.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32.0), // Adjust the constant as needed
+            label1.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor), // Center horizontally
+        ])
+        
+        // Update the scrollView's contentSize to fit the label's frame
+        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: label1.frame.size.height + 32.0) // Adjust the padding as needed
     }
-    
-
-    }
-
-
+}
