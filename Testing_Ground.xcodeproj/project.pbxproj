@@ -167,9 +167,9 @@
 				A40988922A1BF9CD0041BBC7 /* Info.plist */,
 				A409888A2A1BF9CC0041BBC7 /* Testing_Ground.xcdatamodeld */,
 				8AC78C1C2A507BF100A4C3FA /* ExtraViewController.swift */,
-				A4CA1A442A3654F200C94D2C /* HomeViewController.swift */,
 				A4CA1A482A3654F200C94D2C /* LoginViewController.swift */,
 				A4CA1A462A3654F200C94D2C /* SignUpViewController.swift */,
+				A4CA1A442A3654F200C94D2C /* HomeViewController.swift */,
 				A4B3FCDD2AB244150021EAB6 /* HomeProfilePageViewController.swift */,
 				A4CA1A4A2A3654F200C94D2C /* ProfileViewController.swift */,
 				A492679C2AB8DB2700D0AD4C /* ParentViewController.swift */,
@@ -558,6 +558,7 @@
 				DEVELOPMENT_TEAM = AJ84Q69AHZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Testing_Ground/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select profile pictures.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -586,6 +587,7 @@
 				DEVELOPMENT_TEAM = AJ84Q69AHZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Testing_Ground/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select profile pictures.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

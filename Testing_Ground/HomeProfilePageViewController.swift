@@ -1,12 +1,15 @@
 import UIKit
-
+import CoreData
+import Foundation
 class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    var user = ""
     @IBOutlet weak var tableView: UITableView!
-
+    // Add properties to store fetched child and parent profiles
+    var childProfiles: [Child] = []
+    var parentProfiles: [Parent] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("Profile User", user)
         // Set the data source and delegate to self
         tableView.dataSource = self
         tableView.delegate = self
@@ -41,4 +44,33 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         
         return cell
     }
+    
+    
+    // Implement your CoreData fetch functions
+        func fetchChildProfiles(username: String) -> [Child] {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "username == %@", user)
+            
+            do {
+                return try context.fetch(fetchRequest)
+            } catch {
+                print("Error fetching child profiles: \(error)")
+                return []
+            }
+        }
+        
+        func fetchParentProfiles(username: String) -> [Parent] {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "username == %@", user)
+            
+            do {
+                return try context.fetch(fetchRequest)
+            } catch {
+                print("Error fetching parent profiles: \(error)")
+                return []
+            }
+        }
+    
 }

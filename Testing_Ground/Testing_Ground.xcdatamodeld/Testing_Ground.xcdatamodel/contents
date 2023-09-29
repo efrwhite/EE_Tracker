@@ -10,6 +10,7 @@
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Parent" representedClassName="Parent" syncable="YES" codeGenerationType="class">
+        <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="firstname" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
