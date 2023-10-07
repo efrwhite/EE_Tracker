@@ -31,6 +31,18 @@
 		A409889C2A1BF9CD0041BBC7 /* Testing_GroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409889B2A1BF9CD0041BBC7 /* Testing_GroundTests.swift */; };
 		A40988A62A1BF9CD0041BBC7 /* Testing_GroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988A52A1BF9CD0041BBC7 /* Testing_GroundUITests.swift */; };
 		A40988A82A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988A72A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift */; };
+		A424E0372AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */; };
+		A424E0382AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */; };
+		A424E0392AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */; };
+		A424E03A2AD1DD97000AA275 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E0362AD1DD97000AA275 /* ProfilesTableviewcell.xib */; };
+		A424E03B2AD1DD97000AA275 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E0362AD1DD97000AA275 /* ProfilesTableviewcell.xib */; };
+		A424E03C2AD1DD97000AA275 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E0362AD1DD97000AA275 /* ProfilesTableviewcell.xib */; };
+		A424E03F2AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */; };
+		A424E0402AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */; };
+		A424E0412AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */; };
+		A424E0422AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */; };
+		A424E0432AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */; };
+		A424E0442AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */; };
 		A492679D2AB8DB2700D0AD4C /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492679C2AB8DB2700D0AD4C /* ParentViewController.swift */; };
 		A492679F2AB8DB3300D0AD4C /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492679E2AB8DB3300D0AD4C /* ChildViewController.swift */; };
 		A4B3FCDE2AB244150021EAB6 /* HomeProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3FCDD2AB244150021EAB6 /* HomeProfilePageViewController.swift */; };
@@ -94,6 +106,10 @@
 		A40988A12A1BF9CD0041BBC7 /* Testing_GroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Testing_GroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40988A52A1BF9CD0041BBC7 /* Testing_GroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing_GroundUITests.swift; sourceTree = "<group>"; };
 		A40988A72A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing_GroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTableviewcell.swift; sourceTree = "<group>"; };
+		A424E0362AD1DD97000AA275 /* ProfilesTableviewcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilesTableviewcell.xib; sourceTree = "<group>"; };
+		A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
+		A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParentTableViewCell.xib; sourceTree = "<group>"; };
 		A492679C2AB8DB2700D0AD4C /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		A492679E2AB8DB3300D0AD4C /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		A4B3FCDD2AB244150021EAB6 /* HomeProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfilePageViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +177,8 @@
 				A40988812A1BF9CC0041BBC7 /* AppDelegate.swift */,
 				A40988832A1BF9CC0041BBC7 /* SceneDelegate.swift */,
 				A40988852A1BF9CC0041BBC7 /* ViewController.swift */,
+				A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */,
+				A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */,
 				A409888D2A1BF9CD0041BBC7 /* Assets.xcassets */,
 				A40988872A1BF9CC0041BBC7 /* Main.storyboard */,
 				A409888F2A1BF9CD0041BBC7 /* LaunchScreen.storyboard */,
@@ -177,6 +195,8 @@
 				A4CA1A492A3654F200C94D2C /* QualityofLifeViewController.swift */,
 				A4CA1A572A3654FC00C94D2C /* QualityofLifeTableViewCell.swift */,
 				A4CA1A552A3654FB00C94D2C /* QualityofLifeTableViewCell.xib */,
+				A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */,
+				A424E0362AD1DD97000AA275 /* ProfilesTableviewcell.xib */,
 				A4CA1A472A3654F200C94D2C /* SymptomViewController.swift */,
 				A4CA1A562A3654FC00C94D2C /* SymptomTableViewCell.swift */,
 				A4CA1A542A3654FB00C94D2C /* SymptomTableViewCell.xib */,
@@ -320,8 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40988912A1BF9CD0041BBC7 /* LaunchScreen.storyboard in Resources */,
+				A424E03A2AD1DD97000AA275 /* ProfilesTableviewcell.xib in Resources */,
 				A4CA1A592A3654FC00C94D2C /* QualityofLifeTableViewCell.xib in Resources */,
 				A4CA1A582A3654FC00C94D2C /* SymptomTableViewCell.xib in Resources */,
+				A424E0422AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */,
 				A409888E2A1BF9CD0041BBC7 /* Assets.xcassets in Resources */,
 				A40988892A1BF9CC0041BBC7 /* Main.storyboard in Resources */,
 			);
@@ -331,6 +353,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A424E03B2AD1DD97000AA275 /* ProfilesTableviewcell.xib in Resources */,
+				A424E0432AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +362,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A424E03C2AD1DD97000AA275 /* ProfilesTableviewcell.xib in Resources */,
+				A424E0442AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4CA1A502A3654F200C94D2C /* LoginViewController.swift in Sources */,
+				A424E03F2AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */,
 				A4CA1A4C2A3654F200C94D2C /* HomeViewController.swift in Sources */,
 				8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */,
 				8AE183272A658E3E006517D0 /* EGIDInfoViewController.swift in Sources */,
@@ -367,6 +394,7 @@
 				8AC78C1D2A507BF100A4C3FA /* ExtraViewController.swift in Sources */,
 				8AC78C272A58892700A4C3FA /* Diet6ViewController.swift in Sources */,
 				A4CA1A522A3654F200C94D2C /* ProfileViewController.swift in Sources */,
+				A424E0372AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */,
 				8AC78C1F2A58831000A4C3FA /* Diet1ViewController.swift in Sources */,
 				A492679F2AB8DB3300D0AD4C /* ChildViewController.swift in Sources */,
 				A4B3FCDE2AB244150021EAB6 /* HomeProfilePageViewController.swift in Sources */,
@@ -386,6 +414,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4B3FCDF2AB244150021EAB6 /* HomeProfilePageViewController.swift in Sources */,
+				A424E0402AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */,
+				A424E0382AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */,
 				A409889C2A1BF9CD0041BBC7 /* Testing_GroundTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +425,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40988A82A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift in Sources */,
+				A424E0412AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */,
+				A424E0392AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */,
 				A40988A62A1BF9CD0041BBC7 /* Testing_GroundUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
