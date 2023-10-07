@@ -21,6 +21,18 @@
 		8AE183232A658DF1006517D0 /* HowItsDiagnosedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183222A658DF1006517D0 /* HowItsDiagnosedViewController.swift */; };
 		8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */; };
 		8AE183272A658E3E006517D0 /* EGIDInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */; };
+		A40883802AD1DF56006F3871 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408837E2AD1DF56006F3871 /* ParentTableViewCell.xib */; };
+		A40883812AD1DF56006F3871 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408837E2AD1DF56006F3871 /* ParentTableViewCell.xib */; };
+		A40883822AD1DF56006F3871 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408837E2AD1DF56006F3871 /* ParentTableViewCell.xib */; };
+		A40883832AD1DF56006F3871 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408837F2AD1DF56006F3871 /* ParentTableViewCell.swift */; };
+		A40883842AD1DF56006F3871 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408837F2AD1DF56006F3871 /* ParentTableViewCell.swift */; };
+		A40883852AD1DF56006F3871 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408837F2AD1DF56006F3871 /* ParentTableViewCell.swift */; };
+		A40883882AD1DF6D006F3871 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40883862AD1DF6D006F3871 /* ProfilesTableviewcell.xib */; };
+		A40883892AD1DF6D006F3871 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40883862AD1DF6D006F3871 /* ProfilesTableviewcell.xib */; };
+		A408838A2AD1DF6D006F3871 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40883862AD1DF6D006F3871 /* ProfilesTableviewcell.xib */; };
+		A408838B2AD1DF6D006F3871 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40883872AD1DF6D006F3871 /* ProfilesTableviewcell.swift */; };
+		A408838C2AD1DF6D006F3871 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40883872AD1DF6D006F3871 /* ProfilesTableviewcell.swift */; };
+		A408838D2AD1DF6D006F3871 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40883872AD1DF6D006F3871 /* ProfilesTableviewcell.swift */; };
 		A40988822A1BF9CC0041BBC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988812A1BF9CC0041BBC7 /* AppDelegate.swift */; };
 		A40988842A1BF9CC0041BBC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988832A1BF9CC0041BBC7 /* SceneDelegate.swift */; };
 		A40988862A1BF9CC0041BBC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988852A1BF9CC0041BBC7 /* ViewController.swift */; };
@@ -80,6 +92,10 @@
 		8AE183222A658DF1006517D0 /* HowItsDiagnosedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItsDiagnosedViewController.swift; sourceTree = "<group>"; };
 		8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItsTreatedViewController.swift; sourceTree = "<group>"; };
 		8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGIDInfoViewController.swift; sourceTree = "<group>"; };
+		A408837E2AD1DF56006F3871 /* ParentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParentTableViewCell.xib; sourceTree = "<group>"; };
+		A408837F2AD1DF56006F3871 /* ParentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
+		A40883862AD1DF6D006F3871 /* ProfilesTableviewcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilesTableviewcell.xib; sourceTree = "<group>"; };
+		A40883872AD1DF6D006F3871 /* ProfilesTableviewcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTableviewcell.swift; sourceTree = "<group>"; };
 		A409887E2A1BF9CC0041BBC7 /* Testing_Ground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testing_Ground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40988812A1BF9CC0041BBC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A40988832A1BF9CC0041BBC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +210,10 @@
 				8AC78C202A5888D200A4C3FA /* Diet2ViewController.swift */,
 				8AC78C242A58891600A4C3FA /* Diet4ViewController.swift */,
 				8AC78C262A58892700A4C3FA /* Diet6ViewController.swift */,
+				A408837F2AD1DF56006F3871 /* ParentTableViewCell.swift */,
+				A40883872AD1DF6D006F3871 /* ProfilesTableviewcell.swift */,
+				A40883862AD1DF6D006F3871 /* ProfilesTableviewcell.xib */,
+				A408837E2AD1DF56006F3871 /* ParentTableViewCell.xib */,
 			);
 			path = Testing_Ground;
 			sourceTree = "<group>";
@@ -323,7 +343,9 @@
 				A4CA1A592A3654FC00C94D2C /* QualityofLifeTableViewCell.xib in Resources */,
 				A4CA1A582A3654FC00C94D2C /* SymptomTableViewCell.xib in Resources */,
 				A409888E2A1BF9CD0041BBC7 /* Assets.xcassets in Resources */,
+				A40883882AD1DF6D006F3871 /* ProfilesTableviewcell.xib in Resources */,
 				A40988892A1BF9CC0041BBC7 /* Main.storyboard in Resources */,
+				A40883802AD1DF56006F3871 /* ParentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +353,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40883812AD1DF56006F3871 /* ParentTableViewCell.xib in Resources */,
+				A40883892AD1DF6D006F3871 /* ProfilesTableviewcell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +362,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40883822AD1DF56006F3871 /* ParentTableViewCell.xib in Resources */,
+				A408838A2AD1DF6D006F3871 /* ProfilesTableviewcell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +378,7 @@
 				A4CA1A4C2A3654F200C94D2C /* HomeViewController.swift in Sources */,
 				8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */,
 				8AE183272A658E3E006517D0 /* EGIDInfoViewController.swift in Sources */,
+				A40883832AD1DF56006F3871 /* ParentTableViewCell.swift in Sources */,
 				A4CA1A4E2A3654F200C94D2C /* SignUpViewController.swift in Sources */,
 				8AC78C2B2A5C9A5B00A4C3FA /* MoreInfoViewController.swift in Sources */,
 				8AE1831F2A658DBD006517D0 /* WhatCausesEOEViewController.swift in Sources */,
@@ -376,6 +403,7 @@
 				A409888C2A1BF9CC0041BBC7 /* Testing_Ground.xcdatamodeld in Sources */,
 				8AC78C252A58891600A4C3FA /* Diet4ViewController.swift in Sources */,
 				A492679D2AB8DB2700D0AD4C /* ParentViewController.swift in Sources */,
+				A408838B2AD1DF6D006F3871 /* ProfilesTableviewcell.swift in Sources */,
 				A4CA1A4F2A3654F200C94D2C /* SymptomViewController.swift in Sources */,
 				8AE183212A658DD9006517D0 /* WhatIsEOEViewController.swift in Sources */,
 			);
@@ -386,7 +414,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4B3FCDF2AB244150021EAB6 /* HomeProfilePageViewController.swift in Sources */,
+				A408838C2AD1DF6D006F3871 /* ProfilesTableviewcell.swift in Sources */,
 				A409889C2A1BF9CD0041BBC7 /* Testing_GroundTests.swift in Sources */,
+				A40883842AD1DF56006F3871 /* ParentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +425,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40988A82A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift in Sources */,
+				A408838D2AD1DF6D006F3871 /* ProfilesTableviewcell.swift in Sources */,
 				A40988A62A1BF9CD0041BBC7 /* Testing_GroundUITests.swift in Sources */,
+				A40883852AD1DF56006F3871 /* ParentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
