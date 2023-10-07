@@ -11,9 +11,9 @@ class WhatIsEOEViewController: UIViewController {
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // Set the font size to 20.0
         label1.font = UIFont.systemFont(ofSize: 20.0)
@@ -26,8 +26,8 @@ class WhatIsEOEViewController: UIViewController {
         label1.numberOfLines = 0
         label1.lineBreakMode = .byWordWrapping
         
-        // Center the label text horizontally
-        label1.textAlignment = .center
+        // Set text alignment to left
+        label1.textAlignment = .left
         
         // Update the label's frame and size it to fit its content
         label1.sizeToFit()
@@ -44,10 +44,10 @@ class WhatIsEOEViewController: UIViewController {
             label1.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16.0),
             label1.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16.0),
             label1.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32.0), // Adjust the constant as needed
-            label1.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor), // Center horizontally
         ])
         
         // Update the scrollView's contentSize to fit the label's frame
         scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: label1.frame.size.height + 32.0) // Adjust the padding as needed
     }
+    
 }
