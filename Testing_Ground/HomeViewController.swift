@@ -3,7 +3,12 @@ import CoreData
 import UIKit
 
 class HomeViewController: UIViewController {
+    var mainChildProfile: Child?
+
     var user = ""
+    @IBOutlet weak var childnames: UILabel!
+    @IBOutlet weak var childsimage: UIImageView!
+    @IBOutlet weak var childsdiet: UILabel!
     var isButtonEnabled = true // Add a property to track button state
     
     override func viewDidLoad() {
@@ -11,36 +16,63 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("Home Username: ", user)
         
+        // Fetch the first child entity with username == user
+        mainChildProfile = fetchMainChildProfile(username: user)
+        
+        // Do any additional setup after loading the view.
+        print("Main Child Profile: \(mainChildProfile?.firstName ?? "N/A")")
+        updateUIWithMainChildProfile()
     }
     
-    @IBAction func buttonTapped(_ sender: Any) {
-        // Check if the button is enabled
-        guard isButtonEnabled else {
-            return
-        }
-        
-        // Disable the button to prevent multiple taps
-        isButtonEnabled = false
-        
-        // Create an instance of HomeProfilePageViewController
-        let homeProfileVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeProfilePageViewController") as! HomeProfilePageViewController
-        
-        // Set the logged-in username
-        homeProfileVC.user = user
-        
-        // Present the HomeProfilePageViewController
-        navigationController?.pushViewController(homeProfileVC, animated: true)
-        
-        // Re-enable the button after a delay (adjust the delay as needed)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.isButtonEnabled = true
-        }
-    }
-    
-    
-    func loadItems(){
-        // Load database items into Home Page based on child.user
-        
-    }
-}
+    func updateUIWithMainChildProfile() {
+        if let mainChildProfile = mainChildProfile {
+            // Update the name label with child's name
+            childnames.text = "\(mainChildProfile.firstName!) \(mainChildProfile.lastName!)"
 
+            // Assuming you have a property called 'imageData' in Child entity that stores image data
+            if let imageData = mainChildProfile.image {
+                // Update the image view with child's image
+                childsimage.image = UIImage(data: imageData)
+            } else {
+                // If there is no image data, you can set a default image or handle it as needed
+                childsimage.image = UIImage(named: "DefaultImage")
+            }
+
+            // Update the diet label with child's diet type
+            childsdiet.text = "Diet: \(String(describing: mainChildProfile.diettype!))"
+
+            // Update other UI elements as needed
+        } else {
+            // Handle the case when no main child profile is found
+            childnames.text = "Welcome!"
+            childsimage.image = nil
+            childsdiet.text = "Diet: Diet Type"
+            // Update other UI elements as needed
+        }
+    }
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "profilessegue", let displayVC = segue.destination as? HomeProfilePageViewController {
+            // Pass any necessary data to HomeViewController if needed
+            displayVC.user = user
+            print("User value sent to HomeProfilePage: \(user)")
+        }
+    }
+    
+    func fetchMainChildProfile(username: String) -> Child? {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "username == %@", user)
+
+        do {
+            let childProfiles = try context.fetch(fetchRequest)
+            return childProfiles.first // Get the first child profile that matches the predicate
+        } catch {
+            print("Error fetching main child profile: \(error)")
+            return nil
+        }
+    }
+
+    
+}
