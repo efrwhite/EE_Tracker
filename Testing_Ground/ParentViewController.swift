@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 import CoreData
 
+
 class ParentViewController: UIViewController {
     
     // Your Core Data context
@@ -9,6 +10,10 @@ class ParentViewController: UIViewController {
     var profiles = [Parent]()
     var receivedString = ""
     var user = ""
+    var isEditingParent: Bool = false
+    var isAddingParent: Bool = false
+    var parentName: String?
+    var usernamep: String?
     
     @IBOutlet weak var parentLastName: UITextField!
     @IBOutlet weak var parentFirstName: UITextField!
@@ -19,7 +24,6 @@ class ParentViewController: UIViewController {
         super.viewDidLoad()
         print("You are on Parent")
         print(user)
-
         // Gesture to collapse/dismiss keyboard on click outside
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
@@ -42,20 +46,81 @@ class ParentViewController: UIViewController {
             showAlert(title: "Missing Information", message: "Please fill in all fields.")
             return
         }
+        
         let userName = user
-        // 1. Fetch the Core Data entity instance (assuming it's called "Parent")
+        
+        if isEditingParent {
+            // You are editing an existing profile
+            // Use the 'parentName' and 'usernamep' to identify the profile to edit
+            // Update the attributes of the existing entity
+            if let parentName = parentName, let usernamep = usernamep {
+                updateParentProfile(lastName: lastName, firstName: firstName, userName: userName, parentName: parentName, usernamep: usernamep)
+                performSegue(withIdentifier: "unwindToHomeProfilePageSegue", sender: self)
+            }
+        } else if isAddingParent {
+            // You are adding a new profile
+            // Create a new 'Parent' entity and set its attributes
+            createNewParentProfile(lastName: lastName, firstName: firstName, userName: userName)
+            // Trigger the unwind segue to go back to HomeProfileViewController
+            // Send the username back to HomeProfilePageViewController
+            // Perform the unwind segue to go back to HomeProfilePageViewController
+            performSegue(withIdentifier: "unwindToHomeProfilePageSegue", sender: self)
+      
+        } else {
+            // You are adding a new profile or updating an existing one
+               // Check if a profile with the same parentName and usernamep exists
+               let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
+               fetchRequest.predicate = NSPredicate(format: "username == %@", user)
+
+               do {
+                   let results = try context.fetch(fetchRequest)
+                   if let profile = results.first {
+                       // Update the attributes of the fetched entity
+                       profile.lastname = lastName
+                       profile.firstname = firstName
+                       let imageData = parentimage.image?.pngData()
+                       profile.image = imageData
+
+                       // Save the context to persist the changes
+                       saveContext()
+                       showAlert(title: "Success", message: "Profile updated successfully.")
+                   } else {
+                       // No matching profile found, create a new one
+                       createNewParentProfile(lastName: lastName, firstName: firstName, userName: userName)
+                   }
+               } catch {
+                   print("Error fetching or updating entity: \(error)")
+                   showAlert(title: "Error", message: "Failed to update profile.")
+               }
+        }
+    }
+    @IBAction func unwindToHomeProfilePage(_ sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? ChildViewController {
+            // Pass the username back to HomeProfilePageViewController
+            if let homeProfileViewController = navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
+                homeProfileViewController.user = sourceViewController.user
+            }
+            
+            // Perform the unwind segue to go back to HomeProfilePageViewController
+            navigationController?.popViewController(animated: true)
+        }
+    }
+
+    // Function to update an existing Parent entity
+    func updateParentProfile(lastName: String, firstName: String, userName: String, parentName: String, usernamep: String) {
         let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "username == %@", user)
-       
+        fetchRequest.predicate = NSPredicate(format: "username == %@ AND firstname == %@", usernamep, parentName)
+        
         do {
             let results = try context.fetch(fetchRequest)
             if let profile = results.first {
-                // 2. Update the attributes of the fetched entity
+                // Update the attributes of the fetched entity
                 profile.lastname = lastName
                 profile.firstname = firstName
                 let imageData = parentimage.image?.pngData()
                 profile.image = imageData
-                // 3. Save the context to persist the changes
+                
+                // Save the context to persist the changes
                 saveContext()
                 showAlert(title: "Success", message: "Profile updated successfully.")
             } else {
@@ -66,6 +131,22 @@ class ParentViewController: UIViewController {
             showAlert(title: "Error", message: "Failed to update profile.")
         }
     }
+
+    // Function to create a new Parent entity
+    func createNewParentProfile(lastName: String, firstName: String, userName: String) {
+        // Create a new 'Parent' entity and set its attributes
+        let newProfile = Parent(context: context)
+        newProfile.lastname = lastName
+        newProfile.firstname = firstName
+        newProfile.username = userName
+        let imageData = parentimage.image?.pngData()
+        newProfile.image = imageData
+        
+        // Save the context to persist the changes
+        saveContext()
+        showAlert(title: "Success", message: "Profile created successfully.")
+    }
+
     
     // Helper method to save the Core Data context
     func saveContext() {

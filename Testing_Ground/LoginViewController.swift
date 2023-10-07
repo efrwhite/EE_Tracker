@@ -1,10 +1,11 @@
 import UIKit
+import CoreData
 
-class LoginViewController: UIViewController, UITextFieldDelegate{
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var Username: UITextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,6 +17,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
+
     override func updateViewConstraints() {
         // Update or adjust constraints here
         super.updateViewConstraints()
@@ -24,19 +26,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBAction func EnterButton(_ sender: Any) {
         let username = Username.text ?? ""
         let password = Password.text ?? ""
-        if username.isEmpty {
-            let usernamealert = UIAlertController(title: nil, message: "Please enter username", preferredStyle: .alert)
-            usernamealert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(usernamealert, animated: true, completion: nil)
-        }
-        
-        if password.isEmpty {
-            let passwordalert = UIAlertController(title: nil, message: "Please enter password", preferredStyle: .alert)
-            passwordalert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(passwordalert, animated: true, completion: nil)
+
+        if username.isEmpty || password.isEmpty {
+            // Handle empty username or password
+            let alert = UIAlertController(title: nil, message: "Please enter both username and password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } else if validateLogin(username: username, password: password) {
+            // You don't need to performSegue here, as it's handled by the Storyboard
+        } else {
+            // Invalid username or password
+            let alert = UIAlertController(title: nil, message: "Username or password is incorrect", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
-    
+
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == Username {
             Password.becomeFirstResponder()
@@ -46,12 +52,36 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
         return true
     }
-    
+
+    func validateLogin(username: String, password: String) -> Bool {
+        // Assuming you have a Core Data entity named 'Parent' with attributes 'username' and 'password'
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "username == %@ AND password == %@", username, password)
+
+        do {
+            let matchingParents = try context.fetch(fetchRequest)
+            return !matchingParents.isEmpty
+        } catch {
+            print("Error validating login: \(error)")
+            return false
+        }
+    }
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
+
     func LoadItems() {
         // Validate username and password in the database, if true, send the username to the home page
     }
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homesegue", let destinationVC = segue.destination as? HomeViewController {
+            destinationVC.user = Username.text ?? "" // Pass the username to HomeViewController
+        }
+    }
+
 }
