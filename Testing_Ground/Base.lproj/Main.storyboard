@@ -449,7 +449,7 @@
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="4O5-VK-X7b" kind="show" id="G5W-C6-n7G"/>
+                                    <segue destination="bB7-xn-OZl" kind="show" id="W0D-2F-S2x"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diet: Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upb-cS-fwP">
@@ -999,7 +999,7 @@
                     <navigationItem key="navigationItem" title="Symptom Score" id="4jY-V8-jJm">
                         <barButtonItem key="rightBarButtonItem" title="Results" style="plain" id="OHb-aN-Wx5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="835-dR-OoH">
-                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <rect key="frame" x="290" y="4.6666666666666679" width="87" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
@@ -1015,7 +1015,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="db4-PS-S9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6218" y="1244"/>
+            <point key="canvasLocation" x="6250" y="1208"/>
         </scene>
         <!--QualityofLifeViewController-->
         <scene sceneID="6fk-Op-5z4">
@@ -1066,7 +1066,7 @@
                     <navigationItem key="navigationItem" title="Quality of Life" id="5OS-AS-0Gr">
                         <barButtonItem key="rightBarButtonItem" title="Results" style="plain" id="ehQ-L7-yiI">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3EW-Tr-hKo">
-                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <rect key="frame" x="290" y="4.6666666666666679" width="87" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
@@ -1323,7 +1323,7 @@
         <!--What is EOE-->
         <scene sceneID="pzv-Iq-V4Q">
             <objects>
-                <viewController title="WhatIsEOEViewController" id="ym0-er-mGI" userLabel="What is EOE" customClass="WhatIsEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatIsEOEViewController" title="WhatIsEOEViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ym0-er-mGI" userLabel="What is EOE" customClass="WhatIsEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zut-bs-M0m" customClass="WhatisEOEViewController">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1374,7 +1374,7 @@
         <!--How is it Diagnosed-->
         <scene sceneID="hhf-E4-kCE">
             <objects>
-                <viewController title="SignInViewController" id="4Rl-zd-NgE" userLabel="How is it Diagnosed" customClass="HowItsDiagnosedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HowItsDiagnosedViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Rl-zd-NgE" userLabel="How is it Diagnosed" customClass="HowItsDiagnosedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Quy-g8-edR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1425,7 +1425,7 @@
         <!--How is it Treated-->
         <scene sceneID="Q3T-af-e2q">
             <objects>
-                <viewController title="SignInViewController" id="NMk-Rm-Zdu" userLabel="How is it Treated" customClass="HowItsTreatedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HowItsTreatedViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NMk-Rm-Zdu" userLabel="How is it Treated" customClass="HowItsTreatedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pii-tV-RXh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1469,7 +1469,7 @@
         <!--Who is Affected-->
         <scene sceneID="gOV-1V-SmU">
             <objects>
-                <viewController id="dX1-vT-guO" userLabel="Who is Affected" customClass="WhoIsAffectedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhoIsAffectedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dX1-vT-guO" userLabel="Who is Affected" customClass="WhoIsAffectedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2KW-tX-Xrd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1514,7 +1514,7 @@
         <!--What Are Symptoms-->
         <scene sceneID="Kfg-hT-eLK">
             <objects>
-                <viewController title="SignInViewController" id="2lP-cm-MnA" userLabel="What Are Symptoms" customClass="WhatAreSymptomsViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatAreSymptomsViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2lP-cm-MnA" userLabel="What Are Symptoms" customClass="WhatAreSymptomsViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4NM-ox-Dcq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1565,7 +1565,7 @@
         <!--What Causes EOE-->
         <scene sceneID="V42-cc-i9r">
             <objects>
-                <viewController title="SignInViewController" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatCausesEOEViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="PYa-Ys-ZQw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1883,7 +1883,7 @@
         <!--More Info-->
         <scene sceneID="oDe-iT-s4u">
             <objects>
-                <viewController title="SignInViewController" id="YXR-7B-oXq" userLabel="More Info" customClass="MoreInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreInfoViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YXR-7B-oXq" userLabel="More Info" customClass="MoreInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PB5-pU-ggK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1916,7 +1916,7 @@
         <!--EGID Info-->
         <scene sceneID="Baq-kK-GdJ">
             <objects>
-                <viewController title="SignInViewController" id="AFc-WF-Ew6" userLabel="EGID Info" customClass="EGIDInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EGIDInfoViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AFc-WF-Ew6" userLabel="EGID Info" customClass="EGIDInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VeH-EX-7hP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2204,6 +2204,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6D-Lc-QBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="484.73282442748092" y="804.92957746478874"/>
+        </scene>
+        <!--Education-->
+        <scene sceneID="7gu-pt-Vk6">
+            <objects>
+                <viewController storyboardIdentifier="EducationViewController" title="EducationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bB7-xn-OZl" userLabel="Education" customClass="EducationViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YD5-tv-2Q5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RbQ-9b-A4l"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EOE Education" id="iVu-9m-Xbj">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="N2G-BL-k1S"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDJ-26-fyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3779" y="1208"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

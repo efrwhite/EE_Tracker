@@ -6,3 +6,87 @@
 //
 
 import Foundation
+import UIKit
+
+class EducationViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let buttonTitles = [
+            "What is EOE?",
+            "How is it Diagnosed?",
+            "How is it Treated?",
+            "Who is Affected?",
+            "What are Symptoms?",
+            "What Causes EOE?",
+            "EGID Information",
+            "Where Can I Find More Information?"
+        ]
+
+        var previousButton: UIButton?
+        let headerHeight: CGFloat = 100
+        let spacing: CGFloat = 24 
+
+        for title in buttonTitles {
+            let button = UIButton()
+            button.setTitle(title, for: .normal)
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = UIColor(red: 57.0/255.0, green: 67.0/255.0, blue: 144.0/255.0, alpha: 1)
+            
+           
+            button.layer.cornerRadius = 10
+            button.layer.masksToBounds = true
+            
+            button.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(button)
+
+            NSLayoutConstraint.activate([
+                button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+                button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            button.heightAnchor.constraint(equalToConstant: 40),
+                button.widthAnchor.constraint(equalToConstant: 350),
+            ])
+
+            if let previousButton = previousButton {
+                button.topAnchor.constraint(equalTo: previousButton.bottomAnchor, constant: spacing).isActive = true
+            } else {
+                button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: headerHeight + spacing).isActive = true
+            }
+
+            previousButton = button
+
+            // Connect each button to its corresponding segue
+            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+        }
+    }
+
+    @objc func buttonTapped(_ sender: UIButton) {
+        var destinationViewController: UIViewController?
+
+        switch sender.titleLabel?.text {
+        case "What is EOE?":
+            destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WhatIsEOEViewController")
+        case "How is it Diagnosed?":
+            destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HowItsDiagnosedViewController")
+        case "How is it Treated?":
+            destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HowItsTreatedViewController")
+        case "Who is Affected?":
+            destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WhoIsAffectedViewController")
+        case "What are Symptoms?":
+            destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WhatAreSymptomsViewController")
+        case "What Causes EOE?":
+            destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WhatCausesEOEViewController")
+        case "EGID Information":
+            destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EGIDInfoViewController")
+        case "Where Can I Find More Information?":
+            destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MoreInfoViewController")
+        default:
+            break
+        }
+
+        if let destinationVC = destinationViewController {
+            self.navigationController?.pushViewController(destinationVC, animated: true)
+        }
+    }
+}
