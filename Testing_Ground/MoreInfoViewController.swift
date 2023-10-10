@@ -4,7 +4,7 @@
 //
 //  Created by Vivek Vangala on 7/10/23.
 //
-//this is something i'm changing
+
 import Foundation
 import UIKit
 
@@ -13,7 +13,7 @@ class MoreInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let _: CGFloat = 40.0 //
+        let _: CGFloat = 40.0 
         let buttonWidth: CGFloat = 320.0 
         
         let naspghanButton = UIButton(type: .system)

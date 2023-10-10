@@ -449,7 +449,7 @@
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="4O5-VK-X7b" kind="show" id="G5W-C6-n7G"/>
+                                    <segue destination="bB7-xn-OZl" kind="show" id="W0D-2F-S2x"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diet: Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upb-cS-fwP">
@@ -986,7 +986,7 @@
                     <navigationItem key="navigationItem" title="Symptom Score" id="4jY-V8-jJm">
                         <barButtonItem key="rightBarButtonItem" title="Results" style="plain" id="OHb-aN-Wx5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="835-dR-OoH">
-                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <rect key="frame" x="290" y="4.6666666666666679" width="87" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
@@ -1002,7 +1002,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="db4-PS-S9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6218" y="1244"/>
+            <point key="canvasLocation" x="6250" y="1208"/>
         </scene>
         <!--QualityofLifeViewController-->
         <scene sceneID="6fk-Op-5z4">
@@ -1040,7 +1040,7 @@
                     <navigationItem key="navigationItem" title="Quality of Life" id="5OS-AS-0Gr">
                         <barButtonItem key="rightBarButtonItem" title="Results" style="plain" id="ehQ-L7-yiI">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3EW-Tr-hKo">
-                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <rect key="frame" x="290" y="4.6666666666666679" width="87" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
@@ -1107,210 +1107,10 @@
             </objects>
             <point key="canvasLocation" x="7596.1832061068699" y="765.49295774647896"/>
         </scene>
-        <!--Education-->
-        <scene sceneID="2V2-XX-oxE">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vV5-i7-B9C" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="MedicalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4O5-VK-X7b" userLabel="Education" customClass="MedicalViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jSh-FU-Ksc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2l-sY-xid">
-                                <rect key="frame" x="118" y="124" width="168" height="39"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5v-A7-Pgt">
-                                <rect key="frame" x="16" y="616" width="363" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="jSj-Yw-v8L"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="EGID Information" cornerStyle="medium">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="AFc-WF-Ew6" kind="show" id="Dex-fB-KRq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPy-5V-jVQ">
-                                <rect key="frame" x="15" y="541" width="363" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="363" id="750-99-hId"/>
-                                    <constraint firstAttribute="height" constant="50" id="cLQ-iq-MEE"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="What Causes EoE?" cornerStyle="medium">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="GpN-11-xz6" kind="show" id="olh-eB-AgU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ok-aP-CRv">
-                                <rect key="frame" x="15" y="471" width="363" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="363" id="Guh-ja-6oL"/>
-                                    <constraint firstAttribute="height" constant="50" id="dnR-w9-Bfp"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="What are Symptoms?" cornerStyle="medium">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="2lP-cm-MnA" kind="show" id="Cet-l2-MyR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntS-Cs-qE2">
-                                <rect key="frame" x="15" y="401" width="363" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="9Q5-DI-run"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="KaI-hW-97m"/>
-                                    <constraint firstAttribute="width" constant="363" id="rtM-1s-zeg"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Who is Affected?" cornerStyle="medium">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="dX1-vT-guO" kind="show" id="idC-jg-jbF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSZ-tp-IB7">
-                                <rect key="frame" x="15" y="333" width="363" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="1Nc-N4-Pyv"/>
-                                    <constraint firstAttribute="width" constant="363" id="qFK-7D-kgt"/>
-                                    <constraint firstAttribute="height" constant="50" id="xRQ-Ol-eM7"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="zgU-4a-mqL"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="How is it Treated?" cornerStyle="medium">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NMk-Rm-Zdu" kind="show" id="xrC-Vi-GGp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSb-SD-v0e">
-                                <rect key="frame" x="15" y="260" width="362" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="77e-GE-r9z"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="m0J-aJ-N8S"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="How is it Diagnosed?" cornerStyle="medium">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="4Rl-zd-NgE" kind="show" id="SuT-Zq-jIG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-9V-FRw">
-                                <rect key="frame" x="15" y="187" width="363" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="RDn-nE-5I7"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="yWm-LT-mSt"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="What is EoE?" cornerStyle="medium">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="ym0-er-mGI" kind="show" id="nUt-lH-5u6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY0-sO-SMx">
-                                <rect key="frame" x="16" y="678" width="363" height="50"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Where Can I Find More Information?" cornerStyle="medium">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="2" bottom="0.0" trailing="2"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="YXR-7B-oXq" kind="show" id="HFj-rn-Xz3"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Nj5-fd-ala"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="1Ok-aP-CRv" firstAttribute="top" secondItem="ntS-Cs-qE2" secondAttribute="bottom" constant="25" id="3BI-NP-OaJ"/>
-                            <constraint firstItem="ntS-Cs-qE2" firstAttribute="leading" secondItem="1Ok-aP-CRv" secondAttribute="leading" id="4yU-AQ-5pP"/>
-                            <constraint firstItem="1Ok-aP-CRv" firstAttribute="top" secondItem="ntS-Cs-qE2" secondAttribute="bottom" constant="23" id="6eU-x6-BQ0"/>
-                            <constraint firstItem="HSb-SD-v0e" firstAttribute="leading" secondItem="jSZ-tp-IB7" secondAttribute="leading" id="8D7-5q-1s9"/>
-                            <constraint firstItem="Nj5-fd-ala" firstAttribute="trailing" secondItem="N2l-sY-xid" secondAttribute="trailing" constant="107" id="CHB-lC-5Hv"/>
-                            <constraint firstItem="HSb-SD-v0e" firstAttribute="trailing" secondItem="jSh-FU-Ksc" secondAttribute="trailingMargin" id="GoB-3T-Nd2"/>
-                            <constraint firstItem="1Ok-aP-CRv" firstAttribute="top" secondItem="ntS-Cs-qE2" secondAttribute="bottom" constant="30" id="H2V-bt-Huv"/>
-                            <constraint firstItem="Nj5-fd-ala" firstAttribute="bottom" secondItem="YY0-sO-SMx" secondAttribute="bottom" constant="69" id="HWT-th-SRU"/>
-                            <constraint firstItem="3RK-9V-FRw" firstAttribute="leading" secondItem="Nj5-fd-ala" secondAttribute="leading" constant="15" id="J9q-bU-nSD"/>
-                            <constraint firstItem="h5v-A7-Pgt" firstAttribute="top" secondItem="bPy-5V-jVQ" secondAttribute="bottom" constant="25" id="LH1-UJ-PT8"/>
-                            <constraint firstItem="h5v-A7-Pgt" firstAttribute="trailing" secondItem="YY0-sO-SMx" secondAttribute="trailing" id="Nn0-CO-jNW"/>
-                            <constraint firstItem="1Ok-aP-CRv" firstAttribute="top" secondItem="ntS-Cs-qE2" secondAttribute="bottom" constant="25" id="PoG-Dv-zMc"/>
-                            <constraint firstItem="1Ok-aP-CRv" firstAttribute="top" secondItem="ntS-Cs-qE2" secondAttribute="bottom" constant="20" id="Q1T-Aw-syW"/>
-                            <constraint firstItem="h5v-A7-Pgt" firstAttribute="leading" secondItem="jSh-FU-Ksc" secondAttribute="leadingMargin" id="TaW-t0-F45"/>
-                            <constraint firstItem="1Ok-aP-CRv" firstAttribute="leading" secondItem="bPy-5V-jVQ" secondAttribute="leading" id="VCi-9F-i7J"/>
-                            <constraint firstItem="3RK-9V-FRw" firstAttribute="centerX" secondItem="jSh-FU-Ksc" secondAttribute="centerX" id="VuJ-cD-jim"/>
-                            <constraint firstItem="3RK-9V-FRw" firstAttribute="top" secondItem="N2l-sY-xid" secondAttribute="bottom" constant="24" id="Vv0-OU-IfM"/>
-                            <constraint firstItem="bPy-5V-jVQ" firstAttribute="top" secondItem="1Ok-aP-CRv" secondAttribute="bottom" constant="20" id="Y7b-la-hW1"/>
-                            <constraint firstItem="1Ok-aP-CRv" firstAttribute="top" secondItem="ntS-Cs-qE2" secondAttribute="bottom" constant="25" id="ghl-ND-Fjq"/>
-                            <constraint firstItem="jSZ-tp-IB7" firstAttribute="top" secondItem="HSb-SD-v0e" secondAttribute="bottom" constant="23" id="lhc-9Y-wNE"/>
-                            <constraint firstItem="YY0-sO-SMx" firstAttribute="top" secondItem="h5v-A7-Pgt" secondAttribute="bottom" constant="33" id="lkx-Pf-5Ne"/>
-                            <constraint firstItem="ntS-Cs-qE2" firstAttribute="top" secondItem="jSZ-tp-IB7" secondAttribute="bottom" constant="23" id="nGT-Nf-RQl"/>
-                            <constraint firstItem="1Ok-aP-CRv" firstAttribute="top" secondItem="ntS-Cs-qE2" secondAttribute="bottom" constant="25" id="ood-nG-Hos"/>
-                            <constraint firstItem="3RK-9V-FRw" firstAttribute="centerX" secondItem="jSZ-tp-IB7" secondAttribute="centerX" id="rHO-cB-hhe"/>
-                            <constraint firstItem="bPy-5V-jVQ" firstAttribute="trailing" secondItem="h5v-A7-Pgt" secondAttribute="trailing" id="sWl-p6-63P"/>
-                            <constraint firstItem="ntS-Cs-qE2" firstAttribute="centerY" secondItem="jSh-FU-Ksc" secondAttribute="centerY" id="uDh-Js-yJr"/>
-                            <constraint firstItem="jSZ-tp-IB7" firstAttribute="leading" secondItem="ntS-Cs-qE2" secondAttribute="leading" id="uQb-gC-Ppd"/>
-                            <constraint firstItem="h5v-A7-Pgt" firstAttribute="leading" secondItem="YY0-sO-SMx" secondAttribute="leading" id="vM2-SF-EvK"/>
-                            <constraint firstItem="N2l-sY-xid" firstAttribute="leading" secondItem="Nj5-fd-ala" secondAttribute="leading" constant="118" id="vZj-aM-AB8"/>
-                            <constraint firstItem="HSb-SD-v0e" firstAttribute="top" secondItem="3RK-9V-FRw" secondAttribute="bottom" constant="23" id="xt8-fT-GLs"/>
-                            <constraint firstItem="bPy-5V-jVQ" firstAttribute="top" secondItem="1Ok-aP-CRv" secondAttribute="bottom" constant="25" id="y44-Ze-j0f"/>
-                            <constraint firstItem="N2l-sY-xid" firstAttribute="top" secondItem="Nj5-fd-ala" secondAttribute="top" constant="21" id="zsY-eG-04L"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="EOE Education" id="1BM-8V-eGM"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="3751.9083969465646" y="1207.7464788732395"/>
-        </scene>
         <!--What is EOE-->
         <scene sceneID="pzv-Iq-V4Q">
             <objects>
-                <viewController title="WhatIsEOEViewController" id="ym0-er-mGI" userLabel="What is EOE" customClass="WhatIsEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatIsEOEViewController" title="WhatIsEOEViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ym0-er-mGI" userLabel="What is EOE" customClass="WhatIsEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zut-bs-M0m" customClass="WhatisEOEViewController">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1361,7 +1161,7 @@
         <!--How is it Diagnosed-->
         <scene sceneID="hhf-E4-kCE">
             <objects>
-                <viewController title="SignInViewController" id="4Rl-zd-NgE" userLabel="How is it Diagnosed" customClass="HowItsDiagnosedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HowItsDiagnosedViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Rl-zd-NgE" userLabel="How is it Diagnosed" customClass="HowItsDiagnosedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Quy-g8-edR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1412,7 +1212,7 @@
         <!--How is it Treated-->
         <scene sceneID="Q3T-af-e2q">
             <objects>
-                <viewController title="SignInViewController" id="NMk-Rm-Zdu" userLabel="How is it Treated" customClass="HowItsTreatedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HowItsTreatedViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NMk-Rm-Zdu" userLabel="How is it Treated" customClass="HowItsTreatedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pii-tV-RXh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1456,7 +1256,7 @@
         <!--Who is Affected-->
         <scene sceneID="gOV-1V-SmU">
             <objects>
-                <viewController id="dX1-vT-guO" userLabel="Who is Affected" customClass="WhoIsAffectedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhoIsAffectedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dX1-vT-guO" userLabel="Who is Affected" customClass="WhoIsAffectedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2KW-tX-Xrd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1501,7 +1301,7 @@
         <!--What Are Symptoms-->
         <scene sceneID="Kfg-hT-eLK">
             <objects>
-                <viewController title="SignInViewController" id="2lP-cm-MnA" userLabel="What Are Symptoms" customClass="WhatAreSymptomsViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatAreSymptomsViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2lP-cm-MnA" userLabel="What Are Symptoms" customClass="WhatAreSymptomsViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4NM-ox-Dcq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1552,7 +1352,7 @@
         <!--What Causes EOE-->
         <scene sceneID="V42-cc-i9r">
             <objects>
-                <viewController title="SignInViewController" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatCausesEOEViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="PYa-Ys-ZQw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1870,7 +1670,7 @@
         <!--More Info-->
         <scene sceneID="oDe-iT-s4u">
             <objects>
-                <viewController title="SignInViewController" id="YXR-7B-oXq" userLabel="More Info" customClass="MoreInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreInfoViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YXR-7B-oXq" userLabel="More Info" customClass="MoreInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PB5-pU-ggK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1903,7 +1703,7 @@
         <!--EGID Info-->
         <scene sceneID="Baq-kK-GdJ">
             <objects>
-                <viewController title="SignInViewController" id="AFc-WF-Ew6" userLabel="EGID Info" customClass="EGIDInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EGIDInfoViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AFc-WF-Ew6" userLabel="EGID Info" customClass="EGIDInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VeH-EX-7hP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2199,6 +1999,25 @@
             </objects>
             <point key="canvasLocation" x="484.73282442748092" y="804.92957746478874"/>
         </scene>
+        <!--Education-->
+        <scene sceneID="7gu-pt-Vk6">
+            <objects>
+                <viewController storyboardIdentifier="EducationViewController" title="EducationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bB7-xn-OZl" userLabel="Education" customClass="EducationViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YD5-tv-2Q5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RbQ-9b-A4l"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EOE Education" id="iVu-9m-Xbj">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="N2G-BL-k1S"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDJ-26-fyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3779" y="1208"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Wft-8I-mqj"/>
@@ -2207,8 +2026,6 @@
     <resources>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="person.fill.badge.plus" catalog="system" width="128" height="126"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
