@@ -30,6 +30,9 @@
 		A40883972AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40883962AD1E0C2006F3871 /* ParentTableViewCell.swift */; };
 		A40883982AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40883962AD1E0C2006F3871 /* ParentTableViewCell.swift */; };
 		A40883992AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40883962AD1E0C2006F3871 /* ParentTableViewCell.swift */; };
+		A408839B2AD41C5F006F3871 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408839A2AD41C5F006F3871 /* ScoreViewController.swift */; };
+		A408839C2AD41C5F006F3871 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408839A2AD41C5F006F3871 /* ScoreViewController.swift */; };
+		A408839D2AD41C5F006F3871 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408839A2AD41C5F006F3871 /* ScoreViewController.swift */; };
 		A40988822A1BF9CC0041BBC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988812A1BF9CC0041BBC7 /* AppDelegate.swift */; };
 		A40988842A1BF9CC0041BBC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988832A1BF9CC0041BBC7 /* SceneDelegate.swift */; };
 		A40988862A1BF9CC0041BBC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988852A1BF9CC0041BBC7 /* ViewController.swift */; };
@@ -40,9 +43,6 @@
 		A409889C2A1BF9CD0041BBC7 /* Testing_GroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A409889B2A1BF9CD0041BBC7 /* Testing_GroundTests.swift */; };
 		A40988A62A1BF9CD0041BBC7 /* Testing_GroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988A52A1BF9CD0041BBC7 /* Testing_GroundUITests.swift */; };
 		A40988A82A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988A72A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift */; };
-		A424E0372AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */; };
-		A424E0382AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */; };
-		A424E0392AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */; };
 		A424E03F2AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */; };
 		A424E0402AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */; };
 		A424E0412AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */; };
@@ -101,6 +101,7 @@
 		A408838E2AD1E0BA006F3871 /* ProfilesTableviewcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilesTableviewcell.xib; sourceTree = "<group>"; };
 		A408838F2AD1E0BA006F3871 /* ProfilesTableviewcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTableviewcell.swift; sourceTree = "<group>"; };
 		A40883962AD1E0C2006F3871 /* ParentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
+		A408839A2AD41C5F006F3871 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		A409887E2A1BF9CC0041BBC7 /* Testing_Ground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testing_Ground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40988812A1BF9CC0041BBC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A40988832A1BF9CC0041BBC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +116,6 @@
 		A40988A12A1BF9CD0041BBC7 /* Testing_GroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Testing_GroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40988A52A1BF9CD0041BBC7 /* Testing_GroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing_GroundUITests.swift; sourceTree = "<group>"; };
 		A40988A72A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing_GroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTableviewcell.swift; sourceTree = "<group>"; };
 		A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParentTableViewCell.xib; sourceTree = "<group>"; };
 		A492679C2AB8DB2700D0AD4C /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
@@ -203,12 +203,12 @@
 				A4CA1A492A3654F200C94D2C /* QualityofLifeViewController.swift */,
 				A4CA1A572A3654FC00C94D2C /* QualityofLifeTableViewCell.swift */,
 				A4CA1A552A3654FB00C94D2C /* QualityofLifeTableViewCell.xib */,
-				A424E0352AD1DD97000AA275 /* ProfilesTableviewcell.swift */,
 				A408838F2AD1E0BA006F3871 /* ProfilesTableviewcell.swift */,
 				A40883962AD1E0C2006F3871 /* ParentTableViewCell.swift */,
 				A4CA1A472A3654F200C94D2C /* SymptomViewController.swift */,
 				A4CA1A562A3654FC00C94D2C /* SymptomTableViewCell.swift */,
 				A4CA1A542A3654FB00C94D2C /* SymptomTableViewCell.xib */,
+				A408839A2AD41C5F006F3871 /* ScoreViewController.swift */,
 				8AC78C282A5C8FC300A4C3FA /* EducationViewController.swift */,
 				8AC78C2A2A5C9A5B00A4C3FA /* MoreInfoViewController.swift */,
 				8AE1831A2A658D86006517D0 /* WhoIsAffectedViewController.swift */,
@@ -397,6 +397,7 @@
 				A4CA1A512A3654F200C94D2C /* QualityofLifeViewController.swift in Sources */,
 				8AE1831D2A658DA6006517D0 /* WhatAreSymptomsViewController.swift in Sources */,
 				A4CA1A5B2A3654FC00C94D2C /* QualityofLifeTableViewCell.swift in Sources */,
+				A408839B2AD41C5F006F3871 /* ScoreViewController.swift in Sources */,
 				A4CA1A5A2A3654FC00C94D2C /* SymptomTableViewCell.swift in Sources */,
 				A40988862A1BF9CC0041BBC7 /* ViewController.swift in Sources */,
 				8AE1831B2A658D86006517D0 /* WhoIsAffectedViewController.swift in Sources */,
@@ -404,7 +405,6 @@
 				8AC78C1D2A507BF100A4C3FA /* ExtraViewController.swift in Sources */,
 				8AC78C272A58892700A4C3FA /* Diet6ViewController.swift in Sources */,
 				A4CA1A522A3654F200C94D2C /* ProfileViewController.swift in Sources */,
-				A424E0372AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */,
 				A40883972AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */,
 				8AC78C1F2A58831000A4C3FA /* Diet1ViewController.swift in Sources */,
 				A492679F2AB8DB3300D0AD4C /* ChildViewController.swift in Sources */,
@@ -427,10 +427,10 @@
 			files = (
 				A4B3FCDF2AB244150021EAB6 /* HomeProfilePageViewController.swift in Sources */,
 				A424E0402AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */,
-				A424E0382AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */,
 				A409889C2A1BF9CD0041BBC7 /* Testing_GroundTests.swift in Sources */,
 				A40883942AD1E0BA006F3871 /* ProfilesTableviewcell.swift in Sources */,
 				A40883982AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */,
+				A408839C2AD41C5F006F3871 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,10 +440,10 @@
 			files = (
 				A40988A82A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift in Sources */,
 				A424E0412AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */,
-				A424E0392AD1DD97000AA275 /* ProfilesTableviewcell.swift in Sources */,
 				A40988A62A1BF9CD0041BBC7 /* Testing_GroundUITests.swift in Sources */,
 				A40883952AD1E0BA006F3871 /* ProfilesTableviewcell.swift in Sources */,
 				A40883992AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */,
+				A408839D2AD41C5F006F3871 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

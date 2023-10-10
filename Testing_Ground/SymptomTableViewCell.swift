@@ -1,25 +1,37 @@
-//
-//  SymTableViewCell.swift
-//  Testing_Ground
-//
-//  Created by Brianna Boston on 6/7/23.
-//
-
 import UIKit
 
-class SymTableViewCell: UITableViewCell {
+protocol SymTableViewCellDelegate: AnyObject {
+    func didEditTextField(_ text: String, atIndexPath indexPath: IndexPath)
+}
 
-    @IBOutlet weak var questionlabel: UILabel!
-    @IBOutlet weak var ratingtext: UITextField!
+class SymTableViewCell: UITableViewCell, UITextFieldDelegate {
+    
+    @IBOutlet weak var questionLabel: UILabel!
+
+    @IBOutlet weak var Ratingtext: UITextField!
+    
+    weak var delegate: SymTableViewCellDelegate?
+    var indexPath: IndexPath?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+        if let ratingText = Ratingtext {
+            ratingText.delegate = self
+        }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    func setupTextField() {
+        Ratingtext.isHidden = false
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let text = textField.text, let indexPath = indexPath {
+            delegate?.didEditTextField(text, atIndexPath: indexPath)
+        }
+    }
 }
