@@ -24,6 +24,12 @@ class ParentViewController: UIViewController {
         super.viewDidLoad()
         print("You are on Parent")
         print(user)
+        if isEditingParent {
+                    // Load and populate data for editing
+                    if let parentName = parentName, let usernamep = usernamep {
+                        loadParentProfile(parentName: parentName, usernamep: usernamep)
+                    }
+                }
         // Gesture to collapse/dismiss keyboard on click outside
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
@@ -61,6 +67,10 @@ class ParentViewController: UIViewController {
             // You are adding a new profile
             // Create a new 'Parent' entity and set its attributes
             createNewParentProfile(lastName: lastName, firstName: firstName, userName: userName)
+           
+            showAlert(title: "Success", message: "Profile created successfully.")
+                    // Clear text fields and reset isAddingParent
+    
             // Trigger the unwind segue to go back to HomeProfileViewController
             // Send the username back to HomeProfilePageViewController
             // Perform the unwind segue to go back to HomeProfilePageViewController
@@ -94,6 +104,8 @@ class ParentViewController: UIViewController {
                }
         }
     }
+    
+    
     @IBAction func unwindToHomeProfilePage(_ sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? ChildViewController {
             // Pass the username back to HomeProfilePageViewController
@@ -146,7 +158,27 @@ class ParentViewController: UIViewController {
         saveContext()
         showAlert(title: "Success", message: "Profile created successfully.")
     }
-
+    func loadParentProfile(parentName: String, usernamep: String) {
+            let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "username == %@ AND firstname == %@", usernamep, parentName)
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if let profile = results.first {
+                    parentLastName.text = profile.lastname
+                    parentFirstName.text = profile.firstname
+                    
+                    if let imageData = profile.image {
+                        parentimage.image = UIImage(data: imageData)
+                    }
+                } else {
+                    showAlert(title: "Profile Not Found", message: "No matching profile found.")
+                }
+            } catch {
+                print("Error fetching entity: \(error)")
+                showAlert(title: "Error", message: "Failed to load profile.")
+            }
+        }
     
     // Helper method to save the Core Data context
     func saveContext() {

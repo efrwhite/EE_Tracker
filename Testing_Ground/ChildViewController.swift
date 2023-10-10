@@ -23,7 +23,16 @@ class ChildViewController: UIViewController {
         super.viewDidLoad()
         print("You are on Child")
         print("Child User: ", user)
+        print("Child name:", childName)
+        usernamec = user
         setPopupButton()
+        // Check if it's editing mode and load data if needed
+                if isEditingChild {
+                    // Load and populate data for editing
+                    if let childName = childName, let usernamec = usernamec {
+                        loadChildProfile(childName: childName, usernamec: usernamec)
+                    }
+                }
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
@@ -39,10 +48,10 @@ class ChildViewController: UIViewController {
         let optional2 = { (action: UIAction) in print(action.title) }
 
         diettype.menu = UIMenu(children:[
-            UIAction(title: "Diet1", state: .on, handler: optional2),
-            UIAction(title: "Diet2", handler: optional2),
-            UIAction(title: "Diet4", handler: optional2),
-            UIAction(title: "Diet6", handler: optional2)
+            UIAction(title: "Diet 1", state: .on, handler: optional2),
+            UIAction(title: "Diet 2", handler: optional2),
+            UIAction(title: "Diet 4", handler: optional2),
+            UIAction(title: "Diet 6", handler: optional2)
         ])
 
         diettype.showsMenuAsPrimaryAction = true
@@ -62,10 +71,11 @@ class ChildViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         if isEditingChild {
             print("editing created")
-            editChildProfile()
+           
             // Get a reference to the HomeProfileViewController
             // Send the username back to HomeProfilePageViewController
             // Get a reference to the HomeProfilePageViewController
+            updateChildProfile()
             if let homeProfileViewController = navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
                     homeProfileViewController.user = user
                     navigationController?.popToViewController(homeProfileViewController, animated: true)
@@ -88,19 +98,62 @@ class ChildViewController: UIViewController {
         }
     }
    
-    func editChildProfile() {
+  
+    func loadChildProfile(childName: String, usernamec: String) {
+            let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "username == %@ AND firstName == %@", usernamec, childName)
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if let profile = results.first {
+                    childFirstName.text = profile.firstName
+                    lastName.text = profile.lastName
+                    // Populate other fields as needed (diettype, gender, etc.)
+                    // ...
+                    if let imageData = profile.image {
+                        childimage.image = UIImage(data: imageData)
+                    }
+                } else {
+                    showAlert(title: "Profile Not Found", message: "No matching profile found.")
+                }
+            } catch {
+                print("Error fetching entity: \(error)")
+                showAlert(title: "Error", message: "Failed to load profile.")
+            }
+        }
+    
+    func updateChildProfile() {
         // Handle editing an existing profile
         if let profileToEdit = editingChildProfile {
             profileToEdit.firstName = childFirstName.text!
             profileToEdit.lastName = lastName.text!
             profileToEdit.username = user
+            profileToEdit.diettype = diettype.currentTitle ?? ""
+            
             // Update other profile properties as needed
             // ...
+
+            if let selectedImage = childimage.image {
+                // Convert the UIImage to Data
+                if let imageData = selectedImage.pngData() {
+                    profileToEdit.image = imageData
+                } else {
+                    print("Error converting image to data.")
+                }
+            } else {
+                print("No image selected.")
+            }
+            
+            // Save the changes
             saveContext()
-            print("Profile updated successfully.")
+            showAlert(title: "Success", message: "Profile updated successfully.")
         }
     }
-
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
     func addChildProfile() {
         // Handle adding a new profile
         let newChild = Child(context: context)
