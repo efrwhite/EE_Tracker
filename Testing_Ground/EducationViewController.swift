@@ -14,7 +14,7 @@ class EducationViewController: UIViewController {
         super.viewDidLoad()
 
         let buttonTitles = [
-            "What is EOE?",
+            "What is Eosinophilic Esophagitis (EOE)?",
             "How is it Diagnosed?",
             "How is it Treated?",
             "Who is Affected?",
