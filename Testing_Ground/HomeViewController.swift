@@ -58,6 +58,10 @@ class HomeViewController: UIViewController {
             displayVC.user = user
             print("User value sent to HomeProfilePage: \(user)")
         }
+        else if segue.identifier == "plansegue", let displayVC = segue.destination as? YourPlanViewController{
+            displayVC.user = user
+            print("User value sent to Plan: ", user)
+        }
     }
     
     func fetchMainChildProfile(username: String) -> Child? {

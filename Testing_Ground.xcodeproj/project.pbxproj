@@ -58,12 +58,16 @@
 		A4CA1A4F2A3654F200C94D2C /* SymptomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A472A3654F200C94D2C /* SymptomViewController.swift */; };
 		A4CA1A502A3654F200C94D2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A482A3654F200C94D2C /* LoginViewController.swift */; };
 		A4CA1A512A3654F200C94D2C /* QualityofLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A492A3654F200C94D2C /* QualityofLifeViewController.swift */; };
-		A4CA1A522A3654F200C94D2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A4A2A3654F200C94D2C /* ProfileViewController.swift */; };
 		A4CA1A532A3654F200C94D2C /* AddMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A4B2A3654F200C94D2C /* AddMedicationViewController.swift */; };
 		A4CA1A582A3654FC00C94D2C /* SymptomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CA1A542A3654FB00C94D2C /* SymptomTableViewCell.xib */; };
 		A4CA1A592A3654FC00C94D2C /* QualityofLifeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CA1A552A3654FB00C94D2C /* QualityofLifeTableViewCell.xib */; };
 		A4CA1A5A2A3654FC00C94D2C /* SymptomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A562A3654FC00C94D2C /* SymptomTableViewCell.swift */; };
 		A4CA1A5B2A3654FC00C94D2C /* QualityofLifeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA1A572A3654FC00C94D2C /* QualityofLifeTableViewCell.swift */; };
+		A4CADC092AE0B57400F1FB67 /* medicationprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CADC082AE0B57400F1FB67 /* medicationprofile.swift */; };
+		A4CADC0B2AE0C37D00F1FB67 /* YourPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CADC0A2AE0C37D00F1FB67 /* YourPlanViewController.swift */; };
+		A4CADC0D2AE2AF0800F1FB67 /* AllergenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CADC0C2AE2AF0800F1FB67 /* AllergenViewController.swift */; };
+		A4CADC0F2AE2AFDD00F1FB67 /* AddAllergenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CADC0E2AE2AFDD00F1FB67 /* AddAllergenViewController.swift */; };
+		A4CADC112AE2B6F600F1FB67 /* DietPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CADC102AE2B6F600F1FB67 /* DietPlanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,12 +130,16 @@
 		A4CA1A472A3654F200C94D2C /* SymptomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomViewController.swift; sourceTree = "<group>"; };
 		A4CA1A482A3654F200C94D2C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A4CA1A492A3654F200C94D2C /* QualityofLifeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QualityofLifeViewController.swift; sourceTree = "<group>"; };
-		A4CA1A4A2A3654F200C94D2C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A4CA1A4B2A3654F200C94D2C /* AddMedicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicationViewController.swift; sourceTree = "<group>"; };
 		A4CA1A542A3654FB00C94D2C /* SymptomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SymptomTableViewCell.xib; sourceTree = "<group>"; };
 		A4CA1A552A3654FB00C94D2C /* QualityofLifeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QualityofLifeTableViewCell.xib; sourceTree = "<group>"; };
 		A4CA1A562A3654FC00C94D2C /* SymptomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomTableViewCell.swift; sourceTree = "<group>"; };
 		A4CA1A572A3654FC00C94D2C /* QualityofLifeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QualityofLifeTableViewCell.swift; sourceTree = "<group>"; };
+		A4CADC082AE0B57400F1FB67 /* medicationprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medicationprofile.swift; sourceTree = "<group>"; };
+		A4CADC0A2AE0C37D00F1FB67 /* YourPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourPlanViewController.swift; sourceTree = "<group>"; };
+		A4CADC0C2AE2AF0800F1FB67 /* AllergenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergenViewController.swift; sourceTree = "<group>"; };
+		A4CADC0E2AE2AFDD00F1FB67 /* AddAllergenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAllergenViewController.swift; sourceTree = "<group>"; };
+		A4CADC102AE2B6F600F1FB67 /* DietPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +205,6 @@
 				A4CA1A462A3654F200C94D2C /* SignUpViewController.swift */,
 				A4CA1A442A3654F200C94D2C /* HomeViewController.swift */,
 				A4B3FCDD2AB244150021EAB6 /* HomeProfilePageViewController.swift */,
-				A4CA1A4A2A3654F200C94D2C /* ProfileViewController.swift */,
 				A492679C2AB8DB2700D0AD4C /* ParentViewController.swift */,
 				A492679E2AB8DB3300D0AD4C /* ChildViewController.swift */,
 				A4CA1A492A3654F200C94D2C /* QualityofLifeViewController.swift */,
@@ -213,6 +220,7 @@
 				8AC78C2A2A5C9A5B00A4C3FA /* MoreInfoViewController.swift */,
 				8AE1831A2A658D86006517D0 /* WhoIsAffectedViewController.swift */,
 				8AE1831C2A658DA6006517D0 /* WhatAreSymptomsViewController.swift */,
+				A4CADC082AE0B57400F1FB67 /* medicationprofile.swift */,
 				A4CA1A4B2A3654F200C94D2C /* AddMedicationViewController.swift */,
 				8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */,
 				8AE183202A658DD9006517D0 /* WhatIsEOEViewController.swift */,
@@ -224,6 +232,10 @@
 				8AC78C242A58891600A4C3FA /* Diet4ViewController.swift */,
 				8AC78C262A58892700A4C3FA /* Diet6ViewController.swift */,
 				A408838E2AD1E0BA006F3871 /* ProfilesTableviewcell.xib */,
+				A4CADC0A2AE0C37D00F1FB67 /* YourPlanViewController.swift */,
+				A4CADC0C2AE2AF0800F1FB67 /* AllergenViewController.swift */,
+				A4CADC0E2AE2AFDD00F1FB67 /* AddAllergenViewController.swift */,
+				A4CADC102AE2B6F600F1FB67 /* DietPlanViewController.swift */,
 			);
 			path = Testing_Ground;
 			sourceTree = "<group>";
@@ -388,10 +400,13 @@
 				A424E03F2AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */,
 				A4CA1A4C2A3654F200C94D2C /* HomeViewController.swift in Sources */,
 				8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */,
+				A4CADC0B2AE0C37D00F1FB67 /* YourPlanViewController.swift in Sources */,
 				8AE183272A658E3E006517D0 /* EGIDInfoViewController.swift in Sources */,
 				A4CA1A4E2A3654F200C94D2C /* SignUpViewController.swift in Sources */,
 				8AC78C2B2A5C9A5B00A4C3FA /* MoreInfoViewController.swift in Sources */,
+				A4CADC0D2AE2AF0800F1FB67 /* AllergenViewController.swift in Sources */,
 				8AE1831F2A658DBD006517D0 /* WhatCausesEOEViewController.swift in Sources */,
+				A4CADC092AE0B57400F1FB67 /* medicationprofile.swift in Sources */,
 				8AE183232A658DF1006517D0 /* HowItsDiagnosedViewController.swift in Sources */,
 				8AC78C292A5C8FC300A4C3FA /* EducationViewController.swift in Sources */,
 				A4CA1A512A3654F200C94D2C /* QualityofLifeViewController.swift in Sources */,
@@ -400,16 +415,17 @@
 				A408839B2AD41C5F006F3871 /* ScoreViewController.swift in Sources */,
 				A4CA1A5A2A3654FC00C94D2C /* SymptomTableViewCell.swift in Sources */,
 				A40988862A1BF9CC0041BBC7 /* ViewController.swift in Sources */,
+				A4CADC0F2AE2AFDD00F1FB67 /* AddAllergenViewController.swift in Sources */,
 				8AE1831B2A658D86006517D0 /* WhoIsAffectedViewController.swift in Sources */,
 				A40988822A1BF9CC0041BBC7 /* AppDelegate.swift in Sources */,
 				8AC78C1D2A507BF100A4C3FA /* ExtraViewController.swift in Sources */,
 				8AC78C272A58892700A4C3FA /* Diet6ViewController.swift in Sources */,
-				A4CA1A522A3654F200C94D2C /* ProfileViewController.swift in Sources */,
 				A40883972AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */,
 				8AC78C1F2A58831000A4C3FA /* Diet1ViewController.swift in Sources */,
 				A492679F2AB8DB3300D0AD4C /* ChildViewController.swift in Sources */,
 				A4B3FCDE2AB244150021EAB6 /* HomeProfilePageViewController.swift in Sources */,
 				A4CA1A532A3654F200C94D2C /* AddMedicationViewController.swift in Sources */,
+				A4CADC112AE2B6F600F1FB67 /* DietPlanViewController.swift in Sources */,
 				8AC78C212A5888D200A4C3FA /* Diet2ViewController.swift in Sources */,
 				A40988842A1BF9CC0041BBC7 /* SceneDelegate.swift in Sources */,
 				A409888C2A1BF9CC0041BBC7 /* Testing_Ground.xcdatamodeld in Sources */,
