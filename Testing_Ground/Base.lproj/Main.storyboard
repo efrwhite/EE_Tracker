@@ -473,7 +473,7 @@
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="N9R-bu-SFT" kind="show" id="00j-dR-LXR"/>
+                                    <segue destination="N9R-bu-SFT" kind="show" identifier="plansegue" id="00j-dR-LXR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVx-1D-VJ7">
@@ -601,7 +601,7 @@
         <!--Your Plan-->
         <scene sceneID="m1C-BT-Qvt">
             <objects>
-                <viewController id="N9R-bu-SFT" sceneMemberID="viewController">
+                <viewController id="N9R-bu-SFT" customClass="YourPlanViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sbk-c7-IJk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -634,6 +634,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="98B-nN-68K" kind="show" id="C8e-7m-jFE"/>
@@ -653,9 +654,10 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="1m8-Tx-fd1" kind="show" id="lm1-N8-bMD"/>
+                                    <segue destination="1m8-Tx-fd1" kind="show" identifier="medsegue" id="lm1-N8-bMD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpi-cq-Xi8">
@@ -672,9 +674,10 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="bD2-Pn-bSY" kind="show" id="oZD-md-3GJ"/>
+                                    <segue destination="bD2-Pn-bSY" kind="show" identifier="dietsegue" id="oZD-md-3GJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -690,10 +693,118 @@
         <!--Diet Plan-->
         <scene sceneID="NWF-1a-4z4">
             <objects>
-                <viewController storyboardIdentifier="DietPlanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bD2-Pn-bSY" userLabel="Diet Plan" customClass="DietPlanViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bD2-Pn-bSY" userLabel="Diet Plan" customClass="DietPlanViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Nz-aM-9SN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vr-1x-f9Z">
+                                <rect key="frame" x="77" y="231" width="230" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Diet 1">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Tcd-mR-9cd" kind="show" id="zvJ-ow-XMr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-zf-WjA">
+                                <rect key="frame" x="78" y="469" width="230" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Diet 6">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="HJa-D5-KIS" kind="show" id="sM9-TO-avv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZU-VG-Tgr">
+                                <rect key="frame" x="78" y="315" width="229" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Diet 2">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="EYQ-ma-Vv2" kind="show" id="vQx-ik-gNf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bb-Xq-R2I">
+                                <rect key="frame" x="77" y="390" width="230" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Diet 4">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="hYS-cf-Jp0" kind="show" id="NWN-mT-sCS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8M-4j-aRi">
+                                <rect key="frame" x="77" y="557" width="230" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Allergies">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="uDD-ZN-BbB" kind="show" identifier="allergysegue" id="6XK-bc-0md"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpj-Hl-Ttc">
+                                <rect key="frame" x="175" y="162" width="36" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="R9Y-hh-39x"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -706,8 +817,9 @@
         <!--Medications-->
         <scene sceneID="ZWm-hb-6G6">
             <objects>
-                <viewController title="Add Medications" id="1m8-Tx-fd1" userLabel="Medications" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uzp-WJ-mWw">
+                <viewController id="1m8-Tx-fd1" userLabel="Medications" customClass="MedicationProfile" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uzp-WJ-mWw" customClass="Medicationprofile">
+
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -716,60 +828,38 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" editingAccessoryType="detailButton" id="jI6-tD-e4Q">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="currentcell1" editingAccessoryType="detailButton" id="jI6-tD-e4Q">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jI6-tD-e4Q" id="9c9-Jg-u7l">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medication Currently Taking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAz-em-Pfg">
-                                                    <rect key="frame" x="33" y="11" width="213" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVJ-UE-Ouy">
-                                                    <rect key="frame" x="309" y="4" width="54" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1m8-Tx-fd1" id="Guf-5l-xhA"/>
+                                    <outlet property="delegate" destination="1m8-Tx-fd1" id="OXC-Qb-OSm"/>
+                                </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oNZ-CW-RhT">
                                 <rect key="frame" x="0.0" y="455" width="393" height="397"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" editingAccessoryType="detailButton" id="uyO-ap-6nd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="discontinuedcell" editingAccessoryType="detailButton" id="uyO-ap-6nd">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uyO-ap-6nd" id="yMD-cv-slM">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discontinued Medication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E54-yK-go1">
-                                                    <rect key="frame" x="33" y="11" width="189" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWR-DU-Bm4">
-                                                    <rect key="frame" x="309" y="4" width="54" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1m8-Tx-fd1" id="zmZ-NY-EEs"/>
+                                    <outlet property="delegate" destination="1m8-Tx-fd1" id="YwI-Ab-CHX"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UaS-Uh-cB7"/>
@@ -778,10 +868,14 @@
                     <navigationItem key="navigationItem" title="Add Medications" id="HE9-QT-nuU">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Y8H-3f-vUw">
                             <connections>
-                                <segue destination="0M3-RU-tSB" kind="show" id="m6u-KY-MVn"/>
+                                <segue destination="0M3-RU-tSB" kind="show" identifier="addmedsegue" id="m6u-KY-MVn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currentTableView" destination="xCn-dt-j37" id="iwy-yC-KOj"/>
+                        <outlet property="discontinuedTableView" destination="oNZ-CW-RhT" id="gtP-cK-FXW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msN-6Z-UbD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -803,7 +897,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fq9-IR-upr">
-                                <rect key="frame" x="107" y="249" width="117" height="34"/>
+                                <rect key="frame" x="151" y="249" width="117" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="amount">
@@ -824,7 +918,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="medication name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64j-Ze-CY6">
-                                <rect key="frame" x="107" y="187" width="233" height="34"/>
+                                <rect key="frame" x="144" y="187" width="233" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -853,9 +947,12 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButton:" destination="0M3-RU-tSB" eventType="touchUpInside" id="LnZ-Ue-zna"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3R-Ah-yQG">
-                                <rect key="frame" x="252" y="249" width="88" height="34"/>
+                                <rect key="frame" x="289" y="249" width="88" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <menu key="menu" id="MgC-mm-vha">
                                     <children>
@@ -884,27 +981,27 @@
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amP-VT-ejT">
-                                <rect key="frame" x="16" y="349" width="81" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discontinue the medication?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amP-VT-ejT">
+                                <rect key="frame" x="7" y="415" width="243" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="84D-fj-6q8">
-                                <rect key="frame" x="145" y="334" width="227" height="65"/>
+                            <datePicker hidden="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="84D-fj-6q8">
+                                <rect key="frame" x="183" y="446" width="227" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQv-9K-0Qe">
-                                <rect key="frame" x="16" y="406" width="91" height="23"/>
+                                <rect key="frame" x="16" y="357" width="91" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5FE-3C-UIy">
-                                <rect key="frame" x="206" y="400" width="104" height="34"/>
+                                <rect key="frame" x="222" y="346" width="118" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="how often?">
@@ -925,15 +1022,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="24e-8l-mIk">
-                                <rect key="frame" x="145" y="284" width="227" height="65"/>
+                                <rect key="frame" x="166" y="284" width="227" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                             </datePicker>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWJ-NF-AA4">
+                                <rect key="frame" x="273" y="411" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </switch>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iq9-cd-4xU">
+                                <rect key="frame" x="17" y="468" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gQD-qF-hf6"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Medication" id="DHh-OT-nHQ"/>
+                    <connections>
+                        <outlet property="enableEndDateSwitch" destination="QWJ-NF-AA4" id="k1U-Ze-17k"/>
+                        <outlet property="enddate" destination="84D-fj-6q8" id="tSV-3p-fCN"/>
+                        <outlet property="frequency" destination="5FE-3C-UIy" id="pxy-sG-0BI"/>
+                        <outlet property="hiddenlabel" destination="iq9-cd-4xU" id="Wa2-xy-H8G"/>
+                        <outlet property="medicationamount" destination="Fq9-IR-upr" id="Xoe-oC-Ba6"/>
+                        <outlet property="medicationname" destination="64j-Ze-CY6" id="poe-UV-54n"/>
+                        <outlet property="medicationunits" destination="f3R-Ah-yQG" id="ze0-A1-LYs"/>
+                        <outlet property="notes" destination="tnR-Hp-5tg" id="4Cz-cZ-G41"/>
+                        <outlet property="startdate" destination="24e-8l-mIk" id="dnD-9v-zki"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcZ-fs-924" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1400,7 +1520,7 @@
         <!--Add Allergies-->
         <scene sceneID="DLu-xK-4vS">
             <objects>
-                <viewController id="uDD-ZN-BbB" sceneMemberID="viewController">
+                <viewController id="uDD-ZN-BbB" customClass="AddAllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2n4-2Q-Zk7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1410,27 +1530,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" editingAccessoryType="detailButton" id="cIj-mU-ilP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="currentcell" editingAccessoryType="detailButton" id="cIj-mU-ilP">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cIj-mU-ilP" id="bqT-O6-7aq">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IGE Allergies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cf-BO-Jjw">
-                                                    <rect key="frame" x="33" y="11" width="96" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-9l-dBQ">
-                                                    <rect key="frame" x="309" y="4" width="54" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -1440,27 +1545,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" editingAccessoryType="detailButton" id="YtV-Db-rOx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notcurrentcell" editingAccessoryType="detailButton" id="YtV-Db-rOx">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YtV-Db-rOx" id="F4b-Ah-8U7">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EOE Allergies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2T5-A5-bBd">
-                                                    <rect key="frame" x="33" y="11" width="102" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPy-N6-a8Y">
-                                                    <rect key="frame" x="309" y="4" width="54" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -1472,10 +1562,14 @@
                     <navigationItem key="navigationItem" title="Add Allergies" id="3fs-HM-kKP">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="BBN-bc-kic">
                             <connections>
-                                <segue destination="hMn-Qp-YDe" kind="show" id="SkF-XX-wZP"/>
+                                <segue destination="hMn-Qp-YDe" kind="show" identifier="addAsegue" id="SkF-XX-wZP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currentAllergen" destination="ysm-c3-GC0" id="GSy-7j-9su"/>
+                        <outlet property="discontinuedAllergen" destination="yXq-mg-9aC" id="Uya-pY-tJq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Phr-K6-p5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1484,32 +1578,26 @@
         <!--Allergies -->
         <scene sceneID="aoE-he-YPi">
             <objects>
-                <viewController storyboardIdentifier="AllergiesViewController" title="AllergiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hMn-Qp-YDe" userLabel="Allergies " customClass="AllergiesViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2Ty-p7-eQ3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                <viewController id="hMn-Qp-YDe" userLabel="Allergies " customClass="AllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Ty-p7-eQ3" customClass="Aller">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1U-n4-jGR">
-                                <rect key="frame" x="16" y="194" width="74" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXH-pa-8Sg">
-                                <rect key="frame" x="16" y="305" width="89" height="23"/>
+                                <rect key="frame" x="6" y="305" width="89" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="squ-WM-jne">
-                                <rect key="frame" x="173" y="283" width="227" height="65"/>
+                                <rect key="frame" x="150" y="284" width="227" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m6u-7a-tkC">
-                                <rect key="frame" x="196" y="187" width="181" height="34"/>
+                                <rect key="frame" x="201" y="188" width="123" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1529,27 +1617,27 @@
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="is3-DI-iTG">
-                                <rect key="frame" x="16" y="349" width="81" height="23"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="is3-DI-iTG">
+                                <rect key="frame" x="16" y="390" width="81" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Fz0-xC-trk">
-                                <rect key="frame" x="173" y="327" width="227" height="65"/>
+                            <datePicker hidden="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Fz0-xC-trk">
+                                <rect key="frame" x="150" y="369" width="227" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBo-Ob-Bj4">
-                                <rect key="frame" x="15" y="399" width="91" height="23"/>
+                                <rect key="frame" x="6" y="253" width="91" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="How Often?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Jp-BQ-8YI">
-                                <rect key="frame" x="244" y="392" width="104" height="34"/>
+                                <rect key="frame" x="201" y="242" width="123" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1570,12 +1658,45 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButton:" destination="hMn-Qp-YDe" eventType="touchUpInside" id="4ty-Ns-jgc"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergy Discontinued?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujB-bI-1R5">
+                                <rect key="frame" x="6" y="351" width="191" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZS-ue-RIZ">
+                                <rect key="frame" x="268" y="347" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="hMn-Qp-YDe" eventType="valueChanged" id="JU1-Mo-QOs"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1U-n4-jGR">
+                                <rect key="frame" x="6" y="194" width="74" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dQs-8w-HFY"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Allergies" id="lPz-pY-3eI"/>
+                    <connections>
+                        <outlet property="allergyname" destination="m6u-7a-tkC" id="VEP-q0-XzM"/>
+                        <outlet property="endDateLabel" destination="is3-DI-iTG" id="pPT-MB-TCL"/>
+                        <outlet property="enddate" destination="Fz0-xC-trk" id="T7c-qK-PvY"/>
+                        <outlet property="frequency" destination="9Jp-BQ-8YI" id="3a4-Jx-zN1"/>
+                        <outlet property="notes" destination="JQm-O3-0Tn" id="0Og-Jd-iKL"/>
+                        <outlet property="offonswitch" destination="gZS-ue-RIZ" id="Lcw-wc-guX"/>
+                        <outlet property="startdate" destination="squ-WM-jne" id="3Ni-nv-dAz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dit-B9-fFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2011,7 +2132,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDJ-26-fyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3799" y="1208"/>
+
+            <point key="canvasLocation" x="3787" y="1208"/>
+
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
