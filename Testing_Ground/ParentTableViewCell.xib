@@ -17,18 +17,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="422" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLv-6B-OWP">
-                        <rect key="frame" x="275" y="5" width="55" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Add"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liC-Ap-dpM">
-                        <rect key="frame" x="338" y="5" width="54" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jec-Jx-voG">
                         <rect key="frame" x="20" y="3" width="211" height="39"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -36,11 +24,20 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liC-Ap-dpM">
+                        <rect key="frame" x="340" y="8" width="54" height="28"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="liC-Ap-dpM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6hS-o8-0rQ"/>
+                    <constraint firstAttribute="trailing" secondItem="liC-Ap-dpM" secondAttribute="trailing" constant="28" id="Z5B-Tw-zPV"/>
+                    <constraint firstAttribute="bottom" secondItem="liC-Ap-dpM" secondAttribute="bottom" constant="8" id="kJl-JB-OTZ"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="addbutton" destination="pLv-6B-OWP" id="swO-XB-ngF"/>
                 <outlet property="editbutton" destination="liC-Ap-dpM" id="eNE-bw-3jA"/>
                 <outlet property="parentname" destination="Jec-Jx-voG" id="jhI-Hp-ra0"/>
             </connections>

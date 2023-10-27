@@ -15,12 +15,15 @@ class SymTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        // Use optional binding to safely set the delegate
         if let ratingText = Ratingtext {
             ratingText.delegate = self
         }
 
-    }
     
+    }
+
     func setupTextField() {
         Ratingtext.isHidden = false
     }

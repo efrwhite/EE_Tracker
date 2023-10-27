@@ -819,7 +819,6 @@
             <objects>
                 <viewController id="1m8-Tx-fd1" userLabel="Medications" customClass="MedicationProfile" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uzp-WJ-mWw" customClass="Medicationprofile">
-
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1098,7 +1097,7 @@
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="Savebutton:" destination="nCO-9r-d3V" eventType="touchUpInside" id="RUn-kW-sGQ"/>
+                                    <action selector="savebutton:" destination="nCO-9r-d3V" eventType="touchUpInside" id="kHD-Ml-f3e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1119,7 +1118,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="xXF-yN-OHE" id="KKZ-KC-mMx"/>
+                        <outlet property="symptomtableview" destination="xXF-yN-OHE" id="AhY-5s-imf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="db4-PS-S9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1581,7 +1580,6 @@
                 <viewController id="hMn-Qp-YDe" userLabel="Allergies " customClass="AllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ty-p7-eQ3" customClass="Aller">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXH-pa-8Sg">
@@ -1920,7 +1918,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68N-oc-hgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7798" y="-37"/>
+            <point key="canvasLocation" x="8273" y="149"/>
         </scene>
         <!--Child Profile-->
         <scene sceneID="ETq-UD-pOw">
@@ -2105,7 +2103,7 @@
                         <viewLayoutGuide key="safeArea" id="WUB-mt-3Z9"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="f4Q-9o-q6N"/>
+                    <navigationItem key="navigationItem" title="Profiles" id="f4Q-9o-q6N"/>
                     <connections>
                         <outlet property="tableView" destination="Qbj-11-VBa" id="xaz-iq-HsA"/>
                         <outlet property="tableView2" destination="jRR-nN-EUb" id="wJp-fV-Dmt"/>
@@ -2132,13 +2130,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDJ-26-fyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="3787" y="1208"/>
-
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="18g-oF-war"/>
+        <segue reference="Wft-8I-mqj"/>
         <segue reference="XAM-dJ-Uju"/>
     </inferredMetricsTieBreakers>
     <resources>

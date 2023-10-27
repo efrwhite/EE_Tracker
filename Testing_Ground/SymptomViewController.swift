@@ -1,191 +1,172 @@
-
 import UIKit
 import CoreData
 
-struct SymptomResponse {
-    var date: Date?
-    var response: String?
-}
-
-
 class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SymTableViewCellDelegate, UITextFieldDelegate {
-    var symptomResponses: [SymptomResponse] = []
+    var symptomResponses: [Symptom] = []
     var userInputArray: [String?] = []
-   
+    var userInputArrayQuestions: [String?] = [] // For questions
+    var userInputArrayYesNo: [String?] = []    // For yes/no questions
+
     let questions = [
-         "Visit date",
-         "How often does your child have trouble swallowing?",
-         "How bad is your child's trouble swallowing?",
-         "How often does your child feel like food gets stuck in their throat or chest?",
-         "How bad is it when your child gets food stuck in their throat or chest?",
-         "How often does your child need to drink a lot to help them swallow food?",
-         "How bad is it when your child needs to drink a lot to help them swallow food?",
-         "How often does your child eat less than others?",
-         "How often does your child need more time to eat than other?",
-         "How often does your child have heartburn?",
-         "How bad is your child's heartburn (burning in the chest, mouth, or throat)?",
-         "How often does your child have food come back up in their throat when eating?",
-         "How bad is it when food comes back up in your child's throat?",
-         "How often does your child vomit (throw up)?",
-         "How bad is your child's vomiting?",
-         "How often does your child feel nauseous (feel like throwing up, but doesn't)?",
-         "How bad is your child's nausea (feel like throwing up, but doesn't)?",
-         "How often does your child have chest pain, ache, or hurt?",
-         "How bad is your child's chest pain, ache, or hurt?",
-         "How often does your child have stomach aches or belly aches?",
-         "How bad are your child's stomach aches or belly aches?"
-     ]
-     
-     let yesnoquestions = [
-         "Feeding is difficult/refuses food?",
-         "Slow eating",
-         "Prolonged chewing",
-         "Swallowing liquids with solid food",
-         "Avoidance of solid food",
-         "Retching",
-         "Choking",
-         "Food Impaction",
-         "Hoarseness",
-         "Constipation",
-         "Poor weight gain",
-         "Diarrhea"
-     ]
+           "Visit date",
+           "How often does your child have trouble swallowing?",
+           "How bad is your child's trouble swallowing?",
+           "How often does your child feel like food gets stuck in their throat or chest?",
+           "How bad is it when your child gets food stuck in their throat or chest?",
+           "How often does your child need to drink a lot to help them swallow food?",
+           "How bad is it when your child needs to drink a lot to help them swallow food?",
+           "How often does your child eat less than others?",
+           "How often does your child need more time to eat than other?",
+           "How often does your child have heartburn?",
+           "How bad is your child's heartburn (burning in the chest, mouth, or throat)?",
+           "How often does your child have food come back up in their throat when eating?",
+           "How bad is it when food comes back up in your child's throat?",
+           "How often does your child vomit (throw up)?",
+           "How bad is your child's vomiting?",
+           "How often does your child feel nauseous (feel like throwing up, but doesn't)?",
+           "How bad is your child's nausea (feel like throwing up, but doesn't)?",
+           "How often does your child have chest pain, ache, or hurt?",
+           "How bad is your child's chest pain, ache, or hurt?",
+           "How often does your child have stomach aches or belly aches?",
+           "How bad are your child's stomach aches or belly aches?"
+       ]
+       
+       let yesnoquestions = [
+           "Feeding is difficult/refuses food?",
+           "Slow eating",
+           "Prolonged chewing",
+           "Swallowing liquids with solid food",
+           "Avoidance of solid food",
+           "Retching",
+           "Choking",
+           "Food Impaction",
+           "Hoarseness",
+           "Constipation",
+           "Poor weight gain",
+           "Diarrhea"
+       ]
+    let sections = [
+        """
+For the following questions insert a value 0-5 based on the ranking below\n
+Pain Scale: 0-5
+
+""",
+        """
+For the following questions insert a value 0 or 1 based on the ranking below\n
+0 = No
+1 = Yes
+"""
+    ]
+    @IBOutlet weak var symptomtableview: UITableView!
     
-   
-    @IBOutlet weak var tableView: UITableView!
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        tableView.register(UINib(nibName: "SymptomTableViewCell", bundle: nil), forCellReuseIdentifier: "SymptomTableViewCell")
-        tableView.rowHeight = UITableView.automaticDimension
-          tableView.estimatedRowHeight = 65
-
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return questions.count
-        } else {
-            return yesnoquestions.count + 1 // Add 1 for the header
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section == 0 ? "0-5 Rating Questions" : "Yes/No Questions"
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SymptomTableViewCell", for: indexPath) as! SymTableViewCell
-        
-        // Set the indexPath property for the cell
-        cell.indexPath = indexPath
-        
-        // Configure the cell's Ratingtext field
-        cell.Ratingtext.delegate = self
-        
-        if indexPath.section == 1 {
-            // Check if it's a "Yes/No Questions" cell
-            if indexPath.row < yesnoquestions.count {
-                cell.Ratingtext.placeholder = "Yes/No" // Set placeholder for Yes/No questions
-                cell.questionLabel.text = yesnoquestions[indexPath.row]
-            } else {
-                cell.Ratingtext.placeholder = "0-5"
-                cell.questionLabel.text = "" // Empty label for this case
-            }
-        } else {
-            // Configure cells in the "0-5 Rating Questions" section
-            cell.Ratingtext.placeholder = "0-5" // Set placeholder for 0-5 rating questions
-            
-            // Set the text for the "0-5 Rating Questions" here
-            if indexPath.row < questions.count {
-                cell.questionLabel.text = questions[indexPath.row]
-            } else {
-                cell.questionLabel.text = "" // Empty label for this case
-            }
-        }
-        
-        // Allow the label text to wrap to multiple lines
-        cell.questionLabel.numberOfLines = 0
-        cell.questionLabel.lineBreakMode = .byWordWrapping
-        
-        // Set the text field's text to the user's input if it exists
-        if indexPath.row < userInputArray.count, let userInput = userInputArray[indexPath.row] {
-            cell.Ratingtext.text = userInput
-        } else {
-            cell.Ratingtext.text = "" // Clear the text field if there's no user input
-        }
-        
-        return cell
-    }
-
-
-
-
-
-    @IBAction func Savebutton(_ sender: Any) {
-        saveResponsesToCoreData()
-    }
-    func saveResponsesToCoreData() {
+    @IBAction func savebutton(_ sender: UIButton) {
         let currentDate = Date() // Get the current date
-
-        for (index, response) in symptomResponses.enumerated() {
-            let symptomEntity = NSEntityDescription.entity(forEntityName: "Symptom", in: context)
-            let symptomObject = NSManagedObject(entity: symptomEntity!, insertInto: context)
-
-            symptomObject.setValue(currentDate, forKey: "date") // Set the current date
-            symptomObject.setValue(response.response, forKey: "response")
-
-            if index < questions.count {
-                let question = questions[index]
-                symptomObject.setValue(question, forKey: "question") // Set the question
+        
+        for (index, response) in userInputArrayQuestions.enumerated() {
+            if let response = response {
+                saveSymptom(date: currentDate, response: response, question: questions[index])
             }
+        }
 
-            // Save the managed object context
+        for (index, response) in userInputArrayYesNo.enumerated() {
+            if let response = response {
+                saveSymptom(date: currentDate, response: response, question: yesnoquestions[index])
+            }
+        }
+    }
+
+    func saveSymptom(date: Date, response: String, question: String) {
+        // Get the managed object context from the app delegate
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let context = appDelegate.persistentContainer.viewContext
+
+            // Create a new Symptom managed object
+            let newSymptom = Symptom(context: context)
+            
+            // Set the properties of the Symptom object
+            newSymptom.date = date // Use the provided date
+            newSymptom.response = response
+            newSymptom.question = question
+            
+            // Save the context to persist the Symptom object
             do {
                 try context.save()
+                print("Symptom saved successfully")
             } catch {
-                print("Error saving response: \(error)")
+                print("Failed to save Symptom: \(error)")
             }
         }
     }
 
-
-
-
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if let text = textField.text, let cell = textField.superview?.superview as? SymTableViewCell,
-           let indexPath = tableView.indexPath(for: cell) {
-            createSymptomResponseIfNeeded(atIndexPath: indexPath)
-            symptomResponses[indexPath.row].response = text
+    override func viewDidLoad() {
+            super.viewDidLoad()
+
+            symptomtableview.register(UINib(nibName: "SymptomTableViewCell", bundle: nil), forCellReuseIdentifier: "SymptomTableViewCell")
+            symptomtableview.rowHeight = UITableView.automaticDimension
+            symptomtableview.delegate = self
+            symptomtableview.dataSource = self
+            symptomtableview.estimatedRowHeight = 65
+
+            // Initialize userInputArrayQuestions and userInputArrayYesNo with nil values
+            userInputArrayQuestions = Array(repeating: nil, count: questions.count)
+            userInputArrayYesNo = Array(repeating: nil, count: yesnoquestions.count)
         }
+
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return sections.count
+        }
+
+        func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+            return sections[section]
+        }
+
+       
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let headerText = sections[section]
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 17) // Adjust font size as needed
+        label.numberOfLines = 0
+        label.text = headerText
+        label.lineBreakMode = .byWordWrapping
+
+        let maxSize = CGSize(width: tableView.frame.size.width - 32, height: CGFloat.greatestFiniteMagnitude)
+        let expectedSize = label.sizeThatFits(maxSize)
+
+        return max(40, expectedSize.height + 32) // Ensure it's at least 40, your desired minimum height
     }
 
-
-
-    func createSymptomResponseIfNeeded(atIndexPath indexPath: IndexPath) {
-        // Ensure that the array has enough elements for the current index
-        while symptomResponses.count <= indexPath.row {
-            symptomResponses.append(SymptomResponse(date: nil, response: nil))
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            if section == 0 {
+                return questions.count
+            } else {
+                return yesnoquestions.count
+            }
         }
-    }
 
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SymptomTableViewCell", for: indexPath) as! SymTableViewCell
 
-    
-    func didEditTextField(_ text: String, atIndexPath indexPath: IndexPath) {
-        if indexPath.row < symptomResponses.count {
-            symptomResponses[indexPath.row].response = text
+            if indexPath.section == 0 {
+                cell.questionLabel.text = questions[indexPath.row]
+                cell.Ratingtext.text = userInputArrayQuestions[indexPath.row]
+            } else if indexPath.section == 1 {
+                cell.questionLabel.text = yesnoquestions[indexPath.row]
+                cell.Ratingtext.text = userInputArrayYesNo[indexPath.row]
+            }
+
+            cell.delegate = self
+            cell.indexPath = indexPath
+
+            return cell
         }
-    }
 
-
+        // Implement the SymTableViewCellDelegate method
+        func didEditTextField(_ text: String, atIndexPath indexPath: IndexPath) {
+            if indexPath.section == 0 {
+                userInputArrayQuestions[indexPath.row] = text
+            } else if indexPath.section == 1 {
+                userInputArrayYesNo[indexPath.row] = text
+            }
+        }
 }
-

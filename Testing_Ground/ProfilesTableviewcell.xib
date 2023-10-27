@@ -25,28 +25,22 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-we-LIl">
-                        <rect key="frame" x="243" y="4" width="71" height="36"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="tintColor" red="0.22902172639999999" green="0.49006559900000002" blue="0.97767345179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Add" cornerStyle="large">
-                            <color key="baseForegroundColor" systemColor="tintColor"/>
-                        </buttonConfiguration>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-Q0-cNk">
-                        <rect key="frame" x="322" y="4" width="65" height="36"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-Q0-cNk">
+                        <rect key="frame" x="334.66666666666669" y="8" width="53.333333333333314" height="28"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Edit">
                             <color key="baseForegroundColor" systemColor="tintColor"/>
                         </buttonConfiguration>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="dsg-Q0-cNk" secondAttribute="trailing" constant="28" id="djc-5e-w0k"/>
+                    <constraint firstAttribute="bottom" secondItem="dsg-Q0-cNk" secondAttribute="bottom" constant="8" id="eJC-57-6Zg"/>
+                    <constraint firstItem="dsg-Q0-cNk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="vc3-7L-5kS"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="addbutton" destination="hdB-we-LIl" id="dyQ-Gq-usz"/>
                 <outlet property="editbutton" destination="dsg-Q0-cNk" id="oYA-jB-lxR"/>
                 <outlet property="namelabel" destination="z7g-Ii-0UI" id="m4u-Tc-JR9"/>
             </connections>
