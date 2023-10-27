@@ -78,6 +78,25 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
     }
     
     // MARK: - Table View Data Source and Delegate
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.frame = CGRect(x: 15, y: 0, width: tableView.frame.size.width - 30, height: 30)
+        
+        if tableView == currentTableView {
+            label.text = "Current Medications"
+        } else if tableView == discontinuedTableView {
+            label.text = "Discontinued Medications"
+        }
+        
+        headerView.addSubview(label)
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -92,8 +111,23 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         return 0
     }
     
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell: UITableViewCell
+//        if tableView == currentTableView {
+//            cell = tableView.dequeueReusableCell(withIdentifier: currentCellIdentifier, for: indexPath)
+//            cell.textLabel?.text = currentMedications[indexPath.row].medName
+//        } else if tableView == discontinuedTableView {
+//            cell = tableView.dequeueReusableCell(withIdentifier: discontinuedCellIdentifier, for: indexPath)
+//            cell.textLabel?.text = discontinuedMedications[indexPath.row].medName
+//        } else {
+//            cell = UITableViewCell()
+//        }
+//        
+//        return cell
+//    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
+        
         if tableView == currentTableView {
             cell = tableView.dequeueReusableCell(withIdentifier: currentCellIdentifier, for: indexPath)
             cell.textLabel?.text = currentMedications[indexPath.row].medName
@@ -104,13 +138,63 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
             cell = UITableViewCell()
         }
         
+        // Check if the edit button is already added, and if not, add it
+        if cell.contentView.subviews.first(where: { $0 is UIButton }) == nil {
+            // Calculate the X position based on the cell's width and button width
+            let buttonWidth: CGFloat = 50
+            let xPosition = cell.contentView.frame.size.width - buttonWidth - 10 // 10 is the right margin
+
+            // Set up the frame for the edit button
+            let editButton = UIButton(type: .system)
+            editButton.setTitle("Edit", for: .normal)
+            editButton.frame = CGRect(x: xPosition, y: 5, width: buttonWidth, height: 30)
+            editButton.addTarget(self, action: #selector(editButtonTapped), for: .touchUpInside)
+            
+            cell.contentView.addSubview(editButton)
+        }
+        
         return cell
     }
-    
+
+
+    @objc func editButtonTapped(sender: UIButton) {
+        var selectedMedicationName: String?
+        
+        if let cell = sender.superview?.superview as? UITableViewCell, let indexPath = currentTableView.indexPath(for: cell) {
+            // Handle editing for the currentTableView
+            selectedMedicationName = currentMedications[indexPath.row].medName
+            // Implement the editing logic for the selected medication
+        } else if let cell = sender.superview?.superview as? UITableViewCell, let indexPath = discontinuedTableView.indexPath(for: cell) {
+            // Handle editing for the discontinuedTableView
+            selectedMedicationName = discontinuedMedications[indexPath.row].medName
+            // Implement the editing logic for the selected medication
+        }
+        
+        // Perform the segue and pass the isEdit boolean and selected medication name
+        performSegue(withIdentifier: "addmedsegue", sender: (true, selectedMedicationName))
+    }
+
+
+
+
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addmedsegue", let displayVC = segue.destination as? AddMedicationViewController {
             displayVC.user = user
+            
+            if let (isEdit, medicationName) = sender as? (Bool, String) {
+                displayVC.isEditMode = isEdit // Updated the property name
+                displayVC.medicationName = medicationName
+            } else {
+                displayVC.isEditMode = false
+                displayVC.medicationName = ""
+            }
+            
             displayVC.delegate = self
         }
     }
+
+
+
+
 }

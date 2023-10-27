@@ -19,7 +19,15 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
       
       let foodfeelingQ = [ "I worry about eating foods I'm allergic to or not supposed to eat","I feel mad (get upset) about not eating foods I am allergic to or not supposed to eat","I feel sad about not eating foods I am allergic to or not supposed to eat"]
     let sections = [
-        "Pain Scale:\n0 = pain\n1 = moderate pain\n2 = slight pain\n3 = barely pain\n4 = no pain",
+        """
+        For the following sections insert a value 0-5 based on the ranking below
+        Pain Scale:
+        0 = pain
+        1 = moderate pain
+        2 = slight pain
+        3 = barely pain
+        4 = no pain
+        """,
         "SYMPTOMS I",
         "SYMPTOMS II",
         "TREATMENT",
@@ -28,6 +36,7 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
         "FOOD AND EATING",
         "FOOD FEELINGS"
     ]
+
 
     var sectionData: [[String]] {
             return [
@@ -230,7 +239,7 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
 
         switch section {
         case 0:
-            label.text = "Pain Scale:\n0 = pain\n1 = moderate pain\n2 = slight pain\n3 = barely pain\n4 = no pain"
+            label.text = "For the following sections insert a value 0-5 based on the ranking below:\n\nPain Scale:\n0 = pain\n1 = moderate pain\n2 = slight pain\n3 = barely pain\n4 = no pain"
             label.font = UIFont.systemFont(ofSize: 14)
             label.textAlignment = .left
             label.numberOfLines = 0
