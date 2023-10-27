@@ -10,7 +10,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var Mobile: UITextField!
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var ConfirmPassword: UITextField!
-    
+   
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var receivedString = ""
     var parents = [Parent]()

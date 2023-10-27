@@ -65,7 +65,7 @@ class EducationViewController: UIViewController {
         var destinationViewController: UIViewController?
 
         switch sender.titleLabel?.text {
-        case "What is EOE?":
+        case "What is Eosinophilic Esophagitis (EOE)?":
             destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WhatIsEOEViewController")
         case "How is it Diagnosed?":
             destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HowItsDiagnosedViewController")
