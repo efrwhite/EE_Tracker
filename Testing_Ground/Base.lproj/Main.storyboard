@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrP-ae-Jgr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrP-ae-Jgr">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -203,7 +203,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Evy-te-cBa" secondAttribute="trailing" id="vaw-Sb-sAY"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="imageView:mm0-OS-dyI:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mm0-OS-dyI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="imageView:mm0-OS-dyI:image" translatesAutoresizingMaskIntoConstraints="NO" id="mm0-OS-dyI">
                                 <rect key="frame" x="358" y="138" width="20" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -229,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1vu-d6-CbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-779.38931297709917" y="764.78873239436621"/>
+            <point key="canvasLocation" x="-1963" y="723"/>
         </scene>
         <!--ParentViewController-->
         <scene sceneID="tAI-hE-Mwa">
@@ -369,11 +369,12 @@
                         <outlet property="parentLastName" destination="EOK-Ey-BCC" id="vel-6Z-ipd"/>
                         <outlet property="parentUserName" destination="6cI-hA-wjp" id="but-bT-IQs"/>
                         <outlet property="parentimage" destination="LmZ-CL-1BS" id="HbO-aD-dyT"/>
+                        <segue destination="Cwd-Je-hZs" kind="unwind" identifier="unwindToHomeProfilePageSegue" unwindAction="unwindToHomeProfilePage:" id="GhD-YY-ffD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iz0-rb-Hhl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38.931297709923662" y="1611.9718309859156"/>
+            <point key="canvasLocation" x="-320" y="805"/>
         </scene>
         <!--SignInViewController-->
         <scene sceneID="2Gk-9S-9d3">
@@ -528,7 +529,7 @@
                                             <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="SPM-L8-qId" kind="show" id="iHN-gt-7bE"/>
+                                            <segue destination="SPM-L8-qId" kind="show" identifier="profilessegue" id="iHN-gt-7bE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGD-x9-IqA">
@@ -938,7 +939,7 @@
         <!--Medications-->
         <scene sceneID="ZWm-hb-6G6">
             <objects>
-                <viewController title="Add Medications" id="1m8-Tx-fd1" userLabel="Medications" customClass="AddMedicationViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Medications" id="1m8-Tx-fd1" userLabel="Medications" customClass="MedicationProfile" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uzp-WJ-mWw" customClass="Medicationprofile">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -993,8 +994,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="currentTableView" destination="xCn-dt-j37" id="iwy-yC-KOj"/>
-                        <outlet property="discontinuedTableView" destination="oNZ-CW-RhT" id="gtP-cK-FXW"/>
+                        <outlet property="currentTableView" destination="xCn-dt-j37" id="t6n-uC-zVY"/>
+                        <outlet property="discontinuedTableView" destination="oNZ-CW-RhT" id="iS9-cb-wgU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msN-6Z-UbD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1579,7 +1580,7 @@
         <scene sceneID="V42-cc-i9r">
             <objects>
                 <viewController storyboardIdentifier="WhatCausesEOEViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="PYa-Ys-ZQw">
+                    <view key="view" contentMode="scaleToFill" id="PYa-Ys-ZQw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -2100,7 +2101,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveButton:" destination="7AB-bm-094" eventType="touchUpInside" id="5Gf-de-cJb"/>
-                                    <segue destination="CUC-Nl-vlO" kind="show" identifier="homeSegue" id="R3T-0P-bOg"/>
+                                    <segue destination="CUC-Nl-vlO" kind="show" identifier="homeSegue2" id="R3T-0P-bOg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fF-0Q-6sL">
@@ -2216,6 +2217,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6D-Lc-QBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Cwd-Je-hZs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="484.73282442748092" y="804.92957746478874"/>
         </scene>
@@ -2241,10 +2243,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Wft-8I-mqj"/>
-        <segue reference="XAM-dJ-Uju"/>
+        <segue reference="R3T-0P-bOg"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="imageView:mm0-OS-dyI:image" catalog="system" width="128" height="123">
+        <image name="imageView:mm0-OS-dyI:image" width="128" height="123">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBELDBscIRkmKywzNjlDS0xQU1UkbnVsbNcNDg8QERITFBUW
@@ -19198,7 +19200,7 @@ AAAAAAAAAA+Blg
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
