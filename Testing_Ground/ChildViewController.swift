@@ -193,11 +193,16 @@ class ChildViewController: UIViewController {
         view.endEditing(true)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "homeSegue", let displayVC = segue.destination as? HomeViewController {
+           if segue.identifier == "homesegue", let displayVC = segue.destination as? HomeViewController {
                // Pass any necessary data to HomeViewController if needed
                displayVC.user = user
                print("User value sent to HomeViewController: \(user)")
            }
+        if segue.identifier == "homeSegue2", let displayVC = segue.destination as? HomeViewController {
+            // Pass any necessary data to HomeViewController if needed
+            displayVC.user = user
+            print("User value sent to HomeViewController: \(user)")
+        }
        }
 }
 
