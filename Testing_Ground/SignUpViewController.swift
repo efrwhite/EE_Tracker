@@ -4,7 +4,7 @@ import CoreData
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var PasswordRequirements: UILabel!
+
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var Mobile: UITextField!
@@ -19,18 +19,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the text of the PasswordRequirements label
-        PasswordRequirements.text = "Password Requirements:\n- 7 Characters long\n- 1 Capital letter\n- 1 Symbol !@#$\n- 1 Number"
         
-        // Allow label to wrap to multiple lines
-        PasswordRequirements.numberOfLines = 0
-        PasswordRequirements.lineBreakMode = .byWordWrapping
-        
-        // Calculate the required size for the label
-        let requiredSize = PasswordRequirements.sizeThatFits(CGSize(width: PasswordRequirements.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
-        
-        // Update the label's frame to fit the content
-        PasswordRequirements.frame = CGRect(origin: PasswordRequirements.frame.origin, size: requiredSize)
+    
         
         // Set delegates for other text fields
         Password.delegate = self
