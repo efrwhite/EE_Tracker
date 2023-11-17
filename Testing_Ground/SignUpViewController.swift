@@ -84,6 +84,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "parentSegue", let displayVC = segue.destination as? ParentViewController {
             displayVC.user = receivedString
+            displayVC.usernamesup = Username.text!
         }
     }
     // Enter dismisses keyboard
