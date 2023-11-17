@@ -42,6 +42,7 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         // Reload table views to populate data
         tableView.reloadData()
         tableView2.reloadData()
+        print("Profile User: ", user)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -211,6 +212,10 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
             return []
         }
     }
+    @IBAction func unwindToHomeProfilePage(_ segue: UIStoryboardSegue) {
+        // Add any specific logic you need when unwinding
+    }
+
 
     func fetchParentProfiles(username: String) -> [Parent] {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
