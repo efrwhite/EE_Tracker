@@ -884,7 +884,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Cr-OU-k1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6148.8549618320612" y="-1123.2394366197184"/>
+            <point key="canvasLocation" x="6155" y="-1213"/>
         </scene>
         <!--Medications-->
         <scene sceneID="ZWm-hb-6G6">
@@ -1678,7 +1678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Phr-K6-p5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6945.801526717557" y="-1213.3802816901409"/>
+            <point key="canvasLocation" x="6886" y="-1213"/>
         </scene>
         <!--Allergies -->
         <scene sceneID="aoE-he-YPi">
@@ -1804,7 +1804,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dit-B9-fFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7736.6412213740459" y="-1309.1549295774648"/>
+            <point key="canvasLocation" x="7727" y="-1213"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="byf-7W-dBM">
@@ -1972,56 +1972,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egg-bF-RVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5296.9465648854957" y="1921.8309859154931"/>
-        </scene>
-        <!--Medications-->
-        <scene sceneID="hFx-0w-Gju">
-            <objects>
-                <viewController title="Documents" id="98B-nN-68K" userLabel="Medications" customClass="AddDocumentsViewController" customModule="Testing_Ground" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mLJ-SD-uDb">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cul-Sj-21N">
-                                <rect key="frame" x="0.0" y="103" width="393" height="760"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" editingAccessoryType="detailButton" id="D4X-aA-Fpd">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D4X-aA-Fpd" id="LNH-Wt-tZz">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Document Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bD-gH-UzT">
-                                                    <rect key="frame" x="33" y="11" width="129" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idq-0m-y4f">
-                                                    <rect key="frame" x="309" y="4" width="54" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="2xt-CU-9uV"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Documents" id="CZu-Xl-ScH">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="XmF-84-k1C"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="68N-oc-hgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9853" y="177"/>
         </scene>
         <!--Documents-->
         <scene sceneID="GSf-oq-fOE">
