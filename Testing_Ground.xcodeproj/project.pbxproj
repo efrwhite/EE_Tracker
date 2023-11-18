@@ -37,7 +37,6 @@
 		A40988A82A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988A72A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift */; };
 		A424E03F2AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */; };
 		A424E0422AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */; };
-		A45E48AE2B0941BF001C7D37 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A40988922A1BF9CD0041BBC7 /* Info.plist */; };
 		A492679D2AB8DB2700D0AD4C /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492679C2AB8DB2700D0AD4C /* ParentViewController.swift */; };
 		A492679F2AB8DB3300D0AD4C /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492679E2AB8DB3300D0AD4C /* ChildViewController.swift */; };
 		A4B3FCDE2AB244150021EAB6 /* HomeProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3FCDD2AB244150021EAB6 /* HomeProfilePageViewController.swift */; };
@@ -349,7 +348,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A45E48AE2B0941BF001C7D37 /* Info.plist in Resources */,
 				A40988912A1BF9CD0041BBC7 /* LaunchScreen.storyboard in Resources */,
 				A40883902AD1E0BA006F3871 /* ProfilesTableviewcell.xib in Resources */,
 				A4CA1A592A3654FC00C94D2C /* QualityofLifeTableViewCell.xib in Resources */,
