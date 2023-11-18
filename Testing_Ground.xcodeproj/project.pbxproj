@@ -22,8 +22,6 @@
 		8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */; };
 		8AE183272A658E3E006517D0 /* EGIDInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */; };
 		A40883902AD1E0BA006F3871 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408838E2AD1E0BA006F3871 /* ProfilesTableviewcell.xib */; };
-		A40883912AD1E0BA006F3871 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408838E2AD1E0BA006F3871 /* ProfilesTableviewcell.xib */; };
-		A40883922AD1E0BA006F3871 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408838E2AD1E0BA006F3871 /* ProfilesTableviewcell.xib */; };
 		A40883932AD1E0BA006F3871 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408838F2AD1E0BA006F3871 /* ProfilesTableviewcell.swift */; };
 		A40883942AD1E0BA006F3871 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408838F2AD1E0BA006F3871 /* ProfilesTableviewcell.swift */; };
 		A40883952AD1E0BA006F3871 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408838F2AD1E0BA006F3871 /* ProfilesTableviewcell.swift */; };
@@ -41,8 +39,6 @@
 		A40988A82A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40988A72A1BF9CD0041BBC7 /* Testing_GroundUITestsLaunchTests.swift */; };
 		A424E03F2AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424E03D2AD1DDB5000AA275 /* ParentTableViewCell.swift */; };
 		A424E0422AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */; };
-		A424E0432AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */; };
-		A424E0442AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */; };
 		A492679D2AB8DB2700D0AD4C /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492679C2AB8DB2700D0AD4C /* ParentViewController.swift */; };
 		A492679F2AB8DB3300D0AD4C /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492679E2AB8DB3300D0AD4C /* ChildViewController.swift */; };
 		A4B3FCDE2AB244150021EAB6 /* HomeProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3FCDD2AB244150021EAB6 /* HomeProfilePageViewController.swift */; };
@@ -368,8 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40883912AD1E0BA006F3871 /* ProfilesTableviewcell.xib in Resources */,
-				A424E0432AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,8 +371,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40883922AD1E0BA006F3871 /* ProfilesTableviewcell.xib in Resources */,
-				A424E0442AD1DDB5000AA275 /* ParentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
