@@ -18,6 +18,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Add a tap gesture recognizer to dismiss the keyboard
+          let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+          tapGesture.cancelsTouchesInView = false
+          view.addGestureRecognizer(tapGesture)
         receivedString = Username.text!
     }
     
