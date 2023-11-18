@@ -28,22 +28,33 @@ class ParentViewController: UIViewController {
         print("You are on Parent")
         print(user)
         print(receivedString)
-        print("Edit User: ",usernamep)
-        print("Add User:", usernamep)
+        
+        
         if isEditingParent {
+            print("Edit User: ",usernamep!)
             if usernamesup != ""{
                 parentUserName.text = usernamesup
-            } else { parentUserName.text = user}
-                    // Load and populate data for editing
-            if let parentName = parentName, let usernamep = usernamep {
-                        loadParentProfile(parentName: parentName, usernamep: usernamep)
-                    }
+            } else if usernamep != "" { 
+                parentUserName.text = usernamep
+                if let parentName = parentName, let usernamep = usernamep {
+                            loadParentProfile(parentName: parentName, usernamep: usernamep)
+                        }
+            }
+//            else{ parentUserName.text = user
+//                // Load and populate data for editing
+//                if let parentName = parentName, _ = user {
+//                    loadParentProfile(parentName: parentName, usernamep: user)
+//                }
+            //}
+            
         }else if isAddingParent{
+            print("Add User:", usernamep!)
             if usernamesup != ""{
                 parentUserName.text = usernamesup
             } else  { parentUserName.text = usernamep}
         }
         else{
+            print("Else Block")
             if usernamesup != ""{
                 parentUserName.text = usernamesup
             } else { parentUserName.text = user}

@@ -62,6 +62,8 @@ class HomeViewController: UIViewController {
             displayVC.user = user
             print("User value sent to Plan: ", user)
         }
+        
+      
     }
     
     func fetchMainChildProfile(username: String) -> Child? {

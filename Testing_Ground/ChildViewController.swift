@@ -28,6 +28,7 @@ class ChildViewController: UIViewController {
         setPopupButton()
         // Check if it's editing mode and load data if needed
                 if isEditingChild {
+                    print("Child Edited")
                     // Load and populate data for editing
                     if let childName = childName, let usernamec = usernamec {
                         loadChildProfile(childName: childName, usernamec: usernamec)
@@ -102,7 +103,7 @@ class ChildViewController: UIViewController {
     func loadChildProfile(childName: String, usernamec: String) {
             let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "username == %@ AND firstName == %@", usernamec, childName)
-            
+      
             do {
                 let results = try context.fetch(fetchRequest)
                 if let profile = results.first {
@@ -121,17 +122,18 @@ class ChildViewController: UIViewController {
                 showAlert(title: "Error", message: "Failed to load profile.")
             }
         }
-    
     func updateChildProfile() {
         // Handle editing an existing profile
+      
         if let profileToEdit = editingChildProfile {
+            print(childFirstName.text!)
             profileToEdit.firstName = childFirstName.text!
             profileToEdit.lastName = lastName.text!
-            profileToEdit.username = user
-            profileToEdit.diettype = diettype.currentTitle ?? ""
-            
+            profileToEdit.username = usernamec
+
             // Update other profile properties as needed
-            // ...
+            profileToEdit.diettype = diettype.currentTitle ?? ""
+            // Add similar lines to update gender and other properties
 
             if let selectedImage = childimage.image {
                 // Convert the UIImage to Data
@@ -143,12 +145,40 @@ class ChildViewController: UIViewController {
             } else {
                 print("No image selected.")
             }
-            
+
             // Save the changes
             saveContext()
             showAlert(title: "Success", message: "Profile updated successfully.")
         }
     }
+
+//    func updateChildProfile() {
+//        // Handle editing an existing profile
+//        if let profileToEdit = editingChildProfile {
+//            profileToEdit.firstName = childFirstName.text!
+//            profileToEdit.lastName = lastName.text!
+//            profileToEdit.username = user
+//            profileToEdit.diettype = diettype.currentTitle ?? ""
+//            
+//            // Update other profile properties as needed
+//            // ...
+//
+//            if let selectedImage = childimage.image {
+//                // Convert the UIImage to Data
+//                if let imageData = selectedImage.pngData() {
+//                    profileToEdit.image = imageData
+//                } else {
+//                    print("Error converting image to data.")
+//                }
+//            } else {
+//                print("No image selected.")
+//            }
+//            
+//            // Save the changes
+//            saveContext()
+//            showAlert(title: "Success", message: "Profile updated successfully.")
+//        }
+//    }
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

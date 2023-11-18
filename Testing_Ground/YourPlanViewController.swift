@@ -27,6 +27,12 @@ class YourPlanViewController: UIViewController {
             print("User value sent to HomeProfilePage: \(user)")
             
         }
+        else if segue.identifier == "dietsegue", let displayVC = segue.destination as? DietPlanViewController{
+            // Pass any necessary data to HomeViewController if needed
+            displayVC.user = user
+            print("User value sent to HomeProfilePage: \(user)")
+            
+        }
         
         
         

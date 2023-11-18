@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrP-ae-Jgr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrP-ae-Jgr">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -219,7 +219,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveButton:" destination="HuY-2G-98V" eventType="touchUpInside" id="1lQ-wI-d2k"/>
-                                    <segue destination="7AB-bm-094" kind="show" identifier="childSegue" id="dWw-e2-HS0"/>
+                                    <segue destination="7AB-bm-094" kind="show" identifier="childSegue" id="4Ti-OQ-PBv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvQ-Zk-LIg">
@@ -323,11 +323,12 @@
                         <outlet property="parentLastName" destination="EOK-Ey-BCC" id="vel-6Z-ipd"/>
                         <outlet property="parentUserName" destination="6cI-hA-wjp" id="but-bT-IQs"/>
                         <outlet property="parentimage" destination="LmZ-CL-1BS" id="HbO-aD-dyT"/>
+                        <segue destination="MyL-HF-eEr" kind="unwind" identifier="unwindToHomeProfilePageSegue" unwindAction="unwindToHomeProfilePage:" id="UIC-KH-Ity"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iz0-rb-Hhl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38.931297709923662" y="1611.9718309859156"/>
+            <point key="canvasLocation" x="1363" y="1020"/>
         </scene>
         <!--SignInViewController-->
         <scene sceneID="2Gk-9S-9d3">
@@ -473,7 +474,7 @@
                                             <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="SPM-L8-qId" kind="show" id="iHN-gt-7bE"/>
+                                            <segue destination="SPM-L8-qId" kind="show" identifier="profilessegue" id="iHN-gt-7bE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGD-x9-IqA">
@@ -680,7 +681,7 @@
                                             <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="98B-nN-68K" kind="show" id="C8e-7m-jFE"/>
+                                            <segue destination="61h-pS-5gI" kind="show" id="npW-Cc-whF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogw-gr-twP">
@@ -888,7 +889,7 @@
         <!--Medications-->
         <scene sceneID="ZWm-hb-6G6">
             <objects>
-                <viewController title="Add Medications" id="1m8-Tx-fd1" userLabel="Medications" customClass="AddMedicationViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Medications" id="1m8-Tx-fd1" userLabel="Medications" customClass="MedicationProfile" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uzp-WJ-mWw" customClass="Medicationprofile">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -954,7 +955,7 @@
         <!--Add Medications-->
         <scene sceneID="D86-3V-iS7">
             <objects>
-                <viewController title="Medications" id="0M3-RU-tSB" userLabel="Add Medications" customClass="MedicationsViewController" sceneMemberID="viewController">
+                <viewController title="Medications" id="0M3-RU-tSB" userLabel="Add Medications" customClass="AddMedicationViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GiH-Q6-r0t">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1975,7 +1976,7 @@
         <!--Medications-->
         <scene sceneID="hFx-0w-Gju">
             <objects>
-                <viewController title="Documents" id="98B-nN-68K" userLabel="Medications" customClass="AddDocumentsViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Documents" id="98B-nN-68K" userLabel="Medications" customClass="AddDocumentsViewController" customModule="Testing_Ground" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mLJ-SD-uDb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2017,13 +2018,43 @@
                     <navigationItem key="navigationItem" title="Add Documents" id="CZu-Xl-ScH">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="XmF-84-k1C"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="AddDocsButton" destination="XmF-84-k1C" id="6aA-I4-d6W"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68N-oc-hgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8273" y="149"/>
+            <point key="canvasLocation" x="9853" y="177"/>
+        </scene>
+        <!--Documents-->
+        <scene sceneID="GSf-oq-fOE">
+            <objects>
+                <viewController title="Documents" id="61h-pS-5gI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="id0-a7-tnH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T6M-LO-X2F">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="q1V-6f-gB6">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q1V-6f-gB6" id="FIb-OQ-zJ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m6A-5c-ZlD"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Rc-C2-sFB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2H-oA-FFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9004" y="177"/>
         </scene>
         <!--Child Profile-->
         <scene sceneID="ETq-UD-pOw">
@@ -2100,7 +2131,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveButton:" destination="7AB-bm-094" eventType="touchUpInside" id="5Gf-de-cJb"/>
-                                    <segue destination="CUC-Nl-vlO" kind="show" identifier="homeSegue" id="R3T-0P-bOg"/>
+                                    <segue destination="CUC-Nl-vlO" kind="show" identifier="homeSegue2" id="R3T-0P-bOg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fF-0Q-6sL">
@@ -2216,8 +2247,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6D-Lc-QBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="MyL-HF-eEr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="484.73282442748092" y="804.92957746478874"/>
+            <point key="canvasLocation" x="682" y="1020"/>
         </scene>
         <!--Education-->
         <scene sceneID="7gu-pt-Vk6">
@@ -19198,7 +19230,7 @@ AAAAAAAAAA+Blg
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -213,8 +213,10 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         }
     }
     @IBAction func unwindToHomeProfilePage(_ segue: UIStoryboardSegue) {
+        print("Unwind segue triggered")
         // Add any specific logic you need when unwinding
     }
+
 
 
     func fetchParentProfiles(username: String) -> [Parent] {
