@@ -18,12 +18,17 @@ class ChildViewController: UIViewController {
     @IBOutlet weak var childFirstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var childimage: UIImageView!
-
+    // HEy look at gender in the database not saving coming up as nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        //NSLog("Session ID in viewDidLoad: ", mySessionID);
         print("You are on Child")
         print("Child User: ", user)
-        print("Child name:", childName)
+        if childName != nil {
+            print("Child name:", childName!)
+        } else {
+            print("No Child name")
+        }
         usernamec = user
         setPopupButton()
         // Check if it's editing mode and load data if needed
@@ -101,39 +106,69 @@ class ChildViewController: UIViewController {
    
   
     func loadChildProfile(childName: String, usernamec: String) {
-            let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "username == %@ AND firstName == %@", usernamec, childName)
-      
-            do {
-                let results = try context.fetch(fetchRequest)
-                if let profile = results.first {
-                    childFirstName.text = profile.firstName
-                    lastName.text = profile.lastName
-                    // Populate other fields as needed (diettype, gender, etc.)
-                    // ...
-                    if let imageData = profile.image {
-                        childimage.image = UIImage(data: imageData)
-                    }
-                } else {
-                    showAlert(title: "Profile Not Found", message: "No matching profile found.")
+        let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "username == %@ AND firstName == %@", usernamec, childName)
+
+        do {
+            let results = try context.fetch(fetchRequest)
+            if let profile = results.first {
+                childFirstName.text = profile.firstName
+                lastName.text = profile.lastName
+
+                // Assuming diettype is a UIButton
+                diettype.setTitle(profile.diettype, for: .normal)
+
+                // Assuming gender is a UIButton
+                gender.setTitle(profile.gender, for: .normal)
+
+                // Assuming birthdate is a UIDatePicker
+                birthdate.date = profile.birthday ?? Date()
+
+                if let imageData = profile.image {
+                    childimage.image = UIImage(data: imageData)
                 }
-            } catch {
-                print("Error fetching entity: \(error)")
-                showAlert(title: "Error", message: "Failed to load profile.")
+            } else {
+                showAlert(title: "Profile Not Found", message: "No matching profile found.")
             }
+        } catch {
+            print("Error fetching entity: \(error)")
+            showAlert(title: "Error", message: "Failed to load profile.")
         }
+    }
+
+    
+    func addChildProfile() {
+        // Handle adding a new profile
+        let newChild = Child(context: context)
+        newChild.firstName = childFirstName.text!
+        newChild.lastName = lastName.text!
+        newChild.username = user
+        newChild.diettype = diettype.currentTitle
+        newChild.gender = gender.currentTitle ?? "" // Set the gender using selectedGender
+
+        if let selectedImage = childimage.image {
+            // Convert the UIImage to Data
+            if let imageData = selectedImage.pngData() {
+                newChild.image = imageData
+            } else {
+                print("Error converting image to data.")
+            }
+        } else {
+            print("No image selected.")
+        }
+        child.append(newChild)
+        saveContext()
+        print("New profile added successfully.")
+    }
+
     func updateChildProfile() {
         // Handle editing an existing profile
-      
         if let profileToEdit = editingChildProfile {
-            print(childFirstName.text!)
             profileToEdit.firstName = childFirstName.text!
             profileToEdit.lastName = lastName.text!
-            profileToEdit.username = usernamec
-
-            // Update other profile properties as needed
+            profileToEdit.username = user
             profileToEdit.diettype = diettype.currentTitle ?? ""
-            // Add similar lines to update gender and other properties
+            profileToEdit.gender = gender.currentTitle ?? "" // Update the gender using selectedGender
 
             if let selectedImage = childimage.image {
                 // Convert the UIImage to Data
@@ -152,6 +187,37 @@ class ChildViewController: UIViewController {
         }
     }
 
+    //1st update
+//    func updateChildProfile() {
+//        // Handle editing an existing profile
+//      
+//        if let profileToEdit = editingChildProfile {
+//            print(childFirstName.text!)
+//            profileToEdit.firstName = childFirstName.text!
+//            profileToEdit.lastName = lastName.text!
+//            profileToEdit.username = usernamec
+//
+//            // Update other profile properties as needed
+//            profileToEdit.diettype = diettype.currentTitle ?? ""
+//            // Add similar lines to update gender and other properties
+//
+//            if let selectedImage = childimage.image {
+//                // Convert the UIImage to Data
+//                if let imageData = selectedImage.pngData() {
+//                    profileToEdit.image = imageData
+//                } else {
+//                    print("Error converting image to data.")
+//                }
+//            } else {
+//                print("No image selected.")
+//            }
+//
+//            // Save the changes
+//            saveContext()
+//            showAlert(title: "Success", message: "Profile updated successfully.")
+//        }
+//    }
+//2
 //    func updateChildProfile() {
 //        // Handle editing an existing profile
 //        if let profileToEdit = editingChildProfile {
@@ -184,27 +250,27 @@ class ChildViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    func addChildProfile() {
-        // Handle adding a new profile
-        let newChild = Child(context: context)
-        newChild.firstName = childFirstName.text!
-        newChild.lastName = lastName.text!
-        newChild.username = user
-        newChild.diettype = diettype.currentTitle
-        if let selectedImage = childimage.image {
-            // Convert the UIImage to Data
-            if let imageData = selectedImage.pngData() {
-                newChild.image = imageData
-            } else {
-                print("Error converting image to data.")
-            }
-        } else {
-            print("No image selected.")
-        }
-        child.append(newChild)
-        saveContext()
-        print("New profile added successfully.")
-    }
+//    func addChildProfile() {
+//        // Handle adding a new profile
+//        let newChild = Child(context: context)
+//        newChild.firstName = childFirstName.text!
+//        newChild.lastName = lastName.text!
+//        newChild.username = user
+//        newChild.diettype = diettype.currentTitle
+//        if let selectedImage = childimage.image {
+//            // Convert the UIImage to Data
+//            if let imageData = selectedImage.pngData() {
+//                newChild.image = imageData
+//            } else {
+//                print("Error converting image to data.")
+//            }
+//        } else {
+//            print("No image selected.")
+//        }
+//        child.append(newChild)
+//        saveContext()
+//        print("New profile added successfully.")
+//    }
 
     func createChildProfile() {
         // Handle creating a new profile (similar to adding)

@@ -1,6 +1,14 @@
 import UIKit
 import CoreData
 
+
+// Add an extension to Array for safe subscripting
+extension Array {
+    subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
 class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var user = ""
@@ -42,7 +50,12 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         // Reload table views to populate data
         tableView.reloadData()
         tableView2.reloadData()
-        print("Profile User: ", user)
+        if user != nil{
+            print("Profile User: ", user)
+        } else {
+            print("user is nil")
+        }
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -176,29 +189,57 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         }
     }
 
+//    @objc func editButtonPressed(_ sender: UIButton) {
+//        let indexPath = IndexPath(row: sender.tag, section: 0)
+//        let childProfile = childProfiles[indexPath.row]
+//        
+//        let childViewController = storyboard?.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
+//        childViewController.isEditingChild = true
+//        childViewController.childName = childProfile.firstName
+//        childViewController.user = user // Set the user property here
+//        
+//        navigationController?.pushViewController(childViewController, animated: true)
+//    }
+//
+//    @objc func editParentButtonPressed(_ sender: UIButton) {
+//        let indexPath = IndexPath(row: sender.tag, section: 0)
+//        let parentProfile = parentProfiles[indexPath.row]
+//        
+//        let parentViewController = storyboard?.instantiateViewController(withIdentifier: "ParentViewController") as! ParentViewController
+//        parentViewController.isEditingParent = true
+//        parentViewController.parentName = parentProfile.firstname
+//        parentViewController.usernamep = user
+//        
+//        navigationController?.pushViewController(parentViewController, animated: true)
+//    }
+    
+    // Inside the `editButtonPressed` function
     @objc func editButtonPressed(_ sender: UIButton) {
         let indexPath = IndexPath(row: sender.tag, section: 0)
-        let childProfile = childProfiles[indexPath.row]
         
-        let childViewController = storyboard?.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
-        childViewController.isEditingChild = true
-        childViewController.childName = childProfile.firstName
-        childViewController.user = user // Set the user property here
-        
-        navigationController?.pushViewController(childViewController, animated: true)
+        if let childProfile = childProfiles[safe: indexPath.row] {
+            let childViewController = storyboard?.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
+            childViewController.isEditingChild = true
+            childViewController.childName = childProfile.firstName ?? "Default Child Name"
+            childViewController.user = user
+            navigationController?.pushViewController(childViewController, animated: true)
+        }
     }
 
+    // Inside the `editParentButtonPressed` function
     @objc func editParentButtonPressed(_ sender: UIButton) {
         let indexPath = IndexPath(row: sender.tag, section: 0)
-        let parentProfile = parentProfiles[indexPath.row]
         
-        let parentViewController = storyboard?.instantiateViewController(withIdentifier: "ParentViewController") as! ParentViewController
-        parentViewController.isEditingParent = true
-        parentViewController.parentName = parentProfile.firstname
-        parentViewController.usernamep = user
-        
-        navigationController?.pushViewController(parentViewController, animated: true)
+        if let parentProfile = parentProfiles[safe: indexPath.row] {
+            let parentViewController = storyboard?.instantiateViewController(withIdentifier: "ParentViewController") as! ParentViewController
+            parentViewController.isEditingParent = true
+            parentViewController.parentName = parentProfile.firstname ?? "Default Parent Name"
+            parentViewController.usernamep = user
+            navigationController?.pushViewController(parentViewController, animated: true)
+        }
+       
     }
+
 
     func fetchChildProfiles(username: String) -> [Child] {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -206,12 +247,18 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         fetchRequest.predicate = NSPredicate(format: "username == %@", username)
 
         do {
-            return try context.fetch(fetchRequest)
+            let childProfiles = try context.fetch(fetchRequest)
+
+            // Filter and remove empty or invalid profiles
+            let validChildProfiles = childProfiles.filter { $0.firstName != nil && !$0.firstName!.isEmpty }
+
+            return validChildProfiles
         } catch {
             print("Error fetching child profiles: \(error)")
             return []
         }
     }
+
     @IBAction func unwindToHomeProfilePage(_ segue: UIStoryboardSegue) {
         print("Unwind segue triggered")
         // Add any specific logic you need when unwinding
@@ -225,15 +272,16 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         fetchRequest.predicate = NSPredicate(format: "username == %@", username)
         
         do {
-            var parentProfiles = try context.fetch(fetchRequest)
+            let parentProfiles = try context.fetch(fetchRequest)
             
             // Filter and remove empty or invalid profiles
-            parentProfiles = parentProfiles.filter { !$0.firstname!.isEmpty } // Adjust the condition as needed
+            let validParentProfiles = parentProfiles.filter { $0.firstname != nil && !$0.firstname!.isEmpty }
             
-            return parentProfiles
+            return validParentProfiles
         } catch {
             print("Error fetching parent profiles: \(error)")
             return []
         }
     }
+
 }

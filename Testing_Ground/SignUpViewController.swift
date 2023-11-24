@@ -4,7 +4,7 @@ import CoreData
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
-
+//Something is wrong here with username and password not syncing LOOK INTO LOGIN TOO
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var Mobile: UITextField!
@@ -18,6 +18,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // NSLog(@"Session ID in viewDidLoad: %@", mySessionID);
         // Add a tap gesture recognizer to dismiss the keyboard
           let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
           tapGesture.cancelsTouchesInView = false

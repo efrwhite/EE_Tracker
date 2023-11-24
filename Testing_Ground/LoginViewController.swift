@@ -32,10 +32,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             let alert = UIAlertController(title: nil, message: "Please enter both username and password", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            print("Username:",username)
+            print("Password:",password)
         } else if validateLogin(username: username, password: password) {
             // You don't need to performSegue here, as it's handled by the Storyboard
+            
+            print("Username:",username)
+            print("Password:",password)
         } else {
             // Invalid username or password
+            print("Else Block Error:")
+            print("Username:",username)
+            print("Password:",password)
             let alert = UIAlertController(title: nil, message: "Username or password is incorrect", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)

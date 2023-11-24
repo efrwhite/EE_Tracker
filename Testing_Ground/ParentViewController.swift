@@ -23,6 +23,7 @@ class ParentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // NSLog(@"Session ID in viewDidLoad: %@", mySessionID);
         // Disable user interaction for the parentUserName text field
         parentUserName.isUserInteractionEnabled = false
         print("You are on Parent")
