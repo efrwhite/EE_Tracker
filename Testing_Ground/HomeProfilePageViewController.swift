@@ -283,5 +283,17 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
             return []
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "profilessegue", let displayVC = segue.destination as? HomeViewController {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                let selectedChild = childProfiles[selectedIndexPath.row]
+                displayVC.user = user
+                displayVC.childselected = selectedChild.firstName ?? "Default Child Name"
+            }
+        }
+    }
+
+    
+
 
 }

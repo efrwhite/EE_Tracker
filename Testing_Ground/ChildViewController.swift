@@ -74,35 +74,35 @@ class ChildViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
 
-    @IBAction func saveButton(_ sender: Any) {
-        if isEditingChild {
-            print("editing created")
-           
-            // Get a reference to the HomeProfileViewController
-            // Send the username back to HomeProfilePageViewController
-            // Get a reference to the HomeProfilePageViewController
-            updateChildProfile()
-            if let homeProfileViewController = navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
-                    homeProfileViewController.user = user
-                    navigationController?.popToViewController(homeProfileViewController, animated: true)
-                }
-                    // Pop back to the HomeProfilePageViewController
-                    navigationController?.popViewController(animated: true)
-        } else if isAddingChild {
-            print("adding created")
-            addChildProfile()
-            // Get a reference to the HomeProfileViewController
-            // Send the username back to HomeProfilePageViewController
-            if let homeProfileViewController = navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
-                    homeProfileViewController.user = user
-                    navigationController?.popToViewController(homeProfileViewController, animated: true)
-                }
-                    // Pop back to the HomeProfilePageViewController
-                    navigationController?.popViewController(animated: true)
-        } else {
-            createChildProfile()
-        }
-    }
+//    @IBAction func saveButton(_ sender: Any) {
+//        if isEditingChild {
+//            print("editing created")
+//           
+//            // Get a reference to the HomeProfileViewController
+//            // Send the username back to HomeProfilePageViewController
+//            // Get a reference to the HomeProfilePageViewController
+//            updateChildProfile()
+//            if let homeProfileViewController = navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
+//                    homeProfileViewController.user = user
+//                    navigationController?.popToViewController(homeProfileViewController, animated: true)
+//                }
+//                    // Pop back to the HomeProfilePageViewController
+//                    navigationController?.popViewController(animated: true)
+//        } else if isAddingChild {
+//            print("adding created")
+//            addChildProfile()
+//            // Get a reference to the HomeProfileViewController
+//            // Send the username back to HomeProfilePageViewController
+//            if let homeProfileViewController = navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
+//                    homeProfileViewController.user = user
+//                    navigationController?.popToViewController(homeProfileViewController, animated: true)
+//                }
+//                    // Pop back to the HomeProfilePageViewController
+//                    navigationController?.popViewController(animated: true)
+//        } else {
+//            createChildProfile()
+//        }
+//    }
    
   
     func loadChildProfile(childName: String, usernamec: String) {
@@ -300,6 +300,40 @@ class ChildViewController: UIViewController {
             print("User value sent to HomeViewController: \(user)")
         }
        }
+    @IBAction func saveButton(_ sender: Any) {
+        if isEditingChild {
+            // Handle editing an existing child profile
+            updateChildProfile()
+            showAlertAndNavigate()
+        } else if isAddingChild {
+            // Handle adding a new child profile
+            addChildProfile()
+            showAlertAndNavigate()
+        } else {
+            // Handle other cases (if needed)
+            createChildProfile()
+        }
+    }
+
+    func showAlertAndNavigate() {
+        let alert = UIAlertController(title: "Success", message: "Child saved successfully.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            // Check if popping to HomeProfilePageViewController is necessary
+            if let homeProfilePageViewController = self?.navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
+                homeProfilePageViewController.user = self!.user
+                self?.navigationController?.popToViewController(homeProfilePageViewController, animated: true)
+            } else {
+                // If HomeProfilePageViewController is not in the navigation stack, present it using the correct segue identifier
+                self?.performSegue(withIdentifier: "homeSegue2", sender: self)
+            }
+        })
+        present(alert, animated: true, completion: nil)
+    }
+
+
+    
+    
+    
 }
 
 extension ChildViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
