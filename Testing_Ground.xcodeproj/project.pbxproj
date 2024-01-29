@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A3D423A2B68026B0013EFE5 /* AddDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D42392B68026B0013EFE5 /* AddDocumentsViewController.swift */; };
+		8A3D423C2B6802860013EFE5 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D423B2B6802860013EFE5 /* DocumentTableViewCell.swift */; };
+		8A3D423E2B68029A0013EFE5 /* EndoscopyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D423D2B68029A0013EFE5 /* EndoscopyViewController.swift */; };
 		8AC78C1D2A507BF100A4C3FA /* ExtraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C1C2A507BF100A4C3FA /* ExtraViewController.swift */; };
 		8AC78C1F2A58831000A4C3FA /* Diet1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C1E2A58831000A4C3FA /* Diet1ViewController.swift */; };
 		8AC78C212A5888D200A4C3FA /* Diet2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C202A5888D200A4C3FA /* Diet2ViewController.swift */; };
@@ -75,6 +78,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A3D42392B68026B0013EFE5 /* AddDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddDocumentsViewController.swift; path = ../AddDocumentsViewController.swift; sourceTree = "<group>"; };
+		8A3D423B2B6802860013EFE5 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
+		8A3D423D2B68029A0013EFE5 /* EndoscopyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndoscopyViewController.swift; sourceTree = "<group>"; };
 		8AC78C1C2A507BF100A4C3FA /* ExtraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewController.swift; sourceTree = "<group>"; };
 		8AC78C1E2A58831000A4C3FA /* Diet1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet1ViewController.swift; sourceTree = "<group>"; };
 		8AC78C202A5888D200A4C3FA /* Diet2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet2ViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +229,9 @@
 				A4CADC0C2AE2AF0800F1FB67 /* AllergenViewController.swift */,
 				A4CADC0E2AE2AFDD00F1FB67 /* AddAllergenViewController.swift */,
 				A4CADC102AE2B6F600F1FB67 /* DietPlanViewController.swift */,
+				8A3D423D2B68029A0013EFE5 /* EndoscopyViewController.swift */,
+				8A3D423B2B6802860013EFE5 /* DocumentTableViewCell.swift */,
+				8A3D42392B68026B0013EFE5 /* AddDocumentsViewController.swift */,
 			);
 			path = Testing_Ground;
 			sourceTree = "<group>";
@@ -379,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3D423A2B68026B0013EFE5 /* AddDocumentsViewController.swift in Sources */,
 				A4CA1A502A3654F200C94D2C /* LoginViewController.swift in Sources */,
 				A424E03F2AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */,
 				A4CA1A4C2A3654F200C94D2C /* HomeViewController.swift in Sources */,
@@ -394,9 +404,11 @@
 				8AC78C292A5C8FC300A4C3FA /* EducationViewController.swift in Sources */,
 				A4CA1A512A3654F200C94D2C /* QualityofLifeViewController.swift in Sources */,
 				8AE1831D2A658DA6006517D0 /* WhatAreSymptomsViewController.swift in Sources */,
+				8A3D423C2B6802860013EFE5 /* DocumentTableViewCell.swift in Sources */,
 				A4CA1A5B2A3654FC00C94D2C /* QualityofLifeTableViewCell.swift in Sources */,
 				A408839B2AD41C5F006F3871 /* ScoreViewController.swift in Sources */,
 				A4CA1A5A2A3654FC00C94D2C /* SymptomTableViewCell.swift in Sources */,
+				8A3D423E2B68029A0013EFE5 /* EndoscopyViewController.swift in Sources */,
 				A40988862A1BF9CC0041BBC7 /* ViewController.swift in Sources */,
 				A4CADC0F2AE2AFDD00F1FB67 /* AddAllergenViewController.swift in Sources */,
 				8AE1831B2A658D86006517D0 /* WhoIsAffectedViewController.swift in Sources */,
