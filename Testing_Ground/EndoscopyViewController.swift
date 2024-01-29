@@ -1,3 +1,11 @@
+//
+//  EndoscopyViewController.swift
+//  Testing_Ground
+//
+//  Created by Vivek Vangala on 1/29/24.
+//
+
+import Foundation
 import UIKit
 
 class EndoscopyViewController: UIViewController {
@@ -161,3 +169,4 @@ class EndoscopyViewController: UIViewController {
         // Handle save button action
     }
 }
+
