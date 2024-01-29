@@ -111,20 +111,6 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         return 0
     }
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell: UITableViewCell
-//        if tableView == currentTableView {
-//            cell = tableView.dequeueReusableCell(withIdentifier: currentCellIdentifier, for: indexPath)
-//            cell.textLabel?.text = currentMedications[indexPath.row].medName
-//        } else if tableView == discontinuedTableView {
-//            cell = tableView.dequeueReusableCell(withIdentifier: discontinuedCellIdentifier, for: indexPath)
-//            cell.textLabel?.text = discontinuedMedications[indexPath.row].medName
-//        } else {
-//            cell = UITableViewCell()
-//        }
-//        
-//        return cell
-//    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
         

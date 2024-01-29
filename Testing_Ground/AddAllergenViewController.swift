@@ -1,136 +1,192 @@
+import Foundation
 import UIKit
 import CoreData
-protocol AddAllergenDelegate: class {
-    func didSaveNewAllergen()
-}
 
-class AddAllergenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddAllergenDelegate {
-    var user = "" // Set the user as needed
+class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, AddAllergenDelegate {
+    func didSaveNewAllergen() {
+        setupFetchedResultsControllers()
+        currentAllergenTableView.reloadData()
+        discontinuedAllergenTableView.reloadData()
+    }
     
-
-    @IBOutlet weak var currentAllergen: UITableView!
+    var user = ""
+    
+    @IBOutlet weak var currentAllergenTableView: UITableView!
     let currentCellIdentifier = "currentcell"
-
-    @IBOutlet weak var discontinuedAllergen: UITableView!
-    let discontinuedCellIdentifier = "notcurrentcell"
-
-    // Create fetchedResultsController for current and discontinued allergies
-    var currentFetchedResultsController: NSFetchedResultsController<Allergies>!
-    var discontinuedFetchedResultsController: NSFetchedResultsController<Allergies>!
-
+    
+    @IBOutlet weak var discontinuedAllergenTableView: UITableView!
+    let discontinuedCellIdentifier = "discontinuedAllergenCell"
+    
+    // Create fetchedResultsController for all medications
+    var allFetchedResultsController: NSFetchedResultsController<Allergies>!
+    
+    // Create arrays to hold current and discontinued medications
+    var currentAllergens: [Allergies] = []
+    var discontinuedAllergens: [Allergies] = []
+    
     // Create a reference to the Core Data managed object context
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ADD ALLERGY USER: ",user)
+        
         // Set up the fetched results controllers
         setupFetchedResultsControllers()
-
+        
         // Configure table views and set delegates
-        currentAllergen.delegate = self
-        currentAllergen.dataSource = self
-        currentAllergen.register(UITableViewCell.self, forCellReuseIdentifier: currentCellIdentifier)
-
-        discontinuedAllergen.delegate = self
-        discontinuedAllergen.dataSource = self
-        discontinuedAllergen.register(UITableViewCell.self, forCellReuseIdentifier: discontinuedCellIdentifier)
+        currentAllergenTableView.delegate = self
+        currentAllergenTableView.dataSource = self
+        currentAllergenTableView.register(UITableViewCell.self, forCellReuseIdentifier: currentCellIdentifier)
+        
+        discontinuedAllergenTableView.delegate = self
+        discontinuedAllergenTableView.dataSource = self
+        discontinuedAllergenTableView.register(UITableViewCell.self, forCellReuseIdentifier: discontinuedCellIdentifier)
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         // Refresh data when the view appears
         setupFetchedResultsControllers()
-        currentAllergen.reloadData()
-        discontinuedAllergen.reloadData()
+        currentAllergenTableView.reloadData()
+        discontinuedAllergenTableView.reloadData()
     }
-
+    
     func setupFetchedResultsControllers() {
         let fetchRequest: NSFetchRequest<Allergies> = Allergies.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-
-        // Filter for current allergies for a specific user
-        let currentPredicate = NSPredicate(format: "enddate == nil AND username == %@", user)
-        currentFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
-                                                                    managedObjectContext: managedObjectContext,
-                                                                    sectionNameKeyPath: nil,
-                                                                    cacheName: nil)
-        currentFetchedResultsController.fetchRequest.predicate = currentPredicate
-
-        // Filter for discontinued allergies for a specific user
-        let discontinuedPredicate = NSPredicate(format: "enddate != nil AND username == %@", user)
-        discontinuedFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
-                                                                        managedObjectContext: managedObjectContext,
-                                                                        sectionNameKeyPath: nil,
-                                                                        cacheName: nil)
-        discontinuedFetchedResultsController.fetchRequest.predicate = discontinuedPredicate
-
+        
+        // Filter for medications for a specific user
+        let userPredicate = NSPredicate(format: "username == %@", user)
+        fetchRequest.predicate = userPredicate
+        
+        allFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                               managedObjectContext: managedObjectContext,
+                                                               sectionNameKeyPath: nil,
+                                                               cacheName: nil)
+        
         do {
-            try currentFetchedResultsController.performFetch()
-            try discontinuedFetchedResultsController.performFetch()
+            try allFetchedResultsController.performFetch()
+            
+            // Filter medications into current and discontinued based on enddate
+            currentAllergens = allFetchedResultsController.fetchedObjects?.filter { $0.enddate == nil } ?? []
+            discontinuedAllergens = allFetchedResultsController.fetchedObjects?.filter { $0.enddate != nil } ?? []
         } catch {
             print("Error fetching data: \(error)")
         }
     }
-
-    func didSaveNewAllergen() {
-        // Refresh data when a new allergen is saved
+    
+    func didSaveNewMedication() {
+        // Refresh data when a new medication is saved
         setupFetchedResultsControllers()
-        currentAllergen.reloadData()
-        discontinuedAllergen.reloadData()
+        currentAllergenTableView.reloadData()
+        discontinuedAllergenTableView.reloadData()
     }
-
-
+    
     // MARK: - Table View Data Source and Delegate
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.frame = CGRect(x: 15, y: 0, width: tableView.frame.size.width - 30, height: 30)
+        
+        if tableView == currentAllergenTableView {
+            label.text = "Current Allergens"
+        } else if tableView == discontinuedAllergenTableView {
+            label.text = "Discontinued Allergens"
+        }
+        
+        headerView.addSubview(label)
+        return headerView
+    }
 
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        if tableView == currentAllergen {
-            return currentFetchedResultsController.sections?.count ?? 0
-        } else if tableView == discontinuedAllergen {
-            return discontinuedFetchedResultsController.sections?.count ?? 0
-        }
-        return 0
+        return 1
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == currentAllergen {
-            return currentFetchedResultsController.sections?[section].numberOfObjects ?? 0
-        } else if tableView == discontinuedAllergen {
-            return discontinuedFetchedResultsController.sections?[section].numberOfObjects ?? 0
+        if tableView == currentAllergenTableView {
+            return currentAllergens.count
+        } else if tableView == discontinuedAllergenTableView {
+            return discontinuedAllergens.count
         }
         return 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
-        if tableView == currentAllergen {
+        
+        if tableView == currentAllergenTableView {
             cell = tableView.dequeueReusableCell(withIdentifier: currentCellIdentifier, for: indexPath)
-        } else if tableView == discontinuedAllergen {
+            cell.textLabel?.text = currentAllergens[indexPath.row].name
+        } else if tableView == discontinuedAllergenTableView {
             cell = tableView.dequeueReusableCell(withIdentifier: discontinuedCellIdentifier, for: indexPath)
+            cell.textLabel?.text = discontinuedAllergens[indexPath.row].name
         } else {
             cell = UITableViewCell()
         }
+        
+        // Check if the edit button is already added, and if not, add it
+        if cell.contentView.subviews.first(where: { $0 is UIButton }) == nil {
+            // Calculate the X position based on the cell's width and button width
+            let buttonWidth: CGFloat = 50
+            let xPosition = cell.contentView.frame.size.width - buttonWidth - 10 // 10 is the right margin
 
-        let allergy: Allergies
-        if tableView == currentAllergen {
-            allergy = currentFetchedResultsController.object(at: indexPath)
-        } else {
-            allergy = discontinuedFetchedResultsController.object(at: indexPath)
+            // Set up the frame for the edit button
+            let editButton = UIButton(type: .system)
+            editButton.setTitle("Edit", for: .normal)
+            editButton.frame = CGRect(x: xPosition, y: 5, width: buttonWidth, height: 30)
+            editButton.addTarget(self, action: #selector(editButtonTapped), for: .touchUpInside)
+            
+            cell.contentView.addSubview(editButton)
         }
-
-        cell.textLabel?.text = allergy.name
-
+        
         return cell
     }
-    
-    
+
+
+    @objc func editButtonTapped(sender: UIButton) {
+        var selectedAllergen: String?
+        
+        if let cell = sender.superview?.superview as? UITableViewCell, let indexPath = currentAllergenTableView.indexPath(for: cell) {
+            // Handle editing for the currentTableView
+            selectedAllergen = currentAllergens[indexPath.row].name
+            // Implement the editing logic for the selected medication
+        } else if let cell = sender.superview?.superview as? UITableViewCell, let indexPath = discontinuedAllergenTableView.indexPath(for: cell) {
+            // Handle editing for the discontinuedTableView
+            selectedAllergen = discontinuedAllergens[indexPath.row].name
+            // Implement the editing logic for the selected medication
+        }
+        
+        // Perform the segue and pass the isEdit boolean and selected medication name
+        performSegue(withIdentifier: "addAsegue", sender: (true, selectedAllergen))
+    }
+
+
+
+
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addAsegue", let displayVC = segue.destination as? AllergenViewController {
             displayVC.user = user
-           // displayVC.delegate = self
-            print("User value sent to Allergen: \(user)")
+            
+            if let (isEdit, allergenName) = sender as? (Bool, String) {
+                displayVC.isEditMode = isEdit // Updated the property name
+                displayVC.allergenName = allergenName
+            } else {
+                displayVC.isEditMode = false
+                displayVC.allergenName = ""
+            }
+            
+            displayVC.delegate = self
         }
-    
     }
+
+
+
+
 }
