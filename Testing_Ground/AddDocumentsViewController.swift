@@ -5,6 +5,8 @@
 //  Created by Vivek Vangala on 1/29/24.
 //
 
+import Foundation
+
 import UIKit
 import CoreData
 
@@ -284,3 +286,4 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         // Handle selection if needed
     }
 }
+
