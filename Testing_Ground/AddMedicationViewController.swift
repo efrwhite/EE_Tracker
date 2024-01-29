@@ -3,7 +3,7 @@ import UIKit
 import CoreData
 
 // Define a protocol for the delegate
-protocol AddMedicationDelegate: class {
+protocol AddMedicationDelegate: AnyObject {
     func didSaveNewMedication()
 }
 

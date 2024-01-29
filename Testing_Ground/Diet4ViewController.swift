@@ -16,13 +16,13 @@ class Diet4ViewController: UIViewController {
     }
     
     private func setupScene() {
-        view.backgroundColor = UIColor.systemBackground
+        
         
         // Create and configure the header label
         let headerLabel = UILabel()
         headerLabel.text = "Diet 4"
         headerLabel.font = UIFont.boldSystemFont(ofSize: 24)
-        headerLabel.textColor = UIColor.red
+        headerLabel.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
         headerLabel.textAlignment = .center
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -51,12 +51,12 @@ class Diet4ViewController: UIViewController {
 
         It's important to work with a healthcare professional to determine the most suitable diet plan for managing EoE.
         """
-        descriptionLabel.font = UIFont.systemFont(ofSize: 14)
-        descriptionLabel.textColor = UIColor.darkGray
+        descriptionLabel.font = UIFont.systemFont(ofSize: 20)
+        descriptionLabel.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0) // Updated color
         descriptionLabel.textAlignment = .left
         descriptionLabel.numberOfLines = 0
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        
+
         view.addSubview(descriptionLabel)
         
         // Add constraints for the labels

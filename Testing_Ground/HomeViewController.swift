@@ -198,6 +198,8 @@
 //        self.navigationItem.setHidesBackButton(false, animated: false)
 //    }
 //}
+
+
 import Foundation
 import CoreData
 import UIKit
@@ -212,6 +214,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var childsdiet: UILabel!
     var isButtonEnabled = true // Add a property to track button state
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Home Username: ", user)
@@ -234,7 +237,46 @@ class HomeViewController: UIViewController {
 
         // Hide the back button
         self.navigationItem.setHidesBackButton(true, animated: false)
+        
+        // Add a button (person icon) to the top right corner of the navigation bar
+           let button = UIButton(type: .system)
+           button.setImage(UIImage(systemName: "person.circle"), for: .normal)
+           button.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
+           let barButton = UIBarButtonItem(customView: button)
+           self.navigationItem.rightBarButtonItem = barButton
+       }
+    
+    @objc func showAlert() {
+        // Create the alert controller
+        let alertController = UIAlertController(title: "Logout", message: "Are you sure you want to log out?", preferredStyle: .alert)
+        
+        // Add the Log Out action
+        let logoutAction = UIAlertAction(title: "Log Out", style: .destructive) { (_) in
+            // Perform segue to LoginViewController
+            if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
+                // Hide the navigation bar when presenting LoginViewController
+                self.navigationController?.setNavigationBarHidden(true, animated: false)
+                self.navigationController?.pushViewController(loginVC, animated: true)
+                
+                // Show the navigation bar for other screens
+                self.navigationController?.setNavigationBarHidden(false, animated: false)
+            }
+        }
+        alertController.addAction(logoutAction)
+        
+        // Add the Cancel action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        // Present the alert controller
+        present(alertController, animated: true, completion: nil)
     }
+
+
+
+
+
+
 
     func updateUIWithMainChildProfile() {
         if let mainChildProfile = mainChildProfile {

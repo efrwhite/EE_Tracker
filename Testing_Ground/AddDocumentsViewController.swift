@@ -1,13 +1,7 @@
-// AddDocumentsViewController.swift
-// Testing_Ground
-//
-// Created by Vivek Vangala on 1/19/24.
-
-import Foundation
 import UIKit
 import CoreData
 
-class AddDocumentsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITextFieldDelegate {
+class AddDocumentsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var AddDocsButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
@@ -22,8 +16,24 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         AddDocsButton.action = #selector(plusButtonTapped)
 
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(DocumentTableViewCell.self, forCellReuseIdentifier: "DocumentTableViewCell")
 
-        print("View did load")
+        if let savedPhotoNames = UserDefaults.standard.stringArray(forKey: "SavedPhotoNames") {
+            photoNames = savedPhotoNames
+        }
+    }
+
+    func savePhotoNamesToUserDefaults() {
+        UserDefaults.standard.set(photoNames, forKey: "SavedPhotoNames")
+    }
+
+    func loadImage(with photoName: String) -> UIImage? {
+        if let imageData = UserDefaults.standard.data(forKey: photoName),
+           let image = UIImage(data: imageData) {
+            return image
+        }
+        return nil
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,11 +41,102 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "currentcell1", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DocumentTableViewCell", for: indexPath) as? DocumentTableViewCell else {
+            return UITableViewCell()
+        }
+
         let photoName = photoNames[indexPath.row]
         cell.textLabel?.text = photoName
-        print("Configuring cell for row: \(indexPath.row), photo name: \(photoName), binary data: \(String(describing: selectedImageData))")
+        cell.editButtonAction = { [weak self] in
+            self?.editButtonTappedForRow(at: indexPath)
+        }
+
         return cell
+    }
+
+    func editButtonTappedForRow(at indexPath: IndexPath) {
+        let photoName = photoNames[indexPath.row]
+        let actionSheet = UIAlertController(title: "Select an option", message: nil, preferredStyle: .actionSheet)
+
+        let editAction = UIAlertAction(title: "Edit", style: .default) { [weak self] _ in
+            self?.showEditAlert(for: indexPath)
+        }
+
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+            self?.deletePhotoName(at: indexPath)
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        actionSheet.addAction(editAction)
+        actionSheet.addAction(deleteAction)
+        actionSheet.addAction(cancelAction)
+
+        present(actionSheet, animated: true, completion: nil)
+    }
+
+    func showEditAlert(for indexPath: IndexPath) {
+        let alertController = UIAlertController(title: "Edit Photo Name", message: nil, preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.text = self.photoNames[indexPath.row]
+        }
+
+        let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self, weak alertController] _ in
+            guard let newName = alertController?.textFields?.first?.text, !newName.isEmpty else { return }
+            self?.photoNames[indexPath.row] = newName
+            self?.tableView.reloadRows(at: [indexPath], with: .automatic)
+            self?.savePhotoNamesToUserDefaults()
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+
+    func deletePhotoName(at indexPath: IndexPath) {
+        photoNames.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        savePhotoNamesToUserDefaults()
+    }
+
+
+    func showPhotoPopup(with image: UIImage) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
+        alertController.view.addSubview(imageView)
+
+        imageView.centerXAnchor.constraint(equalTo: alertController.view.centerXAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: alertController.view.centerYAnchor).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
+
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+
+    func fetchDocument(with photoName: String) -> NSManagedObject? {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Documents")
+        fetchRequest.predicate = NSPredicate(format: "title == %@", photoName)
+        do {
+            let documents = try context.fetch(fetchRequest)
+            return documents.first
+        } catch {
+            print("Failed to fetch document: \(error.localizedDescription)")
+            return nil
+        }
     }
 
     @objc func plusButtonTapped() {
@@ -43,7 +144,6 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
         let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default) { _ in
-            // Call openCamera() to open the camera
             self.openCamera()
         }
 
@@ -82,12 +182,9 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             print("Image picked from library")
 
-            // Capture the binary data associated with the selected image
             selectedImageData = pickedImage.jpegData(compressionQuality: 1.0)
 
-            // Dismiss the photo picking screen
             picker.dismiss(animated: true) {
-                // Show the confirmation alert after dismissal
                 self.showConfirmationAlert(with: pickedImage)
             }
         }
@@ -98,7 +195,6 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         picker.dismiss(animated: true, completion: nil)
     }
 
-    // Function to show a confirmation alert
     func showConfirmationAlert(with image: UIImage) {
         let alertController = UIAlertController(title: "Confirmation", message: "Are you sure you'd like to input this photo?", preferredStyle: .alert)
 
@@ -115,7 +211,6 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         present(alertController, animated: true, completion: nil)
     }
 
-    // Function to show an alert for entering the name
     func showNameInputAlert(for image: UIImage) {
         let alertController = UIAlertController(title: "Enter Photo Name", message: nil, preferredStyle: .alert)
         alertController.addTextField { textField in
@@ -125,11 +220,10 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
 
         let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
             if let nameTextField = alertController.textFields?.first, let photoName = nameTextField.text, !photoName.isEmpty {
-                // Process the entered name
                 print("Entered photo name: \(photoName)")
                 self?.updateTableView(with: image, name: photoName)
-                // Save to CoreData
-                self?.savePhotoToCoreData(childName: "childNameValue", date: Date(), image: "imageValue", title: "titleValue", userName: "userNameValue")
+                self?.savePhotoToCoreData(childName: "childNameValue", date: Date(), image: "imageValue", title: photoName, userName: "userNameValue")
+                self?.savePhotoNamesToUserDefaults()
             }
         }
 
@@ -141,44 +235,35 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         present(alertController, animated: true, completion: nil)
     }
 
-    // Function to update the table view with the selected image and name
     func updateTableView(with image: UIImage, name: String) {
         print("Updating table view with the selected image and name: \(name), binary data: \(String(describing: selectedImageData))")
         photoNames.append(name)
 
-        // Reload the table view on the main thread
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
 
-    // Function to generate a unique name for the photo (e.g., timestamp)
     func generateUniqueName() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd_HHmmss"
         return "Photo_\(formatter.string(from: Date()))"
     }
 
-    // Function to save photo data to CoreData
     func savePhotoToCoreData(childName: String, date: Date, image: String, title: String, userName: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
 
-        // Create a managed object context
         let context = appDelegate.persistentContainer.viewContext
 
-        // Create a new Documents entity
         if let newDocument = NSEntityDescription.insertNewObject(forEntityName: "Documents", into: context) as? NSManagedObject {
-
-            // Assign values to the entity attributes
             newDocument.setValue(childName, forKey: "childName")
             newDocument.setValue(date, forKey: "date")
             newDocument.setValue(image, forKey: "image")
             newDocument.setValue(title, forKey: "title")
             newDocument.setValue(userName, forKey: "userName")
 
-            // Save the changes to CoreData
             do {
                 try context.save()
                 print("Saved to CoreData: ChildName - \(childName), Date - \(date), Image - \(image), Title - \(title), UserName - \(userName)")
@@ -186,5 +271,9 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
                 print("Failed to save to CoreData: \(error.localizedDescription)")
             }
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Handle selection if needed
     }
 }
