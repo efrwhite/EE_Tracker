@@ -794,7 +794,7 @@
                                             <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Tcd-mR-9cd" kind="show" id="zvJ-ow-XMr"/>
+                                            <segue destination="gVa-VJ-Q51" kind="show" id="G6H-HV-y12"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZU-VG-Tgr">
@@ -813,7 +813,7 @@
                                             <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="EYQ-ma-Vv2" kind="show" id="vQx-ik-gNf"/>
+                                            <segue destination="zDM-UM-su2" kind="show" id="1c2-92-fQN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bb-Xq-R2I">
@@ -832,7 +832,7 @@
                                             <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="hYS-cf-Jp0" kind="show" id="NWN-mT-sCS"/>
+                                            <segue destination="1zL-46-5UA" kind="show" id="rrN-qQ-hAE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-zf-WjA">
@@ -851,7 +851,7 @@
                                             <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="HJa-D5-KIS" kind="show" id="sM9-TO-avv"/>
+                                            <segue destination="EUx-DI-TSP" kind="show" id="2Kf-tJ-sN8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8M-4j-aRi">
@@ -1832,71 +1832,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyj-j4-Vhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9501.5267175572517" y="-1950"/>
-        </scene>
-        <!--Diet 1-->
-        <scene sceneID="Gsu-vk-iwO">
-            <objects>
-                <viewController storyboardIdentifier="Diet1ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tcd-mR-9cd" userLabel="Diet 1" customClass="Diet1ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="axy-eA-Qd7">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="uOZ-24-3n7"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="cJg-vr-wAY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OEL-6r-sBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4531" y="-1882"/>
-        </scene>
-        <!--Diet 2-->
-        <scene sceneID="Bwa-Bh-wac">
-            <objects>
-                <viewController storyboardIdentifier="Diet2ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EYQ-ma-Vv2" userLabel="Diet 2" customClass="Diet2ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="REH-fz-SSS">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="kbk-4p-qE7"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="0k5-cs-OOZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cDx-aI-gov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4531" y="-1213"/>
-        </scene>
-        <!--Diet 4-->
-        <scene sceneID="OES-q5-RPJ">
-            <objects>
-                <viewController storyboardIdentifier="Diet4ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hYS-cf-Jp0" userLabel="Diet 4" customClass="Diet4ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gsM-G1-k1R">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="klX-4N-wJ6"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="EKR-T4-GcO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wft-J1-sja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5462" y="-1882"/>
-        </scene>
-        <!--Diet 6-->
-        <scene sceneID="fWW-L0-Hws">
-            <objects>
-                <viewController storyboardIdentifier="Diet6ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HJa-D5-KIS" userLabel="Diet 6" customClass="Diet6ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Y7Y-hd-6tQ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="fG9-LI-mRs"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="xNL-cA-ZBv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FG2-P7-Ug0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5462" y="-1213"/>
+            <point key="canvasLocation" x="10135" y="-1213"/>
         </scene>
         <!--More Info-->
         <scene sceneID="oDe-iT-s4u">
@@ -2240,6 +2176,486 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XsD-st-1Th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9352" y="220"/>
+        </scene>
+        <!--Diet 1 View-->
+        <scene sceneID="UJG-gr-guc">
+            <objects>
+                <viewController storyboardIdentifier="Diet1ViewController" title="Diet 1 View" id="gVa-VJ-Q51" customClass="Diet1ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i6N-et-7j9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5jZ-zQ-x88">
+                                <rect key="frame" x="0.0" y="168" width="393" height="684"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="tn4-CR-qOL" kind="embed" identifier="FeedSegue" id="dZq-rg-GR7"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3iT-0g-5xl">
+                                <rect key="frame" x="21.666666666666657" y="118" width="350" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="G1L-55-zim"/>
+                                    <constraint firstAttribute="width" constant="350" id="Ppx-wT-WXQ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Foods Okay to Eat"/>
+                                    <segment title="Foods Not Okay to Eat"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="gVa-VJ-Q51" eventType="valueChanged" id="ftl-vZ-Z8y"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx9-lO-gFu">
+                                <rect key="frame" x="0.0" y="168" width="393" height="684"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="Tm3-sQ-8qp" kind="embed" identifier="FeedSegue" id="9PZ-zQ-UPl"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Over here there is general text about diet plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0Y-6I-Qgc">
+                                <rect key="frame" x="18" y="187" width="357" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eKK-lf-FqN"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="3iT-0g-5xl" firstAttribute="centerX" secondItem="i6N-et-7j9" secondAttribute="centerX" id="1Oj-C3-xRo"/>
+                            <constraint firstAttribute="bottom" secondItem="gx9-lO-gFu" secondAttribute="bottom" id="EQR-jw-wgK"/>
+                            <constraint firstItem="gx9-lO-gFu" firstAttribute="leading" secondItem="eKK-lf-FqN" secondAttribute="leading" id="Ia3-Gk-pmR"/>
+                            <constraint firstItem="5jZ-zQ-x88" firstAttribute="trailing" secondItem="eKK-lf-FqN" secondAttribute="trailing" id="RhX-Gl-3tB"/>
+                            <constraint firstItem="3iT-0g-5xl" firstAttribute="top" secondItem="eKK-lf-FqN" secondAttribute="top" constant="15" id="VVR-UI-KbZ"/>
+                            <constraint firstItem="gx9-lO-gFu" firstAttribute="trailing" secondItem="eKK-lf-FqN" secondAttribute="trailing" id="esC-pZ-iXy"/>
+                            <constraint firstItem="5jZ-zQ-x88" firstAttribute="leading" secondItem="eKK-lf-FqN" secondAttribute="leading" id="eyL-cA-sJ5"/>
+                            <constraint firstItem="5jZ-zQ-x88" firstAttribute="top" secondItem="3iT-0g-5xl" secondAttribute="bottom" constant="10" id="qQc-MF-4WP"/>
+                            <constraint firstAttribute="bottom" secondItem="5jZ-zQ-x88" secondAttribute="bottom" id="qsB-Zj-xPk"/>
+                            <constraint firstItem="gx9-lO-gFu" firstAttribute="top" secondItem="3iT-0g-5xl" secondAttribute="bottom" constant="10" id="rcN-8O-9fU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Diet 1" largeTitleDisplayMode="never" id="4pO-Ns-3Yf"/>
+                    <connections>
+                        <outlet property="Diet1BadView" destination="5jZ-zQ-x88" id="gq9-t4-mSB"/>
+                        <outlet property="Diet1GoodView" destination="gx9-lO-gFu" id="7eW-0B-iG5"/>
+                        <outlet property="segmentedControl" destination="3iT-0g-5xl" id="VMN-zz-22z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQz-g2-4UQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3609.9236641221373" y="-2866.1971830985917"/>
+        </scene>
+        <!--Diet 1 Good View-->
+        <scene sceneID="uB3-UG-LEm">
+            <objects>
+                <viewController storyboardIdentifier="Diet1GoodViewController" title="Diet 1 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tm3-sQ-8qp" customClass="Diet1GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4UM-gr-upn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="684"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1fu-K5-2nm">
+                                <rect key="frame" x="16" y="59" width="361" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dxl-8h-mpg"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="1fu-K5-2nm" id="MGo-nH-oI6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFe-vd-20l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3054" y="-2248"/>
+        </scene>
+        <!--Diet 1 Bad View-->
+        <scene sceneID="gKJ-gu-hI0">
+            <objects>
+                <viewController storyboardIdentifier="Diet1BadViewController" title="Diet 1 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tn4-CR-qOL" customClass="Diet1BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8gE-Eq-cel">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="684"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UDv-g8-M7K">
+                                <rect key="frame" x="16" y="59" width="361" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YrK-dF-sCz"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="UDv-g8-M7K" id="xIw-jO-JEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i95-gx-j5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4106" y="-2246"/>
+        </scene>
+        <!--Diet 2 Good View-->
+        <scene sceneID="nj3-Y3-7eE">
+            <objects>
+                <viewController storyboardIdentifier="Diet2GoodViewController" title="Diet 2 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aDT-sZ-C6h" customClass="Diet2GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P9X-KM-V7q">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="684"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="usH-JT-qRF">
+                                <rect key="frame" x="16" y="59" width="361" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UWG-Nu-qiQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="usH-JT-qRF" id="8vl-R2-zL8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dah-9p-tzy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5118" y="-2247"/>
+        </scene>
+        <!--Diet 2 Bad View-->
+        <scene sceneID="gWj-tG-9UV">
+            <objects>
+                <viewController storyboardIdentifier="Diet2BadViewController" title="Diet 2 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aUh-Ot-NFo" customClass="Diet2BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nbr-0G-XPV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="684"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8e0-np-39E">
+                                <rect key="frame" x="16" y="59" width="361" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Lg-HT-eEo"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="8e0-np-39E" id="9kA-HQ-hYw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZqN-1w-dBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6002" y="-2247"/>
+        </scene>
+        <!--Diet 2 View-->
+        <scene sceneID="9iV-aL-iOz">
+            <objects>
+                <viewController storyboardIdentifier="Diet2ViewController" title="Diet 2 View" id="zDM-UM-su2" customClass="Diet2ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tmQ-fx-f1C">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjF-T5-nWg">
+                                <rect key="frame" x="0.0" y="168" width="393" height="684"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="aUh-Ot-NFo" kind="embed" identifier="FeedSegue" id="9xY-7b-col"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z2L-4o-GU1">
+                                <rect key="frame" x="21.666666666666657" y="118" width="350" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MIm-QP-V4j"/>
+                                    <constraint firstAttribute="width" constant="350" id="vEc-Pq-xjy"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Foods Okay to Eat"/>
+                                    <segment title="Foods Not Okay to Eat"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="zDM-UM-su2" eventType="valueChanged" id="4Lg-9y-Ror"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IM1-0U-MWm">
+                                <rect key="frame" x="0.0" y="168" width="393" height="684"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="aDT-sZ-C6h" kind="embed" identifier="FeedSegue" id="vP5-tw-EFe"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Over here there is general text about diet plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozy-k1-gbt">
+                                <rect key="frame" x="18" y="187" width="357" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cR1-Uk-VKZ"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="IM1-0U-MWm" firstAttribute="top" secondItem="z2L-4o-GU1" secondAttribute="bottom" constant="10" id="5t8-a5-YMf"/>
+                            <constraint firstAttribute="bottom" secondItem="IM1-0U-MWm" secondAttribute="bottom" id="7sh-jC-PDv"/>
+                            <constraint firstItem="IM1-0U-MWm" firstAttribute="leading" secondItem="cR1-Uk-VKZ" secondAttribute="leading" id="AUc-cw-8Pb"/>
+                            <constraint firstItem="z2L-4o-GU1" firstAttribute="centerX" secondItem="tmQ-fx-f1C" secondAttribute="centerX" id="F2k-AY-jjd"/>
+                            <constraint firstAttribute="bottom" secondItem="vjF-T5-nWg" secondAttribute="bottom" id="Nb8-VW-2Wh"/>
+                            <constraint firstItem="vjF-T5-nWg" firstAttribute="leading" secondItem="cR1-Uk-VKZ" secondAttribute="leading" id="WAS-sp-wiq"/>
+                            <constraint firstItem="vjF-T5-nWg" firstAttribute="top" secondItem="z2L-4o-GU1" secondAttribute="bottom" constant="10" id="bz0-Yl-m0X"/>
+                            <constraint firstItem="z2L-4o-GU1" firstAttribute="top" secondItem="cR1-Uk-VKZ" secondAttribute="top" constant="15" id="c0r-IT-Ae3"/>
+                            <constraint firstItem="IM1-0U-MWm" firstAttribute="trailing" secondItem="cR1-Uk-VKZ" secondAttribute="trailing" id="eRh-ed-8ev"/>
+                            <constraint firstItem="vjF-T5-nWg" firstAttribute="trailing" secondItem="cR1-Uk-VKZ" secondAttribute="trailing" id="xKa-Jd-Ukk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Diet 2" largeTitleDisplayMode="never" id="5z6-4M-DIl"/>
+                    <connections>
+                        <outlet property="Diet2BadView" destination="vjF-T5-nWg" id="5kB-7J-M8D"/>
+                        <outlet property="Diet2GoodView" destination="IM1-0U-MWm" id="9Gz-QY-YmF"/>
+                        <outlet property="segmentedControl" destination="z2L-4o-GU1" id="WEc-Tr-eqF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1p-KL-3Sb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5533.5877862595416" y="-2866.1971830985917"/>
+        </scene>
+        <!--Diet 4 Bad View-->
+        <scene sceneID="EHh-9f-7O9">
+            <objects>
+                <viewController storyboardIdentifier="Diet4BadViewController" title="Diet 4 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m1Z-xR-Ycc" customClass="Diet4BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pCj-cn-1Ta">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="684"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-s4-8Fg">
+                                <rect key="frame" x="16" y="59" width="361" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jOB-NP-kFG"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RaL-s4-8Fg" id="FA5-6c-gTk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zcv-t7-RzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8219" y="-2262"/>
+        </scene>
+        <!--Diet 4 Good View-->
+        <scene sceneID="exE-Bd-Qne">
+            <objects>
+                <viewController storyboardIdentifier="Diet4GoodViewController" title="Diet 4 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NxP-8u-9Di" customClass="Diet4GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WuX-54-gWN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="684"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DrR-cy-s7G">
+                                <rect key="frame" x="16" y="59" width="361" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lll-wu-rRU"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="DrR-cy-s7G" id="Yk9-3j-Tmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fW2-Zd-nxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7335" y="-2262"/>
+        </scene>
+        <!--Diet 4 View-->
+        <scene sceneID="E31-61-bGa">
+            <objects>
+                <viewController storyboardIdentifier="Diet4ViewController" title="Diet 4 View" id="1zL-46-5UA" customClass="Diet4ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eyg-Hp-sQu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngm-sV-n52">
+                                <rect key="frame" x="0.0" y="168" width="393" height="684"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="m1Z-xR-Ycc" kind="embed" identifier="FeedSegue" id="HCB-hh-Oga"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UvZ-iv-73h">
+                                <rect key="frame" x="21.666666666666657" y="118" width="350" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="64l-ZR-xrc"/>
+                                    <constraint firstAttribute="height" constant="40" id="Z4A-hA-efo"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Foods Okay to Eat"/>
+                                    <segment title="Foods Not Okay to Eat"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="1zL-46-5UA" eventType="valueChanged" id="xOu-Kr-F4E"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKZ-5C-V98">
+                                <rect key="frame" x="0.0" y="168" width="393" height="684"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="NxP-8u-9Di" kind="embed" identifier="FeedSegue" id="jGF-oW-iOn"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Over here there is general text about diet plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeK-aF-ug9">
+                                <rect key="frame" x="18" y="187" width="357" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a8b-Kq-ywU"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Ngm-sV-n52" firstAttribute="leading" secondItem="a8b-Kq-ywU" secondAttribute="leading" id="7eH-2H-k8H"/>
+                            <constraint firstItem="UvZ-iv-73h" firstAttribute="top" secondItem="a8b-Kq-ywU" secondAttribute="top" constant="15" id="JeY-n7-Rwa"/>
+                            <constraint firstItem="UvZ-iv-73h" firstAttribute="centerX" secondItem="eyg-Hp-sQu" secondAttribute="centerX" id="M9z-PL-6cX"/>
+                            <constraint firstAttribute="bottom" secondItem="mKZ-5C-V98" secondAttribute="bottom" id="VlG-tT-jd1"/>
+                            <constraint firstItem="Ngm-sV-n52" firstAttribute="trailing" secondItem="a8b-Kq-ywU" secondAttribute="trailing" id="WbP-dN-Co9"/>
+                            <constraint firstItem="mKZ-5C-V98" firstAttribute="trailing" secondItem="a8b-Kq-ywU" secondAttribute="trailing" id="ZIj-8B-eHr"/>
+                            <constraint firstItem="mKZ-5C-V98" firstAttribute="leading" secondItem="a8b-Kq-ywU" secondAttribute="leading" id="aYd-pE-tuX"/>
+                            <constraint firstAttribute="bottom" secondItem="Ngm-sV-n52" secondAttribute="bottom" id="jbk-Oe-hpq"/>
+                            <constraint firstItem="mKZ-5C-V98" firstAttribute="top" secondItem="UvZ-iv-73h" secondAttribute="bottom" constant="10" id="qeS-Dq-vcI"/>
+                            <constraint firstItem="Ngm-sV-n52" firstAttribute="top" secondItem="UvZ-iv-73h" secondAttribute="bottom" constant="10" id="zK5-kt-Uv3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Diet 4" largeTitleDisplayMode="never" id="Osi-37-jMP"/>
+                    <connections>
+                        <outlet property="Diet4BadView" destination="Ngm-sV-n52" id="e15-DZ-Lk1"/>
+                        <outlet property="Diet4GoodView" destination="mKZ-5C-V98" id="Cej-67-nDE"/>
+                        <outlet property="segmentedControl" destination="UvZ-iv-73h" id="mRL-Ab-3NJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDs-nf-RZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7751.9083969465646" y="-2881.6901408450703"/>
+        </scene>
+        <!--Diet 6 Bad View-->
+        <scene sceneID="e3w-uh-msA">
+            <objects>
+                <viewController storyboardIdentifier="Diet6BadViewController" title="Diet 6 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tjl-vi-BZJ" customClass="Diet6BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mCw-0d-VHh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="684"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iVf-gw-acz">
+                                <rect key="frame" x="16" y="59" width="361" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d6W-Gc-vbC"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="iVf-gw-acz" id="88z-JI-j58"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWC-0J-lK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10201" y="-2263"/>
+        </scene>
+        <!--Diet 6 Good View-->
+        <scene sceneID="ryW-am-Rf3">
+            <objects>
+                <viewController storyboardIdentifier="Diet6GoodViewController" title="Diet 6 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gyw-Ez-I7A" customClass="Diet6GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QLb-rk-ku9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="686"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cTz-JN-3YU">
+                                <rect key="frame" x="16" y="59" width="361" height="591"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2fH-Eq-TOM"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cTz-JN-3YU" id="bMn-pL-hSF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMI-O1-nkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9317" y="-2263"/>
+        </scene>
+        <!--Diet 6 View-->
+        <scene sceneID="5SB-1R-9pf">
+            <objects>
+                <viewController storyboardIdentifier="Diet6ViewController" title="Diet 6 View" id="EUx-DI-TSP" customClass="Diet6ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0NQ-bm-SoA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcu-Gh-5Iv">
+                                <rect key="frame" x="0.0" y="168" width="393" height="684"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="Tjl-vi-BZJ" kind="embed" identifier="FeedSegue" id="K2R-fw-eTu"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z7L-dj-HWg">
+                                <rect key="frame" x="21.666666666666657" y="118" width="350" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="BtG-fm-CJi"/>
+                                    <constraint firstAttribute="height" constant="40" id="JFM-vO-tf0"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Foods Okay to Eat"/>
+                                    <segment title="Foods Not Okay to Eat"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="EUx-DI-TSP" eventType="valueChanged" id="88A-KL-Ics"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lg9-4R-649">
+                                <rect key="frame" x="0.0" y="166" width="393" height="686"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="gyw-Ez-I7A" kind="embed" identifier="FeedSegue" id="Oak-AE-ZZS"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Over here there is general text about diet plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9r-m5-TSS">
+                                <rect key="frame" x="18" y="187" width="357" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IyI-YT-eou"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Lg9-4R-649" firstAttribute="trailing" secondItem="IyI-YT-eou" secondAttribute="trailing" id="AWP-AX-SHE"/>
+                            <constraint firstItem="Lg9-4R-649" firstAttribute="top" secondItem="Z7L-dj-HWg" secondAttribute="bottom" constant="10" id="FHx-8R-IOe"/>
+                            <constraint firstItem="wcu-Gh-5Iv" firstAttribute="trailing" secondItem="IyI-YT-eou" secondAttribute="trailing" id="KGg-bg-o9H"/>
+                            <constraint firstItem="Z7L-dj-HWg" firstAttribute="top" secondItem="IyI-YT-eou" secondAttribute="top" constant="15" id="Q6i-4D-j7F"/>
+                            <constraint firstItem="Lg9-4R-649" firstAttribute="leading" secondItem="IyI-YT-eou" secondAttribute="leading" id="Qr6-CJ-hey"/>
+                            <constraint firstItem="wcu-Gh-5Iv" firstAttribute="top" secondItem="Z7L-dj-HWg" secondAttribute="bottom" constant="10" id="TVB-3y-vqU"/>
+                            <constraint firstAttribute="bottom" secondItem="Lg9-4R-649" secondAttribute="bottom" id="jEL-BC-9ys"/>
+                            <constraint firstItem="Z7L-dj-HWg" firstAttribute="centerX" secondItem="0NQ-bm-SoA" secondAttribute="centerX" id="jH0-2f-yVy"/>
+                            <constraint firstAttribute="bottom" secondItem="wcu-Gh-5Iv" secondAttribute="bottom" id="kT9-oC-fSl"/>
+                            <constraint firstItem="wcu-Gh-5Iv" firstAttribute="leading" secondItem="IyI-YT-eou" secondAttribute="leading" id="l9m-mS-Qeh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Diet 6" largeTitleDisplayMode="never" id="6hg-YT-gWA"/>
+                    <connections>
+                        <outlet property="Diet6BadView" destination="wcu-Gh-5Iv" id="yjf-bC-ZHY"/>
+                        <outlet property="Diet6GoodView" destination="Lg9-4R-649" id="EZR-6r-d2B"/>
+                        <outlet property="segmentedControl" destination="Z7L-dj-HWg" id="xFQ-Kh-xza"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7g5-t4-5rR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9774.8091603053435" y="-2899.2957746478874"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
