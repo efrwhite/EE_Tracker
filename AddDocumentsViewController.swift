@@ -27,6 +27,7 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         tableView.register(DocumentTableViewCell.self, forCellReuseIdentifier: "DocumentTableViewCell")
         
         if let savedPhotoNames = UserDefaults.standard.stringArray(forKey: "SavedPhotoNames") {
+
             photoNames = savedPhotoNames
         }
     }
@@ -87,21 +88,38 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         alertController.addTextField { textField in
             textField.text = self.photoNames[indexPath.row]
         }
-        
+
         let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self, weak alertController] _ in
             guard let newName = alertController?.textFields?.first?.text, !newName.isEmpty else { return }
             self?.photoNames[indexPath.row] = newName
-            self?.tableView.reloadRows(at: [indexPath], with: .automatic)
             self?.savePhotoNamesToUserDefaults()
+
+            DispatchQueue.main.async {
+                self?.tableView.reloadData() // Reload the entire table view
+            }
         }
-        
+
+
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
+
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
-        
+
         present(alertController, animated: true, completion: nil)
     }
+
+    func updateTableView(with image: UIImage, name: String) {
+        print("Updating table view with the selected image and name: \(name), binary data: \(String(describing: selectedImageData))")
+        photoNames.append(name)
+
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.photoNames.count - 1, section: 0)
+            self.tableView.beginUpdates()
+            self.tableView.insertRows(at: [indexPath], with: .automatic)
+            self.tableView.endUpdates()
+        }
+    }
+
     
     func deletePhotoName(at indexPath: IndexPath) {
         photoNames.remove(at: indexPath.row)
@@ -241,15 +259,8 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         
         present(alertController, animated: true, completion: nil)
     }
+
     
-    func updateTableView(with image: UIImage, name: String) {
-        print("Updating table view with the selected image and name: \(name), binary data: \(String(describing: selectedImageData))")
-        photoNames.append(name)
-        
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
     
     func generateUniqueName() -> String {
         let formatter = DateFormatter()

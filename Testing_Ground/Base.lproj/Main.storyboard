@@ -378,15 +378,39 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuF-jc-i08">
+                                <rect key="frame" x="153" y="679.33333333333337" width="87" height="35.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Up">
+                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="19"/>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tnS-He-ia0" kind="show" id="C2F-II-KMz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP9-d2-pgu">
+                                <rect key="frame" x="105" y="619" width="183" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gHH-So-0IY"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.6705882353" green="0.7725490196" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="iuF-jc-i08" firstAttribute="top" secondItem="QP9-d2-pgu" secondAttribute="bottom" constant="40" id="Co0-Zi-CGi"/>
                             <constraint firstItem="gHH-So-0IY" firstAttribute="bottom" secondItem="1oE-OL-UXv" secondAttribute="bottom" constant="243" id="Dk6-zb-64x"/>
                             <constraint firstItem="1oE-OL-UXv" firstAttribute="top" secondItem="gHH-So-0IY" secondAttribute="top" constant="141" id="GS9-CO-7gk"/>
+                            <constraint firstItem="iuF-jc-i08" firstAttribute="leading" secondItem="gHH-So-0IY" secondAttribute="leading" constant="153" id="KPU-4E-L0e"/>
+                            <constraint firstItem="QP9-d2-pgu" firstAttribute="top" secondItem="1oE-OL-UXv" secondAttribute="bottom" constant="44" id="QjR-c6-DYB"/>
+                            <constraint firstItem="QP9-d2-pgu" firstAttribute="leading" secondItem="gHH-So-0IY" secondAttribute="leading" constant="105" id="ULf-V2-Ziq"/>
+                            <constraint firstItem="gHH-So-0IY" firstAttribute="bottom" secondItem="iuF-jc-i08" secondAttribute="bottom" constant="103.33" id="ek8-OL-o8O"/>
+                            <constraint firstItem="gHH-So-0IY" firstAttribute="trailing" secondItem="iuF-jc-i08" secondAttribute="trailing" constant="153" id="jQg-Uv-yM0"/>
                             <constraint firstItem="1oE-OL-UXv" firstAttribute="leading" secondItem="gHH-So-0IY" secondAttribute="leading" constant="93" id="kmA-fI-KOg"/>
                             <constraint firstItem="gHH-So-0IY" firstAttribute="trailing" secondItem="1oE-OL-UXv" secondAttribute="trailing" constant="93.670000000000002" id="rlh-lg-8wb"/>
+                            <constraint firstItem="gHH-So-0IY" firstAttribute="trailing" secondItem="QP9-d2-pgu" secondAttribute="trailing" constant="105" id="xOF-dv-Xzj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" prompt="Add your details to login" id="fmw-WA-JkD"/>
@@ -397,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baM-ez-iOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2869" y="-449"/>
+            <point key="canvasLocation" x="2866.4122137404579" y="-449.29577464788736"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L8G-Hd-d0f">
@@ -562,10 +586,10 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="EOE Education">
+                                                <fragment content="EGID Education">
                                                     <attributes>
                                                         <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -1171,7 +1195,7 @@
         <!--Symptom Score-->
         <scene sceneID="FIZ-Gk-i7P">
             <objects>
-                <viewController id="nCO-9r-d3V" customClass="SymptomScoreViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SymptomScoreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nCO-9r-d3V" customClass="SymptomScoreViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ra-JG-iMg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1207,7 +1231,7 @@
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="savebutton:" destination="nCO-9r-d3V" eventType="touchUpInside" id="kHD-Ml-f3e"/>
+                                    <action selector="saveButtonTapped:" destination="nCO-9r-d3V" eventType="touchUpInside" id="3ad-Xt-FUy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1222,23 +1246,27 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
                                 <connections>
-                                    <segue destination="Aa5-OM-4DW" kind="show" id="Wft-8I-mqj"/>
+                                    <segue destination="Aa5-OM-4DW" kind="show" identifier="SymptomSegue" id="Wft-8I-mqj"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <action selector="presentSymptomScoreViewController:" destination="X8H-xg-O52" id="RQP-aO-f3P"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="symptomtableview" destination="xXF-yN-OHE" id="AhY-5s-imf"/>
+                        <outlet property="tableView" destination="xXF-yN-OHE" id="MDs-o1-9iN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="db4-PS-S9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="X8H-xg-O52" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6250" y="1208"/>
         </scene>
         <!--QualityofLifeViewController-->
         <scene sceneID="6fk-Op-5z4">
             <objects>
-                <viewController title="QualityofLifeViewController" id="bqa-K7-Tx7" customClass="QualityofLifeViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QualityofLifeViewController" title="QualityofLifeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bqa-K7-Tx7" customClass="QualityofLifeViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QOX-fy-NNN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1274,7 +1302,7 @@
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="saveButtonTapped:" destination="bqa-K7-Tx7" eventType="touchUpInside" id="ggG-r3-nUk"/>
+                                    <action selector="saveButtonTapped:" destination="bqa-K7-Tx7" eventType="touchUpInside" id="XpH-55-7ld"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1289,29 +1317,34 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
                                 <connections>
-                                    <segue destination="Aa5-OM-4DW" kind="show" identifier="scoresegue" id="18g-oF-war"/>
+                                    <segue destination="Aa5-OM-4DW" kind="show" identifier="QualitySegue" id="18g-oF-war"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <action selector="presentQualityofLifeViewController:" destination="BqY-sO-eJ1" id="sEP-ck-K7d"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="RCV-sF-zri" id="9dX-4c-HXQ"/>
+                        <outlet property="saveButton" destination="lkB-CH-VA9" id="EU8-LH-qco"/>
+                        <outlet property="tableView" destination="RCV-sF-zri" id="fOp-4w-32j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjC-7Z-N2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BqY-sO-eJ1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6217.5572519083971" y="425.35211267605638"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="l7i-Z7-dkP">
             <objects>
-                <viewController id="Aa5-OM-4DW" customClass="ScoreViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScoreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aa5-OM-4DW" customClass="ScoreViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k8h-jU-nxg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4SI-lb-YFi">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -1325,18 +1358,53 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy3-dF-D0R">
+                                <rect key="frame" x="94" y="777" width="205" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Generate Report">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="PXE-xf-haD" kind="show" id="3WP-uQ-JyG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MJZ-EE-dfr"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Vz-Vm-7VN"/>
                     <connections>
-                        <outlet property="tableView" destination="4SI-lb-YFi" id="jgz-NT-Ut2"/>
+                        <outlet property="tableView" destination="4SI-lb-YFi" id="hyf-45-zWA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAF-M9-Pdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7596.1832061068699" y="765.49295774647896"/>
+        </scene>
+        <!--GenerateReportViewController-->
+        <scene sceneID="e8L-yJ-ANi">
+            <objects>
+                <viewController title="GenerateReportViewController" id="PXE-xf-haD" customClass="GenerateReportViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lSN-2E-hSt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bPf-SX-zub"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Survey Report" id="Idy-Zj-yGJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PzU-He-edv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8490.8396946564881" y="1207.7464788732395"/>
         </scene>
         <!--What is EOE-->
         <scene sceneID="pzv-Iq-V4Q">
@@ -1584,7 +1652,7 @@
         <scene sceneID="V42-cc-i9r">
             <objects>
                 <viewController storyboardIdentifier="WhatCausesEOEViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="PYa-Ys-ZQw">
+                    <view key="view" contentMode="scaleToFill" id="PYa-Ys-ZQw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -2177,6 +2245,21 @@
             </objects>
             <point key="canvasLocation" x="9352" y="220"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="myt-Wg-XpC">
+            <objects>
+                <viewController id="4fL-ee-Oma" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YVe-98-GaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9S2-Ad-CUW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EiA-im-pzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10460" y="220"/>
+        </scene>
         <!--Diet 1 View-->
         <scene sceneID="UJG-gr-guc">
             <objects>
@@ -2659,8 +2742,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wft-8I-mqj"/>
-        <segue reference="R3T-0P-bOg"/>
+        <segue reference="18g-oF-war"/>
+        <segue reference="XAM-dJ-Uju"/>
+        <segue reference="C2F-II-KMz"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="imageView:mm0-OS-dyI:image" width="128" height="123">
