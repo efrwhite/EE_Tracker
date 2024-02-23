@@ -4,21 +4,36 @@ class Diet1BadViewController: UIViewController, UITableViewDataSource, UITableVi
     
     let sectionTitle = "Foods Not Okay to Eat"
     let items = [
-        "Milk",
+        "Baked goods",
         "Butter",
-        "Cream",
         "Buttermilk",
-        "Half & half",
-        "Yogurt",
+        "Casein",
         "Cheese",
-        "Ice cream",
-        "Sour cream",
+        "Chocolate",
+        "Condensed milk",
         "Cottage cheese",
-        "Chocolates and candy",
-        "“Whey” listed in ingredients",
-        "“Casein” listed in ingredients"
+        "Cream",
+        "Cream cheese",
+        "Curd",
+        "Custard",
+        "Evaporated milk",
+        "Ghee",
+        "Goat’s milk",
+        "Gravy",
+        "Half & half",
+        "Ice cream",
+        "Lactose",
+        "Margarine",
+        "Milk",
+        "Milk powder",
+        "Pastries",
+        "Pudding",
+        "Salad dressing",
+        "Sheep’s milk",
+        "Sour cream",
+        "Whey",
+        "Yogurt"
     ]
-    
     
     @IBOutlet weak var tableView: UITableView!
     
