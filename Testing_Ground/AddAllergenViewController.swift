@@ -41,6 +41,19 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         discontinuedAllergenTableView.delegate = self
         discontinuedAllergenTableView.dataSource = self
         discontinuedAllergenTableView.register(UITableViewCell.self, forCellReuseIdentifier: discontinuedCellIdentifier)
+
+        // Setup to dismiss keyboard
+        setupKeyboardDismissRecognizer()
+    }
+    
+    // Setup UITapGestureRecognizer to dismiss keyboard
+    func setupKeyboardDismissRecognizer() {
+        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddAllergenViewController.dismissKeyboard))
+        view.addGestureRecognizer(tapRecognizer)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

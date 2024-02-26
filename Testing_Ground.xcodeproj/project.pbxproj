@@ -34,6 +34,7 @@
 		8AE183232A658DF1006517D0 /* HowItsDiagnosedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183222A658DF1006517D0 /* HowItsDiagnosedViewController.swift */; };
 		8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */; };
 		8AE183272A658E3E006517D0 /* EGIDInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */; };
+		8AE8712A2B8AA0020081337D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE871292B8AA0020081337D /* ResultsViewController.swift */; };
 		A40883902AD1E0BA006F3871 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408838E2AD1E0BA006F3871 /* ProfilesTableviewcell.xib */; };
 		A40883932AD1E0BA006F3871 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408838F2AD1E0BA006F3871 /* ProfilesTableviewcell.swift */; };
 		A40883972AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40883962AD1E0C2006F3871 /* ParentTableViewCell.swift */; };
@@ -115,6 +116,7 @@
 		8AE183222A658DF1006517D0 /* HowItsDiagnosedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItsDiagnosedViewController.swift; sourceTree = "<group>"; };
 		8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItsTreatedViewController.swift; sourceTree = "<group>"; };
 		8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGIDInfoViewController.swift; sourceTree = "<group>"; };
+		8AE871292B8AA0020081337D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		A408838E2AD1E0BA006F3871 /* ProfilesTableviewcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilesTableviewcell.xib; sourceTree = "<group>"; };
 		A408838F2AD1E0BA006F3871 /* ProfilesTableviewcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTableviewcell.swift; sourceTree = "<group>"; };
 		A40883962AD1E0C2006F3871 /* ParentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				A4CADC0E2AE2AFDD00F1FB67 /* AddAllergenViewController.swift */,
 				A4CADC102AE2B6F600F1FB67 /* DietPlanViewController.swift */,
 				8A3D423D2B68029A0013EFE5 /* EndoscopyViewController.swift */,
+				8AE871292B8AA0020081337D /* ResultsViewController.swift */,
 				8A3D423B2B6802860013EFE5 /* DocumentTableViewCell.swift */,
 				8A3D42392B68026B0013EFE5 /* AddDocumentsViewController.swift */,
 				8A58A1632B7FD98900CC2D44 /* EditDocumentsViewController.swift */,
@@ -441,6 +444,7 @@
 				8A5108982B6BFDF2008206A3 /* Diet4GoodViewController.swift in Sources */,
 				8AE1831D2A658DA6006517D0 /* WhatAreSymptomsViewController.swift in Sources */,
 				8A5108A62B6C0735008206A3 /* Diet6ViewController.swift in Sources */,
+				8AE8712A2B8AA0020081337D /* ResultsViewController.swift in Sources */,
 				8A51088C2B6BF19E008206A3 /* Diet1ViewController.swift in Sources */,
 				8A3D423C2B6802860013EFE5 /* DocumentTableViewCell.swift in Sources */,
 				A4CA1A5B2A3654FC00C94D2C /* QualityofLifeTableViewCell.swift in Sources */,

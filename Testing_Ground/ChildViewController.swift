@@ -74,37 +74,7 @@ class ChildViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
 
-//    @IBAction func saveButton(_ sender: Any) {
-//        if isEditingChild {
-//            print("editing created")
-//           
-//            // Get a reference to the HomeProfileViewController
-//            // Send the username back to HomeProfilePageViewController
-//            // Get a reference to the HomeProfilePageViewController
-//            updateChildProfile()
-//            if let homeProfileViewController = navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
-//                    homeProfileViewController.user = user
-//                    navigationController?.popToViewController(homeProfileViewController, animated: true)
-//                }
-//                    // Pop back to the HomeProfilePageViewController
-//                    navigationController?.popViewController(animated: true)
-//        } else if isAddingChild {
-//            print("adding created")
-//            addChildProfile()
-//            // Get a reference to the HomeProfileViewController
-//            // Send the username back to HomeProfilePageViewController
-//            if let homeProfileViewController = navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
-//                    homeProfileViewController.user = user
-//                    navigationController?.popToViewController(homeProfileViewController, animated: true)
-//                }
-//                    // Pop back to the HomeProfilePageViewController
-//                    navigationController?.popViewController(animated: true)
-//        } else {
-//            createChildProfile()
-//        }
-//    }
-   
-  
+    
     func loadChildProfile(childName: String, usernamec: String) {
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@ AND firstName == %@", usernamec, childName)
@@ -187,90 +157,12 @@ class ChildViewController: UIViewController {
         }
     }
 
-    //1st update
-//    func updateChildProfile() {
-//        // Handle editing an existing profile
-//      
-//        if let profileToEdit = editingChildProfile {
-//            print(childFirstName.text!)
-//            profileToEdit.firstName = childFirstName.text!
-//            profileToEdit.lastName = lastName.text!
-//            profileToEdit.username = usernamec
-//
-//            // Update other profile properties as needed
-//            profileToEdit.diettype = diettype.currentTitle ?? ""
-//            // Add similar lines to update gender and other properties
-//
-//            if let selectedImage = childimage.image {
-//                // Convert the UIImage to Data
-//                if let imageData = selectedImage.pngData() {
-//                    profileToEdit.image = imageData
-//                } else {
-//                    print("Error converting image to data.")
-//                }
-//            } else {
-//                print("No image selected.")
-//            }
-//
-//            // Save the changes
-//            saveContext()
-//            showAlert(title: "Success", message: "Profile updated successfully.")
-//        }
-//    }
-//2
-//    func updateChildProfile() {
-//        // Handle editing an existing profile
-//        if let profileToEdit = editingChildProfile {
-//            profileToEdit.firstName = childFirstName.text!
-//            profileToEdit.lastName = lastName.text!
-//            profileToEdit.username = user
-//            profileToEdit.diettype = diettype.currentTitle ?? ""
-//            
-//            // Update other profile properties as needed
-//            // ...
-//
-//            if let selectedImage = childimage.image {
-//                // Convert the UIImage to Data
-//                if let imageData = selectedImage.pngData() {
-//                    profileToEdit.image = imageData
-//                } else {
-//                    print("Error converting image to data.")
-//                }
-//            } else {
-//                print("No image selected.")
-//            }
-//            
-//            // Save the changes
-//            saveContext()
-//            showAlert(title: "Success", message: "Profile updated successfully.")
-//        }
-//    }
+
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-//    func addChildProfile() {
-//        // Handle adding a new profile
-//        let newChild = Child(context: context)
-//        newChild.firstName = childFirstName.text!
-//        newChild.lastName = lastName.text!
-//        newChild.username = user
-//        newChild.diettype = diettype.currentTitle
-//        if let selectedImage = childimage.image {
-//            // Convert the UIImage to Data
-//            if let imageData = selectedImage.pngData() {
-//                newChild.image = imageData
-//            } else {
-//                print("Error converting image to data.")
-//            }
-//        } else {
-//            print("No image selected.")
-//        }
-//        child.append(newChild)
-//        saveContext()
-//        print("New profile added successfully.")
-//    }
 
     func createChildProfile() {
         // Handle creating a new profile (similar to adding)

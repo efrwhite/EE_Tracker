@@ -9,17 +9,17 @@ protocol AddAllergenDelegate: AnyObject {
 
 class AllergenViewController: UIViewController, UITextFieldDelegate {
     
-        @IBOutlet weak var allergyname: UITextField!
-        @IBOutlet weak var notes: UITextView!
-        @IBOutlet weak var frequency: UITextField!
-        @IBOutlet weak var startdate: UIDatePicker!
-        @IBOutlet weak var enddate: UIDatePicker!
-        @IBOutlet weak var endDateLabel: UILabel!
-        @IBOutlet weak var offonswitch: UISwitch!
+    @IBOutlet weak var allergyname: UITextField!
+    @IBOutlet weak var notes: UITextView!
+    @IBOutlet weak var frequency: UITextField!
+    @IBOutlet weak var startdate: UIDatePicker!
+    @IBOutlet weak var enddate: UIDatePicker!
+    @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var offonswitch: UISwitch!
     var user = ""
     var allergenName = ""
     // Rename isEditing to isEditMode
-        var isEditMode = false
+    var isEditMode = false
 
     // Declare a delegate property
     weak var delegate: AddAllergenDelegate?
@@ -35,12 +35,21 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
         offonswitch.isOn = false
         print("Edited Pressed ", isEditMode)
         print("Allergen Name ", allergenName)
+        
+        // Add tap gesture to dismiss keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
         if isEditMode {
                // Fetch and populate data for editing an existing medication
                populateDataForEditing()
            } else {
                // Configure the view for adding a new medication
            }
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @objc func switchValueChanged(_ sender: UISwitch) {
@@ -72,9 +81,6 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-
-
-    
     @IBAction func saveButton(_ sender: Any) {
             if isEditMode {
                 // Add logic to update the existing medication record
