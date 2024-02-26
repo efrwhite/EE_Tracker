@@ -1,16 +1,9 @@
-//
-//  EndoscopyViewController.swift
-//  Testing_Ground
-//
-//  Created by Vivek Vangala on 1/29/24.
-//
-
-import Foundation
 import UIKit
+import CoreData
 
 class EndoscopyViewController: UIViewController {
     
-    // MARK: - Properties
+    @IBOutlet weak var saveButton: UIButton!
     
     let mainStackView: UIStackView = {
         let stackView = UIStackView()
@@ -22,15 +15,8 @@ class EndoscopyViewController: UIViewController {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Endoscopy Results"
+        label.text = "Endoscopy"
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
-        return label
-    }()
-    
-    let dateLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Date:"
         label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
         return label
     }()
@@ -44,22 +30,25 @@ class EndoscopyViewController: UIViewController {
     
     let proximateTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "#input"
+        textField.placeholder = "Proximate:"
         textField.borderStyle = .roundedRect
+        textField.keyboardType = .numberPad
         return textField
     }()
     
     let middleTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "#input"
+        textField.placeholder = "Middle:"
         textField.borderStyle = .roundedRect
+        textField.keyboardType = .numberPad
         return textField
     }()
     
     let lowerTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "#input"
+        textField.placeholder = "Lower:"
         textField.borderStyle = .roundedRect
+        textField.keyboardType = .numberPad
         return textField
     }()
     
@@ -72,8 +61,8 @@ class EndoscopyViewController: UIViewController {
     
     let stomachTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "#input"
         textField.borderStyle = .roundedRect
+        textField.keyboardType = .numberPad
         return textField
     }()
     
@@ -86,8 +75,8 @@ class EndoscopyViewController: UIViewController {
     
     let duodenumTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "#input"
         textField.borderStyle = .roundedRect
+        textField.keyboardType = .numberPad
         return textField
     }()
     
@@ -100,31 +89,26 @@ class EndoscopyViewController: UIViewController {
     
     let rightColonTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Right: #input"
+        textField.placeholder = "Right:"
         textField.borderStyle = .roundedRect
+        textField.keyboardType = .numberPad
         return textField
     }()
     
     let middleColonTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Middle: #input"
+        textField.placeholder = "Middle:"
         textField.borderStyle = .roundedRect
+        textField.keyboardType = .numberPad
         return textField
     }()
     
     let leftColonTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Left: #input"
+        textField.placeholder = "Left:"
         textField.borderStyle = .roundedRect
+        textField.keyboardType = .numberPad
         return textField
-    }()
-    
-    let saveButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Save", for: .normal)
-        button.setTitleColor(UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0), for: .normal)
-        button.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
-        return button
     }()
     
     // MARK: - Lifecycle
@@ -141,7 +125,6 @@ class EndoscopyViewController: UIViewController {
         
         view.addSubview(mainStackView)
         mainStackView.addArrangedSubview(titleLabel)
-        mainStackView.addArrangedSubview(dateLabel)
         mainStackView.addArrangedSubview(eoELabel)
         mainStackView.addArrangedSubview(proximateTextField)
         mainStackView.addArrangedSubview(middleTextField)
@@ -154,7 +137,6 @@ class EndoscopyViewController: UIViewController {
         mainStackView.addArrangedSubview(rightColonTextField)
         mainStackView.addArrangedSubview(middleColonTextField)
         mainStackView.addArrangedSubview(leftColonTextField)
-        mainStackView.addArrangedSubview(saveButton)
         
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -165,8 +147,46 @@ class EndoscopyViewController: UIViewController {
     
     // MARK: - Button Action
     
-    @objc func saveButtonTapped() {
-        // Handle save button action
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        saveEndoscopyResults()
+    }
+    
+    func saveEndoscopyResults() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let context = appDelegate.persistentContainer.viewContext
+
+        // Create a new NSManagedObject for the 'Endoscopy' entity
+        let entity = NSEntityDescription.entity(forEntityName: "Endoscopy", in: context)!
+        let newEndoscopyResult = NSManagedObject(entity: entity, insertInto: context)
+
+        // Use setValue(_:forKey:) to set values for each attribute
+        newEndoscopyResult.setValue(Date(), forKey: "date") // Use the current date or a date picker
+        let proximateValue = Int32(proximateTextField.text ?? "0") ?? 0
+        let middleValue = Int32(middleTextField.text ?? "0") ?? 0
+        let lowerValue = Int32(lowerTextField.text ?? "0") ?? 0
+        let stomachValue = Int32(stomachTextField.text ?? "0") ?? 0
+        let duodenumValue = Int32(duodenumTextField.text ?? "0") ?? 0
+        let rightColonValue = Int32(rightColonTextField.text ?? "0") ?? 0
+        let middleColonValue = Int32(middleColonTextField.text ?? "0") ?? 0
+        let leftColonValue = Int32(leftColonTextField.text ?? "0") ?? 0
+        let sum = proximateValue + middleValue + lowerValue + stomachValue + duodenumValue + rightColonValue + middleColonValue + leftColonValue
+        newEndoscopyResult.setValue(sum, forKey: "sum")
+
+        print("Attempting to save Endoscopy result with sum: \(sum)")
+
+        do {
+            try context.save()
+            print("Endoscopy result saved successfully.")
+            navigateToResultsViewController()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+
+    func navigateToResultsViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let resultsVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as? ResultsViewController {
+            navigationController?.pushViewController(resultsVC, animated: true)
+        }
     }
 }
-
