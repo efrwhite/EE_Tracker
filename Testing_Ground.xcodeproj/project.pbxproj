@@ -649,7 +649,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AJ84Q69AHZ;
+				DEVELOPMENT_TEAM = G9Z6TQ3GHH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Testing_Ground/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select profile pictures.";
@@ -679,7 +679,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AJ84Q69AHZ;
+				DEVELOPMENT_TEAM = G9Z6TQ3GHH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Testing_Ground/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select profile pictures.";
