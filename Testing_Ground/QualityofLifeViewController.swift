@@ -1,7 +1,6 @@
 import UIKit
 import CoreData
 
-// Define QualityEntry outside of the QualityofLifeViewController class
 struct QualityEntry {
     let sum: Int
     let date: Date
@@ -22,10 +21,9 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
     let worry = ["I worry about having EOE", "I worry about getting sick in front of other people", "I worry about what other people think about me because of EOE", "I worry about getting allergy testing"]
     let communication = ["I have trouble telling other people about EOE", "I have trouble talking to my parents about how I feel", "I have trouble talking to other adults about how I feel", "I have trouble talking to my friends about how I feel", "I have trouble talking to doctors or nurses about how I feel"]
     let foodandeating = ["It is hard not being allowed to eat some foods", "It is hard for me not to sneak foods I'm allergic to", "It is hard for me to not eat the same things as my family", "It is hard not to eat the same things as my friends"]
-    let foodfeelingQ = ["I worry about eating foods I'm allergic to or not supposed to eat", "I feel upset about not eating foods I am allergic to or not supposed to eat", "I feel sad about not eating foods I am allergic to or not supposed to eat"]
+    let foodfeelingQ = ["I worry about eating foods I'm allergic to or not supposed to eat", "I'm upset about not eating foods I'm allergic to/not supposed to eat", "I'm sad about not eating foods I'm allergic to/not supposed to eat"]
     
     let sections = [
-        "Pain Scale:\n0 = pain\n1 = moderate pain\n2 = slight pain\n3 = barely pain\n4 = no pain",
         "SYMPTOMS I",
         "SYMPTOMS II",
         "TREATMENT",
@@ -37,7 +35,6 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
     
     var sectionData: [[String]] {
         return [
-            [], // Empty array for "Pain Scale" section
             symptomsone,
             symptomstwo,
             treatment,
@@ -53,31 +50,32 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
     
     var sectionResponses: [[String?]] = []
     
-    private var isHeaderSetupDone = false // Add this flag
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-        
-        
-            
-            
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         let nib = UINib(nibName: "QualityofLifeTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "QualityofLifeTableViewCell")
-        tableView.estimatedRowHeight = 40 // Set a reasonable estimate
+        tableView.estimatedRowHeight = 60 // Increase this value as needed
         tableView.rowHeight = UITableView.automaticDimension
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.estimatedRowHeight = 44
-        tableView.rowHeight = UITableView.automaticDimension
         
-        // Initialize the sectionResponses array
         for section in sectionData {
             sectionResponses.append(Array(repeating: nil, count: section.count))
         }
         
-        // Disable save button initially
         saveButton.isEnabled = false
+        
+        setupPersistentPainScaleHeaderView()
+        
+        // Setup tap gesture recognizer to dismiss keyboard
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            tapGesture.cancelsTouchesInView = false  // This allows other controls to receive touch events
+            view.addGestureRecognizer(tapGesture)
+        }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -88,70 +86,28 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
         return sectionData[section].count
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        if !isHeaderSetupDone {
-            setupTableHeaderView()
-            isHeaderSetupDone = true
-        }
-    }
-
-    func setupTableHeaderView() {
-        let headerText = "Pain Scale:\n0 = pain\n1 = moderate pain\n2 = slight pain\n3 = barely pain\n4 = no pain"
-        let label = UILabel(frame: CGRect(x: 16, y: 8, width: self.tableView.bounds.width - 32, height: 0))
-        label.numberOfLines = 0
-        label.text = headerText
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textAlignment = .left
-        label.textColor = .black
-        label.sizeToFit() // Resize the label to fit its content
-
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: label.frame.height + 16))
-        headerView.addSubview(label)
-
-        // Force the layout of subviews immediately
-        headerView.layoutIfNeeded()
-
-        // Set the header view as the table's header view
-        self.tableView.tableHeaderView = headerView
-    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QualityofLifeTableViewCell", for: indexPath) as! QualityofLifeTableViewCell
         
-        cell.questionlabel.text = sectionData[indexPath.section][indexPath.row]
-        if indexPath.section != 0 {
+            cell.questionlabel.font = UIFont.systemFont(ofSize: 14) // Adjust the font size as needed
+            cell.questionlabel.text = sectionData[indexPath.section][indexPath.row]
             cell.ratingText.tag = indexPath.section * 100 + indexPath.row
             cell.ratingText.text = sectionResponses[indexPath.section][indexPath.row]
             cell.ratingText.addTarget(self, action: #selector(responseTextFieldDidChange(_:)), for: .editingChanged)
-        }
-        
-        return cell
+                
+                return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        headerView.backgroundColor = UIColor.lightGray // Set a background color for header views
+        headerView.backgroundColor = UIColor.lightGray
         
         let label = UILabel()
         label.text = sections[section]
         label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.frame = CGRect(x: 16, y: 8, width: tableView.bounds.width - 32, height: 0)
+        label.sizeToFit()
         headerView.addSubview(label)
-        
-        NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 16),
-            label.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -16),
-            label.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 8),
-            label.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -8)
-        ])
-        
-        // For the first section, make the header sticky by setting it as the table view's header
-        if section == 0 {
-            tableView.tableHeaderView = headerView
-            return nil
-        }
         
         return headerView
     }
@@ -163,7 +119,6 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
         
         sectionResponses[section][row] = response
         
-        // Update the state of the save button based on whether all fields are filled
         updateSaveButtonState()
     }
     
@@ -182,6 +137,8 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
     @IBAction func saveButtonTapped(_ sender: Any) {
         captureData()
         saveDataToCoreData()
+        
+        performSegue(withIdentifier: "QualitySegue", sender: self)
     }
     
     func captureData() {
@@ -216,5 +173,51 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
         } catch let error as NSError {
             print("Could not save Quality data. \(error), \(error.userInfo)")
         }
+    }
+    
+    func setupPersistentPainScaleHeaderView() {
+        let painScaleHeaderView = UIView()
+        painScaleHeaderView.backgroundColor = .white // You can change the background color as needed
+        let headerText = "Pain Scale:\n0 = no pain\n1 = slight pain\n2 = moderate pain\n3 = severe pain\n4 = very severe pain"
+        let label = UILabel()
+        label.numberOfLines = 0 // Allows label to have multiple lines
+        label.text = headerText
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textAlignment = .left
+        label.textColor = .black
+        
+        painScaleHeaderView.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Constraints for the label inside the painScaleHeaderView
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: painScaleHeaderView.topAnchor, constant: 8),
+            label.leadingAnchor.constraint(equalTo: painScaleHeaderView.leadingAnchor, constant: 16),
+            label.trailingAnchor.constraint(equalTo: painScaleHeaderView.trailingAnchor, constant: -16),
+            label.bottomAnchor.constraint(equalTo: painScaleHeaderView.bottomAnchor, constant: -8)
+        ])
+        
+        view.addSubview(painScaleHeaderView)
+        painScaleHeaderView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Set the painScaleHeaderView height based on the content of the label
+        let estimatedSize = label.sizeThatFits(CGSize(width: view.frame.width - 32, height: CGFloat.greatestFiniteMagnitude))
+        let headerHeight = estimatedSize.height + 16 // Add some padding
+        
+        NSLayoutConstraint.activate([
+            painScaleHeaderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            painScaleHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            painScaleHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            painScaleHeaderView.heightAnchor.constraint(equalToConstant: headerHeight) // Use the calculated header height
+        ])
+        
+        // Adjust the tableView's top constraint to be below the painScaleHeaderView
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: painScaleHeaderView.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }

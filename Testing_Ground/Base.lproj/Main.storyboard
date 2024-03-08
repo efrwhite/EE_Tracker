@@ -901,7 +901,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fq9-IR-upr">
-                                <rect key="frame" x="151" y="249" width="117" height="34"/>
+                                <rect key="frame" x="151" y="249" width="99" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -948,7 +948,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3R-Ah-yQG">
-                                <rect key="frame" x="289" y="249" width="88" height="34"/>
+                                <rect key="frame" x="273" y="249" width="104" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <menu key="menu" id="MgC-mm-vha">
                                     <children>
@@ -962,7 +962,7 @@
                                         <fragment content="Button">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="14" name="TimesNewRomanPSMT"/>
+                                                <font key="NSFont" size="8" name="TimesNewRomanPSMT"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
@@ -1795,12 +1795,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="Allergies" id="lPz-pY-3eI"/>
                     <connections>
+                        <outlet property="allergenLabel" destination="g1U-n4-jGR" id="Ytb-mr-Kgr"/>
+                        <outlet property="allergyDiscontinuedLabel" destination="ujB-bI-1R5" id="84u-Op-xke"/>
                         <outlet property="allergyname" destination="m6u-7a-tkC" id="VEP-q0-XzM"/>
                         <outlet property="endDateLabel" destination="is3-DI-iTG" id="pPT-MB-TCL"/>
                         <outlet property="enddate" destination="Fz0-xC-trk" id="T7c-qK-PvY"/>
                         <outlet property="frequency" destination="9Jp-BQ-8YI" id="3a4-Jx-zN1"/>
+                        <outlet property="frequencyLabel" destination="IBo-Ob-Bj4" id="oNE-sT-QSE"/>
                         <outlet property="notes" destination="JQm-O3-0Tn" id="0Og-Jd-iKL"/>
+                        <outlet property="notesLabel" destination="Z7M-hP-vc6" id="8j4-W9-aLd"/>
                         <outlet property="offonswitch" destination="gZS-ue-RIZ" id="Lcw-wc-guX"/>
+                        <outlet property="startDateLabel" destination="cXH-pa-8Sg" id="XRw-CS-lCH"/>
                         <outlet property="startdate" destination="squ-WM-jne" id="3Ni-nv-dAz"/>
                     </connections>
                 </viewController>
@@ -2671,7 +2676,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="18g-oF-war"/>
         <segue reference="R3T-0P-bOg"/>
-        <segue reference="C2F-II-KMz"/>
+        <segue reference="yOw-6k-zAp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="imageView:mm0-OS-dyI:image" width="128" height="123">
