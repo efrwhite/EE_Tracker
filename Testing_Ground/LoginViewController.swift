@@ -1,11 +1,14 @@
 import UIKit
 import CoreData
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+var defaultUsername = "username"
+var defaultPassword = "password"
 
+class LoginViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var Username: UITextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,40 +20,30 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
-
+    
     override func updateViewConstraints() {
         // Update or adjust constraints here
         super.updateViewConstraints()
     }
-
+    
     @IBAction func EnterButton(_ sender: Any) {
-        let username = Username.text ?? ""
-        let password = Password.text ?? ""
+        guard let username = Username.text, let password = Password.text, !username.isEmpty, !password.isEmpty else {
+            presentAlert(message: "Please enter both username and password")
+            return
+        }
 
-        if username.isEmpty || password.isEmpty {
-            // Handle empty username or password
-            let alert = UIAlertController(title: nil, message: "Please enter both username and password", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            print("Username:",username)
-            print("Password:",password)
+        // Check for default credentials
+        if username == defaultUsername && password == defaultPassword {
+            // Handle default login by segueing Home
+            performSegue(withIdentifier: "homesegue", sender: nil)
         } else if validateLogin(username: username, password: password) {
+            // Handle normal login flow
             // You don't need to performSegue here, as it's handled by the Storyboard
-            
-            print("Username:",username)
-            print("Password:",password)
         } else {
-            // Invalid username or password
-            print("Else Block Error:")
-            print("Username:",username)
-            print("Password:",password)
-            let alert = UIAlertController(title: nil, message: "Username or password is incorrect", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            presentAlert(message: "Username or password is incorrect")
         }
     }
-
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == Username {
             Password.becomeFirstResponder()
@@ -60,13 +53,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-
+    
     func validateLogin(username: String, password: String) -> Bool {
         // Assuming you have a Core Data entity named 'Parent' with attributes 'username' and 'password'
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@ AND password == %@", username, password)
-
+        
         do {
             let matchingParents = try context.fetch(fetchRequest)
             return !matchingParents.isEmpty
@@ -75,21 +68,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return false
         }
     }
-
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-
+    
     func LoadItems() {
         // Validate username and password in the database, if true, send the username to the home page
     }
-
-    // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "homesegue", let destinationVC = segue.destination as? HomeViewController {
             destinationVC.user = Username.text ?? "" // Pass the username to HomeViewController
         }
     }
-
+    
+    func presentAlert(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
+    }
 }

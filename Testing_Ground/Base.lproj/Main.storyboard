@@ -368,8 +368,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuF-jc-i08">
                                 <rect key="frame" x="153" y="679.33333333333337" width="87" height="35.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign Up">
-                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Sign Up">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -1585,7 +1591,7 @@
         <scene sceneID="V42-cc-i9r">
             <objects>
                 <viewController storyboardIdentifier="WhatCausesEOEViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="PYa-Ys-ZQw">
+                    <view key="view" contentMode="scaleToFill" id="PYa-Ys-ZQw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -2675,8 +2681,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="18g-oF-war"/>
-        <segue reference="R3T-0P-bOg"/>
-        <segue reference="yOw-6k-zAp"/>
+        <segue reference="XAM-dJ-Uju"/>
+        <segue reference="C2F-II-KMz"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="imageView:mm0-OS-dyI:image" width="128" height="123">
