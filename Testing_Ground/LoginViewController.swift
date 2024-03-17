@@ -1,9 +1,7 @@
 import UIKit
 import CoreData
-
 var defaultUsername = "username"
 var defaultPassword = "password"
-
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var Password: UITextField!
@@ -22,25 +20,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func updateViewConstraints() {
-        // Update or adjust constraints here
         super.updateViewConstraints()
     }
     
     @IBAction func EnterButton(_ sender: Any) {
-        guard let username = Username.text, let password = Password.text, !username.isEmpty, !password.isEmpty else {
-            presentAlert(message: "Please enter both username and password")
-            return
-        }
-
+        guard let username = Username.text, let password = Password.text else { return }
         // Check for default credentials
         if username == defaultUsername && password == defaultPassword {
-            // Handle default login by segueing Home
+            // Perform the segue with the default login information
             performSegue(withIdentifier: "homesegue", sender: nil)
-        } else if validateLogin(username: username, password: password) {
-            // Handle normal login flow
-            // You don't need to performSegue here, as it's handled by the Storyboard
         } else {
-            presentAlert(message: "Username or password is incorrect")
         }
     }
     
@@ -49,32 +38,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             Password.becomeFirstResponder()
         } else if textField == Password {
             textField.resignFirstResponder()
-            // You can also call your EnterButton function here if needed.
         }
         return true
     }
     
     func validateLogin(username: String, password: String) -> Bool {
-        // Assuming you have a Core Data entity named 'Parent' with attributes 'username' and 'password'
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "username == %@ AND password == %@", username, password)
-        
-        do {
-            let matchingParents = try context.fetch(fetchRequest)
-            return !matchingParents.isEmpty
-        } catch {
-            print("Error validating login: \(error)")
-            return false
-        }
+        // Login validation logic
+        return false // Placeholder return value
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
-    func LoadItems() {
-        // Validate username and password in the database, if true, send the username to the home page
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "homesegue" {
+            guard let username = Username.text, let password = Password.text, !username.isEmpty, !password.isEmpty else {
+                presentAlert(message: "Please enter both username and password")
+                return false
+            }
+            // Prevent the automatic segue if using the default credentials
+            return !(username == defaultUsername && password == defaultPassword)
+        }
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -89,3 +75,4 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true)
     }
 }
+
