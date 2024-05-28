@@ -16,11 +16,6 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var enddate: UIDatePicker!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var offonswitch: UISwitch!
-    @IBOutlet weak var allergenLabel: UILabel!
-    @IBOutlet weak var frequencyLabel: UILabel!
-    @IBOutlet weak var startDateLabel: UILabel!
-    @IBOutlet weak var notesLabel: UILabel!
-    @IBOutlet weak var allergyDiscontinuedLabel: UILabel!
     
     
     var user = ""
@@ -33,7 +28,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            setupLayout()
+           // setupLayout()
             print("Edited Pressed ", isEditMode)
             print("Allergen Name ", allergenName)
             
@@ -129,84 +124,84 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
     }
 
     
-    func setupLayout() {
-        allergyname.translatesAutoresizingMaskIntoConstraints = false
-        notes.translatesAutoresizingMaskIntoConstraints = false
-        frequency.translatesAutoresizingMaskIntoConstraints = false
-        startdate.translatesAutoresizingMaskIntoConstraints = false
-        enddate.translatesAutoresizingMaskIntoConstraints = false
-        endDateLabel.translatesAutoresizingMaskIntoConstraints = false
-        offonswitch.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Constraints for allergen label and field
-            NSLayoutConstraint.activate([
-                allergenLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-                allergenLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-
-                allergyname.centerYAnchor.constraint(equalTo: allergenLabel.centerYAnchor),
-                allergyname.leadingAnchor.constraint(equalTo: allergenLabel.trailingAnchor, constant: 8),
-                allergyname.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-                allergyname.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.65), // Adjust width as a percentage of the view's width
-                allergyname.heightAnchor.constraint(equalToConstant: 30), // Adjust height
-            ])
-        
-        // Constraints for frequency label and field
-            NSLayoutConstraint.activate([
-                frequencyLabel.topAnchor.constraint(equalTo: allergyname.bottomAnchor, constant: 20),
-                frequencyLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
-
-                frequency.centerYAnchor.constraint(equalTo: frequencyLabel.centerYAnchor),
-                frequency.leadingAnchor.constraint(equalTo: frequencyLabel.trailingAnchor, constant: 8),
-                frequency.trailingAnchor.constraint(equalTo: allergyname.trailingAnchor),
-            ])
-        
-        frequency.widthAnchor.constraint(equalTo: allergyname.widthAnchor).isActive = true
-
-        
-        // Constraints for start date label and picker
-        NSLayoutConstraint.activate([
-            startDateLabel.topAnchor.constraint(equalTo: frequency.bottomAnchor, constant: 20),
-            startDateLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
-            
-            startdate.centerYAnchor.constraint(equalTo: startDateLabel.centerYAnchor),
-            startdate.leadingAnchor.constraint(equalTo: startDateLabel.trailingAnchor, constant: 8),
-            startdate.trailingAnchor.constraint(equalTo: allergyname.trailingAnchor),
-        ])
-        
-        // Constraints for allergy discontinued label and switch
-        NSLayoutConstraint.activate([
-            allergyDiscontinuedLabel.topAnchor.constraint(equalTo: startdate.bottomAnchor, constant: 20),
-            allergyDiscontinuedLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
-            
-            offonswitch.centerYAnchor.constraint(equalTo: allergyDiscontinuedLabel.centerYAnchor),
-            offonswitch.trailingAnchor.constraint(equalTo: allergyname.trailingAnchor),
-        ])
-        
-        // Constraints for end date label and picker
-        NSLayoutConstraint.activate([
-            endDateLabel.topAnchor.constraint(equalTo: offonswitch.bottomAnchor, constant: 20),
-            endDateLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
-            
-            enddate.centerYAnchor.constraint(equalTo: endDateLabel.centerYAnchor),
-            enddate.leadingAnchor.constraint(equalTo: endDateLabel.trailingAnchor, constant: 8),
-            enddate.trailingAnchor.constraint(equalTo: allergyname.trailingAnchor),
-        ])
-        
-        // Constraints for notes label and text field
-        NSLayoutConstraint.activate([
-            notesLabel.topAnchor.constraint(equalTo: enddate.bottomAnchor, constant: 20),
-            notesLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
-            
-            notes.topAnchor.constraint(equalTo: notesLabel.bottomAnchor, constant: 8),
-            notes.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            notes.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            notes.heightAnchor.constraint(equalToConstant: 150),
-        ])
-        
-        endDateLabel.isHidden = !offonswitch.isOn
-            enddate.isHidden = !offonswitch.isOn
-
-            offonswitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
-        }
-    
+//    func setupLayout() {
+//        allergyname.translatesAutoresizingMaskIntoConstraints = false
+//        notes.translatesAutoresizingMaskIntoConstraints = false
+//        frequency.translatesAutoresizingMaskIntoConstraints = false
+//        startdate.translatesAutoresizingMaskIntoConstraints = false
+//        enddate.translatesAutoresizingMaskIntoConstraints = false
+//        endDateLabel.translatesAutoresizingMaskIntoConstraints = false
+//        offonswitch.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        // Constraints for allergen label and field
+//            NSLayoutConstraint.activate([
+//                allergenLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+//                allergenLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+//
+//                allergyname.centerYAnchor.constraint(equalTo: allergenLabel.centerYAnchor),
+//                allergyname.leadingAnchor.constraint(equalTo: allergenLabel.trailingAnchor, constant: 8),
+//                allergyname.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+//                allergyname.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.65), // Adjust width as a percentage of the view's width
+//                allergyname.heightAnchor.constraint(equalToConstant: 30), // Adjust height
+//            ])
+//        
+//        // Constraints for frequency label and field
+//            NSLayoutConstraint.activate([
+//                frequencyLabel.topAnchor.constraint(equalTo: allergyname.bottomAnchor, constant: 20),
+//                frequencyLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
+//
+//                frequency.centerYAnchor.constraint(equalTo: frequencyLabel.centerYAnchor),
+//                frequency.leadingAnchor.constraint(equalTo: frequencyLabel.trailingAnchor, constant: 8),
+//                frequency.trailingAnchor.constraint(equalTo: allergyname.trailingAnchor),
+//            ])
+//        
+//        frequency.widthAnchor.constraint(equalTo: allergyname.widthAnchor).isActive = true
+//
+//        
+//        // Constraints for start date label and picker
+//        NSLayoutConstraint.activate([
+//            startDateLabel.topAnchor.constraint(equalTo: frequency.bottomAnchor, constant: 20),
+//            startDateLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
+//            
+//            startdate.centerYAnchor.constraint(equalTo: startDateLabel.centerYAnchor),
+//            startdate.leadingAnchor.constraint(equalTo: startDateLabel.trailingAnchor, constant: 8),
+//            startdate.trailingAnchor.constraint(equalTo: allergyname.trailingAnchor),
+//        ])
+//        
+//        // Constraints for allergy discontinued label and switch
+//        NSLayoutConstraint.activate([
+//            allergyDiscontinuedLabel.topAnchor.constraint(equalTo: startdate.bottomAnchor, constant: 20),
+//            allergyDiscontinuedLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
+//            
+//            offonswitch.centerYAnchor.constraint(equalTo: allergyDiscontinuedLabel.centerYAnchor),
+//            offonswitch.trailingAnchor.constraint(equalTo: allergyname.trailingAnchor),
+//        ])
+//        
+//        // Constraints for end date label and picker
+//        NSLayoutConstraint.activate([
+//            endDateLabel.topAnchor.constraint(equalTo: offonswitch.bottomAnchor, constant: 20),
+//            endDateLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
+//            
+//            enddate.centerYAnchor.constraint(equalTo: endDateLabel.centerYAnchor),
+//            enddate.leadingAnchor.constraint(equalTo: endDateLabel.trailingAnchor, constant: 8),
+//            enddate.trailingAnchor.constraint(equalTo: allergyname.trailingAnchor),
+//        ])
+//        
+//        // Constraints for notes label and text field
+//        NSLayoutConstraint.activate([
+//            notesLabel.topAnchor.constraint(equalTo: enddate.bottomAnchor, constant: 20),
+//            notesLabel.leadingAnchor.constraint(equalTo: allergenLabel.leadingAnchor),
+//            
+//            notes.topAnchor.constraint(equalTo: notesLabel.bottomAnchor, constant: 8),
+//            notes.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+//            notes.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+//            notes.heightAnchor.constraint(equalToConstant: 150),
+//        ])
+//        
+//        endDateLabel.isHidden = !offonswitch.isOn
+//            enddate.isHidden = !offonswitch.isOn
+//
+//            offonswitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
+//        }
+//    
 }
