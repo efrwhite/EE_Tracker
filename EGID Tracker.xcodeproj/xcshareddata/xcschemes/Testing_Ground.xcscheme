@@ -17,7 +17,7 @@
                BlueprintIdentifier = "A409887D2A1BF9CC0041BBC7"
                BuildableName = "Testing_Ground.app"
                BlueprintName = "Testing_Ground"
-               ReferencedContainer = "container:Testing_Ground.xcodeproj">
+               ReferencedContainer = "container:EGID Tracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "A40988A02A1BF9CD0041BBC7"
                BuildableName = "Testing_GroundUITests.xctest"
                BlueprintName = "Testing_GroundUITests"
-               ReferencedContainer = "container:Testing_Ground.xcodeproj">
+               ReferencedContainer = "container:EGID Tracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -51,7 +51,7 @@
                BlueprintIdentifier = "A40988962A1BF9CD0041BBC7"
                BuildableName = "Testing_GroundTests.xctest"
                BlueprintName = "Testing_GroundTests"
-               ReferencedContainer = "container:Testing_Ground.xcodeproj">
+               ReferencedContainer = "container:EGID Tracker.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -62,7 +62,7 @@
                BlueprintIdentifier = "A40988A02A1BF9CD0041BBC7"
                BuildableName = "Testing_GroundUITests.xctest"
                BlueprintName = "Testing_GroundUITests"
-               ReferencedContainer = "container:Testing_Ground.xcodeproj">
+               ReferencedContainer = "container:EGID Tracker.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -84,7 +84,7 @@
             BlueprintIdentifier = "A409887D2A1BF9CC0041BBC7"
             BuildableName = "Testing_Ground.app"
             BlueprintName = "Testing_Ground"
-            ReferencedContainer = "container:Testing_Ground.xcodeproj">
+            ReferencedContainer = "container:EGID Tracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -101,7 +101,7 @@
             BlueprintIdentifier = "A409887D2A1BF9CC0041BBC7"
             BuildableName = "Testing_Ground.app"
             BlueprintName = "Testing_Ground"
-            ReferencedContainer = "container:Testing_Ground.xcodeproj">
+            ReferencedContainer = "container:EGID Tracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
