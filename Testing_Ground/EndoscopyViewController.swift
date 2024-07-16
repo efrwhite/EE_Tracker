@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class EndoscopyViewController: UIViewController {
+class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var saveButton: UIButton!
     
@@ -11,14 +11,6 @@ class EndoscopyViewController: UIViewController {
         stackView.spacing = 16
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
-    }()
-    
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Endoscopy"
-        label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
-        return label
     }()
     
     let eoELabel: UILabel = {
@@ -116,6 +108,11 @@ class EndoscopyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupKeyboardObservers()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - Setup UI
@@ -124,7 +121,6 @@ class EndoscopyViewController: UIViewController {
         view.backgroundColor = .white
         
         view.addSubview(mainStackView)
-        mainStackView.addArrangedSubview(titleLabel)
         mainStackView.addArrangedSubview(eoELabel)
         mainStackView.addArrangedSubview(proximateTextField)
         mainStackView.addArrangedSubview(middleTextField)
@@ -143,6 +139,42 @@ class EndoscopyViewController: UIViewController {
             mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ])
+        
+        // Gesture to dismiss keyboard on tap outside
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    func setupKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+              let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
+        
+        let keyboardHeight = keyboardFrame.height
+        let bottomSafeAreaInset = view.safeAreaInsets.bottom
+        let topOffset = eoELabel.frame.maxY + 200 // Adjust this value as needed
+        
+        UIView.animate(withDuration: duration) {
+            self.view.frame.origin.y = -keyboardHeight + bottomSafeAreaInset + topOffset
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
+        
+        UIView.animate(withDuration: duration) {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     // MARK: - Button Action
