@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38B773612C463A54008BDEA6 /* QualityResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B773602C463A54008BDEA6 /* QualityResultViewController.swift */; };
 		8A1E0A122B82B04B0032DF35 /* GenerateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E0A112B82B04B0032DF35 /* GenerateReportViewController.swift */; };
 		8A3D423A2B68026B0013EFE5 /* AddDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D42392B68026B0013EFE5 /* AddDocumentsViewController.swift */; };
 		8A3D423C2B6802860013EFE5 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D423B2B6802860013EFE5 /* DocumentTableViewCell.swift */; };
@@ -89,6 +90,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38B773602C463A54008BDEA6 /* QualityResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityResultViewController.swift; sourceTree = "<group>"; };
 		8A1E0A112B82B04B0032DF35 /* GenerateReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateReportViewController.swift; sourceTree = "<group>"; };
 		8A3D42392B68026B0013EFE5 /* AddDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddDocumentsViewController.swift; path = ../AddDocumentsViewController.swift; sourceTree = "<group>"; };
 		8A3D423B2B6802860013EFE5 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				8A5108A12B6C0714008206A3 /* Diet6GoodViewController.swift */,
 				8A5108A32B6C0723008206A3 /* Diet6BadViewController.swift */,
 				8A5108A52B6C0735008206A3 /* Diet6ViewController.swift */,
+				38B773602C463A54008BDEA6 /* QualityResultViewController.swift */,
 			);
 			path = Testing_Ground;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				A4CADC112AE2B6F600F1FB67 /* DietPlanViewController.swift in Sources */,
 				8A5108A42B6C0723008206A3 /* Diet6BadViewController.swift in Sources */,
 				A40988842A1BF9CC0041BBC7 /* SceneDelegate.swift in Sources */,
+				38B773612C463A54008BDEA6 /* QualityResultViewController.swift in Sources */,
 				A409888C2A1BF9CC0041BBC7 /* Testing_Ground.xcdatamodeld in Sources */,
 				A40883932AD1E0BA006F3871 /* ProfilesTableviewcell.swift in Sources */,
 				A492679D2AB8DB2700D0AD4C /* ParentViewController.swift in Sources */,

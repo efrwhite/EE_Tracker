@@ -8,6 +8,7 @@ class SymTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var Ratingtext: UITextField!
+    @IBOutlet weak var yesNoSwitch: UISwitch!
     
     weak var delegate: SymTableViewCellDelegate?
     var indexPath: IndexPath?
@@ -15,20 +16,37 @@ class SymTableViewCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        // Safely unwrap Ratingtext and set its properties
         if let ratingText = Ratingtext {
             ratingText.delegate = self
             ratingText.keyboardType = .numberPad
             ratingText.font = UIFont.systemFont(ofSize: 17)
         }
 
-        // Set font size
         if let questionLbl = questionLabel {
             questionLbl.font = UIFont.systemFont(ofSize: 14)
         }
-    }   
-
-
+        
+        yesNoSwitch?.isOn = false
+        yesNoSwitch?.addTarget(self, action: #selector(switchChanged(_:)), for: .valueChanged)
+    }
+    
+    func configureCell(for section: Int) {
+        if section == 0 {
+            Ratingtext.isHidden = false
+            yesNoSwitch.isHidden = true
+        } else if section == 1 {
+            Ratingtext.isHidden = true
+            yesNoSwitch.isHidden = false
+            yesNoSwitch.isUserInteractionEnabled = true  // Ensure switch is interactable
+        }
+    }
+    
+    @objc func switchChanged(_ sender: UISwitch) {
+        if let indexPath = indexPath {
+            delegate?.didEditTextField(sender.isOn ? "1" : "0", atIndexPath: indexPath)
+        }
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let text = textField.text, let indexPath = indexPath {
             let validatedText = validateInput(text: text, section: indexPath.section)

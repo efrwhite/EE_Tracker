@@ -31,6 +31,11 @@ class QualityofLifeTableViewCell: UITableViewCell, UITextFieldDelegate {
         }
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
     private func validateInput(text: String) -> String {
         guard let number = Int(text) else { return "" }
         return (0...4).contains(number) ? text : ""
