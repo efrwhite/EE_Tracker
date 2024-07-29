@@ -1,10 +1,3 @@
-//
-//  AddDocumentsViewController.swift
-//  Testing_Ground
-//
-//  Created by Vivek Vangala on 1/29/24.
-//
-
 import UIKit
 import CoreData
 
@@ -27,7 +20,6 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         tableView.register(DocumentTableViewCell.self, forCellReuseIdentifier: "DocumentTableViewCell")
         
         if let savedPhotoNames = UserDefaults.standard.stringArray(forKey: "SavedPhotoNames") {
-
             photoNames = savedPhotoNames
         }
     }
@@ -63,7 +55,6 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     func editButtonTappedForRow(at indexPath: IndexPath) {
-        let photoName = photoNames[indexPath.row]
         let actionSheet = UIAlertController(title: "Select an option", message: nil, preferredStyle: .actionSheet)
         
         let editAction = UIAlertAction(title: "Edit", style: .default) { [weak self] _ in
@@ -99,7 +90,6 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
             }
         }
 
-
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         alertController.addAction(saveAction)
@@ -111,6 +101,7 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
     func updateTableView(with image: UIImage, name: String) {
         print("Updating table view with the selected image and name: \(name), binary data: \(String(describing: selectedImageData))")
         photoNames.append(name)
+        savePhotoNamesToUserDefaults()
 
         DispatchQueue.main.async {
             let indexPath = IndexPath(row: self.photoNames.count - 1, section: 0)
@@ -120,13 +111,17 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
 
-    
     func deletePhotoName(at indexPath: IndexPath) {
+        guard indexPath.row < photoNames.count else { return }
         photoNames.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
         savePhotoNamesToUserDefaults()
+
+        DispatchQueue.main.async {
+            self.tableView.beginUpdates()
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.endUpdates()
+        }
     }
-    
     
     func showPhotoPopup(with image: UIImage) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
@@ -259,8 +254,6 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         
         present(alertController, animated: true, completion: nil)
     }
-
-    
     
     func generateUniqueName() -> String {
         let formatter = DateFormatter()

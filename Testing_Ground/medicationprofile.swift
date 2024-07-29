@@ -142,7 +142,6 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         return cell
     }
 
-
     @objc func editButtonTapped(sender: UIButton) {
         var selectedMedicationName: String?
         
@@ -160,10 +159,6 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         performSegue(withIdentifier: "addmedsegue", sender: (true, selectedMedicationName))
     }
 
-
-
-
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addmedsegue", let displayVC = segue.destination as? AddMedicationViewController {
             displayVC.user = user
@@ -179,8 +174,4 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
             displayVC.delegate = self
         }
     }
-
-
-
-
 }
