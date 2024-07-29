@@ -25,6 +25,8 @@
 		8A5108A42B6C0723008206A3 /* Diet6BadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5108A32B6C0723008206A3 /* Diet6BadViewController.swift */; };
 		8A5108A62B6C0735008206A3 /* Diet6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5108A52B6C0735008206A3 /* Diet6ViewController.swift */; };
 		8A58A1642B7FD98900CC2D44 /* EditDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58A1632B7FD98900CC2D44 /* EditDocumentsViewController.swift */; };
+		8A78A2F82C5311C800237F66 /* AccidentalExposureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A78A2F72C5311C800237F66 /* AccidentalExposureViewController.swift */; };
+		8A78A2FA2C5314BC00237F66 /* ExposureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A78A2F92C5314BC00237F66 /* ExposureTableViewCell.swift */; };
 		8AC78C1D2A507BF100A4C3FA /* ExtraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C1C2A507BF100A4C3FA /* ExtraViewController.swift */; };
 		8AC78C292A5C8FC300A4C3FA /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C282A5C8FC300A4C3FA /* EducationViewController.swift */; };
 		8AC78C2B2A5C9A5B00A4C3FA /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C2A2A5C9A5B00A4C3FA /* MoreInfoViewController.swift */; };
@@ -108,6 +110,8 @@
 		8A5108A32B6C0723008206A3 /* Diet6BadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet6BadViewController.swift; sourceTree = "<group>"; };
 		8A5108A52B6C0735008206A3 /* Diet6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet6ViewController.swift; sourceTree = "<group>"; };
 		8A58A1632B7FD98900CC2D44 /* EditDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDocumentsViewController.swift; sourceTree = "<group>"; };
+		8A78A2F72C5311C800237F66 /* AccidentalExposureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentalExposureViewController.swift; sourceTree = "<group>"; };
+		8A78A2F92C5314BC00237F66 /* ExposureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExposureTableViewCell.swift; sourceTree = "<group>"; };
 		8AC78C1C2A507BF100A4C3FA /* ExtraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewController.swift; sourceTree = "<group>"; };
 		8AC78C282A5C8FC300A4C3FA /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 		8AC78C2A2A5C9A5B00A4C3FA /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 				8A5108A32B6C0723008206A3 /* Diet6BadViewController.swift */,
 				8A5108A52B6C0735008206A3 /* Diet6ViewController.swift */,
 				38B773602C463A54008BDEA6 /* QualityResultViewController.swift */,
+				8A78A2F72C5311C800237F66 /* AccidentalExposureViewController.swift */,
+				8A78A2F92C5314BC00237F66 /* ExposureTableViewCell.swift */,
 			);
 			path = Testing_Ground;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A5108A22B6C0714008206A3 /* Diet6GoodViewController.swift in Sources */,
+				8A78A2F82C5311C800237F66 /* AccidentalExposureViewController.swift in Sources */,
 				8A3D423A2B68026B0013EFE5 /* AddDocumentsViewController.swift in Sources */,
 				A4CA1A502A3654F200C94D2C /* LoginViewController.swift in Sources */,
 				A424E03F2AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */,
@@ -463,6 +470,7 @@
 				A40988822A1BF9CC0041BBC7 /* AppDelegate.swift in Sources */,
 				8AC78C1D2A507BF100A4C3FA /* ExtraViewController.swift in Sources */,
 				A40883972AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */,
+				8A78A2FA2C5314BC00237F66 /* ExposureTableViewCell.swift in Sources */,
 				8A5108922B6BFDB8008206A3 /* Diet2ViewController.swift in Sources */,
 				A492679F2AB8DB3300D0AD4C /* ChildViewController.swift in Sources */,
 				A4B3FCDE2AB244150021EAB6 /* HomeProfilePageViewController.swift in Sources */,
