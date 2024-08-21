@@ -3,7 +3,7 @@ import UIKit
 class Diet1BadViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let sectionTitle = "Foods Not Okay to Eat"
-    let items = [
+    var items = [
         "Baked goods",
         "Butter",
         "Buttermilk",
@@ -70,5 +70,11 @@ class Diet1BadViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.textLabel?.lineBreakMode = .byWordWrapping
         
         return cell
+    }
+    
+    // Method to add a new food item
+    func addFood(_ food: String) {
+        items.append(food)
+        tableView.reloadData()
     }
 }

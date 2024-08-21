@@ -3,7 +3,7 @@ import UIKit
 class Diet1GoodViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let sectionTitle = "Foods Okay to Eat"
-    let items = [
+    var items = [
         "Milk alternatives like almond, soy, coconut, oat, cashew, and rice",
         "Yogurt made from milk alternatives",
         "Ice cream made from milk alternatives",
@@ -13,7 +13,6 @@ class Diet1GoodViewController: UIViewController, UITableViewDataSource, UITableV
         "Foods labeled “Vegan”, “Plant Based” or “Dairy Free”"
     ]
     
-   
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -49,5 +48,11 @@ class Diet1GoodViewController: UIViewController, UITableViewDataSource, UITableV
         cell.textLabel?.lineBreakMode = .byWordWrapping
         
         return cell
+    }
+    
+    // Method to add a new food item
+    func addFood(_ food: String) {
+        items.append(food)
+        tableView.reloadData()
     }
 }
