@@ -23,77 +23,82 @@ class ParentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Disable user interaction for the parentUserName text field
         parentUserName.isUserInteractionEnabled = false
         print("You are on Parent")
         print(user)
         print(receivedString)
-        
+
         if isEditingParent {
-            print("Edit User: ",usernamep!)
-            if usernamesup != ""{
+            print("Edit User: ", usernamep!)
+            if usernamesup != "" {
                 parentUserName.text = usernamesup
             } else if usernamep != "" {
                 parentUserName.text = usernamep
                 if let parentName = parentName, let usernamep = usernamep {
-                            loadParentProfile(parentName: parentName, usernamep: usernamep)
-                        }
+                    loadParentProfile(parentName: parentName, usernamep: usernamep)
+                }
             }
         } else if isAddingParent {
             print("Add User:", usernamep!)
-            if usernamesup != ""{
+            if usernamesup != "" {
                 parentUserName.text = usernamesup
-            } else  { parentUserName.text = usernamep }
+            } else {
+                parentUserName.text = usernamep
+            }
         } else {
             print("Else Block")
-            if usernamesup != ""{
+            if usernamesup != "" {
                 parentUserName.text = usernamesup
-            } else { parentUserName.text = user }
+            } else {
+                parentUserName.text = user
+            }
         }
-        
+
         // Gesture to collapse/dismiss keyboard on click outside
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
-        
+
         // Add observers for keyboard notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
+
     deinit {
         // Remove observers when the view controller is deallocated
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
+
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo,
               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
               let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
-        
+
         let keyboardHeight = keyboardFrame.height
         let bottomSafeAreaInset = view.safeAreaInsets.bottom
         let topSafeAreaInset = view.safeAreaInsets.top
         let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 44 // Default navigation bar height
-        
+
         UIView.animate(withDuration: duration) {
             self.view.frame.origin.y = -keyboardHeight + bottomSafeAreaInset + navigationBarHeight + topSafeAreaInset
         }
     }
-    
+
     @objc func keyboardWillHide(notification: NSNotification) {
         guard let userInfo = notification.userInfo,
               let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
-        
+
         UIView.animate(withDuration: duration) {
             self.view.frame.origin.y = 0
         }
     }
+
     
     @IBAction func saveButton(_ sender: Any) {
         // Ensure that all required fields are not empty
