@@ -16,8 +16,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     var parents = [Parent]()
     var seguePerformed = false // Flag to track whether the segue has been performed
     
+    var originalY: CGFloat = 0.0 // Store the original Y position of the view
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Store the original Y position of the view
+        originalY = self.view.frame.origin.y
         
         // Add a tap gesture recognizer to dismiss the keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -99,12 +104,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
               let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
         
         let keyboardHeight = keyboardFrame.height
-        let bottomSafeAreaInset = view.safeAreaInsets.bottom
-        let topSafeAreaInset = view.safeAreaInsets.top
-        let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 44 // Default navigation bar height
         
-        UIView.animate(withDuration: duration) {
-            self.view.frame.origin.y = -keyboardHeight + bottomSafeAreaInset + navigationBarHeight + topSafeAreaInset
+        // Only move the view if it's not already moved up
+        if self.view.frame.origin.y == originalY {
+            UIView.animate(withDuration: duration) {
+                self.view.frame.origin.y = self.originalY - keyboardHeight / 2
+            }
         }
     }
     
@@ -112,8 +117,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         guard let userInfo = notification.userInfo,
               let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
         
+        // Reset the view position when the keyboard hides
         UIView.animate(withDuration: duration) {
-            self.view.frame.origin.y = 0
+            self.view.frame.origin.y = self.originalY
         }
     }
     
