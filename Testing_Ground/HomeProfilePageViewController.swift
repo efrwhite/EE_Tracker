@@ -1,7 +1,6 @@
 import UIKit
 import CoreData
 
-
 // Add an extension to Array for safe subscripting
 extension Array {
     subscript(safe index: Index) -> Element? {
@@ -13,6 +12,7 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
 
     var user = ""
     var selectedChild: Child?
+    var selected = ""
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableView2: UITableView!
@@ -46,16 +46,15 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         // Debugging print statements
         print("Child Profiles Count: \(childProfiles.count)")
         print("Parent Profiles Count: \(parentProfiles.count)")
-       
+
         // Reload table views to populate data
         tableView.reloadData()
         tableView2.reloadData()
-        if user != nil{
-            print("Profile User: ", user)
+        if !user.isEmpty {
+            print("Profile User: \(user)")
         } else {
             print("user is nil")
         }
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -87,18 +86,17 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
                 //this is where we fire off the childname segue
             }
             
-            // Deselect the row to remove the highlight
-            tableView.deselectRow(at: indexPath, animated: true)
+            // Reload the table view to apply the new selection style
+            tableView.reloadData()
             
             // Show a popup message with the selected child's name
             if let child = selectedChild, let childName = child.firstName {
-                let alertController = UIAlertController(title: "Main Child Selection", message: "\(childName) is chosen as the main child.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Main Patient Selection", message: "\(childName) is chosen as the Active Patient.", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 present(alertController, animated: true, completion: nil)
             }
         }
     }
-
 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,8 +106,9 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
             
             cell.namelabel.text = childProfile.firstName // Update the label using your IBOutlet
             
-            if let selectedChild = selectedChild, childProfile == selectedChild {
-                // Update the cell's appearance for the selected child
+            // Check if the current child profile is the selected one
+            if childProfile == selectedChild {
+                // Highlight the cell if it's the selected child
                 cell.backgroundColor = .lightGray
             } else {
                 // Reset the cell's appearance for unselected children
@@ -136,7 +135,6 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         return UITableViewCell()
     }
 
-
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40  // Adjust the height to add space above the header
     }
@@ -147,7 +145,7 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         let label = UILabel(frame: CGRect(x: 15, y: 10, width: tableView.frame.size.width - 30, height: 20))
 
         if tableView == self.tableView {
-            label.text = "Child"
+            label.text = "Patient"
         } else if tableView == self.tableView2 {
             label.text = "Caregiver"
         }
@@ -162,13 +160,10 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         addButton.frame = CGRect(x: tableView.frame.size.width - 75, y: 10, width: 40, height: 20)
         addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchUpInside)
         addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18) // Change font and size
-        //addButton.setTitleColor(UIColor.blue, for: .normal) // Change text color
         headerView.addSubview(addButton)
 
         return headerView
     }
-
-
 
     @objc func addButtonPressed(_ sender: UIButton) {
         // Determine which table view's "Add" button was pressed
@@ -183,37 +178,12 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
                 // Handle the "Add" button press for the parent table view
                 let parentViewController = storyboard?.instantiateViewController(withIdentifier: "ParentViewController") as! ParentViewController
                 parentViewController.isAddingParent = true
-                parentViewController.usernamep = user
+                parentViewController.user = user
                 navigationController?.pushViewController(parentViewController, animated: true)
             }
         }
     }
 
-//    @objc func editButtonPressed(_ sender: UIButton) {
-//        let indexPath = IndexPath(row: sender.tag, section: 0)
-//        let childProfile = childProfiles[indexPath.row]
-//        
-//        let childViewController = storyboard?.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
-//        childViewController.isEditingChild = true
-//        childViewController.childName = childProfile.firstName
-//        childViewController.user = user // Set the user property here
-//        
-//        navigationController?.pushViewController(childViewController, animated: true)
-//    }
-//
-//    @objc func editParentButtonPressed(_ sender: UIButton) {
-//        let indexPath = IndexPath(row: sender.tag, section: 0)
-//        let parentProfile = parentProfiles[indexPath.row]
-//        
-//        let parentViewController = storyboard?.instantiateViewController(withIdentifier: "ParentViewController") as! ParentViewController
-//        parentViewController.isEditingParent = true
-//        parentViewController.parentName = parentProfile.firstname
-//        parentViewController.usernamep = user
-//        
-//        navigationController?.pushViewController(parentViewController, animated: true)
-//    }
-    
-    // Inside the `editButtonPressed` function
     @objc func editButtonPressed(_ sender: UIButton) {
         let indexPath = IndexPath(row: sender.tag, section: 0)
         
@@ -226,7 +196,6 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         }
     }
 
-    // Inside the `editParentButtonPressed` function
     @objc func editParentButtonPressed(_ sender: UIButton) {
         let indexPath = IndexPath(row: sender.tag, section: 0)
         
@@ -234,12 +203,10 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
             let parentViewController = storyboard?.instantiateViewController(withIdentifier: "ParentViewController") as! ParentViewController
             parentViewController.isEditingParent = true
             parentViewController.parentName = parentProfile.firstname ?? "Default Parent Name"
-            parentViewController.usernamep = user
+            parentViewController.user = user
             navigationController?.pushViewController(parentViewController, animated: true)
         }
-       
     }
-
 
     func fetchChildProfiles(username: String) -> [Child] {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -259,13 +226,6 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         }
     }
 
-    @IBAction func unwindToHomeProfilePage(_ segue: UIStoryboardSegue) {
-        print("Unwind segue triggered")
-        // Add any specific logic you need when unwinding
-    }
-
-
-
     func fetchParentProfiles(username: String) -> [Parent] {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Parent> = Parent.fetchRequest()
@@ -283,17 +243,27 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
             return []
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "profilessegue", let displayVC = segue.destination as? HomeViewController {
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                let selectedChild = childProfiles[selectedIndexPath.row]
-                displayVC.user = user
-                displayVC.childselected = selectedChild.firstName ?? "Default Child Name"
-            }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Call saveAndUnwind before the view disappears
+        if isMovingFromParent || isBeingDismissed {
+            saveAndUnwind(self)
         }
     }
-
-    
-
-
+//programmatically in use for  when we go back to homescreen
+    @IBAction func saveAndUnwind(_ sender: Any) {
+          if let navController = navigationController {
+              // Iterate over view controllers in the navigation stack to find HomeViewController
+              if let homeViewController = navController.viewControllers.first(where: { $0 is HomeViewController }) as? HomeViewController {
+                  homeViewController.user = self.user
+                  homeViewController.childselected = self.selectedChild?.firstName ?? selected
+                  print("Returning to HomeViewController with user: \(self.user) and child: \(self.selectedChild?.firstName ?? selected)")
+              }
+              // Pop the current view controller
+              //navController.popViewController(animated: true)
+          }
+      }
 }
+
