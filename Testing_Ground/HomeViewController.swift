@@ -98,7 +98,7 @@ class HomeViewController: UIViewController {
 
 
 
-
+//THIS was never called
     func updateUIWithMainChildProfile() {
         if let mainChildProfile = mainChildProfile {
             // Update the name label with child's name
@@ -141,6 +141,23 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("View will Appear Home Username: ", user)
+        print("View will Appear Home Childuser: ", childselected)
+        
+        // Fetch the main child entity with username == user
+        mainChildProfile = fetchMainChildProfile(username: user)
+
+        // Fetch the selected child if available
+        let selectedChildProfile = fetchChildProfile(username: user, childName: childselected)
+
+        // Use the selected child profile if available, otherwise use the main child profile
+        if let selectedChildProfile = selectedChildProfile {
+            updateUIWithChildProfile(childProfile: selectedChildProfile)
+        } else {
+            // If no selected child, use the first child found by the user
+            mainChildProfile = fetchFirstChild(username: user)
+            updateUIWithMainChildProfile()
+        }
 
         // Hide the back button
         self.navigationItem.setHidesBackButton(true, animated: false)
@@ -163,6 +180,7 @@ class HomeViewController: UIViewController {
         if segue.identifier == "profilessegue", let displayVC = segue.destination as? HomeProfilePageViewController {
             // Pass any necessary data to HomeViewController if needed
             displayVC.user = user
+            displayVC.selected = childselected
             print("User value sent to HomeProfilePage: \(user)")
         } else if segue.identifier == "plansegue", let displayVC = segue.destination as? YourPlanViewController {
             displayVC.user = user

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrP-ae-Jgr">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -15,18 +15,18 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" title="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZVU-1g-xIn" customClass="ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZz-tc-zwT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGID Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="jd0-Mf-CvO">
-                                <rect key="frame" x="102" y="168" width="189" height="41.666666666666657"/>
+                                <rect key="frame" x="112.66666666666669" y="153" width="189" height="42"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.86666666670000003" green="0.87058823529999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.92941176469999998" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN7-9d-8Gu">
-                                <rect key="frame" x="71.666666666666686" y="607" width="250" height="50"/>
+                                <rect key="frame" x="82" y="593.33333333333337" width="250" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Fek-cw-lhf"/>
                                     <constraint firstAttribute="width" constant="250" id="W8b-Ud-fja"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80G-Zv-O1A">
-                                <rect key="frame" x="71.666666666666686" y="667" width="250" height="50"/>
+                                <rect key="frame" x="82" y="653.33333333333337" width="250" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hZG-nV-Usb"/>
                                     <constraint firstAttribute="width" constant="250" id="tiF-gQ-fhZ"/>
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EGID app graphic white line art masked" translatesAutoresizingMaskIntoConstraints="NO" id="RIQ-2w-NXc">
-                                <rect key="frame" x="121.66666666666669" y="229.66666666666663" width="150" height="150"/>
+                                <rect key="frame" x="132" y="215" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RIQ-2w-NXc" secondAttribute="height" multiplier="1:1" id="H9R-jU-DHc"/>
                                     <constraint firstAttribute="width" constant="150" id="ZhR-d1-2hz"/>
@@ -82,26 +82,26 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easily track your symptoms, medications, and diet plans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81c-46-qVa">
-                                <rect key="frame" x="20" y="399.66666666666669" width="353" height="15.666666666666686"/>
+                                <rect key="frame" x="20" y="385" width="374" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.14509806040000001" green="0.26274511220000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track response to therapy " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkv-cs-DHl">
-                                <rect key="frame" x="30" y="420.33333333333331" width="333" height="15.666666666666686"/>
+                                <rect key="frame" x="30" y="406" width="354" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.14509806040000001" green="0.26274511220000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNs-mu-yu9">
-                                <rect key="frame" x="113.00000000000001" y="497.00000000000006" width="167.33333333333337" height="41.666666666666686"/>
+                                <rect key="frame" x="123.66666666666669" y="483" width="167" height="42"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.86666666670000003" green="0.87058823529999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.92941176469999998" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share the results directly with your healthcare provider" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWb-U4-hMz">
-                                <rect key="frame" x="30" y="441" width="333" height="16"/>
+                                <rect key="frame" x="30" y="427" width="354" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.14509806040000001" green="0.26274511220000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -146,11 +146,11 @@
             <objects>
                 <viewController title="SignUpViewController" id="tnS-He-ia0" customClass="SignUpViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hwW-d4-GPj">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yML-ci-XSe">
-                                <rect key="frame" x="16" y="125" width="361" height="693"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="ryX-Rz-0ci">
+                                <rect key="frame" x="57" y="214.66666666666663" width="300" height="467"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="ryX-Rz-0ci">
                                         <rect key="frame" x="30" y="34" width="300" height="467"/>
@@ -263,18 +263,18 @@
             <objects>
                 <viewController storyboardIdentifier="ParentViewController" title="ParentViewController" id="HuY-2G-98V" customClass="ParentViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cil-tp-twe">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmZ-CL-1BS">
-                                <rect key="frame" x="64" y="138" width="252" height="154"/>
+                                <rect key="frame" x="64" y="123" width="273" height="154"/>
                                 <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="155.33333333333331" id="3r6-C6-DIJ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXM-3V-gTd">
-                                <rect key="frame" x="40" y="331" width="300" height="33"/>
+                                <rect key="frame" x="50.666666666666657" y="316" width="300" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Ap7-OS-eza"/>
                                     <constraint firstAttribute="height" constant="33" id="mzs-yg-raZ"/>
@@ -296,10 +296,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iqZ-he-wh6">
-                                <rect key="frame" x="46" y="418" width="300" height="219"/>
+                                <rect key="frame" x="46" y="403" width="321" height="207.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWh-ci-8SJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="321" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Ihk-kL-oHh"/>
                                         </constraints>
@@ -308,7 +308,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-hA-wjp">
-                                        <rect key="frame" x="0.0" y="37" width="300" height="34"/>
+                                        <rect key="frame" x="0.0" y="37" width="321" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="CXB-RQ-P8j"/>
                                         </constraints>
@@ -316,7 +316,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvQ-Zk-LIg">
-                                        <rect key="frame" x="0.0" y="74" width="300" height="34"/>
+                                        <rect key="frame" x="0.0" y="74" width="321" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="odf-25-adz"/>
                                         </constraints>
@@ -325,7 +325,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-Aw-Rc7">
-                                        <rect key="frame" x="0.0" y="111" width="300" height="34"/>
+                                        <rect key="frame" x="0.0" y="111" width="321" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="NGt-MG-ZQr"/>
                                         </constraints>
@@ -333,7 +333,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cE-uU-AQ2">
-                                        <rect key="frame" x="0.0" y="148" width="300" height="34"/>
+                                        <rect key="frame" x="0.0" y="148" width="321" height="22.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="VKb-lU-7i7"/>
                                         </constraints>
@@ -342,7 +342,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOK-Ey-BCC">
-                                        <rect key="frame" x="0.0" y="185" width="300" height="34"/>
+                                        <rect key="frame" x="0.0" y="173.33333333333337" width="321" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="rsI-BO-3mm"/>
                                         </constraints>
@@ -352,7 +352,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-Ol-WIz">
-                                <rect key="frame" x="46" y="765" width="288" height="35"/>
+                                <rect key="frame" x="46" y="738.33333333333337" width="309" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="XyN-hv-zHB"/>
                                 </constraints>
@@ -371,7 +371,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveButton:" destination="HuY-2G-98V" eventType="touchUpInside" id="1lQ-wI-d2k"/>
-                                    <segue destination="7AB-bm-094" kind="show" identifier="childSegue" id="4Ti-OQ-PBv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -400,7 +399,6 @@
                         <outlet property="parentUserName" destination="6cI-hA-wjp" id="but-bT-IQs"/>
                         <outlet property="parentimage" destination="LmZ-CL-1BS" id="HbO-aD-dyT"/>
                         <outlet property="stackView" destination="iqZ-he-wh6" id="K0b-h5-CxI"/>
-                        <segue destination="MyL-HF-eEr" kind="unwind" identifier="unwindToHomeProfilePageSegue" unwindAction="unwindToHomeProfilePage:" id="UIC-KH-Ity"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iz0-rb-Hhl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -412,11 +410,11 @@
             <objects>
                 <viewController title="LoginViewController" id="IvN-OH-f0M" customClass="LoginViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gjn-xW-rGQ" customClass="loginviewcontroller">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ldj-tI-0cv">
-                                <rect key="frame" x="46" y="312" width="300" height="147"/>
+                                <rect key="frame" x="57" y="374.66666666666669" width="300" height="147.00000000000006"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w4-7P-2qG">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="22.333333333333332"/>
@@ -461,7 +459,7 @@
                                 <color key="highlightedColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ya-r0-Mpd">
-                                <rect key="frame" x="46.666666666666657" y="520" width="300" height="34"/>
+                                <rect key="frame" x="57" y="554.33333333333337" width="300" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="YdG-bp-fjI"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gHV-FK-bn9"/>
@@ -475,8 +473,14 @@
                                     <segue destination="CUC-Nl-vlO" kind="show" identifier="homesegue" id="z7C-BG-gI1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIg-6v-Sj7">
+                                <rect key="frame" x="117.66666666666667" y="666" width="178.66666666666663" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.72941176470000002" green="0.43529411759999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywc-VM-a5O">
-                                <rect key="frame" x="154.66666666666666" y="625" width="84" height="34.333333333333371"/>
+                                <rect key="frame" x="165" y="730" width="84" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -517,7 +521,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WrP-ae-Jgr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V9d-ek-3Jw">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -542,13 +546,13 @@
         <!--HomeViewController-->
         <scene sceneID="fJh-0I-Mmy">
             <objects>
-                <viewController storyboardIdentifier="HomeView" title="HomeViewController" id="CUC-Nl-vlO" customClass="HomeViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" title="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CUC-Nl-vlO" customClass="HomeViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJ9-yv-epH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Le7-wn-9XV">
-                                <rect key="frame" x="22.666666666666657" y="300" width="350" height="452"/>
+                                <rect key="frame" x="33" y="322" width="350" height="452"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ1-w9-a1q">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
@@ -726,11 +730,11 @@
             <objects>
                 <viewController id="N9R-bu-SFT" customClass="YourPlanViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sbk-c7-IJk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="vaU-JW-Z8q">
-                                <rect key="frame" x="21.666666666666657" y="239" width="350" height="374"/>
+                                <rect key="frame" x="32" y="261" width="350" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpi-cq-Xi8">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
@@ -848,7 +852,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RYe-Ps-43e">
-                                <rect key="frame" x="119.66666666666667" y="163" width="153.66666666666663" height="46.666666666666657"/>
+                                <rect key="frame" x="130.33333333333337" y="185" width="153.66666666666663" height="46.666666666666657"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Plan For: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-0m-vQa">
                                         <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="23.333333333333332"/>
@@ -889,14 +893,14 @@
             <objects>
                 <viewController id="bD2-Pn-bSY" userLabel="Diet Plan" customClass="DietPlanViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Nz-aM-9SN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="IlU-Z6-v4r">
-                                <rect key="frame" x="93.000000000000014" y="574" width="206.33333333333337" height="33"/>
+                                <rect key="frame" x="93.000000000000014" y="618" width="227.33333333333337" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8M-4j-aRi">
-                                        <rect key="frame" x="0.0" y="0.0" width="206.33333333333334" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="227.33333333333334" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="206.33000000000001" id="BM8-nO-Ld4"/>
                                             <constraint firstAttribute="height" constant="33" id="Ubd-Hz-42N"/>
@@ -943,7 +947,7 @@
             <objects>
                 <viewController title="Add Medications" id="1m8-Tx-fd1" userLabel="Medications" customClass="MedicationProfile" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uzp-WJ-mWw" customClass="Medicationprofile">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xCn-dt-j37">
@@ -1009,7 +1013,7 @@
             <objects>
                 <viewController title="Medications" id="0M3-RU-tSB" userLabel="Add Medications" customClass="AddMedicationViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GiH-Q6-r0t">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="gQD-qF-hf6"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1025,7 +1029,7 @@
             <objects>
                 <viewController title="Endoscopy" id="R0p-2j-gF8" customClass="EndoscopyViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SzM-RA-qbR">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="QEV-qh-BE3">
@@ -1076,7 +1080,7 @@
             <objects>
                 <viewController title="Accidental Exposure" id="AXc-mm-K9j" customClass="AccidentalExposureViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3bT-y6-gq3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Ech-Rm-qG2">
@@ -1101,7 +1105,7 @@
             <objects>
                 <viewController storyboardIdentifier="SymptomScoreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nCO-9r-d3V" customClass="SymptomScoreViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ra-JG-iMg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xXF-yN-OHE">
@@ -1145,7 +1149,7 @@
                     <navigationItem key="navigationItem" title="Symptom Score" id="4jY-V8-jJm">
                         <barButtonItem key="rightBarButtonItem" title="Results" style="plain" id="OHb-aN-Wx5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="835-dR-OoH">
-                                <rect key="frame" x="290" y="4.6666666666666679" width="87" height="35"/>
+                                <rect key="frame" x="307" y="4.6666666666666679" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
@@ -1170,7 +1174,7 @@
             <objects>
                 <viewController storyboardIdentifier="QualityofLifeViewController" title="QualityofLifeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bqa-K7-Tx7" customClass="QualityofLifeViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QOX-fy-NNN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RCV-sF-zri">
@@ -1214,7 +1218,7 @@
                     <navigationItem key="navigationItem" title="Quality of Life" id="5OS-AS-0Gr">
                         <barButtonItem key="rightBarButtonItem" title="Results" style="plain" id="ehQ-L7-yiI">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3EW-Tr-hKo">
-                                <rect key="frame" x="290" y="4.6666666666666679" width="87" height="35"/>
+                                <rect key="frame" x="307" y="4.6666666666666679" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
@@ -1242,7 +1246,7 @@
             <objects>
                 <viewController storyboardIdentifier="QualityResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aa5-OM-4DW" customClass="QualityResultViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k8h-jU-nxg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4SI-lb-YFi">
@@ -1286,7 +1290,7 @@
                     <navigationItem key="navigationItem" id="3Vz-Vm-7VN">
                         <barButtonItem key="rightBarButtonItem" title="Email" style="plain" id="s7V-4i-jYE">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Xkb-Ki-117">
-                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <rect key="frame" x="307" y="4.6666666666666679" width="87" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -1307,7 +1311,7 @@
             <objects>
                 <viewController title="GenerateReportViewController" id="PXE-xf-haD" customClass="GenerateReportViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lSN-2E-hSt">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bPf-SX-zub"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1323,7 +1327,7 @@
             <objects>
                 <viewController storyboardIdentifier="WhatIsEOEViewController" title="WhatIsEOEViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ym0-er-mGI" userLabel="What is EOE" customClass="WhatIsEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zut-bs-M0m" customClass="WhatisEOEViewController">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAb-Y6-gUo">
@@ -1374,7 +1378,7 @@
             <objects>
                 <viewController storyboardIdentifier="HowItsDiagnosedViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Rl-zd-NgE" userLabel="How is it Diagnosed" customClass="HowItsDiagnosedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Quy-g8-edR">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-0o-Tri">
@@ -1421,7 +1425,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="HowItsTreatedViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NMk-Rm-Zdu" userLabel="How is it Treated" customClass="HowItsTreatedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pii-tV-RXh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x8b-fn-H3s">
@@ -1465,7 +1469,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="WhoIsAffectedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dX1-vT-guO" userLabel="Who is Affected" customClass="WhoIsAffectedViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2KW-tX-Xrd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmk-pX-dbl">
@@ -1510,7 +1514,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="WhatAreSymptomsViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2lP-cm-MnA" userLabel="What Are Symptoms" customClass="WhatAreSymptomsViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4NM-ox-Dcq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eW1-Fo-mut">
@@ -1560,8 +1564,8 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
         <scene sceneID="V42-cc-i9r">
             <objects>
                 <viewController storyboardIdentifier="WhatCausesEOEViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="PYa-Ys-ZQw">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <view key="view" contentMode="scaleToFill" id="PYa-Ys-ZQw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASH-Xg-q7y">
@@ -1607,7 +1611,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController id="uDD-ZN-BbB" customClass="AddAllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2n4-2Q-Zk7">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ysm-c3-GC0">
@@ -1661,11 +1665,11 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController id="hMn-Qp-YDe" userLabel="Allergies " customClass="AllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ty-p7-eQ3" customClass="Aller">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Allergen Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24O-n7-DJc">
-                                <rect key="frame" x="16" y="49" width="361" height="40"/>
+                                <rect key="frame" x="16" y="49" width="382" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="9XQ-Uy-LgM"/>
                                     <constraint firstAttribute="height" constant="40" id="EZj-6w-XD3"/>
@@ -1684,7 +1688,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Allergen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxA-oE-VfJ">
-                                <rect key="frame" x="16" y="20" width="73.333333333333329" height="21"/>
+                                <rect key="frame" x="16" y="20" width="73.666666666666671" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="rGQ-3j-M0o"/>
                                     <constraint firstAttribute="height" constant="21" id="t0d-64-Wsi"/>
@@ -1695,7 +1699,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How Severe? 1-10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XxY-kJ-fyS">
-                                <rect key="frame" x="16" y="136" width="361" height="40"/>
+                                <rect key="frame" x="16" y="136" width="382" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cRS-3b-Qjj"/>
                                 </constraints>
@@ -1712,7 +1716,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imo-iI-WN8">
-                                <rect key="frame" x="16" y="520" width="80.666666666666671" height="33"/>
+                                <rect key="frame" x="16" y="564" width="81" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="4VE-j7-i47"/>
                                 </constraints>
@@ -1721,10 +1725,10 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MnX-IL-AQn">
-                                <rect key="frame" x="16" y="481" width="51" height="31"/>
+                                <rect key="frame" x="16" y="525" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Allergy Discontinued?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-RG-c9f">
-                                <rect key="frame" x="16" y="452" width="190.66666666666666" height="21"/>
+                                <rect key="frame" x="16" y="496" width="191" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NwB-lp-2eP"/>
                                 </constraints>
@@ -1733,14 +1737,14 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-cK-GKe">
-                                <rect key="frame" x="121" y="520" width="227" height="34.333333333333371"/>
+                                <rect key="frame" x="121.33333333333333" y="564" width="247.66666666666669" height="34.333333333333371"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.329999999999998" id="q6Y-GA-BJ5"/>
                                 </constraints>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHl-gp-d6w">
-                                <rect key="frame" x="16" y="809" width="361" height="33"/>
+                                <rect key="frame" x="16" y="853" width="382" height="33"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -1760,7 +1764,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rvq-pO-biQ">
-                                <rect key="frame" x="16" y="641" width="139" height="41"/>
+                                <rect key="frame" x="16" y="685" width="139" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Ohs-mg-tiV"/>
                                     <constraint firstAttribute="height" constant="40" id="abv-cV-JxF"/>
@@ -1771,7 +1775,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Type of Allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2k-6B-80w">
-                                <rect key="frame" x="16" y="591" width="131" height="21"/>
+                                <rect key="frame" x="16" y="635" width="131" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="JGZ-ZW-gWE"/>
                                     <constraint firstAttribute="height" constant="21" id="Uta-s1-yos"/>
@@ -1850,19 +1854,19 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="ResultsViewController" title="ResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oam-9c-s6p" customClass="ResultsViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TA9-oN-U0N">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bsN-we-Bhw">
-                                <rect key="frame" x="16" y="103" width="361" height="666"/>
+                                <rect key="frame" x="0.0" y="103" width="414" height="793"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DEY-1d-HlL">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DEY-1d-HlL" id="xMQ-0j-ul1">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1879,14 +1883,14 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hx-PO-HWW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8974.8091603053435" y="-171.12676056338029"/>
+            <point key="canvasLocation" x="8973.9130434782619" y="-171.42857142857142"/>
         </scene>
         <!--More Info-->
         <scene sceneID="oDe-iT-s4u">
             <objects>
                 <viewController storyboardIdentifier="MoreInfoViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YXR-7B-oXq" userLabel="More Info" customClass="MoreInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PB5-pU-ggK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vB-58-Y3P">
@@ -1919,7 +1923,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="EGIDInfoViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AFc-WF-Ew6" userLabel="EGID Info" customClass="EGIDInfoViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VeH-EX-7hP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-gy-eP3">
@@ -1963,13 +1967,13 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
         <!--Child Profile-->
         <scene sceneID="ETq-UD-pOw">
             <objects>
-                <viewController storyboardIdentifier="ChildViewController" id="7AB-bm-094" customClass="ChildViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChildViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7AB-bm-094" customClass="ChildViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JHw-3M-loH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVz-kG-GYg">
-                                <rect key="frame" x="58" y="758" width="277" height="35"/>
+                                <rect key="frame" x="58" y="802" width="298" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="q0Y-vX-fmj"/>
                                 </constraints>
@@ -1988,11 +1992,10 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveButton:" destination="7AB-bm-094" eventType="touchUpInside" id="5Gf-de-cJb"/>
-                                    <segue destination="CUC-Nl-vlO" kind="show" identifier="homeSegue2" id="R3T-0P-bOg"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-4c-qrH">
-                                <rect key="frame" x="46" y="134" width="301" height="154"/>
+                                <rect key="frame" x="46" y="134" width="322" height="154"/>
                                 <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="155.33333333333331" id="TVz-Ai-nZZ"/>
@@ -2034,17 +2037,17 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="MVx-VZ-Kvx">
-                                <rect key="frame" x="165" y="395" width="200" height="260"/>
+                                <rect key="frame" x="165" y="395" width="221" height="260"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w5X-f2-QqY">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="34"/>
                                         <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="q70-sA-kwC"/>
                                         </constraints>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-0P-R0e">
-                                        <rect key="frame" x="0.0" y="56" width="200" height="35"/>
+                                        <rect key="frame" x="0.0" y="56" width="221" height="35"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                         <menu key="menu" id="a4d-ck-cnT">
                                             <children>
@@ -2058,7 +2061,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-9g-Jnk">
-                                        <rect key="frame" x="0.0" y="113" width="200" height="35"/>
+                                        <rect key="frame" x="0.0" y="113" width="221" height="35"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                         <menu key="menu" id="gdM-qV-orB">
                                             <children>
@@ -2071,19 +2074,19 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                         </state>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-ga-kIO">
-                                        <rect key="frame" x="0.0" y="170" width="200" height="34"/>
+                                        <rect key="frame" x="0.0" y="170" width="221" height="34"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-bc-qSi">
-                                        <rect key="frame" x="0.0" y="226" width="200" height="34"/>
+                                        <rect key="frame" x="0.0" y="226" width="221" height="34"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utk-6x-4PF">
-                                <rect key="frame" x="95" y="307" width="203" height="33"/>
+                                <rect key="frame" x="95" y="307" width="224" height="33"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Select Image" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
@@ -2143,34 +2146,32 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="HomeProfilePageViewController" title="HomeProfilePageViewController" id="SPM-L8-qId" customClass="HomeProfilePageViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z18-LM-MBh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qbj-11-VBa">
-                                <rect key="frame" x="0.0" y="103" width="393" height="367"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qbj-11-VBa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="426"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfilesTableviewcell" id="ts4-0l-66N" customClass="ProfilesTableviewcell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ts4-0l-66N" id="CfF-uI-iVc">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jRR-nN-EUb">
-                                <rect key="frame" x="0.0" y="463" width="393" height="389"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jRR-nN-EUb">
+                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ParentTableViewCell" id="zt8-oK-buR" customClass="ParentTableViewCell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zt8-oK-buR" id="lGl-08-EqC">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2179,6 +2180,16 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WUB-mt-3Z9"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jRR-nN-EUb" firstAttribute="trailing" secondItem="WUB-mt-3Z9" secondAttribute="trailing" id="363-Px-aiL"/>
+                            <constraint firstItem="Qbj-11-VBa" firstAttribute="top" secondItem="WUB-mt-3Z9" secondAttribute="top" id="AGk-b6-Zen"/>
+                            <constraint firstItem="WUB-mt-3Z9" firstAttribute="bottom" secondItem="Qbj-11-VBa" secondAttribute="bottom" constant="299" id="dxB-Dt-Wfb"/>
+                            <constraint firstItem="Qbj-11-VBa" firstAttribute="trailing" secondItem="WUB-mt-3Z9" secondAttribute="trailing" id="mkv-Hu-wEL"/>
+                            <constraint firstAttribute="bottom" secondItem="jRR-nN-EUb" secondAttribute="bottom" id="sfD-iQ-NEO"/>
+                            <constraint firstItem="jRR-nN-EUb" firstAttribute="top" secondItem="WUB-mt-3Z9" secondAttribute="top" constant="360" id="ssZ-SQ-Tjf"/>
+                            <constraint firstItem="Qbj-11-VBa" firstAttribute="leading" secondItem="WUB-mt-3Z9" secondAttribute="leading" id="tdi-1E-OcC"/>
+                            <constraint firstItem="jRR-nN-EUb" firstAttribute="leading" secondItem="WUB-mt-3Z9" secondAttribute="leading" id="tfw-26-xGf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profiles" id="f4Q-9o-q6N"/>
                     <connections>
@@ -2187,16 +2198,15 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6D-Lc-QBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="MyL-HF-eEr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="697" y="754"/>
+            <point key="canvasLocation" x="711" y="573"/>
         </scene>
         <!--Education-->
         <scene sceneID="7gu-pt-Vk6">
             <objects>
                 <viewController storyboardIdentifier="EducationViewController" title="EducationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bB7-xn-OZl" userLabel="Education" customClass="EducationViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YD5-tv-2Q5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="RbQ-9b-A4l"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -2215,7 +2225,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="AddDocumentsViewController" title="Add Documents" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ili-yx-Uxi" userLabel="Add Documents" customClass="AddDocumentsViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15L-kU-mTL">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dZJ-qy-QSf">
@@ -2264,19 +2274,19 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
         <scene sceneID="UJG-gr-guc">
             <objects>
                 <viewController storyboardIdentifier="Diet1ViewController" title="Diet 1 View" id="gVa-VJ-Q51" customClass="Diet1ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i6N-et-7j9">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="i6N-et-7j9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5jZ-zQ-x88">
-                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jZ-zQ-x88">
+                                <rect key="frame" x="0.0" y="109" width="393" height="787"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="tn4-CR-qOL" kind="embed" identifier="FeedSegue" id="dZq-rg-GR7"/>
                                 </connections>
                             </containerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3iT-0g-5xl">
-                                <rect key="frame" x="21.666666666666657" y="74" width="350" height="41"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3iT-0g-5xl">
+                                <rect key="frame" x="21.666666666666657" y="59" width="350" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="G1L-55-zim"/>
                                     <constraint firstAttribute="width" constant="350" id="Ppx-wT-WXQ"/>
@@ -2290,8 +2300,8 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                     <action selector="segmentChanged:" destination="gVa-VJ-Q51" eventType="valueChanged" id="ftl-vZ-Z8y"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx9-lO-gFu">
-                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gx9-lO-gFu">
+                                <rect key="frame" x="0.0" y="109" width="393" height="787"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -2299,7 +2309,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-Bx-Upp">
-                                <rect key="frame" x="146" y="124" width="100" height="35"/>
+                                <rect key="frame" x="146" y="109" width="100" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus.circle" catalog="system" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
@@ -2354,7 +2364,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet1GoodViewController" title="Diet 1 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tm3-sQ-8qp" customClass="Diet1GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4UM-gr-upn">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1fu-K5-2nm">
@@ -2378,7 +2388,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet1BadViewController" title="Diet 1 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tn4-CR-qOL" customClass="Diet1BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8gE-Eq-cel">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UDv-g8-M7K">
@@ -2402,7 +2412,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet2GoodViewController" title="Diet 2 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aDT-sZ-C6h" customClass="Diet2GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P9X-KM-V7q">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="usH-JT-qRF">
@@ -2426,7 +2436,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet2BadViewController" title="Diet 2 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aUh-Ot-NFo" customClass="Diet2BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nbr-0G-XPV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8e0-np-39E">
@@ -2450,18 +2460,18 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet2ViewController" title="Diet 2 View" id="zDM-UM-su2" customClass="Diet2ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tmQ-fx-f1C">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjF-T5-nWg">
-                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="aUh-Ot-NFo" kind="embed" identifier="FeedSegue" id="9xY-7b-col"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z2L-4o-GU1">
-                                <rect key="frame" x="21.666666666666657" y="74" width="350" height="41"/>
+                                <rect key="frame" x="32" y="59" width="350" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MIm-QP-V4j"/>
                                     <constraint firstAttribute="width" constant="350" id="vEc-Pq-xjy"/>
@@ -2476,7 +2486,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IM1-0U-MWm">
-                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -2515,7 +2525,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet4BadViewController" title="Diet 4 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m1Z-xR-Ycc" customClass="Diet4BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pCj-cn-1Ta">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-s4-8Fg">
@@ -2539,7 +2549,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet4GoodViewController" title="Diet 4 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NxP-8u-9Di" customClass="Diet4GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WuX-54-gWN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DrR-cy-s7G">
@@ -2563,18 +2573,18 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet4ViewController" title="Diet 4 View" id="1zL-46-5UA" customClass="Diet4ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eyg-Hp-sQu">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngm-sV-n52">
-                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="m1Z-xR-Ycc" kind="embed" identifier="FeedSegue" id="HCB-hh-Oga"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UvZ-iv-73h">
-                                <rect key="frame" x="21.666666666666657" y="74" width="350" height="41"/>
+                                <rect key="frame" x="32" y="59" width="350" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="64l-ZR-xrc"/>
                                     <constraint firstAttribute="height" constant="40" id="Z4A-hA-efo"/>
@@ -2589,7 +2599,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKZ-5C-V98">
-                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -2628,7 +2638,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet6BadViewController" title="Diet 6 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tjl-vi-BZJ" customClass="Diet6BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mCw-0d-VHh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iVf-gw-acz">
@@ -2652,7 +2662,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet6GoodViewController" title="Diet 6 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gyw-Ez-I7A" customClass="Diet6GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QLb-rk-ku9">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cTz-JN-3YU">
@@ -2676,18 +2686,18 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="Diet6ViewController" title="Diet 6 View" id="EUx-DI-TSP" customClass="Diet6ViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0NQ-bm-SoA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcu-Gh-5Iv">
-                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="Tjl-vi-BZJ" kind="embed" identifier="FeedSegue" id="K2R-fw-eTu"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z7L-dj-HWg">
-                                <rect key="frame" x="21.666666666666657" y="74" width="350" height="41"/>
+                                <rect key="frame" x="32" y="59" width="350" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="BtG-fm-CJi"/>
                                     <constraint firstAttribute="height" constant="40" id="JFM-vO-tf0"/>
@@ -2702,7 +2712,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lg9-4R-649">
-                                <rect key="frame" x="0.0" y="124" width="393" height="728"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -2741,7 +2751,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController storyboardIdentifier="SymptomResultViewController" title="SymptomResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vT4-ss-52N" customClass="ScoreViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k1x-AJ-UL2">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SCL-TY-StQ">
@@ -2796,11 +2806,11 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController id="8gq-uO-laR" userLabel="Allergies " customClass="AllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fe9-cd-pAj" customClass="Aller">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLG-TB-gqD">
-                                <rect key="frame" x="16" y="79" width="112" height="21"/>
+                                <rect key="frame" x="16" y="64" width="112" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pqx-ja-Vfe"/>
                                 </constraints>
@@ -2809,7 +2819,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-l4-9RW">
-                                <rect key="frame" x="16" y="108" width="361" height="40"/>
+                                <rect key="frame" x="16" y="93" width="382" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="T6R-lx-Oov"/>
                                 </constraints>
@@ -2817,19 +2827,19 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-Ci-FaU">
-                                <rect key="frame" x="16" y="164" width="62" height="21"/>
+                                <rect key="frame" x="16" y="149" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qjr-3h-HQy">
-                                <rect key="frame" x="14" y="201" width="365" height="41"/>
+                                <rect key="frame" x="14" y="186" width="386" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tLP-KB-g2h"/>
                                 </constraints>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-se-aJ8">
-                                <rect key="frame" x="16" y="259" width="135" height="21"/>
+                                <rect key="frame" x="16" y="244" width="135" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="mzi-fS-fi3"/>
                                 </constraints>
@@ -2869,7 +2879,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <rect key="frame" x="16" y="521" width="51" height="31"/>
                             </switch>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="KRe-iN-zeZ">
-                                <rect key="frame" x="16" y="301" width="160" height="40"/>
+                                <rect key="frame" x="16" y="286" width="160" height="40"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="heB-ia-heQ"/>
@@ -2914,23 +2924,22 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController id="S0T-J4-89a" customClass="AddAllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZHU-Zv-X5m">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="CurrentAllergensTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oaW-ce-CvU">
-                                <rect key="frame" x="0.0" y="59" width="393" height="381"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CurrentAllergensTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oaW-ce-CvU">
+                                <rect key="frame" x="0.0" y="59" width="414" height="381"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CurrentAllergenCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllergenCell" id="iCN-Oi-ktM" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="44"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iCN-Oi-ktM" id="Kq9-MV-zb1" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDa-IE-mBR">
-                                                    <rect key="frame" x="36" y="11.333333333333334" width="112" height="21.333333333333329"/>
+                                                    <rect key="frame" x="36" y="11.333333333333334" width="133" height="21.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="7rc-ZB-QS1"/>
                                                     </constraints>
@@ -2939,12 +2948,12 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skQ-Fx-tkJ">
-                                                    <rect key="frame" x="319" y="4.6666666666666679" width="58" height="35"/>
+                                                    <rect key="frame" x="319" y="4.6666666666666679" width="79" height="35"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f66-Fi-f6D">
-                                                    <rect key="frame" x="187" y="11.666666666666664" width="105" height="21"/>
+                                                    <rect key="frame" x="208" y="11.666666666666664" width="105" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="81p-dI-C96"/>
                                                     </constraints>
@@ -2982,16 +2991,15 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="DiscontinuedAllergensTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BE4-vG-EOa">
-                                <rect key="frame" x="0.0" y="432" width="393" height="410"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DiscontinuedAllergensTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BE4-vG-EOa">
+                                <rect key="frame" x="0.0" y="432" width="414" height="410"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DiscontinuedAllergenCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllergenCell" id="gMT-5h-pPD" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gMT-5h-pPD" id="8Ms-7b-cMv" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ox-77-v1f">
@@ -3007,7 +3015,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDM-z7-oLc">
-                                                    <rect key="frame" x="319" y="4.3333333333333321" width="58" height="35"/>
+                                                    <rect key="frame" x="319" y="4.3333333333333321" width="79" height="35"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                 </button>
@@ -3033,6 +3041,16 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aWN-pt-KE8"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BE4-vG-EOa" firstAttribute="top" secondItem="aWN-pt-KE8" secondAttribute="top" constant="432" id="4yt-jY-HX7"/>
+                            <constraint firstItem="oaW-ce-CvU" firstAttribute="trailing" secondItem="aWN-pt-KE8" secondAttribute="trailing" id="FZe-bC-yjl"/>
+                            <constraint firstItem="aWN-pt-KE8" firstAttribute="bottom" secondItem="oaW-ce-CvU" secondAttribute="bottom" constant="446" id="RcL-mq-oWT"/>
+                            <constraint firstItem="oaW-ce-CvU" firstAttribute="leading" secondItem="aWN-pt-KE8" secondAttribute="leading" id="Rg4-Xg-Auq"/>
+                            <constraint firstItem="oaW-ce-CvU" firstAttribute="top" secondItem="aWN-pt-KE8" secondAttribute="top" constant="59" id="T7c-mi-0Ij"/>
+                            <constraint firstItem="BE4-vG-EOa" firstAttribute="trailing" secondItem="aWN-pt-KE8" secondAttribute="trailing" id="YK3-ww-Cca"/>
+                            <constraint firstItem="aWN-pt-KE8" firstAttribute="bottom" secondItem="BE4-vG-EOa" secondAttribute="bottom" constant="44" id="bsr-Oz-MXW"/>
+                            <constraint firstItem="BE4-vG-EOa" firstAttribute="leading" secondItem="aWN-pt-KE8" secondAttribute="leading" id="iQT-mA-meb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Allergies" id="Fon-Sn-JEC">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="2CM-7B-0lg">
@@ -3048,14 +3066,14 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWw-1n-6ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6962.5954198473282" y="-1213.3802816901409"/>
+            <point key="canvasLocation" x="6962.3188405797109" y="-1213.3928571428571"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="mYa-xe-H3Z"/>
         <segue reference="3WP-uQ-JyG"/>
-        <segue reference="z7C-BG-gI1"/>
-        <segue reference="Khq-b6-X4a"/>
+        <segue reference="yOw-6k-zAp"/>
+
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EGID app graphic white line art masked" width="1024" height="1024"/>

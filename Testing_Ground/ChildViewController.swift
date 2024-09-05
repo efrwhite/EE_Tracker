@@ -18,7 +18,7 @@ class ChildViewController: UIViewController {
     @IBOutlet weak var childFirstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var childimage: UIImageView!
-    // HEy look at gender in the database not saving coming up as nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //NSLog("Session ID in viewDidLoad: ", mySessionID);
@@ -29,6 +29,7 @@ class ChildViewController: UIViewController {
         } else {
             print("No Child name")
         }
+        //delete this bitch
         usernamec = user
         setPopupButton()
         // Check if it's editing mode and load data if needed
@@ -73,8 +74,6 @@ class ChildViewController: UIViewController {
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
     }
-
-    
     func loadChildProfile(childName: String, usernamec: String) {
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@ AND firstName == %@", usernamec, childName)
@@ -82,18 +81,12 @@ class ChildViewController: UIViewController {
         do {
             let results = try context.fetch(fetchRequest)
             if let profile = results.first {
+                editingChildProfile = profile // Set the editing profile
                 childFirstName.text = profile.firstName
                 lastName.text = profile.lastName
-
-                // Assuming diettype is a UIButton
                 diettype.setTitle(profile.diettype, for: .normal)
-
-                // Assuming gender is a UIButton
                 gender.setTitle(profile.gender, for: .normal)
-
-                // Assuming birthdate is a UIDatePicker
                 birthdate.date = profile.birthday ?? Date()
-
                 if let imageData = profile.image {
                     childimage.image = UIImage(data: imageData)
                 }
@@ -105,6 +98,9 @@ class ChildViewController: UIViewController {
             showAlert(title: "Error", message: "Failed to load profile.")
         }
     }
+
+    
+//deleted a lot of functions
 
     
     func addChildProfile() {
@@ -132,16 +128,16 @@ class ChildViewController: UIViewController {
     }
 
     func updateChildProfile() {
-        // Handle editing an existing profile
+        print("Im in edit function for updating")
         if let profileToEdit = editingChildProfile {
-            profileToEdit.firstName = childFirstName.text!
-            profileToEdit.lastName = lastName.text!
-            profileToEdit.username = user
-            profileToEdit.diettype = diettype.currentTitle ?? ""
-            profileToEdit.gender = gender.currentTitle ?? "" // Update the gender using selectedGender
+            print("name:", childFirstName.text)
+            profileToEdit.firstName = childFirstName.text ?? "" // Safely unwrap text
+            profileToEdit.lastName = lastName.text ?? "" // Safely unwrap text
+            profileToEdit.username = user // Make sure `user` is correctly set
+            profileToEdit.diettype = diettype.currentTitle ?? "" // Safely unwrap button title
+            profileToEdit.gender = gender.currentTitle ?? "" // Safely unwrap button title
 
             if let selectedImage = childimage.image {
-                // Convert the UIImage to Data
                 if let imageData = selectedImage.pngData() {
                     profileToEdit.image = imageData
                 } else {
@@ -151,9 +147,10 @@ class ChildViewController: UIViewController {
                 print("No image selected.")
             }
 
-            // Save the changes
             saveContext()
             showAlert(title: "Success", message: "Profile updated successfully.")
+        } else {
+            print("No profile to edit.")
         }
     }
 
@@ -180,53 +177,65 @@ class ChildViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "homesegue", let displayVC = segue.destination as? HomeViewController {
-               // Pass any necessary data to HomeViewController if needed
-               displayVC.user = user
-               print("User value sent to HomeViewController: \(user)")
-           }
-        if segue.identifier == "homeSegue2", let displayVC = segue.destination as? HomeViewController {
-            // Pass any necessary data to HomeViewController if needed
-            displayVC.user = user
-            print("User value sent to HomeViewController: \(user)")
-        }
-       }
-    @IBAction func saveButton(_ sender: Any) {
-        if isEditingChild {
-            // Handle editing an existing child profile
-            updateChildProfile()
-            showAlertAndNavigate()
-        } else if isAddingChild {
-            // Handle adding a new child profile
-            addChildProfile()
-            showAlertAndNavigate()
-        } else {
-            // Handle other cases (if needed)
-            createChildProfile()
-        }
-    }
 
-    func showAlertAndNavigate() {
+    func showAlertAndNavigate(shouldNavigateToHome: Bool, shouldPopViewController: Bool) {
         let alert = UIAlertController(title: "Success", message: "Child saved successfully.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default) { [weak self] _ in
-            // Check if popping to HomeProfilePageViewController is necessary
-            if let homeProfilePageViewController = self?.navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
-                homeProfilePageViewController.user = self!.user
-                self?.navigationController?.popToViewController(homeProfilePageViewController, animated: true)
-            } else {
-                // If HomeProfilePageViewController is not in the navigation stack, present it using the correct segue identifier
-                self?.performSegue(withIdentifier: "homeSegue2", sender: self)
+            guard let self = self else { return }
+
+            if shouldNavigateToHome {
+                // Navigate to the HomeViewController
+                if let homeViewController = self.navigationController?.viewControllers.first(where: { $0 is HomeViewController }) as? HomeViewController {
+                    // HomeViewController is already in the stack, pop to it
+                    homeViewController.user = self.user
+                    self.navigationController?.popToViewController(homeViewController, animated: true)
+                } else {
+                    // HomeViewController is not in the stack, instantiate and push it
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    if let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+                        homeViewController.user = self.user
+                        self.navigationController?.pushViewController(homeViewController, animated: true)
+                    } else {
+                        print("Error: HomeViewController not found in storyboard")
+                    }
+                }
+            } else if shouldPopViewController {
+                // Navigate to the HomeProfilePageViewController
+                if let homeProfileViewController = self.navigationController?.viewControllers.first(where: { $0 is HomeProfilePageViewController }) as? HomeProfilePageViewController {
+                    // HomeProfilePageViewController is in the stack, pop to it
+                    homeProfileViewController.user = self.user
+                    self.navigationController?.popToViewController(homeProfileViewController, animated: true)
+                } else {
+                    // HomeProfilePageViewController is not in the stack, pop the current view controller
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         })
         present(alert, animated: true, completion: nil)
     }
 
 
-    
-    
-    
-}
+    @IBAction func saveButton(_ sender: Any) {
+        if isEditingChild {
+            // Handle editing an existing child profile
+            print("Editing child profile")
+            updateChildProfile()
+            showAlertAndNavigate(shouldNavigateToHome: false, shouldPopViewController: true)
+        } else if isAddingChild {
+            // Handle adding a new child profile
+            print("Adding new child profile")
+            addChildProfile()
+            showAlertAndNavigate(shouldNavigateToHome: false, shouldPopViewController: true)
+        } else {
+            // Handle other cases (if needed)
+            print("Creating child profile")
+            createChildProfile()
+            showAlertAndNavigate(shouldNavigateToHome: true, shouldPopViewController: false)
+        }
+    }
+
+   
+}///END
 
 extension ChildViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
