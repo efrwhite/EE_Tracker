@@ -4,6 +4,8 @@ import CoreData
 class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var saveButton: UIButton!
+    var user = ""
+    var childName = ""
     
     let mainStackView: UIStackView = {
         let stackView = UIStackView()
@@ -182,7 +184,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         saveEndoscopyResults()
     }
-    
+    //Brianna is editting this area, no user or childname to tie this data too
     func saveEndoscopyResults() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext

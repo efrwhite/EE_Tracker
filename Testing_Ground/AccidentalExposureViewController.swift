@@ -5,7 +5,8 @@ class AccidentalExposureViewController: UIViewController, UITableViewDelegate, U
    
    // CoreData context
    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-   
+   var user = "" //database variable
+   var childName = "" //database variable
    // Assuming a child object is passed to this view controller
    var child: NSManagedObject?
    

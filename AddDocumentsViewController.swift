@@ -5,7 +5,8 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBOutlet weak var AddDocsButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-    
+    var user = "" //needed for database
+    var childName = "" //needed for database
     var photoNames: [String] = []
     var selectedImageData: Data?
     
