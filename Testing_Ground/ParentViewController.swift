@@ -14,18 +14,25 @@ class ParentViewController: UIViewController {
     var isAddingParent: Bool = false
     var parentName: String?
     var usernamep: String?
+    var keyboardHeight: CGFloat = 0.0
+
 
     @IBOutlet weak var parentLastName: UITextField!
     @IBOutlet weak var parentFirstName: UITextField!
     @IBOutlet weak var parentUserName: UITextField!
     @IBOutlet weak var parentimage: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("User in Parent",user)
         // Disable user interaction for the parentUserName text field
         parentUserName.isUserInteractionEnabled = false
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            view.addGestureRecognizer(tapGesture)
+        
 
         if isEditingParent {
             if let parentName = parentName, !parentName.isEmpty {
@@ -35,6 +42,11 @@ class ParentViewController: UIViewController {
             parentUserName.text = user
             print("username",user)
         }
+    }
+    
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBAction func saveButton(_ sender: Any) {
@@ -67,6 +79,63 @@ class ParentViewController: UIViewController {
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Register keyboard notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Unregister keyboard notifications
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        
+        // Capture keyboard height
+        let keyboardHeight = keyboardFrame.height
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
+        
+        // Adjust scroll view insets dynamically
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+        
+        // If active text field is hidden by keyboard, scroll so it's visible
+        var visibleRect = self.view.frame
+        visibleRect.size.height -= keyboardHeight
+        
+        if let activeField = getActiveTextField(), !visibleRect.contains(activeField.frame.origin) {
+            scrollView.scrollRectToVisible(activeField.frame, animated: true)
+        }
+    }
+
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        // Reset scroll view insets
+        let contentInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+
+
+    // find the active text field
+    func getActiveTextField() -> UITextField? {
+        if parentUserName.isFirstResponder {
+            return parentUserName
+        } else if parentFirstName.isFirstResponder {
+            return parentFirstName
+        } else if parentLastName.isFirstResponder {
+            return parentLastName
+        }
+        return nil
+    }
+
 
     func showAlertAndNavigate(shouldNavigateToHome: Bool, shouldPopViewController: Bool) {
         let alert = UIAlertController(title: "Success", message: "Profile saved successfully.", preferredStyle: .alert)
