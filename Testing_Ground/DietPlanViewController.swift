@@ -13,7 +13,7 @@ import CoreData
 class DietPlanViewController: UIViewController {
 
     var user = "" // Username of the parent or child
-
+    var childName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDietPlanButtons()

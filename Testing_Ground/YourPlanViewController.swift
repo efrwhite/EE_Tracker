@@ -31,6 +31,7 @@ class YourPlanViewController: UIViewController {
         updateUIWithChildProfile()
         
         print("User: ", user)
+        print("Child in Your Plan", childName)
     }
     
     func fetchChildProfile(username: String, childName: String) -> Child? {
@@ -79,11 +80,30 @@ class YourPlanViewController: UIViewController {
         if segue.identifier == "medsegue", let displayVC = segue.destination as? MedicationProfile {
             // Pass the 'user' variable to MedicationProfile
             displayVC.user = user
+            displayVC.childName = childName //added by bri you need this to figure out the child you are saving information too
             print("User value sent to MedicationProfile: \(user)")
         } else if segue.identifier == "dietsegue", let displayVC = segue.destination as? DietPlanViewController {
             // Pass the 'user' variable to DietPlanViewController
             displayVC.user = user
+            displayVC.childName = childName //added by bri you need this to figure out the child you are saving information too
             print("User value sent to DietPlanViewController: \(user)")
+        } else if segue.identifier == "documentsegue", let displayVC = segue.destination as? AddDocumentsViewController {
+            // Pass the 'user' variable to DietPlanViewController
+            displayVC.user = user
+            displayVC.childName = childName //added by bri you need this to figure out the child you are saving information too
+            print("User value sent to DietPlanViewController: \(user)")
+        }
+        else if segue.identifier == "expsegue", let displayVC = segue.destination as? AccidentalExposureViewController{
+            // Pass the 'user' variable to DietPlanViewController
+            displayVC.user = user
+            displayVC.childName = childName //added by bri you need this to figure out the child you are saving information too
+            print("User value sent to DietPlanViewController: \(user)")
+        }
+        else if segue.identifier == "expsegue", let displayVC = segue.destination as? AccidentalExposureViewController{
+            // Pass the 'user' variable to DietPlanViewController
+            displayVC.user = user
+            displayVC.childName = childName //added by bri you need this to figure out the child you are saving information too
+            print("User value sent to AccidentalExposureViewController: \(user)")
         }
     }
     

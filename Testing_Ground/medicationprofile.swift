@@ -4,7 +4,7 @@ import CoreData
 
 class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, AddMedicationDelegate {
     var user = ""
-    
+    var childName = ""
     @IBOutlet weak var currentTableView: UITableView!
     let currentCellIdentifier = "currentcell1"
     

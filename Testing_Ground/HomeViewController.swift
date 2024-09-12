@@ -184,6 +184,7 @@ class HomeViewController: UIViewController {
             print("User value sent to HomeProfilePage: \(user)")
         } else if segue.identifier == "plansegue", let displayVC = segue.destination as? YourPlanViewController {
             displayVC.user = user
+            displayVC.childName = childselected
             print("User value sent to Plan: ", user)
         }
     }
