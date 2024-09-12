@@ -11,26 +11,14 @@ class WhatAreSymptomsViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var label1: UILabel!
-
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Set the font size to 20.0
-        label1.font = UIFont.systemFont(ofSize: 20.0)
-        
-        label1.text = """
-           Patients with EoE can experience several symptoms including difficulty in swallowing, choking, food getting stuck in the esophagus, and symptoms of gastroesophageal reflux such as vomiting, heartburn, and regurgitation. Infants and young children may present with food refusal and poor weight gain and growth.
-           """
-        
+  
         // Set the label's text to wrap and display the full content
         label1.numberOfLines = 0
         label1.lineBreakMode = .byWordWrapping
-        
-        // Update the label's frame and size it to fit its content
-        label1.sizeToFit()
         
         // Add the label and image to the scrollView's content view
         scrollView.addSubview(label1)
