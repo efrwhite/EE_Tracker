@@ -36,6 +36,7 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
     let dosageUnits = ["mg", "ml", "tablet", "capsule"]
     
     var user = ""
+    var childName = ""
     var medicationName = ""
     var isEditMode = false
 
@@ -247,15 +248,16 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
         endDateLabel.isHidden = !sender.isOn
         enddate.isHidden = !sender.isOn
     }
-    
+    //added childname
     @objc func saveButtonTapped() {
         if isEditMode {
             let fetchRequest: NSFetchRequest<Medication> = Medication.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "username == %@ AND medName == %@", user, medicationName)
+            fetchRequest.predicate = NSPredicate(format: "userName == %@ AND childName == %@ AND medName == %@", user,childName, medicationName)
             do {
                 let medications = try managedObjectContext.fetch(fetchRequest)
                 if let existingMedication = medications.first {
-                    existingMedication.username = user
+                    existingMedication.userName = user
+                    existingMedication.childName = childName
                     existingMedication.medName = medicationname.text
                     existingMedication.notes = ""
                     existingMedication.medunits = dosageUnits[medicationunits.selectedRow(inComponent: 0)]
@@ -273,7 +275,8 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
             }
         } else {
             let newMedication = Medication(context: managedObjectContext)
-            newMedication.username = user
+            newMedication.userName = user
+            newMedication.childName = childName
             newMedication.medName = medicationname.text
             newMedication.notes = ""
             newMedication.medunits = dosageUnits[medicationunits.selectedRow(inComponent: 0)]
@@ -297,10 +300,10 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
             print("Error saving medication: \(error)")
         }
     }
-    
+    // added childname
     func populateDataForEditing() {
         let fetchRequest: NSFetchRequest<Medication> = Medication.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "username == %@ AND medName == %@", user, medicationName)
+        fetchRequest.predicate = NSPredicate(format: "userName == %@ AND childName == %@ AND medName == %@", user,childName ,medicationName)
         do {
             let medications = try managedObjectContext.fetch(fetchRequest)
             if let existingMedication = medications.first {

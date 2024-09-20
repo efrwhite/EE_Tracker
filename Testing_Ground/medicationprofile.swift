@@ -35,6 +35,8 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         discontinuedTableView.delegate = self
         discontinuedTableView.dataSource = self
         discontinuedTableView.register(UITableViewCell.self, forCellReuseIdentifier: discontinuedCellIdentifier)
+        print("Child in Medication Profile: ",childName)
+        print("Parent in Medication Profile: ",user)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +53,7 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "medName", ascending: true)]
         
         // Filter for medications for a specific user
-        let userPredicate = NSPredicate(format: "username == %@", user)
+        let userPredicate = NSPredicate(format: "userName == %@ AND childName ==%@ ", user, childName)
         fetchRequest.predicate = userPredicate
         
         allFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
@@ -69,6 +71,8 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
             print("Error fetching data: \(error)")
         }
     }
+    
+
     
     func didSaveNewMedication() {
         // Refresh data when a new medication is saved
@@ -156,19 +160,25 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         }
         
         // Perform the segue and pass the isEdit boolean and selected medication name
-        performSegue(withIdentifier: "addmedsegue", sender: (true, selectedMedicationName))
+        performSegue(withIdentifier: "addmed", sender: (true, selectedMedicationName))
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addmedsegue", let displayVC = segue.destination as? AddMedicationViewController {
+        if segue.identifier == "addmed", let displayVC = segue.destination as? AddMedicationViewController {
             displayVC.user = user
+            displayVC.childName = childName //added if not tied to child never will be used
             
             if let (isEdit, medicationName) = sender as? (Bool, String) {
                 displayVC.isEditMode = isEdit // Updated the property name
                 displayVC.medicationName = medicationName
+                displayVC.user = user //added since user would always be null if not added, this will cause the database to pull the first medication meeting the naming requirements which could be wrong for dosage. so I added the user to fix this
+                displayVC.childName = childName // added since it will clash with multiple children/patients without a composite key of (user, child)
             } else {
+                //IDK what this use case is for but always have user and child
                 displayVC.isEditMode = false
                 displayVC.medicationName = ""
+                displayVC.user = user //added since user would always be null if not added, this will cause the database to pull the first medication meeting the naming requirements which could be wrong for dosage. so I added the user to fix this
+                displayVC.childName = childName // added since it will clash with multiple children/patients without a composite key of (user, child)
             }
             
             displayVC.delegate = self
