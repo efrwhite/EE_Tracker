@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGID Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="jd0-Mf-CvO">
-                                <rect key="frame" x="112.66666666666669" y="153" width="189" height="42"/>
+                                <rect key="frame" x="112.5" y="157" width="189" height="42"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.86666666670000003" green="0.87058823529999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.92941176469999998" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN7-9d-8Gu">
-                                <rect key="frame" x="82" y="593.33333333333337" width="250" height="50"/>
+                                <rect key="frame" x="82" y="597.5" width="250" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Fek-cw-lhf"/>
                                     <constraint firstAttribute="width" constant="250" id="W8b-Ud-fja"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80G-Zv-O1A">
-                                <rect key="frame" x="82" y="653.33333333333337" width="250" height="50"/>
+                                <rect key="frame" x="82" y="657.5" width="250" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hZG-nV-Usb"/>
                                     <constraint firstAttribute="width" constant="250" id="tiF-gQ-fhZ"/>
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EGID app graphic white line art masked" translatesAutoresizingMaskIntoConstraints="NO" id="RIQ-2w-NXc">
-                                <rect key="frame" x="132" y="215" width="150" height="150"/>
+                                <rect key="frame" x="132" y="219" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RIQ-2w-NXc" secondAttribute="height" multiplier="1:1" id="H9R-jU-DHc"/>
                                     <constraint firstAttribute="width" constant="150" id="ZhR-d1-2hz"/>
@@ -82,26 +82,26 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easily track your symptoms, medications, and diet plans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81c-46-qVa">
-                                <rect key="frame" x="20" y="385" width="374" height="16"/>
+                                <rect key="frame" x="20" y="389" width="374" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.14509806040000001" green="0.26274511220000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track response to therapy " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkv-cs-DHl">
-                                <rect key="frame" x="30" y="406" width="354" height="16"/>
+                                <rect key="frame" x="30" y="410" width="354" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.14509806040000001" green="0.26274511220000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNs-mu-yu9">
-                                <rect key="frame" x="123.66666666666669" y="483" width="167" height="42"/>
+                                <rect key="frame" x="123.5" y="487" width="167" height="42"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.86666666670000003" green="0.87058823529999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.92941176469999998" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share the results directly with your healthcare provider" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWb-U4-hMz">
-                                <rect key="frame" x="30" y="427" width="354" height="16"/>
+                                <rect key="frame" x="30" y="431" width="354" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.14509806040000001" green="0.26274511220000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -150,10 +150,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yML-ci-XSe">
-                                <rect key="frame" x="16" y="110" width="382" height="767"/>
+                                <rect key="frame" x="16" y="114" width="382" height="759"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="ryX-Rz-0ci">
-                                        <rect key="frame" x="40.666666666666657" y="71" width="300" height="467"/>
+                                        <rect key="frame" x="40.5" y="67" width="300" height="467"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74K-Ig-P7B">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="42"/>
@@ -270,7 +270,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-Ol-WIz">
-                                        <rect key="frame" x="70" y="657" width="274" height="33"/>
+                                        <rect key="frame" x="70" y="653" width="274" height="33"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
@@ -289,14 +289,14 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmZ-CL-1BS">
-                                        <rect key="frame" x="70" y="8.6666666666666714" width="274" height="154"/>
+                                        <rect key="frame" x="70" y="4.5" width="274" height="154.5"/>
                                         <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="155.33333333333331" id="4Mz-hg-VmL"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXM-3V-gTd">
-                                        <rect key="frame" x="70" y="164" width="274" height="33"/>
+                                        <rect key="frame" x="70" y="160" width="274" height="33"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" cornerStyle="large">
                                             <attributedString key="attributedTitle">
@@ -314,10 +314,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="iqZ-he-wh6">
-                                        <rect key="frame" x="35" y="227" width="344" height="199"/>
+                                        <rect key="frame" x="35" y="223" width="344" height="199"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWh-ci-8SJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="344" height="22.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="344" height="22.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="344" id="Rob-Ns-de1"/>
                                                     <constraint firstAttribute="height" constant="22.329999999999998" id="es2-6Y-053"/>
@@ -327,7 +327,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-hA-wjp">
-                                                <rect key="frame" x="0.0" y="28.333333333333343" width="344" height="34"/>
+                                                <rect key="frame" x="0.0" y="28.5" width="344" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="Ito-pY-DME"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="344" id="teF-zj-yWA"/>
@@ -336,7 +336,7 @@
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvQ-Zk-LIg">
-                                                <rect key="frame" x="0.0" y="68.333333333333314" width="344" height="22.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="68.5" width="344" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22.329999999999998" id="8W7-rH-IuT"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="344" id="CJT-e3-2Kn"/>
@@ -346,7 +346,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-Aw-Rc7">
-                                                <rect key="frame" x="0.0" y="96.666666666666686" width="344" height="34"/>
+                                                <rect key="frame" x="0.0" y="96.5" width="344" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="344" id="4cg-wp-hg8"/>
                                                     <constraint firstAttribute="height" constant="34" id="wh9-Z0-rR9"/>
@@ -355,7 +355,7 @@
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cE-uU-AQ2">
-                                                <rect key="frame" x="0.0" y="136.66666666666669" width="344" height="22.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="136.5" width="344" height="22.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="344" id="X1t-xM-C7J"/>
                                                     <constraint firstAttribute="height" constant="22.329999999999998" id="v2g-AM-XtB"/>
@@ -435,13 +435,13 @@
                                 <rect key="frame" x="57" y="334" width="300" height="147"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w4-7P-2qG">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="22.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="22.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-sF-vF9">
-                                        <rect key="frame" x="0.0" y="35.333333333333314" width="300" height="34"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="300" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="9k9-f5-8bO"/>
                                             <constraint firstAttribute="height" constant="34" id="SgE-kH-MbW"/>
@@ -450,7 +450,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcM-bo-bmJ">
-                                        <rect key="frame" x="0.0" y="82.333333333333314" width="300" height="17.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="82.5" width="300" height="17.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -471,7 +471,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIg-6v-Sj7">
-                                <rect key="frame" x="117.66666666666667" y="603" width="178.66666666666663" height="20.333333333333371"/>
+                                <rect key="frame" x="117.5" y="603" width="179" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.72941176470000002" green="0.43529411759999997" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -492,7 +492,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywc-VM-a5O">
-                                <rect key="frame" x="165" y="647" width="84" height="34.333333333333371"/>
+                                <rect key="frame" x="165" y="647" width="84" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -533,7 +533,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WrP-ae-Jgr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V9d-ek-3Jw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -789,7 +789,7 @@
                                             <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="AXc-mm-K9j" kind="show" id="Rxm-BY-TOl"/>
+                                            <segue destination="AXc-mm-K9j" kind="show" identifier="expsegue" id="Rxm-BY-TOl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-Gk-duo">
@@ -833,7 +833,7 @@
                                             <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Ili-yx-Uxi" kind="show" id="I9d-vS-CRE"/>
+                                            <segue destination="Ili-yx-Uxi" kind="show" identifier="docsegue" id="I9d-vS-CRE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogw-gr-twP">
@@ -864,16 +864,16 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RYe-Ps-43e">
-                                <rect key="frame" x="130.33333333333337" y="185" width="153.66666666666663" height="46.666666666666657"/>
+                                <rect key="frame" x="130.5" y="185" width="153.5" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Plan For: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-0m-vQa">
-                                        <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="23.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="153.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="21"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-5T-cOd">
-                                        <rect key="frame" x="0.0" y="23.333333333333343" width="153.66666666666666" height="23.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="23.5" width="153.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="21"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -907,6 +907,39 @@
                     <view key="view" contentMode="scaleToFill" id="9Nz-aM-9SN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="IlU-Z6-v4r">
+                                <rect key="frame" x="93" y="618" width="227.5" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8M-4j-aRi">
+                                        <rect key="frame" x="0.0" y="0.0" width="227.5" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="206.33000000000001" id="BM8-nO-Ld4"/>
+                                            <constraint firstAttribute="height" constant="33" id="Ubd-Hz-42N"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Allergies">
+                                                    <attributes>
+                                                        <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="S0T-J4-89a" kind="show" id="dV9-Uz-kUb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="j8M-4j-aRi" firstAttribute="centerX" secondItem="IlU-Z6-v4r" secondAttribute="centerX" id="Mwo-h7-gGo"/>
+                                    <constraint firstItem="j8M-4j-aRi" firstAttribute="centerY" secondItem="IlU-Z6-v4r" secondAttribute="centerY" id="dGn-oD-2MJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="R9Y-hh-39x"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -930,10 +963,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="currentcell1" editingAccessoryType="detailButton" id="jI6-tD-e4Q">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jI6-tD-e4Q" id="9c9-Jg-u7l">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -949,10 +982,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="discontinuedcell" editingAccessoryType="detailButton" id="uyO-ap-6nd">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uyO-ap-6nd" id="yMD-cv-slM">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -969,7 +1002,7 @@
                     <navigationItem key="navigationItem" title="Medications" id="HE9-QT-nuU">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Y8H-3f-vUw">
                             <connections>
-                                <segue destination="0M3-RU-tSB" kind="show" id="N77-DF-vmu"/>
+                                <segue destination="0M3-RU-tSB" kind="show" identifier="addmed" id="N77-DF-vmu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1088,10 +1121,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SymptomTableViewCell" id="rnD-32-Ddg" customClass="SymTableViewCell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rnD-32-Ddg" id="V9A-ng-O8Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1123,7 +1156,7 @@
                     <navigationItem key="navigationItem" title="Symptom Score" id="4jY-V8-jJm">
                         <barButtonItem key="rightBarButtonItem" title="Results" style="plain" id="OHb-aN-Wx5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="835-dR-OoH">
-                                <rect key="frame" x="307" y="4.6666666666666679" width="87" height="35"/>
+                                <rect key="frame" x="307" y="4.5" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
@@ -1157,10 +1190,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QualityofLifeTableViewCell" id="glb-wk-2gf">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="glb-wk-2gf" id="zKH-Is-yNx">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1192,7 +1225,7 @@
                     <navigationItem key="navigationItem" title="Quality of Life" id="5OS-AS-0Gr">
                         <barButtonItem key="rightBarButtonItem" title="Results" style="plain" id="ehQ-L7-yiI">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3EW-Tr-hKo">
-                                <rect key="frame" x="307" y="4.6666666666666679" width="87" height="35"/>
+                                <rect key="frame" x="307" y="4.5" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Results"/>
@@ -1229,10 +1262,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreIdentifier" id="S4q-nI-qjy">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S4q-nI-qjy" id="tat-bl-DW0">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1264,7 +1297,7 @@
                     <navigationItem key="navigationItem" id="3Vz-Vm-7VN">
                         <barButtonItem key="rightBarButtonItem" title="Email" style="plain" id="s7V-4i-jYE">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Xkb-Ki-117">
-                                <rect key="frame" x="307" y="4.6666666666666679" width="87" height="34.666666666666657"/>
+                                <rect key="frame" x="307" y="4.5" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -1632,10 +1665,10 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="currentcell" editingAccessoryType="detailButton" id="cIj-mU-ilP">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cIj-mU-ilP" id="bqT-O6-7aq">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1647,10 +1680,10 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notcurrentcell" editingAccessoryType="detailButton" id="YtV-Db-rOx">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YtV-Db-rOx" id="F4b-Ah-8U7">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1875,10 +1908,10 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DEY-1d-HlL">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DEY-1d-HlL" id="xMQ-0j-ul1">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2006,8 +2039,99 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                     <action selector="saveButton:" destination="7AB-bm-094" eventType="touchUpInside" id="5Gf-de-cJb"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-4c-qrH">
+                                <rect key="frame" x="46" y="137.5" width="322" height="154.5"/>
+                                <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155.33333333333331" id="TVz-Ai-nZZ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="AQ3-i0-2WO">
+                                <rect key="frame" x="12" y="399" width="96.5" height="260.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fF-0Q-6sL">
+                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehQ-Bk-o9C">
+                                        <rect key="frame" x="0.0" y="59.5" width="96.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ium-PL-3MJ">
+                                        <rect key="frame" x="0.0" y="119" width="96.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEh-IJ-2BA">
+                                        <rect key="frame" x="0.0" y="178.5" width="96.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-KX-s2p">
+                                        <rect key="frame" x="0.0" y="238" width="96.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="MVx-VZ-Kvx">
+                                <rect key="frame" x="165" y="399" width="221" height="260"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w5X-f2-QqY">
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="34"/>
+                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="q70-sA-kwC"/>
+                                        </constraints>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-0P-R0e">
+                                        <rect key="frame" x="0.0" y="56" width="221" height="35"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                        <menu key="menu" id="a4d-ck-cnT">
+                                            <children>
+                                                <command title="Diet Type 1" id="f2i-Y8-umh"/>
+                                                <command title="Diet Type 2" id="g5c-Rw-Ssm"/>
+                                                <command title="Diet Type 3" id="PdO-5L-fwx"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Select Diet">
+                                            <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-9g-Jnk">
+                                        <rect key="frame" x="0.0" y="113" width="221" height="35"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                        <menu key="menu" id="gdM-qV-orB">
+                                            <children>
+                                                <command title="Female" id="x7E-72-bsn"/>
+                                                <command title="Male" id="s2h-A9-wGp"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Select Gender">
+                                            <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-ga-kIO">
+                                        <rect key="frame" x="0.0" y="170" width="221" height="34"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-bc-qSi">
+                                        <rect key="frame" x="0.0" y="226" width="221" height="34"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utk-6x-4PF">
-                                <rect key="frame" x="95" y="302" width="224" height="33"/>
+                                <rect key="frame" x="95" y="311" width="224" height="33"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Select Image" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
@@ -2180,28 +2304,28 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qbj-11-VBa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="426"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="422"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfilesTableviewcell" id="ts4-0l-66N" customClass="ProfilesTableviewcell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ts4-0l-66N" id="CfF-uI-iVc">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jRR-nN-EUb">
-                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                <rect key="frame" x="0.0" y="452" width="414" height="444"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ParentTableViewCell" id="zt8-oK-buR" customClass="ParentTableViewCell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zt8-oK-buR" id="lGl-08-EqC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2264,10 +2388,10 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DocumentTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="currentcell1" editingAccessoryType="detailButton" id="bAo-nn-BLo" customClass="DocumentTableViewCell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAo-nn-BLo" id="Yu4-M3-Jsc">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csQ-19-a3Z">
@@ -2309,14 +2433,14 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jZ-zQ-x88">
-                                <rect key="frame" x="0.0" y="109" width="393" height="787"/>
+                                <rect key="frame" x="0.0" y="113" width="393" height="783"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="tn4-CR-qOL" kind="embed" identifier="FeedSegue" id="dZq-rg-GR7"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3iT-0g-5xl">
-                                <rect key="frame" x="21.666666666666657" y="59" width="350" height="41"/>
+                                <rect key="frame" x="21.666666666666657" y="63" width="350" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="G1L-55-zim"/>
                                     <constraint firstAttribute="width" constant="350" id="Ppx-wT-WXQ"/>
@@ -2331,7 +2455,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gx9-lO-gFu">
-                                <rect key="frame" x="0.0" y="109" width="393" height="787"/>
+                                <rect key="frame" x="0.0" y="113" width="393" height="783"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -2339,7 +2463,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-Bx-Upp">
-                                <rect key="frame" x="146" y="109" width="100" height="34"/>
+                                <rect key="frame" x="146" y="113" width="100" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus.circle" catalog="system" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
@@ -2394,7 +2518,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
             <objects>
                 <viewController storyboardIdentifier="Diet1GoodViewController" title="Diet 1 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tm3-sQ-8qp" customClass="Diet1GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4UM-gr-upn">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1fu-K5-2nm">
@@ -2418,7 +2542,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
             <objects>
                 <viewController storyboardIdentifier="Diet1BadViewController" title="Diet 1 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tn4-CR-qOL" customClass="Diet1BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8gE-Eq-cel">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UDv-g8-M7K">
@@ -2442,7 +2566,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
             <objects>
                 <viewController storyboardIdentifier="Diet2GoodViewController" title="Diet 2 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aDT-sZ-C6h" customClass="Diet2GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P9X-KM-V7q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="usH-JT-qRF">
@@ -2466,7 +2590,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
             <objects>
                 <viewController storyboardIdentifier="Diet2BadViewController" title="Diet 2 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aUh-Ot-NFo" customClass="Diet2BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nbr-0G-XPV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8e0-np-39E">
@@ -2494,14 +2618,14 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjF-T5-nWg">
-                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="aUh-Ot-NFo" kind="embed" identifier="FeedSegue" id="9xY-7b-col"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z2L-4o-GU1">
-                                <rect key="frame" x="32" y="59" width="350" height="41"/>
+                                <rect key="frame" x="32" y="63" width="350" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MIm-QP-V4j"/>
                                     <constraint firstAttribute="width" constant="350" id="vEc-Pq-xjy"/>
@@ -2516,7 +2640,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IM1-0U-MWm">
-                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -2555,7 +2679,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
             <objects>
                 <viewController storyboardIdentifier="Diet4BadViewController" title="Diet 4 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m1Z-xR-Ycc" customClass="Diet4BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pCj-cn-1Ta">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-s4-8Fg">
@@ -2579,7 +2703,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
             <objects>
                 <viewController storyboardIdentifier="Diet4GoodViewController" title="Diet 4 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NxP-8u-9Di" customClass="Diet4GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WuX-54-gWN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DrR-cy-s7G">
@@ -2607,14 +2731,14 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngm-sV-n52">
-                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="m1Z-xR-Ycc" kind="embed" identifier="FeedSegue" id="HCB-hh-Oga"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UvZ-iv-73h">
-                                <rect key="frame" x="32" y="59" width="350" height="41"/>
+                                <rect key="frame" x="32" y="63" width="350" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="64l-ZR-xrc"/>
                                     <constraint firstAttribute="height" constant="40" id="Z4A-hA-efo"/>
@@ -2629,7 +2753,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKZ-5C-V98">
-                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -2668,7 +2792,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
             <objects>
                 <viewController storyboardIdentifier="Diet6BadViewController" title="Diet 6 Bad View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tjl-vi-BZJ" customClass="Diet6BadViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mCw-0d-VHh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iVf-gw-acz">
@@ -2692,7 +2816,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
             <objects>
                 <viewController storyboardIdentifier="Diet6GoodViewController" title="Diet 6 Good View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gyw-Ez-I7A" customClass="Diet6GoodViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QLb-rk-ku9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cTz-JN-3YU">
@@ -2720,14 +2844,14 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcu-Gh-5Iv">
-                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="Tjl-vi-BZJ" kind="embed" identifier="FeedSegue" id="K2R-fw-eTu"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z7L-dj-HWg">
-                                <rect key="frame" x="32" y="59" width="350" height="41"/>
+                                <rect key="frame" x="32" y="63" width="350" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="BtG-fm-CJi"/>
                                     <constraint firstAttribute="height" constant="40" id="JFM-vO-tf0"/>
@@ -2742,7 +2866,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lg9-4R-649">
-                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -2790,10 +2914,10 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreIdentifier" id="UMX-2G-9XM">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UMX-2G-9XM" id="90a-CW-Vep">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2840,7 +2964,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLG-TB-gqD">
-                                <rect key="frame" x="16" y="64" width="112" height="21"/>
+                                <rect key="frame" x="16" y="68" width="112" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pqx-ja-Vfe"/>
                                 </constraints>
@@ -2849,7 +2973,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-l4-9RW">
-                                <rect key="frame" x="16" y="93" width="382" height="40"/>
+                                <rect key="frame" x="16" y="97" width="382" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="T6R-lx-Oov"/>
                                 </constraints>
@@ -2857,19 +2981,19 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-Ci-FaU">
-                                <rect key="frame" x="16" y="149" width="62" height="21"/>
+                                <rect key="frame" x="16" y="153" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qjr-3h-HQy">
-                                <rect key="frame" x="14" y="186" width="386" height="41"/>
+                                <rect key="frame" x="14" y="190" width="386" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tLP-KB-g2h"/>
                                 </constraints>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-se-aJ8">
-                                <rect key="frame" x="16" y="244" width="135" height="21"/>
+                                <rect key="frame" x="16" y="248" width="135" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="mzi-fS-fi3"/>
                                 </constraints>
@@ -2909,7 +3033,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <rect key="frame" x="16" y="521" width="51" height="31"/>
                             </switch>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="KRe-iN-zeZ">
-                                <rect key="frame" x="16" y="286" width="160" height="40"/>
+                                <rect key="frame" x="16" y="290" width="160" height="40"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="heB-ia-heQ"/>
@@ -2969,7 +3093,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDa-IE-mBR">
-                                                    <rect key="frame" x="36" y="11.333333333333334" width="133" height="21.333333333333329"/>
+                                                    <rect key="frame" x="36" y="11.5" width="133" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="7rc-ZB-QS1"/>
                                                     </constraints>
@@ -2978,12 +3102,12 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skQ-Fx-tkJ">
-                                                    <rect key="frame" x="319" y="4.6666666666666679" width="79" height="35"/>
+                                                    <rect key="frame" x="319" y="4.5" width="79" height="35"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f66-Fi-f6D">
-                                                    <rect key="frame" x="208" y="11.666666666666664" width="105" height="21"/>
+                                                    <rect key="frame" x="208" y="11.5" width="105" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="81p-dI-C96"/>
                                                     </constraints>
@@ -3026,14 +3150,14 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DiscontinuedAllergenCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllergenCell" id="gMT-5h-pPD" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gMT-5h-pPD" id="8Ms-7b-cMv" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ox-77-v1f">
-                                                    <rect key="frame" x="36" y="11.333333333333336" width="112" height="21"/>
+                                                    <rect key="frame" x="36" y="11.5" width="112" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -3045,7 +3169,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDM-z7-oLc">
-                                                    <rect key="frame" x="319" y="4.3333333333333321" width="79" height="35"/>
+                                                    <rect key="frame" x="319" y="4.5" width="79" height="35"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                 </button>
@@ -3130,13 +3254,13 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-iQ-YcK">
-                                <rect key="frame" x="96" y="362.33333333333331" width="94.333333333333314" height="22.333333333333314"/>
+                                <rect key="frame" x="96" y="362.5" width="94.5" height="22"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                 <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJz-dD-9XV">
-                                <rect key="frame" x="94" y="320" width="82.333333333333314" height="22.333333333333314"/>
+                                <rect key="frame" x="94" y="319.5" width="82.5" height="22"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                 <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -3228,7 +3352,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfx-4J-L06">
-                                <rect key="frame" x="94" y="276" width="82.333333333333314" height="22.333333333333314"/>
+                                <rect key="frame" x="94" y="276" width="82.5" height="22"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                 <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -3295,9 +3419,9 @@ Unlike many well known food allergens which causes symptoms right after exposure
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0Pe-Sr-d18"/>
+        <segue reference="dV9-Uz-kUb"/>
         <segue reference="3WP-uQ-JyG"/>
-        <segue reference="yOw-6k-zAp"/>
+        <segue reference="Khq-b6-X4a"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EGID app graphic white line art masked" width="1024" height="1024"/>

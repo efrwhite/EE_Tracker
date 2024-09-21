@@ -99,11 +99,11 @@ class YourPlanViewController: UIViewController {
             displayVC.childName = childName //added by bri you need this to figure out the child you are saving information too
             print("User value sent to DietPlanViewController: \(user)")
         }
-        else if segue.identifier == "expsegue", let displayVC = segue.destination as? AccidentalExposureViewController{
+        else if segue.identifier == "docsegue", let displayVC = segue.destination as? AddDocumentsViewController{
             // Pass the 'user' variable to DietPlanViewController
             displayVC.user = user
             displayVC.childName = childName //added by bri you need this to figure out the child you are saving information too
-            print("User value sent to AccidentalExposureViewController: \(user)")
+            print("User value sent to AddDocumentsViewController: \(user)")
         }
     }
     
