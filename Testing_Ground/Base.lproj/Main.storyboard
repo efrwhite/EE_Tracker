@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrP-ae-Jgr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrP-ae-Jgr">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -289,7 +289,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmZ-CL-1BS">
-                                        <rect key="frame" x="70" y="9" width="274" height="154"/>
+                                        <rect key="frame" x="70" y="8.6666666666666714" width="274" height="154"/>
                                         <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="155.33333333333331" id="4Mz-hg-VmL"/>
@@ -327,7 +327,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-hA-wjp">
-                                                <rect key="frame" x="0.0" y="28.333333333333371" width="344" height="34"/>
+                                                <rect key="frame" x="0.0" y="28.333333333333343" width="344" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="Ito-pY-DME"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="344" id="teF-zj-yWA"/>
@@ -757,17 +757,17 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Diet">
+                                                <fragment content="Allergies">
                                                     <attributes>
                                                         <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="bD2-Pn-bSY" kind="show" identifier="dietsegue" id="oZD-md-3GJ"/>
+                                            <segue destination="S0T-J4-89a" kind="show" id="0Pe-Sr-d18"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Eu-1v-pc8">
@@ -907,52 +907,14 @@
                     <view key="view" contentMode="scaleToFill" id="9Nz-aM-9SN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="IlU-Z6-v4r">
-                                <rect key="frame" x="93" y="618" width="86.333333333333314" height="33"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8M-4j-aRi">
-                                        <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="206.33000000000001" id="BM8-nO-Ld4"/>
-                                            <constraint firstAttribute="height" constant="33" id="Ubd-Hz-42N"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Allergies">
-                                                    <attributes>
-                                                        <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="S0T-J4-89a" kind="show" id="dV9-Uz-kUb"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="j8M-4j-aRi" firstAttribute="centerX" secondItem="IlU-Z6-v4r" secondAttribute="centerX" id="Mwo-h7-gGo"/>
-                                    <constraint firstItem="j8M-4j-aRi" firstAttribute="centerY" secondItem="IlU-Z6-v4r" secondAttribute="centerY" id="dGn-oD-2MJ"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="R9Y-hh-39x"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="R9Y-hh-39x" firstAttribute="trailing" secondItem="IlU-Z6-v4r" secondAttribute="trailing" constant="93.670000000000002" id="K5G-m2-afl"/>
-                            <constraint firstItem="R9Y-hh-39x" firstAttribute="bottom" secondItem="IlU-Z6-v4r" secondAttribute="bottom" constant="162" id="Vqz-7W-UeB"/>
-                            <constraint firstItem="IlU-Z6-v4r" firstAttribute="leading" secondItem="R9Y-hh-39x" secondAttribute="leading" constant="93" id="h3v-Hk-sMp"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Diet Plan" id="J1M-Xh-jOG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Cr-OU-k1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6155" y="-1213"/>
+            <point key="canvasLocation" x="5533" y="-1365"/>
         </scene>
         <!--Medications-->
         <scene sceneID="ZWm-hb-6G6">
@@ -1343,17 +1305,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAb-Y6-gUo">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="103" width="413" height="759"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh5-l7-AYl">
-                                        <rect key="frame" x="17" y="42" width="341" height="190"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh5-l7-AYl">
+                                        <rect key="frame" x="31" y="18" width="336" height="203"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Eosinophilic gastrointestinal disorders (EGIDs) are a group of chronic inflammatory disorders characterized by the recruitment of eosinophils in the gastrointestinal tract. The eosinophils release toxins, which lead to inflammation and injury to the Gl tract. EGID can involve any part of the Gl tract, and the patient has symptoms depending on the tract involved.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YWQ-rf-04P">
-                                        <rect key="frame" x="76" y="446" width="240" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eosinophil" translatesAutoresizingMaskIntoConstraints="NO" id="YWQ-rf-04P">
+                                        <rect key="frame" x="8" y="642" width="159" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eosinophilicesophagitis2" translatesAutoresizingMaskIntoConstraints="NO" id="zKZ-mV-CeY">
+                                        <rect key="frame" x="237" y="642" width="158" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBK-Jk-9Bl">
+                                        <rect key="frame" x="31" y="324" width="336" height="302"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <mutableString key="text">Depending on the location of involvement, EGIDs are classified into:
+Eosinophilic gastritis (Stomach)
+Eosinophilic enteritis (small intestine [Duodenum, Jejunum, and Ileum])
+Eosinophilic colitis (Colon)
+Eosinophilic esophagitis (EoE), also known as allergic esophagitis is a chronic immune system disease where a white blood cell called Eosinophil builds up in the lining of the tube (Esophagus) that connects your mouth to your stomach. These eosinophils can release chemicals into the surrounding tissues that cause inflammation.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="egidwhatisgraphic" translatesAutoresizingMaskIntoConstraints="NO" id="jJF-jP-ugl">
+                                        <rect key="frame" x="134" y="240" width="130" height="87"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -1376,14 +1359,17 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="01b-dE-uqE"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="YWQ-rf-04P" id="9FK-0B-sH1"/>
+                        <outlet property="imageView1" destination="jJF-jP-ugl" id="PWQ-MD-o5W"/>
+                        <outlet property="imageView2" destination="YWQ-rf-04P" id="DAm-Bi-f5D"/>
+                        <outlet property="imageView3" destination="zKZ-mV-CeY" id="fJz-iC-PrQ"/>
                         <outlet property="label1" destination="Xh5-l7-AYl" id="Dwi-a7-A6p"/>
+                        <outlet property="label2" destination="uBK-Jk-9Bl" id="AsZ-Hy-5b2"/>
                         <outlet property="scrollView" destination="SAb-Y6-gUo" id="bgo-uj-uSl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvn-iH-gFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3751.9083969465646" y="1921.8309859154931"/>
+            <point key="canvasLocation" x="3750.7246376811595" y="1921.2053571428571"/>
         </scene>
         <!--How is it Diagnosed-->
         <scene sceneID="hhf-E4-kCE">
@@ -1400,8 +1386,8 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4M8-k0-F36">
                                         <rect key="frame" x="8" y="84" width="377" height="686"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">The symptoms of EGIDs can be vague, and patients often experience symptoms for an extended period before the diagnosis. Currently, the diagnosis relies on an upper endoscopy and colonoscopy with biopsies of the gut lining performed by an experienced gastroenterologist. Patients with EGID do have dense eosinophils in the biopsy specimens.
-EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy is a medical procedure where a flexible tube with a light and camera at the tip is passed through the mouth into the esophagus. This procedure will help visualize the lining of the esophagus and also let your doctor take small tissue samples from the lining of the esophagus to examine under microscope for the presence of eosinophils. In an unaffected individual, there are no eosinophils in the esophagus but in patients with the tissue samples may show numerous eosinophils and signs of inflammation.</mutableString>
+                                        <string key="text">The symptoms of EGIDs can be vague, and patients often experience symptoms for an extended period before the diagnosis. Currently, the diagnosis relies on an upper endoscopy and colonoscopy with biopsies of the gut lining performed by an experienced gastroenterologist. Patients with EGID do have dense eosinophils in the biopsy specimens.
+EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy is a medical procedure where a flexible tube with a light and camera at the tip is passed through the mouth into the esophagus. This procedure will help visualize the lining of the esophagus and also let your doctor take small tissue samples from the lining of the esophagus to examine under microscope for the presence of eosinophils. In an unaffected individual, there are no eosinophils in the esophagus but in patients with the tissue samples may show numerous eosinophils and signs of inflammation.</string>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1441,13 +1427,18 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x8b-fn-H3s">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="103" width="414" height="749"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="a4U-lb-W7Q"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="4IE-Sv-ake"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pb-Wb-x4V">
-                                <rect key="frame" x="10" y="113" width="367" height="239"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pb-Wb-x4V">
+                                <rect key="frame" x="10" y="113" width="367" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">Identifying and removing the trigger food(s) from the diet can help improve symptoms, but it is often very challenging. The therapy usually combines empiric food elimination and topical steroids (budesonide). In severe cases, strong inflammatory medications such as systemic steroids (prednisone) or other anti-inflammatory medications may be needed for better control of inflammation and symptoms. Your doctor will help you choose the right therapy for you based on symptoms and biopsy findings.
+There are three main types of treatments available for EoE (as below). Please consult your doctor for a detailed discussion on these options and see what works best for you and your family.
+a. Empiric food elimination
+b. Medical therapy
+c. Elemental diet</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -1474,7 +1465,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFR-zO-h9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4530.5343511450383" y="1921.8309859154931"/>
+            <point key="canvasLocation" x="4530.434782608696" y="1921.2053571428571"/>
         </scene>
         <!--Who is Affected-->
         <scene sceneID="gOV-1V-SmU">
@@ -1485,11 +1476,15 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmk-pX-dbl">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouX-4X-epe">
-                                        <rect key="frame" x="22" y="0.0" width="363" height="304"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="43" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3g-Kp-8fL">
+                                        <rect key="frame" x="32" y="10" width="364" height="335"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">EGID can affect both children and adults. The prevalence of non-EoE EGIDs in the
+USA appears to be 1-20 per 100,000 people in the general population. It is slightly more common in children (19.4/100,000) than adults (17.5/100,000).
+About 5% of patients with Eosinophilic esophagitis may also experience symptoms of EGIDs.
+EE appears to be more common in white males but is being increasingly recognized in patients of all age groups, race and socioeconomic backgrounds. The symptoms however may vary with age.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -1504,22 +1499,24 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mmk-pX-dbl" firstAttribute="trailing" secondItem="btP-es-aCL" secondAttribute="trailing" id="0QL-ES-mpQ"/>
-                            <constraint firstItem="mmk-pX-dbl" firstAttribute="top" secondItem="btP-es-aCL" secondAttribute="top" id="My3-sY-Gzt"/>
+                            <constraint firstItem="mmk-pX-dbl" firstAttribute="top" secondItem="btP-es-aCL" secondAttribute="top" constant="59" id="6kR-kA-86Y"/>
+                            <constraint firstItem="mmk-pX-dbl" firstAttribute="trailing" secondItem="btP-es-aCL" secondAttribute="trailing" id="X6R-OK-Ej3"/>
+                            <constraint firstItem="mmk-pX-dbl" firstAttribute="bottom" secondItem="btP-es-aCL" secondAttribute="bottom" id="XyL-AW-Ike"/>
                             <constraint firstItem="mmk-pX-dbl" firstAttribute="leading" secondItem="btP-es-aCL" secondAttribute="leading" id="cc9-rM-sgG"/>
-                            <constraint firstAttribute="bottom" secondItem="mmk-pX-dbl" secondAttribute="bottom" id="sT7-e6-gmD"/>
+                            <constraint firstItem="mmk-pX-dbl" firstAttribute="leading" secondItem="btP-es-aCL" secondAttribute="leading" id="pjL-RE-QvZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Who is Affected?" id="HW0-kt-hUu">
                         <barButtonItem key="backBarButtonItem" title="Back" id="nAa-Pu-XB1"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="label1" destination="ouX-4X-epe" id="9Pi-cT-6Pa"/>
+                        <outlet property="label1" destination="f3g-Kp-8fL" id="LId-8I-dNZ"/>
                         <outlet property="scrollView" destination="mmk-pX-dbl" id="klB-r0-dT7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AG3-me-pXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3055.7251908396947" y="1207.7464788732395"/>
+            <point key="canvasLocation" x="3055.072463768116" y="1207.3660714285713"/>
         </scene>
         <!--What Are Symptoms-->
         <scene sceneID="Kfg-hT-eLK">
@@ -1535,7 +1532,9 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="43" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcL-bl-9nQ">
                                         <rect key="frame" x="21" y="23" width="364" height="335"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">Identifying and removing the trigger food(s) from the diet can help improve symptoms, but it is often very challenging. The therapy usually combines empiric food elimination and topical sterioids (budesonide). In severe cases, strong inflammatory medications may be needed for better control of inflammation and symptoms. Your doctor will help you choose the right therapy for you based on symptoms and biopsy findings. There are three main types of treatments available for EoE (as below). Please consult your doctor for a detailed discussion on these options and see what works best for you and your family.                   A. Empiric food elimination          B. Medical therapy                     C. Elemental diet</mutableString>
+                                        <string key="text">The typical EGID symptoms are based on the site involved. Patients can experience nausea, vomiting, abdominal pain, diarrhea, weight loss or failure to thrive, and rectal bleeding.
+Patients with EoE can experience several symptoms, including difficulty swallowing, choking, food getting stuck in the esophagus, and symptoms of gastroesophageal reflux, such as vomiting, heartburn, and regurgitation.
+Infants and young children may present with food refusal and poor weight gain and growth.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -1579,12 +1578,15 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASH-Xg-q7y">
-                                <rect key="frame" x="-11" y="103" width="404" height="749"/>
+                                <rect key="frame" x="-11" y="103" width="425" height="749"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoU-ZP-il4">
-                                        <rect key="frame" x="49" y="51" width="324" height="252"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="37" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoU-ZP-il4">
+                                        <rect key="frame" x="49" y="51" width="324" height="578"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <mutableString key="text">The cause of EGIDs is still unknown but appears to be triggered by a few commonly consumed foods, including (but not limited to) dairy, gluten, soy, egg, nuts, and fish. This condition is often seen in patients with other allergic conditions, such as asthma, eczema, and allergic rhinitis. Genetics also play a role as these conditions are being increasingly recognized in patients with a family history of eosinophilic esophagitis or EGIDs.
+EE is usually caused by an immune response to food ingestion. However, the relationship between food allergy and EoE is complex.
+Unlike many well known food allergens which causes symptoms right after exposure such as hives, lip swelling, vomiting and breathing issues, the EoE allergen induced reactions are often delayed, and can develop over several days making it difficult to pinpoint the specific food allergen. Environmental allergies to substances like pollen, dust, mold and animals also appear to play a role in triggering EoE and exacerbating EoE symptoms.</mutableString>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1614,7 +1616,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j69-ZF-z9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3055.7251908396947" y="1921.8309859154931"/>
+            <point key="canvasLocation" x="3055.072463768116" y="1921.2053571428571"/>
         </scene>
         <!--Add Allergies-->
         <scene sceneID="DLu-xK-4vS">
@@ -1675,11 +1677,11 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController id="hMn-Qp-YDe" userLabel="Allergies " customClass="AllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ty-p7-eQ3" customClass="Aller">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Allergen Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24O-n7-DJc">
-                                <rect key="frame" x="16" y="49" width="382" height="40"/>
+                                <rect key="frame" x="16" y="137" width="382" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="9XQ-Uy-LgM"/>
                                     <constraint firstAttribute="height" constant="40" id="EZj-6w-XD3"/>
@@ -1688,7 +1690,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1y-MK-OhC">
-                                <rect key="frame" x="16" y="106" width="70" height="22.333333333333343"/>
+                                <rect key="frame" x="16" y="194" width="70" height="22.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="gBa-8o-iFY"/>
                                     <constraint firstAttribute="height" constant="22.329999999999998" id="xif-bs-Pqh"/>
@@ -1698,7 +1700,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Allergen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxA-oE-VfJ">
-                                <rect key="frame" x="16" y="20" width="73.666666666666671" height="21"/>
+                                <rect key="frame" x="16" y="108" width="73.666666666666671" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="rGQ-3j-M0o"/>
                                     <constraint firstAttribute="height" constant="21" id="t0d-64-Wsi"/>
@@ -1709,7 +1711,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How Severe? 1-10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XxY-kJ-fyS">
-                                <rect key="frame" x="16" y="136" width="382" height="40"/>
+                                <rect key="frame" x="16" y="224" width="382" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cRS-3b-Qjj"/>
                                 </constraints>
@@ -1717,7 +1719,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date of Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rF-xQ-IVG">
-                                <rect key="frame" x="16" y="192" width="149" height="21"/>
+                                <rect key="frame" x="16" y="280" width="149" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="C0s-jA-cdh"/>
                                 </constraints>
@@ -1726,7 +1728,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imo-iI-WN8">
-                                <rect key="frame" x="16" y="564" width="81" height="33"/>
+                                <rect key="frame" x="16" y="491" width="81" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="4VE-j7-i47"/>
                                 </constraints>
@@ -1735,10 +1737,10 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MnX-IL-AQn">
-                                <rect key="frame" x="16" y="525" width="51" height="31"/>
+                                <rect key="frame" x="16" y="452" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Allergy Discontinued?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-RG-c9f">
-                                <rect key="frame" x="16" y="496" width="191" height="21"/>
+                                <rect key="frame" x="16" y="423" width="191" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NwB-lp-2eP"/>
                                 </constraints>
@@ -1747,14 +1749,14 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-cK-GKe">
-                                <rect key="frame" x="121.33333333333333" y="564" width="247.66666666666669" height="34.333333333333371"/>
+                                <rect key="frame" x="121.33333333333333" y="491" width="247.66666666666669" height="34.333333333333371"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.329999999999998" id="q6Y-GA-BJ5"/>
                                 </constraints>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHl-gp-d6w">
-                                <rect key="frame" x="16" y="853" width="382" height="33"/>
+                                <rect key="frame" x="16" y="780" width="382" height="33"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -1774,7 +1776,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rvq-pO-biQ">
-                                <rect key="frame" x="16" y="685" width="139" height="41"/>
+                                <rect key="frame" x="16" y="612" width="139" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Ohs-mg-tiV"/>
                                     <constraint firstAttribute="height" constant="40" id="abv-cV-JxF"/>
@@ -1785,7 +1787,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Type of Allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2k-6B-80w">
-                                <rect key="frame" x="16" y="635" width="131" height="21"/>
+                                <rect key="frame" x="16" y="562" width="131" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="JGZ-ZW-gWE"/>
                                     <constraint firstAttribute="height" constant="21" id="Uta-s1-yos"/>
@@ -1795,7 +1797,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-7C-kbt">
-                                <rect key="frame" x="16" y="241" width="160" height="40"/>
+                                <rect key="frame" x="16" y="329" width="160" height="40"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="31e-RS-AQZ"/>
@@ -2004,99 +2006,8 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                     <action selector="saveButton:" destination="7AB-bm-094" eventType="touchUpInside" id="5Gf-de-cJb"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-4c-qrH">
-                                <rect key="frame" x="46" y="134" width="322" height="154"/>
-                                <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="155.33333333333331" id="TVz-Ai-nZZ"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="AQ3-i0-2WO">
-                                <rect key="frame" x="12" y="396" width="96.333333333333329" height="259.66666666666674"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fF-0Q-6sL">
-                                        <rect key="frame" x="0.0" y="0.0" width="96.333333333333329" height="22.333333333333332"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehQ-Bk-o9C">
-                                        <rect key="frame" x="0.0" y="59.333333333333378" width="96.333333333333329" height="22.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ium-PL-3MJ">
-                                        <rect key="frame" x="0.0" y="118.66666666666667" width="96.333333333333329" height="22.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEh-IJ-2BA">
-                                        <rect key="frame" x="0.0" y="178.00000000000006" width="96.333333333333329" height="22.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-KX-s2p">
-                                        <rect key="frame" x="0.0" y="237.33333333333331" width="96.333333333333329" height="22.333333333333314"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="MVx-VZ-Kvx">
-                                <rect key="frame" x="165" y="395" width="221" height="260"/>
-                                <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w5X-f2-QqY">
-                                        <rect key="frame" x="0.0" y="0.0" width="221" height="34"/>
-                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="q70-sA-kwC"/>
-                                        </constraints>
-                                    </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-0P-R0e">
-                                        <rect key="frame" x="0.0" y="56" width="221" height="35"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
-                                        <menu key="menu" id="a4d-ck-cnT">
-                                            <children>
-                                                <command title="Diet Type 1" id="f2i-Y8-umh"/>
-                                                <command title="Diet Type 2" id="g5c-Rw-Ssm"/>
-                                                <command title="Diet Type 3" id="PdO-5L-fwx"/>
-                                            </children>
-                                        </menu>
-                                        <state key="normal" title="Select Diet">
-                                            <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-9g-Jnk">
-                                        <rect key="frame" x="0.0" y="113" width="221" height="35"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
-                                        <menu key="menu" id="gdM-qV-orB">
-                                            <children>
-                                                <command title="Female" id="x7E-72-bsn"/>
-                                                <command title="Male" id="s2h-A9-wGp"/>
-                                            </children>
-                                        </menu>
-                                        <state key="normal" title="Select Gender">
-                                            <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-ga-kIO">
-                                        <rect key="frame" x="0.0" y="170" width="221" height="34"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-bc-qSi">
-                                        <rect key="frame" x="0.0" y="226" width="221" height="34"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utk-6x-4PF">
-                                <rect key="frame" x="95" y="307" width="224" height="33"/>
+                                <rect key="frame" x="95" y="302" width="224" height="33"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Select Image" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
@@ -2107,23 +2018,135 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                     <action selector="selectImage:" destination="7AB-bm-094" eventType="touchUpInside" id="JEF-eg-aFp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fF-0Q-6sL">
+                                <rect key="frame" x="57.999999999999993" y="360" width="82.333333333333314" height="22"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehQ-Bk-o9C">
+                                <rect key="frame" x="57.999999999999993" y="409" width="82.333333333333314" height="22.333333333333314"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ium-PL-3MJ">
+                                <rect key="frame" x="58" y="451" width="122" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="JhD-em-0eS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-9g-Jnk">
+                                <rect key="frame" x="228" y="446" width="59" height="35"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <menu key="menu" id="gdM-qV-orB">
+                                    <children>
+                                        <command title="Female" id="x7E-72-bsn"/>
+                                        <command title="Male" id="s2h-A9-wGp"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Select Gender">
+                                    <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-bc-qSi">
+                                <rect key="frame" x="228.33333333333337" y="556" width="111" height="34"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-ga-kIO">
+                                <rect key="frame" x="228" y="497" width="111" height="34"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-KX-s2p">
+                                <rect key="frame" x="52.666666666666657" y="562" width="93" height="22.333333333333371"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEh-IJ-2BA">
+                                <rect key="frame" x="50.999999999999993" y="502.99999999999994" width="96.333333333333314" height="22.333333333333314"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-0P-R0e">
+                                <rect key="frame" x="228" y="403.33333333333331" width="94" height="35"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <menu key="menu" id="a4d-ck-cnT">
+                                    <children>
+                                        <command title="Diet Type 1" id="f2i-Y8-umh"/>
+                                        <command title="Diet Type 2" id="g5c-Rw-Ssm"/>
+                                        <command title="Diet Type 3" id="PdO-5L-fwx"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Select Diet">
+                                    <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w5X-f2-QqY">
+                                <rect key="frame" x="221" y="354" width="154" height="34.333333333333314"/>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                            </datePicker>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-4c-qrH">
+                                <rect key="frame" x="46" y="117.66666666666669" width="322" height="152"/>
+                                <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153.33333333333331" id="iUS-YI-sp9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vUg-EG-Vhk"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="MVx-VZ-Kvx" secondAttribute="trailing" constant="28" id="0oP-OA-5uu"/>
-                            <constraint firstItem="y1d-4c-qrH" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="46" id="1R2-yU-XZd"/>
-                            <constraint firstItem="y1d-4c-qrH" firstAttribute="top" secondItem="vUg-EG-Vhk" secondAttribute="top" constant="89" id="TUZ-EF-YwM"/>
+                            <constraint firstItem="ium-PL-3MJ" firstAttribute="centerY" secondItem="Sfv-9g-Jnk" secondAttribute="centerY" id="4sw-up-WzM"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="y1d-4c-qrH" secondAttribute="trailing" constant="46" id="5cW-CN-Aq6"/>
+                            <constraint firstItem="rm6-ga-kIO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TEh-IJ-2BA" secondAttribute="trailing" id="Axx-SM-Rz8"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="ium-PL-3MJ" secondAttribute="trailing" constant="234" id="Cme-qw-jh2"/>
+                            <constraint firstItem="TEh-IJ-2BA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUg-EG-Vhk" secondAttribute="leading" id="CsE-JR-uMd"/>
+                            <constraint firstItem="Hu0-bc-qSi" firstAttribute="top" secondItem="rm6-ga-kIO" secondAttribute="bottom" constant="25" id="Dsj-fE-bRn"/>
+                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="centerX" secondItem="TEh-IJ-2BA" secondAttribute="centerX" id="GMw-id-DFp"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="rm6-ga-kIO" secondAttribute="trailing" constant="74.670000000000002" id="Gwf-GM-3zV"/>
+                            <constraint firstItem="XVz-kG-GYg" firstAttribute="top" secondItem="Hu0-bc-qSi" secondAttribute="bottom" constant="212" id="MzT-Kp-8ig"/>
+                            <constraint firstItem="ium-PL-3MJ" firstAttribute="top" secondItem="ehQ-Bk-o9C" secondAttribute="bottom" constant="19.666666666666686" id="OEu-Ic-WwG"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="Sfv-9g-Jnk" secondAttribute="trailing" constant="127" id="OWG-nf-D0R"/>
+                            <constraint firstAttribute="bottom" secondItem="ium-PL-3MJ" secondAttribute="bottom" constant="420" id="P3D-tL-ba7"/>
+                            <constraint firstItem="ium-PL-3MJ" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="58" id="Q3j-uf-7R1"/>
+                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="top" secondItem="utk-6x-4PF" secondAttribute="bottom" constant="25" id="RPN-u4-RVY"/>
+                            <constraint firstItem="h6i-KX-s2p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUg-EG-Vhk" secondAttribute="leading" id="SJc-lC-cF2"/>
+                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h6i-KX-s2p" secondAttribute="leading" id="SYZ-1s-ufQ"/>
+                            <constraint firstItem="w5X-f2-QqY" firstAttribute="top" secondItem="utk-6x-4PF" secondAttribute="bottom" constant="19" id="T9r-eH-hiV"/>
+                            <constraint firstItem="rm6-ga-kIO" firstAttribute="top" secondItem="Sfv-9g-Jnk" secondAttribute="bottom" constant="16" id="UbI-zq-Wh2"/>
+                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ehQ-Bk-o9C" secondAttribute="leading" id="VxF-ay-zg0"/>
                             <constraint firstItem="utk-6x-4PF" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="95" id="WhU-fP-ZiJ"/>
-                            <constraint firstItem="MVx-VZ-Kvx" firstAttribute="centerY" secondItem="AQ3-i0-2WO" secondAttribute="centerY" id="XtP-8M-Z0a"/>
-                            <constraint firstItem="MVx-VZ-Kvx" firstAttribute="leading" secondItem="JHw-3M-loH" secondAttribute="leading" constant="165" id="Y2n-2O-JOg"/>
-                            <constraint firstItem="y1d-4c-qrH" firstAttribute="centerX" secondItem="JHw-3M-loH" secondAttribute="centerX" id="ZQ0-Xj-28Y"/>
-                            <constraint firstItem="MVx-VZ-Kvx" firstAttribute="top" secondItem="utk-6x-4PF" secondAttribute="bottom" constant="55" id="fF0-XB-gTU"/>
+                            <constraint firstItem="ium-PL-3MJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TEh-IJ-2BA" secondAttribute="leading" id="X92-pm-uZD"/>
+                            <constraint firstItem="3da-0P-R0e" firstAttribute="leading" secondItem="ehQ-Bk-o9C" secondAttribute="trailing" constant="87.666666666666686" id="ag1-6B-8tz"/>
+                            <constraint firstItem="Hu0-bc-qSi" firstAttribute="leading" secondItem="h6i-KX-s2p" secondAttribute="trailing" constant="82.666666666666686" id="bEy-Fu-Dxn"/>
+                            <constraint firstItem="3da-0P-R0e" firstAttribute="top" secondItem="w5X-f2-QqY" secondAttribute="bottom" constant="15" id="bcg-Le-tYS"/>
+                            <constraint firstItem="ehQ-Bk-o9C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUg-EG-Vhk" secondAttribute="leading" id="cYX-rZ-eVa"/>
+                            <constraint firstItem="y1d-4c-qrH" firstAttribute="centerX" secondItem="vUg-EG-Vhk" secondAttribute="centerX" id="cfr-Kk-BhJ"/>
+                            <constraint firstItem="w5X-f2-QqY" firstAttribute="leading" secondItem="4fF-0Q-6sL" secondAttribute="trailing" constant="80.666666666666686" id="dmr-AC-onO"/>
+                            <constraint firstItem="utk-6x-4PF" firstAttribute="top" secondItem="y1d-4c-qrH" secondAttribute="bottom" constant="31.666666666666686" id="eJR-Tm-vl2"/>
+                            <constraint firstItem="TEh-IJ-2BA" firstAttribute="top" secondItem="ium-PL-3MJ" secondAttribute="bottom" constant="27" id="eQw-SP-Mp7"/>
                             <constraint firstItem="vUg-EG-Vhk" firstAttribute="bottom" secondItem="XVz-kG-GYg" secondAttribute="bottom" constant="25" id="fF9-XL-l6N"/>
-                            <constraint firstItem="utk-6x-4PF" firstAttribute="top" secondItem="y1d-4c-qrH" secondAttribute="bottom" constant="18.666666666666686" id="mag-8o-r57"/>
+                            <constraint firstItem="y1d-4c-qrH" firstAttribute="centerX" secondItem="XVz-kG-GYg" secondAttribute="centerX" id="hPZ-Vn-mJp"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="3da-0P-R0e" secondAttribute="trailing" constant="92" id="j8f-Vg-tg9"/>
+                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="centerX" secondItem="ehQ-Bk-o9C" secondAttribute="centerX" id="jGb-Rt-LN3"/>
+                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="centerX" secondItem="h6i-KX-s2p" secondAttribute="centerX" id="l8x-GE-wxB"/>
+                            <constraint firstItem="XVz-kG-GYg" firstAttribute="top" secondItem="h6i-KX-s2p" secondAttribute="bottom" constant="217.66666666666663" id="mHY-Du-B9X"/>
+                            <constraint firstItem="ehQ-Bk-o9C" firstAttribute="top" secondItem="4fF-0Q-6sL" secondAttribute="bottom" constant="27" id="nmI-D2-8mU"/>
                             <constraint firstItem="XVz-kG-GYg" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="58" id="rHK-q3-ieo"/>
-                            <constraint firstItem="y1d-4c-qrH" firstAttribute="centerX" secondItem="XVz-kG-GYg" secondAttribute="centerX" id="ulQ-4o-5Bk"/>
-                            <constraint firstItem="MVx-VZ-Kvx" firstAttribute="leading" secondItem="AQ3-i0-2WO" secondAttribute="trailing" constant="56.666666666666671" id="z6i-uc-f3Z"/>
+                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TEh-IJ-2BA" secondAttribute="leading" id="rJf-yp-06M"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="Hu0-bc-qSi" secondAttribute="trailing" constant="74.670000000000002" id="rLz-dN-9Zh"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="w5X-f2-QqY" secondAttribute="trailing" constant="39" id="ri2-F7-NbK"/>
+                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="58" id="s19-Xl-OFa"/>
+                            <constraint firstItem="h6i-KX-s2p" firstAttribute="top" secondItem="TEh-IJ-2BA" secondAttribute="bottom" constant="36.666666666666742" id="uWh-iB-S6j"/>
+                            <constraint firstItem="y1d-4c-qrH" firstAttribute="centerX" secondItem="utk-6x-4PF" secondAttribute="centerX" id="ybt-ll-mmp"/>
+                            <constraint firstItem="y1d-4c-qrH" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="46" id="yzv-Zu-hxL"/>
                             <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="utk-6x-4PF" secondAttribute="trailing" constant="95" id="zoE-sC-eu7"/>
                         </constraints>
                     </view>
@@ -2146,7 +2169,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                     <viewLayoutGuide key="frameLayoutGuide" id="ekP-Yg-Er4"/>
                 </scrollView>
             </objects>
-            <point key="canvasLocation" x="2266.666666666667" y="656.25"/>
+            <point key="canvasLocation" x="2253.6231884057975" y="424.55357142857139"/>
         </scene>
         <!--HomeProfilePageViewController-->
         <scene sceneID="9hj-MV-jFn">
@@ -2931,11 +2954,11 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
             <objects>
                 <viewController id="S0T-J4-89a" customClass="AddAllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZHU-Zv-X5m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CurrentAllergensTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oaW-ce-CvU">
-                                <rect key="frame" x="0.0" y="59" width="414" height="381"/>
+                                <rect key="frame" x="0.0" y="147" width="414" height="220"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CurrentAllergenCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllergenCell" id="iCN-Oi-ktM" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
@@ -2999,7 +3022,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </prototypes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DiscontinuedAllergensTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BE4-vG-EOa">
-                                <rect key="frame" x="0.0" y="432" width="414" height="410"/>
+                                <rect key="frame" x="0.0" y="520" width="414" height="249"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DiscontinuedAllergenCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllergenCell" id="gMT-5h-pPD" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
@@ -3045,18 +3068,41 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9t-oC-975">
+                                <rect key="frame" x="16" y="736" width="382" height="33"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Diet">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButton:" destination="hMn-Qp-YDe" eventType="touchUpInside" id="yAm-Og-DhQ"/>
+                                    <segue destination="bD2-Pn-bSY" kind="show" id="ItY-A5-zgN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aWN-pt-KE8"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BE4-vG-EOa" firstAttribute="top" secondItem="aWN-pt-KE8" secondAttribute="top" constant="432" id="4yt-jY-HX7"/>
+                            <constraint firstItem="aWN-pt-KE8" firstAttribute="trailing" secondItem="d9t-oC-975" secondAttribute="trailing" constant="16" id="C3H-pL-kJI"/>
                             <constraint firstItem="oaW-ce-CvU" firstAttribute="trailing" secondItem="aWN-pt-KE8" secondAttribute="trailing" id="FZe-bC-yjl"/>
                             <constraint firstItem="aWN-pt-KE8" firstAttribute="bottom" secondItem="oaW-ce-CvU" secondAttribute="bottom" constant="446" id="RcL-mq-oWT"/>
                             <constraint firstItem="oaW-ce-CvU" firstAttribute="leading" secondItem="aWN-pt-KE8" secondAttribute="leading" id="Rg4-Xg-Auq"/>
                             <constraint firstItem="oaW-ce-CvU" firstAttribute="top" secondItem="aWN-pt-KE8" secondAttribute="top" constant="59" id="T7c-mi-0Ij"/>
                             <constraint firstItem="BE4-vG-EOa" firstAttribute="trailing" secondItem="aWN-pt-KE8" secondAttribute="trailing" id="YK3-ww-Cca"/>
+                            <constraint firstItem="d9t-oC-975" firstAttribute="leading" secondItem="aWN-pt-KE8" secondAttribute="leading" constant="16" id="bmm-lM-mDw"/>
                             <constraint firstItem="aWN-pt-KE8" firstAttribute="bottom" secondItem="BE4-vG-EOa" secondAttribute="bottom" constant="44" id="bsr-Oz-MXW"/>
                             <constraint firstItem="BE4-vG-EOa" firstAttribute="leading" secondItem="aWN-pt-KE8" secondAttribute="leading" id="iQT-mA-meb"/>
+                            <constraint firstItem="d9t-oC-975" firstAttribute="top" secondItem="BE4-vG-EOa" secondAttribute="bottom" constant="-33" id="sYh-Zd-iNI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Allergies" id="Fon-Sn-JEC">
@@ -3118,7 +3164,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-ra-MFt">
-                                <rect key="frame" x="45" y="45" width="322" height="154"/>
+                                <rect key="frame" x="45" y="44.666666666666657" width="322" height="154"/>
                                 <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="155.33333333333331" id="oEs-yT-lo5"/>
@@ -3249,13 +3295,16 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mYa-xe-H3Z"/>
+        <segue reference="0Pe-Sr-d18"/>
         <segue reference="3WP-uQ-JyG"/>
         <segue reference="yOw-6k-zAp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EGID app graphic white line art masked" width="1024" height="1024"/>
+        <image name="egidwhatisgraphic" width="900" height="450"/>
         <image name="eoesophagus" width="379" height="349"/>
+        <image name="eosinophil" width="452" height="326"/>
+        <image name="eosinophilicesophagitis2" width="684" height="452"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>

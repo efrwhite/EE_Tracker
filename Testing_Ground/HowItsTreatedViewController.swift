@@ -13,23 +13,10 @@ class HowItsTreatedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the font size to 20.0
-        label1.font = UIFont.systemFont(ofSize: 20.0)
-        
-        label1.text = """
-            There are three main types of treatments available for EoE (as below). Please consult your doctor for a detailed discussion on these options and see what works best for you and your family a. Empiric food elimination  b. Medical therapy  c. Elemental diet
-        """
-        
+    
         // Set the label's text to wrap and display the full content
         label1.numberOfLines = 0
         label1.lineBreakMode = .byWordWrapping
-        
-        // Set text alignment to left
-        label1.textAlignment = .left
-        
-        // Update the label's frame and size it to fit its content
-        label1.sizeToFit()
         
         // Add the label to the scrollView's content view
         scrollView.addSubview(label1)
