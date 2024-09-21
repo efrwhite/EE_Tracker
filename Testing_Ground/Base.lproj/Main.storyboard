@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrP-ae-Jgr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrP-ae-Jgr">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -289,7 +289,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmZ-CL-1BS">
-                                        <rect key="frame" x="70" y="8.6666666666666714" width="274" height="154"/>
+                                        <rect key="frame" x="70" y="9" width="274" height="154"/>
                                         <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="155.33333333333331" id="4Mz-hg-VmL"/>
@@ -327,7 +327,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-hA-wjp">
-                                                <rect key="frame" x="0.0" y="28.333333333333343" width="344" height="34"/>
+                                                <rect key="frame" x="0.0" y="28.333333333333371" width="344" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="Ito-pY-DME"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="344" id="teF-zj-yWA"/>
@@ -789,7 +789,7 @@
                                             <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="AXc-mm-K9j" kind="show" id="Rxm-BY-TOl"/>
+                                            <segue destination="AXc-mm-K9j" kind="show" identifier="expsegue" id="Rxm-BY-TOl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-Gk-duo">
@@ -833,7 +833,7 @@
                                             <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Ili-yx-Uxi" kind="show" id="I9d-vS-CRE"/>
+                                            <segue destination="Ili-yx-Uxi" kind="show" identifier="docsegue" id="I9d-vS-CRE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogw-gr-twP">
@@ -1326,11 +1326,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBK-Jk-9Bl">
                                         <rect key="frame" x="31" y="324" width="336" height="302"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">Depending on the location of involvement, EGIDs are classified into:
+                                        <string key="text">Depending on the location of involvement, EGIDs are classified into:
 Eosinophilic gastritis (Stomach)
 Eosinophilic enteritis (small intestine [Duodenum, Jejunum, and Ileum])
 Eosinophilic colitis (Colon)
-Eosinophilic esophagitis (EoE), also known as allergic esophagitis is a chronic immune system disease where a white blood cell called Eosinophil builds up in the lining of the tube (Esophagus) that connects your mouth to your stomach. These eosinophils can release chemicals into the surrounding tissues that cause inflammation.</mutableString>
+Eosinophilic esophagitis (EoE), also known as allergic esophagitis is a chronic immune system disease where a white blood cell called Eosinophil builds up in the lining of the tube (Esophagus) that connects your mouth to your stomach. These eosinophils can release chemicals into the surrounding tissues that cause inflammation.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -1434,11 +1434,11 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pb-Wb-x4V">
                                 <rect key="frame" x="10" y="113" width="367" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Identifying and removing the trigger food(s) from the diet can help improve symptoms, but it is often very challenging. The therapy usually combines empiric food elimination and topical steroids (budesonide). In severe cases, strong inflammatory medications such as systemic steroids (prednisone) or other anti-inflammatory medications may be needed for better control of inflammation and symptoms. Your doctor will help you choose the right therapy for you based on symptoms and biopsy findings.
+                                <string key="text">Identifying and removing the trigger food(s) from the diet can help improve symptoms, but it is often very challenging. The therapy usually combines empiric food elimination and topical steroids (budesonide). In severe cases, strong inflammatory medications such as systemic steroids (prednisone) or other anti-inflammatory medications may be needed for better control of inflammation and symptoms. Your doctor will help you choose the right therapy for you based on symptoms and biopsy findings.
 There are three main types of treatments available for EoE (as below). Please consult your doctor for a detailed discussion on these options and see what works best for you and your family.
 a. Empiric food elimination
 b. Medical therapy
-c. Elemental diet</mutableString>
+c. Elemental diet</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -1583,9 +1583,9 @@ Infants and young children may present with food refusal and poor weight gain an
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="37" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoU-ZP-il4">
                                         <rect key="frame" x="49" y="51" width="324" height="578"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">The cause of EGIDs is still unknown but appears to be triggered by a few commonly consumed foods, including (but not limited to) dairy, gluten, soy, egg, nuts, and fish. This condition is often seen in patients with other allergic conditions, such as asthma, eczema, and allergic rhinitis. Genetics also play a role as these conditions are being increasingly recognized in patients with a family history of eosinophilic esophagitis or EGIDs.
+                                        <string key="text">The cause of EGIDs is still unknown but appears to be triggered by a few commonly consumed foods, including (but not limited to) dairy, gluten, soy, egg, nuts, and fish. This condition is often seen in patients with other allergic conditions, such as asthma, eczema, and allergic rhinitis. Genetics also play a role as these conditions are being increasingly recognized in patients with a family history of eosinophilic esophagitis or EGIDs.
 EE is usually caused by an immune response to food ingestion. However, the relationship between food allergy and EoE is complex.
-Unlike many well known food allergens which causes symptoms right after exposure such as hives, lip swelling, vomiting and breathing issues, the EoE allergen induced reactions are often delayed, and can develop over several days making it difficult to pinpoint the specific food allergen. Environmental allergies to substances like pollen, dust, mold and animals also appear to play a role in triggering EoE and exacerbating EoE symptoms.</mutableString>
+Unlike many well known food allergens which causes symptoms right after exposure such as hives, lip swelling, vomiting and breathing issues, the EoE allergen induced reactions are often delayed, and can develop over several days making it difficult to pinpoint the specific food allergen. Environmental allergies to substances like pollen, dust, mold and animals also appear to play a role in triggering EoE and exacerbating EoE symptoms.</string>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -2093,7 +2093,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                             </datePicker>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-4c-qrH">
-                                <rect key="frame" x="46" y="117.66666666666669" width="322" height="152"/>
+                                <rect key="frame" x="46" y="118" width="322" height="152"/>
                                 <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="153.33333333333331" id="iUS-YI-sp9"/>
@@ -3164,7 +3164,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-ra-MFt">
-                                <rect key="frame" x="45" y="44.666666666666657" width="322" height="154"/>
+                                <rect key="frame" x="45" y="45" width="322" height="154"/>
                                 <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="155.33333333333331" id="oEs-yT-lo5"/>
