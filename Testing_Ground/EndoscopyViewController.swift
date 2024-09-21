@@ -111,8 +111,6 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setupUI()
         setupKeyboardObservers()
-        print("Child Name in Endoscopy View: ", childName)
-        print("User in Endoscopy View: ", user)
     }
     
     deinit {
