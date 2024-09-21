@@ -13,23 +13,11 @@ class WhoIsAffectedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the font size to 20.0
-        label1.font = UIFont.systemFont(ofSize: 20.0)
-        
-        label1.text = """
-            This condition appears to be more common in white males but is being increasingly recognized in patients of all age groups, race, and socioeconomic backgrounds. The symptoms, however, may vary with age.
-            """
+    
         
         // Set the label's text to wrap and display the full content
         label1.numberOfLines = 0
         label1.lineBreakMode = .byWordWrapping
-        
-        // Set text alignment to left
-        label1.textAlignment = .left
-        
-        // Update the label's frame and size it to fit its content
-        label1.sizeToFit()
         
         // Add the label to the scrollView's content view
         scrollView.addSubview(label1)
