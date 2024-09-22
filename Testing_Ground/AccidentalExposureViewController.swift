@@ -1,7 +1,3 @@
-//accidentalexposure
-//created by vivek
-//database edited by brianna
-
 import UIKit
 import CoreData
 
@@ -72,10 +68,10 @@ class AccidentalExposureViewController: UIViewController, UITableViewDelegate, U
         let button = UIButton(type: .system)
         button.setTitle("Add Exposure", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(addExposure), for: .touchUpInside)
+        button.addTarget(self, action: #selector(addExposure), for: .touchUpInside)  // Target instance, not class
         return button
     }()
-    
+
     // History UI elements
     let historyLabel: UILabel = {
         let label = UILabel()
@@ -272,5 +268,6 @@ class AccidentalExposureViewController: UIViewController, UITableViewDelegate, U
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
+
 
 

@@ -10,11 +10,16 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     var endoscopySumScores: [EndoscopyEntry] = []
+    
+    // Add properties to store username and childname
+    var user: String = "" // Replace with actual value or pass it in
+    var childName: String = "" // Replace with actual value or pass it in
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         fetchEndoscopySumScores()
+        print("Endoscopy User: ", user, "Endoscopy Child: ", childName)
     }
 
     func setupView() {
@@ -47,11 +52,16 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Endoscopy")
         fetchRequest.resultType = .dictionaryResultType
 
+        // Filter by username and childname using NSPredicate
+        let predicate = NSPredicate(format: "username == %@ AND childName == %@", user, childName)
+        fetchRequest.predicate = predicate
+
+        // Create expressions for sum and date
         let sumExpressionDesc = NSExpressionDescription()
         sumExpressionDesc.name = "sum"
         sumExpressionDesc.expression = NSExpression(forFunction: "sum:", arguments: [NSExpression(forKeyPath: "sum")])
         sumExpressionDesc.expressionResultType = .integer32AttributeType
-        
+
         let dateExpression = NSExpressionDescription()
         dateExpression.name = "date"
         dateExpression.expression = NSExpression(forKeyPath: "date")
@@ -62,12 +72,15 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
 
         do {
             let results = try context.fetch(fetchRequest) as! [NSDictionary]
+            endoscopySumScores.removeAll()  // Clear previous results
+            
             for result in results {
                 if let sum = result["sum"] as? Int, let date = result["date"] as? Date {
                     endoscopySumScores.append(EndoscopyEntry(sum: sum, date: date))
                     print("Fetched Endoscopy result with sum: \(sum) for date: \(formatDate(date))")
                 }
             }
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -76,3 +89,4 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
 }
+

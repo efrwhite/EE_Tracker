@@ -1,4 +1,3 @@
-//endoscopy
 import UIKit
 import CoreData
 
@@ -197,7 +196,10 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         let newEndoscopyResult = NSManagedObject(entity: entity, insertInto: context)
 
         // Use setValue(_:forKey:) to set values for each attribute
+        newEndoscopyResult.setValue(user, forKey: "username") // Corrected this line
+        newEndoscopyResult.setValue(childName, forKey: "childName") // Corrected this line
         newEndoscopyResult.setValue(Date(), forKey: "date") // Use the current date or a date picker
+
         let proximateValue = Int32(proximateTextField.text ?? "0") ?? 0
         let middleValue = Int32(middleTextField.text ?? "0") ?? 0
         let lowerValue = Int32(lowerTextField.text ?? "0") ?? 0
@@ -220,11 +222,17 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+
     func navigateToResultsViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let resultsVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as? ResultsViewController {
+            
+            // Pass user and childName to ResultsViewController
+            resultsVC.user = user
+            resultsVC.childName = childName
+
             navigationController?.pushViewController(resultsVC, animated: true)
         }
     }
-}
 
+}
