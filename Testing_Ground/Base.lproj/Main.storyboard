@@ -855,7 +855,7 @@
                                             <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="R0p-2j-gF8" kind="show" id="o15-5f-oIG"/>
+                                            <segue destination="R0p-2j-gF8" kind="show" identifier="edosegue" id="o15-5f-oIG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -969,7 +969,7 @@
                     <navigationItem key="navigationItem" title="Medications" id="HE9-QT-nuU">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Y8H-3f-vUw">
                             <connections>
-                                <segue destination="0M3-RU-tSB" kind="show" id="N77-DF-vmu"/>
+                                <segue destination="0M3-RU-tSB" kind="show" identifier="addmed" id="N77-DF-vmu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

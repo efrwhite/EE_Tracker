@@ -1,4 +1,3 @@
-//addmedication
 import Foundation
 import UIKit
 import CoreData
@@ -353,4 +352,3 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
         return nil
     }
 }
-

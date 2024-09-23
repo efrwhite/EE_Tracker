@@ -1,4 +1,3 @@
-//medicationprofile
 import Foundation
 import UIKit
 import CoreData
@@ -186,4 +185,3 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         }
     }
 }
-
