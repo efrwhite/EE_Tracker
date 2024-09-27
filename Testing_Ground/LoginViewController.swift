@@ -33,14 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func EnterButton(_ sender: Any) {
-        guard let username = Username.text, let password = Password.text else { return }
-        // Check for default credentials
-        if username == defaultUsername && password == defaultPassword {
-            // Perform the segue with the default login information
-            performSegue(withIdentifier: "homesegue", sender: nil)
-        } else {
-            // Add your custom login validation logic here
-        }
+        // No need to call performSegue here, validation will happen in shouldPerformSegue
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -52,9 +45,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
+    // CoreData-based login validation function
     func validateLogin(username: String, password: String) -> Bool {
-        // Login validation logic
-        return false // Placeholder return value
+        // Set up CoreData fetch request
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Parent") // Assuming "Parent" is the entity name
+
+        fetchRequest.predicate = NSPredicate(format: "username == %@ AND password == %@", username, password)
+
+        do {
+            let users = try context.fetch(fetchRequest)
+            if users.count > 0 {
+                // If we have at least one match, login is successful
+                return true
+            } else {
+                // No match found
+                return false
+            }
+        } catch {
+            print("Failed to fetch user: \(error)")
+            return false
+        }
     }
 
     @objc func dismissKeyboard() {
@@ -89,8 +101,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 presentAlert(message: "Please enter both username and password")
                 return false
             }
-            // Prevent the automatic segue if using the default credentials
-            return !(username == defaultUsername && password == defaultPassword)
+            // Check if login is valid (using default or CoreData credentials)
+            if (username == defaultUsername && password == defaultPassword) || validateLogin(username: username, password: password) {
+                return true // Allow segue if valid
+            } else {
+                presentAlert(message: "Invalid username or password")
+                return false // Prevent segue if invalid
+            }
         }
         return true
     }
@@ -107,3 +124,4 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true)
     }
 }
+
