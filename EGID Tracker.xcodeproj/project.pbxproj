@@ -28,6 +28,10 @@
 		8A58A1642B7FD98900CC2D44 /* EditDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58A1632B7FD98900CC2D44 /* EditDocumentsViewController.swift */; };
 		8A78A2F82C5311C800237F66 /* AccidentalExposureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A78A2F72C5311C800237F66 /* AccidentalExposureViewController.swift */; };
 		8A78A2FA2C5314BC00237F66 /* ExposureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A78A2F92C5314BC00237F66 /* ExposureTableViewCell.swift */; };
+		8ABF66332CA65588005185E3 /* Diet1TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF66322CA65588005185E3 /* Diet1TestViewController.swift */; };
+		8ABF66352CA66385005185E3 /* Diet2TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF66342CA66385005185E3 /* Diet2TestViewController.swift */; };
+		8ABF66372CA66394005185E3 /* Diet4TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF66362CA66394005185E3 /* Diet4TestViewController.swift */; };
+		8ABF66392CA663A3005185E3 /* Diet6TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF66382CA663A3005185E3 /* Diet6TestViewController.swift */; };
 		8AC78C1D2A507BF100A4C3FA /* ExtraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C1C2A507BF100A4C3FA /* ExtraViewController.swift */; };
 		8AC78C292A5C8FC300A4C3FA /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C282A5C8FC300A4C3FA /* EducationViewController.swift */; };
 		8AC78C2B2A5C9A5B00A4C3FA /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC78C2A2A5C9A5B00A4C3FA /* MoreInfoViewController.swift */; };
@@ -114,6 +118,10 @@
 		8A58A1632B7FD98900CC2D44 /* EditDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDocumentsViewController.swift; sourceTree = "<group>"; };
 		8A78A2F72C5311C800237F66 /* AccidentalExposureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentalExposureViewController.swift; sourceTree = "<group>"; };
 		8A78A2F92C5314BC00237F66 /* ExposureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExposureTableViewCell.swift; sourceTree = "<group>"; };
+		8ABF66322CA65588005185E3 /* Diet1TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet1TestViewController.swift; sourceTree = "<group>"; };
+		8ABF66342CA66385005185E3 /* Diet2TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet2TestViewController.swift; sourceTree = "<group>"; };
+		8ABF66362CA66394005185E3 /* Diet4TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet4TestViewController.swift; sourceTree = "<group>"; };
+		8ABF66382CA663A3005185E3 /* Diet6TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet6TestViewController.swift; sourceTree = "<group>"; };
 		8AC78C1C2A507BF100A4C3FA /* ExtraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewController.swift; sourceTree = "<group>"; };
 		8AC78C282A5C8FC300A4C3FA /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 		8AC78C2A2A5C9A5B00A4C3FA /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +228,10 @@
 				A424E03E2AD1DDB5000AA275 /* ParentTableViewCell.xib */,
 				A409888D2A1BF9CD0041BBC7 /* Assets.xcassets */,
 				A40988872A1BF9CC0041BBC7 /* Main.storyboard */,
+				8ABF66322CA65588005185E3 /* Diet1TestViewController.swift */,
+				8ABF66342CA66385005185E3 /* Diet2TestViewController.swift */,
+				8ABF66362CA66394005185E3 /* Diet4TestViewController.swift */,
+				8ABF66382CA663A3005185E3 /* Diet6TestViewController.swift */,
 				8A0BEFE02C7595B800296FEC /* AllergenCellTableViewCell.swift */,
 				A409888F2A1BF9CD0041BBC7 /* LaunchScreen.storyboard */,
 				A40988922A1BF9CD0041BBC7 /* Info.plist */,
@@ -436,8 +448,10 @@
 				8A5108A22B6C0714008206A3 /* Diet6GoodViewController.swift in Sources */,
 				8A78A2F82C5311C800237F66 /* AccidentalExposureViewController.swift in Sources */,
 				8A3D423A2B68026B0013EFE5 /* AddDocumentsViewController.swift in Sources */,
+				8ABF66392CA663A3005185E3 /* Diet6TestViewController.swift in Sources */,
 				A4CA1A502A3654F200C94D2C /* LoginViewController.swift in Sources */,
 				A424E03F2AD1DDB5000AA275 /* ParentTableViewCell.swift in Sources */,
+				8ABF66352CA66385005185E3 /* Diet2TestViewController.swift in Sources */,
 				8A5108962B6BFDE4008206A3 /* Diet4BadViewController.swift in Sources */,
 				A4CA1A4C2A3654F200C94D2C /* HomeViewController.swift in Sources */,
 				8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */,
@@ -452,9 +466,11 @@
 				8AE1831F2A658DBD006517D0 /* WhatCausesEOEViewController.swift in Sources */,
 				A4CADC092AE0B57400F1FB67 /* medicationprofile.swift in Sources */,
 				8AE183232A658DF1006517D0 /* HowItsDiagnosedViewController.swift in Sources */,
+				8ABF66372CA66394005185E3 /* Diet4TestViewController.swift in Sources */,
 				8AC78C292A5C8FC300A4C3FA /* EducationViewController.swift in Sources */,
 				A4CA1A512A3654F200C94D2C /* QualityofLifeViewController.swift in Sources */,
 				8A5108982B6BFDF2008206A3 /* Diet4GoodViewController.swift in Sources */,
+				8ABF66332CA65588005185E3 /* Diet1TestViewController.swift in Sources */,
 				8AE1831D2A658DA6006517D0 /* WhatAreSymptomsViewController.swift in Sources */,
 				8A5108A62B6C0735008206A3 /* Diet6ViewController.swift in Sources */,
 				8AE8712A2B8AA0020081337D /* ResultsViewController.swift in Sources */,
