@@ -59,6 +59,8 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
         do {
             let allergens = try managedObjectContext.fetch(fetchRequest)
             if let existingAllergen = allergens.first {
+                print("Editing existing allergen: \(existingAllergen.name ?? "No name")")
+                
                 allergyname.text = existingAllergen.name
                 severity.text = existingAllergen.severity // Severity field
                 startdate.date = existingAllergen.startdate ?? Date()
@@ -75,6 +77,10 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
                 
                 // Update visibility of the enddate picker based on switch state
                 switchValueChanged(offonswitch)
+                
+                print("Allergen severity: \(existingAllergen.severity ?? "No severity")")
+                print("Allergen type: \(existingAllergen.isIgE ? "IgE" : "Non-IgE")")
+                print("Allergen start date: \(existingAllergen.startdate ?? Date())")
             }
         } catch {
             print("Error fetching allergen for editing: \(error)")
@@ -82,6 +88,8 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        print("Save button tapped")
+        
         if isEditMode {
             // Fetch request to find the existing allergen
             let fetchRequest: NSFetchRequest<Allergies> = Allergies.fetchRequest()
@@ -91,6 +99,8 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
                 let allergens = try managedObjectContext.fetch(fetchRequest)
                 if let existingAllergen = allergens.first {
                     // Update existing allergen details
+                    print("Updating existing allergen: \(existingAllergen.name ?? "No name")")
+                    
                     existingAllergen.username = user
                     existingAllergen.name = allergyname.text
                     existingAllergen.severity = severity.text // Severity field
@@ -102,6 +112,10 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
                     } else {
                         existingAllergen.enddate = nil
                     }
+                    
+                    print("Updated allergen name: \(existingAllergen.name ?? "No name")")
+                    print("Updated allergen severity: \(existingAllergen.severity ?? "No severity")")
+                    print("Updated allergen type: \(existingAllergen.isIgE ? "IgE" : "Non-IgE")")
                 }
             } catch {
                 print("Error updating allergen: \(error)")
@@ -120,10 +134,17 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
             } else {
                 newAllergen.enddate = nil
             }
+            
+            print("New allergen added:")
+            print("Name: \(newAllergen.name ?? "No name")")
+            print("Severity: \(newAllergen.severity ?? "No severity")")
+            print("Type: \(newAllergen.isIgE ? "IgE" : "Non-IgE")")
+            print("Start date: \(String(describing: newAllergen.startdate))")
         }
         
         do {
             try managedObjectContext.save()
+            print("Allergen saved successfully")
             delegate?.didSaveNewAllergen()
             self.navigationController?.popViewController(animated: true)
         } catch {

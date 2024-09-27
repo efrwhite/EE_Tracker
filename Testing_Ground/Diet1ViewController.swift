@@ -8,7 +8,7 @@ class Diet1ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var user = ""
-    var userchild = ""
+    var childName = ""
     var Diet1GoodViewController: Diet1GoodViewController?
     var Diet1BadViewController: Diet1BadViewController?
 
