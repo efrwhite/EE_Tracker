@@ -162,27 +162,8 @@ class ChildViewController: UIViewController {
     }
 
     func createChildProfile() {
-        // Handle adding a new profile
-        let newChild = Child(context: context)
-        newChild.firstName = childFirstName.text!
-        newChild.lastName = lastName.text!
-        newChild.username = user
-        newChild.diettype = diettype.currentTitle
-        newChild.gender = gender.currentTitle ?? "" // Set the gender using selectedGender
-
-        if let selectedImage = childimage.image {
-            // Convert the UIImage to Data
-            if let imageData = selectedImage.pngData() {
-                newChild.image = imageData
-            } else {
-                print("Error converting image to data.")
-            }
-        } else {
-            print("No image selected.")
-        }
-        child.append(newChild)
-        saveContext()
-        print("New profile added successfully.")
+        // Handle creating a new profile (similar to adding)
+        addChildProfile()
     }
 
     func saveContext() {
@@ -213,7 +194,6 @@ class ChildViewController: UIViewController {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     if let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
                         homeViewController.user = self.user
-                        homeViewController.childselected = self.childFirstName.text!
                         self.navigationController?.pushViewController(homeViewController, animated: true)
                     } else {
                         print("Error: HomeViewController not found in storyboard")
