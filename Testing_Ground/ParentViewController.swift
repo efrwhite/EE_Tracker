@@ -35,12 +35,19 @@ class ParentViewController: UIViewController {
         
 
         if isEditingParent {
+            //editing parent through profiles
             if let parentName = parentName, !parentName.isEmpty {
                 loadParentProfile(parentName: parentName, usernamep: user)
             }
         } else if isAddingParent{
+            //adding parent through profiles
+            print("new parent check me")
             parentUserName.text = user
             print("username",user)
+        }else{
+            //creating new parent statement
+            parentUserName.text = user
+            print("you are in the else block of this for parent!")
         }
     }
     
