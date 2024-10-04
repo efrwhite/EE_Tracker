@@ -86,7 +86,7 @@ class YourPlanViewController: UIViewController {
         }
     }
     
-    
+    //edited by brianna for dynamic segues to controllers
     //added this dietButtonTapped method to try to create a way for the segue to be performed based on the diet type, i was looking at the other segues and since they're not dynamic (only one possible outcome) the button-tapped method wasn't necessary. but i added it here
     @IBAction func dietButtonTapped(_ sender: UIButton) {
         // Determine the diet type from the selected child's profile
@@ -100,16 +100,41 @@ class YourPlanViewController: UIViewController {
         
         // Perform the segue based on the diet type
         switch diettype {
-        case "Diet1":
-            performSegue(withIdentifier: "diet1segue", sender: self)
-        case "Diet2":
-            performSegue(withIdentifier: "diet2segue", sender: self)
-        case "Diet4":
-            performSegue(withIdentifier: "diet4segue", sender: self)
-        case "Diet6":
-            performSegue(withIdentifier: "diet6segue", sender: self)
+        
+        case "Diet 1":
+            if let diet1 = storyboard!.instantiateViewController(withIdentifier: "Diet1ViewController TEST") as? Diet1TestViewController {
+                diet1.user = self.user
+                diet1.childName = childName
+                self.navigationController?.pushViewController(diet1, animated: true)
+                
+            }
+            //change
+        case "Diet 2":
+            if let diet1 = storyboard!.instantiateViewController(withIdentifier: "Diet2ViewController TEST") as? Diet2TestViewController {
+                diet1.user = self.user
+                diet1.childName = childName
+                self.navigationController?.pushViewController(diet1, animated: true)
+                
+            }
+            //change
+        case "Diet 4":
+            if let diet1 = storyboard!.instantiateViewController(withIdentifier: "Diet4ViewController TEST") as? Diet4TestViewController {
+                diet1.user = self.user
+                diet1.childName = childName
+                self.navigationController?.pushViewController(diet1, animated: true)
+                
+            }
+            //change
+        case "Diet 6":
+            if let diet1 = storyboard!.instantiateViewController(withIdentifier: "Diet6ViewController TEST") as? Diet6TestViewController {
+                diet1.user = self.user
+                diet1.childName = childName
+                self.navigationController?.pushViewController(diet1, animated: true)
+                
+            }
+        
         default:
-            print("Unknown diet type: \(diettype)")
+            print("Segue doesnt work Diet")
         }
     }
 
@@ -119,29 +144,9 @@ class YourPlanViewController: UIViewController {
             displayVC.user = user
             displayVC.childName = childName //added by bri you need this to figure out the child you are saving information to
             print("User value sent to MedicationProfile: \(user)")
-        } else if segue.identifier == "diet1segue", let displayVC = segue.destination as? Diet1TestViewController {
-            // Pass the 'user' and 'childName' to Diet1TestViewController
-            displayVC.user = user
-            displayVC.childName = childName //added by bri you need this to figure out the child you are saving information to
-            
-            //from here onwards i replaced the DietPlan segue stuff with programmatic segues for each diet (1,2,4,6) segues
-            print("User value sent to Diet1TestViewController: \(user)")
-        } else if segue.identifier == "diet2segue", let displayVC = segue.destination as? Diet2TestViewController {
-            // Pass the 'user' and 'childName' to Diet2TestViewController
-            displayVC.user = user
-            displayVC.childName = childName
-            print("User value sent to Diet2TestViewController: \(user)")
-        } else if segue.identifier == "diet4segue", let displayVC = segue.destination as? Diet4TestViewController {
-            // Pass the 'user' and 'childName' to Diet4TestViewController
-            displayVC.user = user
-            displayVC.childName = childName
-            print("User value sent to Diet4TestViewController: \(user)")
-        } else if segue.identifier == "diet6segue", let displayVC = segue.destination as? Diet6TestViewController {
-            // Pass the 'user' and 'childName' to Diet6TestViewController
-            displayVC.user = user
-            displayVC.childName = childName
-            print("User value sent to Diet6TestViewController: \(user)")
-        } else if segue.identifier == "documentsegue", let displayVC = segue.destination as? AddDocumentsViewController {
+        }
+        //somehow this was overwritten and I just fixed it again
+         else if segue.identifier == "docsegue", let displayVC = segue.destination as? AddDocumentsViewController {
             displayVC.user = user
             displayVC.childName = childName
             print("User value sent to AddDocumentsViewController: \(user)")

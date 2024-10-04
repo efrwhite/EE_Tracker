@@ -41,7 +41,7 @@ class Diet1TestViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("User Diet: ",user!, "Child Diet: ", childName!)
         // Set up navigation bar
         navigationItem.title = "Diet 1"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -151,11 +151,12 @@ class Diet1TestViewController: UIViewController, UITableViewDataSource, UITableV
         alert.addTextField { (textField) in
             textField.placeholder = "Enter food"
         }
-        
+        //
         // Define the action for adding food
         let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
             if let foodName = alert.textFields?.first?.text, !foodName.isEmpty {
                 self?.foods.append(foodName) // Add food to the data source
+                //add a list of items in coredata for the diet entity, append the food to do not eat attribute, do eat attribute 
                 self?.tableView.reloadData()  // Reload table view to display new food
             }
         }
