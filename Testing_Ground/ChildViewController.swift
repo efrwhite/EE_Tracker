@@ -1,6 +1,5 @@
 import UIKit
 import CoreData
-
 class ChildViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var user = ""
@@ -8,10 +7,8 @@ class ChildViewController: UIViewController {
     var isAddingChild: Bool = false
     var childName: String?
     var usernamec: String?
-
     var child = [Child]()
     var editingChildProfile: Child?
-
     @IBOutlet weak var diettype: UIButton!
     @IBOutlet weak var gender: UIButton!
     @IBOutlet weak var birthdate: UIDatePicker!
@@ -43,30 +40,24 @@ class ChildViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
-
     func setPopupButton() {
         let optional = { (action: UIAction) in print(action.title) }
-
         gender.menu = UIMenu(children:[
             UIAction(title: "Male", state: .on, handler: optional),
             UIAction(title: "Female", handler: optional),
         ])
-
         let optional2 = { (action: UIAction) in print(action.title) }
-
         diettype.menu = UIMenu(children:[
             UIAction(title: "Diet 1", state: .on, handler: optional2),
             UIAction(title: "Diet 2", handler: optional2),
             UIAction(title: "Diet 4", handler: optional2),
             UIAction(title: "Diet 6", handler: optional2)
         ])
-
         diettype.showsMenuAsPrimaryAction = true
         diettype.changesSelectionAsPrimaryAction = true
         gender.showsMenuAsPrimaryAction = true
         gender.changesSelectionAsPrimaryAction = true
     }
-
     @IBAction func selectImage(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -77,7 +68,6 @@ class ChildViewController: UIViewController {
     func loadChildProfile(childName: String, usernamec: String) {
         let fetchRequest: NSFetchRequest<Child> = Child.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@ AND firstName == %@", usernamec, childName)
-
         do {
             let results = try context.fetch(fetchRequest)
             if let profile = results.first {
@@ -98,10 +88,8 @@ class ChildViewController: UIViewController {
             showAlert(title: "Error", message: "Failed to load profile.")
         }
     }
-
     
 //deleted a lot of functions
-
     
     func addChildProfile() {
         // Handle adding a new profile
@@ -111,7 +99,6 @@ class ChildViewController: UIViewController {
         newChild.username = user
         newChild.diettype = diettype.currentTitle
         newChild.gender = gender.currentTitle ?? "" // Set the gender using selectedGender
-
         if let selectedImage = childimage.image {
             // Convert the UIImage to Data
             if let imageData = selectedImage.pngData() {
@@ -126,7 +113,6 @@ class ChildViewController: UIViewController {
         saveContext()
         print("New profile added successfully.")
     }
-
     func updateChildProfile() {
         print("Im in edit function for updating")
         if let profileToEdit = editingChildProfile {
@@ -136,7 +122,6 @@ class ChildViewController: UIViewController {
             profileToEdit.username = user // Make sure `user` is correctly set
             profileToEdit.diettype = diettype.currentTitle ?? "" // Safely unwrap button title
             profileToEdit.gender = gender.currentTitle ?? "" // Safely unwrap button title
-
             if let selectedImage = childimage.image {
                 if let imageData = selectedImage.pngData() {
                     profileToEdit.image = imageData
@@ -146,26 +131,39 @@ class ChildViewController: UIViewController {
             } else {
                 print("No image selected.")
             }
-
             saveContext()
             showAlert(title: "Success", message: "Profile updated successfully.")
         } else {
             print("No profile to edit.")
         }
     }
-
-
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-
     func createChildProfile() {
-        // Handle creating a new profile (similar to adding)
-        addChildProfile()
+        // Handle adding a new profile
+        let newChild = Child(context: context)
+        newChild.firstName = childFirstName.text!
+        newChild.lastName = lastName.text!
+        newChild.username = user
+        newChild.diettype = diettype.currentTitle
+        newChild.gender = gender.currentTitle ?? "" // Set the gender using selectedGender
+        if let selectedImage = childimage.image {
+            // Convert the UIImage to Data
+            if let imageData = selectedImage.pngData() {
+                newChild.image = imageData
+            } else {
+                print("Error converting image to data.")
+            }
+        } else {
+            print("No image selected.")
+        }
+        child.append(newChild)
+        saveContext()
+        print("New profile added successfully.")
     }
-
     func saveContext() {
         do {
             try context.save()
@@ -173,16 +171,13 @@ class ChildViewController: UIViewController {
             print("Error Saving context \(error)")
         }
     }
-
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-
     func showAlertAndNavigate(shouldNavigateToHome: Bool, shouldPopViewController: Bool) {
         let alert = UIAlertController(title: "Success", message: "Child saved successfully.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default) { [weak self] _ in
             guard let self = self else { return }
-
             if shouldNavigateToHome {
                 // Navigate to the HomeViewController
                 if let homeViewController = self.navigationController?.viewControllers.first(where: { $0 is HomeViewController }) as? HomeViewController {
@@ -194,6 +189,7 @@ class ChildViewController: UIViewController {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     if let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
                         homeViewController.user = self.user
+                        homeViewController.childselected = self.childFirstName.text!
                         self.navigationController?.pushViewController(homeViewController, animated: true)
                     } else {
                         print("Error: HomeViewController not found in storyboard")
@@ -213,8 +209,6 @@ class ChildViewController: UIViewController {
         })
         present(alert, animated: true, completion: nil)
     }
-
-
     @IBAction func saveButton(_ sender: Any) {
         if isEditingChild {
             // Handle editing an existing child profile
@@ -233,10 +227,8 @@ class ChildViewController: UIViewController {
             showAlertAndNavigate(shouldNavigateToHome: true, shouldPopViewController: false)
         }
     }
-
    
 }///END
-
 extension ChildViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
@@ -244,8 +236,8 @@ extension ChildViewController: UIImagePickerControllerDelegate, UINavigationCont
         }
         picker.dismiss(animated: true)
     }
-
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
     }
 }
+
