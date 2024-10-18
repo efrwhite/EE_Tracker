@@ -143,12 +143,16 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
         }
         
         do {
-            try managedObjectContext.save()
-            print("Allergen saved successfully")
-            delegate?.didSaveNewAllergen()
-            self.navigationController?.popViewController(animated: true)
-        } catch {
-            print("Error saving allergen: \(error)")
-        }
+                try managedObjectContext.save()
+                print("Allergen saved successfully")
+                
+                // Notify the delegate before popping the view controller
+                delegate?.didSaveNewAllergen()
+                
+                // Use completion block to ensure data reload before dismissing
+                self.navigationController?.popViewController(animated: true)
+            } catch {
+                print("Error saving allergen: \(error)")
+            }
     }
 }

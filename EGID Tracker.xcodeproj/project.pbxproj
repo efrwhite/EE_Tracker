@@ -43,6 +43,8 @@
 		8AE183252A658E18006517D0 /* HowItsTreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */; };
 		8AE183272A658E3E006517D0 /* EGIDInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */; };
 		8AE8712A2B8AA0020081337D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE871292B8AA0020081337D /* ResultsViewController.swift */; };
+		8AEE734F2CB742B50013E611 /* YesNoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE734E2CB742B50013E611 /* YesNoTableViewCell.swift */; };
+		8AEE73512CB743570013E611 /* YesNoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE73502CB743570013E611 /* YesNoTableViewCell.xib */; };
 		A40883902AD1E0BA006F3871 /* ProfilesTableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408838E2AD1E0BA006F3871 /* ProfilesTableviewcell.xib */; };
 		A40883932AD1E0BA006F3871 /* ProfilesTableviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408838F2AD1E0BA006F3871 /* ProfilesTableviewcell.swift */; };
 		A40883972AD1E0C2006F3871 /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40883962AD1E0C2006F3871 /* ParentTableViewCell.swift */; };
@@ -133,6 +135,8 @@
 		8AE183242A658E18006517D0 /* HowItsTreatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItsTreatedViewController.swift; sourceTree = "<group>"; };
 		8AE183262A658E3E006517D0 /* EGIDInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGIDInfoViewController.swift; sourceTree = "<group>"; };
 		8AE871292B8AA0020081337D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		8AEE734E2CB742B50013E611 /* YesNoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesNoTableViewCell.swift; sourceTree = "<group>"; };
+		8AEE73502CB743570013E611 /* YesNoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YesNoTableViewCell.xib; sourceTree = "<group>"; };
 		A408838E2AD1E0BA006F3871 /* ProfilesTableviewcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilesTableviewcell.xib; sourceTree = "<group>"; };
 		A408838F2AD1E0BA006F3871 /* ProfilesTableviewcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTableviewcell.swift; sourceTree = "<group>"; };
 		A40883962AD1E0C2006F3871 /* ParentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 				A4CA1A472A3654F200C94D2C /* SymptomScoreViewController.swift */,
 				A4CA1A562A3654FC00C94D2C /* SymptomTableViewCell.swift */,
 				A4CA1A542A3654FB00C94D2C /* SymptomTableViewCell.xib */,
+				8AEE73502CB743570013E611 /* YesNoTableViewCell.xib */,
+				8AEE734E2CB742B50013E611 /* YesNoTableViewCell.swift */,
 				A408839A2AD41C5F006F3871 /* ScoreViewController.swift */,
 				8A1E0A112B82B04B0032DF35 /* GenerateReportViewController.swift */,
 				8AC78C282A5C8FC300A4C3FA /* EducationViewController.swift */,
@@ -414,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AEE73512CB743570013E611 /* YesNoTableViewCell.xib in Resources */,
 				A40988912A1BF9CD0041BBC7 /* LaunchScreen.storyboard in Resources */,
 				A40883902AD1E0BA006F3871 /* ProfilesTableviewcell.xib in Resources */,
 				A4CA1A592A3654FC00C94D2C /* QualityofLifeTableViewCell.xib in Resources */,
@@ -480,6 +487,7 @@
 				A408839B2AD41C5F006F3871 /* ScoreViewController.swift in Sources */,
 				8A58A1642B7FD98900CC2D44 /* EditDocumentsViewController.swift in Sources */,
 				A4CA1A5A2A3654FC00C94D2C /* SymptomTableViewCell.swift in Sources */,
+				8AEE734F2CB742B50013E611 /* YesNoTableViewCell.swift in Sources */,
 				8A3D423E2B68029A0013EFE5 /* EndoscopyViewController.swift in Sources */,
 				A40988862A1BF9CC0041BBC7 /* ViewController.swift in Sources */,
 				A4CADC0F2AE2AFDD00F1FB67 /* AddAllergenViewController.swift in Sources */,
@@ -681,9 +689,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = FL6J78634M;
+				DEVELOPMENT_TEAM = G9Z6TQ3GHH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Testing_Ground/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos of documents and upload.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select profile pictures.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -696,7 +705,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = elizabethwhitebaker.egidtracker;
+				PRODUCT_BUNDLE_IDENTIFIER = vivekvangala.egidtracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -711,9 +720,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = FL6J78634M;
+				DEVELOPMENT_TEAM = G9Z6TQ3GHH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Testing_Ground/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos of documents and upload.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select profile pictures.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -726,7 +736,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = elizabethwhitebaker.egidtracker;
+				PRODUCT_BUNDLE_IDENTIFIER = vivekvangala.egidtracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

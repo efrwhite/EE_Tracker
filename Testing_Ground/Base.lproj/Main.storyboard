@@ -112,24 +112,30 @@
                         <color key="tintColor" red="0.14509806040000001" green="0.26274511220000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="cWb-U4-hMz" firstAttribute="centerX" secondItem="gZz-tc-zwT" secondAttribute="centerX" id="2NV-7S-FhF"/>
+                            <constraint firstItem="LpS-rw-g48" firstAttribute="trailing" secondItem="81c-46-qVa" secondAttribute="trailing" constant="20" id="4se-q9-rch"/>
                             <constraint firstItem="jd0-Mf-CvO" firstAttribute="top" secondItem="LpS-rw-g48" secondAttribute="top" constant="65" id="6Uq-11-1hR"/>
                             <constraint firstItem="80G-Zv-O1A" firstAttribute="centerX" secondItem="gZz-tc-zwT" secondAttribute="centerX" id="6tN-34-YeE"/>
                             <constraint firstItem="aN7-9d-8Gu" firstAttribute="centerX" secondItem="gZz-tc-zwT" secondAttribute="centerX" id="D4L-Qq-hvT"/>
                             <constraint firstItem="Nkv-cs-DHl" firstAttribute="leading" secondItem="LpS-rw-g48" secondAttribute="leading" constant="30" id="DBH-I2-PhV"/>
+                            <constraint firstItem="cWb-U4-hMz" firstAttribute="leading" secondItem="LpS-rw-g48" secondAttribute="leading" constant="30" id="G8O-Bw-tH8"/>
                             <constraint firstItem="LpS-rw-g48" firstAttribute="trailing" secondItem="cWb-U4-hMz" secondAttribute="trailing" constant="30" id="HyL-Ec-7aR"/>
+                            <constraint firstItem="LpS-rw-g48" firstAttribute="trailing" secondItem="cWb-U4-hMz" secondAttribute="trailing" constant="30" id="LpZ-qX-xxk"/>
                             <constraint firstItem="jd0-Mf-CvO" firstAttribute="centerX" secondItem="gZz-tc-zwT" secondAttribute="centerX" id="Njq-ss-zRk"/>
                             <constraint firstItem="qNs-mu-yu9" firstAttribute="top" secondItem="cWb-U4-hMz" secondAttribute="bottom" constant="40" id="O73-li-Lz6"/>
                             <constraint firstItem="Nkv-cs-DHl" firstAttribute="top" secondItem="81c-46-qVa" secondAttribute="bottom" constant="5" id="OHU-fa-9n9"/>
                             <constraint firstItem="LpS-rw-g48" firstAttribute="trailing" secondItem="Nkv-cs-DHl" secondAttribute="trailing" constant="30" id="QqY-sh-QbC"/>
+                            <constraint firstItem="81c-46-qVa" firstAttribute="leading" secondItem="LpS-rw-g48" secondAttribute="leading" constant="20" id="V5q-W5-aqu"/>
                             <constraint firstItem="Nkv-cs-DHl" firstAttribute="centerX" secondItem="gZz-tc-zwT" secondAttribute="centerX" id="VeA-KT-S0P"/>
                             <constraint firstItem="cWb-U4-hMz" firstAttribute="top" secondItem="Nkv-cs-DHl" secondAttribute="bottom" constant="5" id="Xlw-fv-ykb"/>
                             <constraint firstItem="RIQ-2w-NXc" firstAttribute="top" secondItem="jd0-Mf-CvO" secondAttribute="bottom" constant="20" id="c16-0u-Na1"/>
+                            <constraint firstItem="LpS-rw-g48" firstAttribute="trailing" secondItem="Nkv-cs-DHl" secondAttribute="trailing" constant="30" id="eIg-BV-0kH"/>
                             <constraint firstItem="81c-46-qVa" firstAttribute="leading" secondItem="LpS-rw-g48" secondAttribute="leading" constant="20" id="gzn-Dg-RfN"/>
                             <constraint firstItem="aN7-9d-8Gu" firstAttribute="top" secondItem="qNs-mu-yu9" secondAttribute="bottom" constant="68.329999999999998" id="hS0-HJ-QQe"/>
                             <constraint firstItem="qNs-mu-yu9" firstAttribute="centerX" secondItem="gZz-tc-zwT" secondAttribute="centerX" id="icI-cu-dFV"/>
                             <constraint firstItem="LpS-rw-g48" firstAttribute="trailing" secondItem="81c-46-qVa" secondAttribute="trailing" constant="20" id="ix4-rO-6Ci"/>
                             <constraint firstItem="RIQ-2w-NXc" firstAttribute="centerX" secondItem="gZz-tc-zwT" secondAttribute="centerX" id="jBl-fR-9n3"/>
                             <constraint firstItem="81c-46-qVa" firstAttribute="centerX" secondItem="gZz-tc-zwT" secondAttribute="centerX" id="jsp-OI-ZIf"/>
+                            <constraint firstItem="Nkv-cs-DHl" firstAttribute="leading" secondItem="LpS-rw-g48" secondAttribute="leading" constant="30" id="osy-d5-Xhf"/>
                             <constraint firstItem="80G-Zv-O1A" firstAttribute="top" secondItem="aN7-9d-8Gu" secondAttribute="bottom" constant="10" id="r1B-NN-nSo"/>
                             <constraint firstItem="cWb-U4-hMz" firstAttribute="leading" secondItem="LpS-rw-g48" secondAttribute="leading" constant="30" id="wDh-cr-8pL"/>
                             <constraint firstItem="81c-46-qVa" firstAttribute="top" secondItem="RIQ-2w-NXc" secondAttribute="bottom" constant="20" id="wk4-Pc-ob6"/>
@@ -768,7 +774,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="dietButtonTapped:" destination="N9R-bu-SFT" eventType="touchUpInside" id="bQM-pT-Jh8"/>
-                                            <segue destination="tFP-tZ-GgI" kind="show" id="gaf-Ia-aH1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Eu-1v-pc8">
@@ -900,22 +905,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jpb-F9-30l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5119.8473282442746" y="-171.12676056338029"/>
-        </scene>
-        <!--Diet Plan-->
-        <scene sceneID="NWF-1a-4z4">
-            <objects>
-                <viewController id="bD2-Pn-bSY" userLabel="Diet Plan" customClass="DietPlanViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9Nz-aM-9SN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="R9Y-hh-39x"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Diet Plan" id="J1M-Xh-jOG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Cr-OU-k1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5533" y="-1365"/>
         </scene>
         <!--Medications-->
         <scene sceneID="ZWm-hb-6G6">
@@ -1083,10 +1072,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="16U-LS-7js">
+                                <rect key="frame" x="0.0" y="99" width="414" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovz-n3-8eE">
-                                <rect key="frame" x="101" y="834.33333333333337" width="212" height="35"/>
+                                <rect key="frame" x="101" y="809" width="212" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Em9-Fj-rJv"/>
+                                    <constraint firstAttribute="height" constant="35" id="Z6T-g7-Brf"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
@@ -1107,6 +1100,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KM0-yb-JX7"/>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ovz-n3-8eE" firstAttribute="top" secondItem="16U-LS-7js" secondAttribute="bottom" constant="8" symbolic="YES" id="7UX-6e-k1H"/>
+                            <constraint firstItem="16U-LS-7js" firstAttribute="top" secondItem="KM0-yb-JX7" secondAttribute="top" constant="11" id="8Rt-O8-H47"/>
+                            <constraint firstItem="ovz-n3-8eE" firstAttribute="centerX" secondItem="1Ra-JG-iMg" secondAttribute="centerX" id="Ahf-UN-mkc"/>
+                            <constraint firstItem="16U-LS-7js" firstAttribute="leading" secondItem="KM0-yb-JX7" secondAttribute="leading" id="IJP-aR-9Ey"/>
+                            <constraint firstItem="ovz-n3-8eE" firstAttribute="centerX" secondItem="16U-LS-7js" secondAttribute="centerX" id="J87-cW-PdA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ovz-n3-8eE" secondAttribute="bottom" constant="-31" id="beD-ee-xyd"/>
+                            <constraint firstItem="ovz-n3-8eE" firstAttribute="leading" secondItem="KM0-yb-JX7" secondAttribute="leading" constant="101" id="bft-81-nsO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Symptom Score" id="4jY-V8-jJm">
                         <barButtonItem key="rightBarButtonItem" title="Results" style="plain" id="OHb-aN-Wx5">
@@ -1118,18 +1120,19 @@
                             </button>
                             <connections>
                                 <action selector="presentSymptomScoreViewController:" destination="X8H-xg-O52" id="RQP-aO-f3P"/>
-                                <segue destination="vT4-ss-52N" kind="show" id="cqC-9G-Ik6"/>
+                                <segue destination="vT4-ss-52N" kind="show" identifier="SymptomResultSegue" id="cqC-9G-Ik6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="xXF-yN-OHE" id="MDs-o1-9iN"/>
+                        <outlet property="symptomTableView" destination="16U-LS-7js" id="nO4-pN-X7n"/>
+                        <outlet property="yesNoTableView" destination="16U-LS-7js" id="aLH-nj-Vg0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="db4-PS-S9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="X8H-xg-O52" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6250" y="1208"/>
+            <point key="canvasLocation" x="6249.275362318841" y="1207.3660714285713"/>
         </scene>
         <!--QualityofLifeViewController-->
         <scene sceneID="6fk-Op-5z4">
@@ -1140,15 +1143,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RCV-sF-zri">
-                                <rect key="frame" x="0.0" y="103" width="393" height="672"/>
+                                <rect key="frame" x="0.0" y="103" width="414" height="672"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QualityofLifeTableViewCell" id="glb-wk-2gf">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="glb-wk-2gf" id="zKH-Is-yNx">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1201,7 +1204,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjC-7Z-N2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="BqY-sO-eJ1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6217.5572519083971" y="425.35211267605638"/>
+            <point key="canvasLocation" x="6217.3913043478269" y="425.22321428571428"/>
         </scene>
         <!--Quality Result View Controller-->
         <scene sceneID="l7i-Z7-dkP">
@@ -1212,15 +1215,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4SI-lb-YFi">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="103" width="414" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreIdentifier" id="S4q-nI-qjy">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S4q-nI-qjy" id="tat-bl-DW0">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1266,7 +1269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAF-M9-Pdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7596.1832061068699" y="765.49295774647896"/>
+            <point key="canvasLocation" x="7595.652173913044" y="765.40178571428567"/>
         </scene>
         <!--GenerateReportViewController-->
         <scene sceneID="e8L-yJ-ANi">
@@ -1561,7 +1564,7 @@ Infants and young children may present with food refusal and poor weight gain an
         <scene sceneID="V42-cc-i9r">
             <objects>
                 <viewController storyboardIdentifier="WhatCausesEOEViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="PYa-Ys-ZQw">
+                    <view key="view" contentMode="scaleToFill" id="PYa-Ys-ZQw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1605,60 +1608,6 @@ Unlike many well known food allergens which causes symptoms right after exposure
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j69-ZF-z9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3055.072463768116" y="1921.2053571428571"/>
-        </scene>
-        <!--Add Allergies-->
-        <scene sceneID="DLu-xK-4vS">
-            <objects>
-                <viewController id="uDD-ZN-BbB" customClass="AddAllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2n4-2Q-Zk7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ysm-c3-GC0">
-                                <rect key="frame" x="0.0" y="103" width="393" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="currentcell" editingAccessoryType="detailButton" id="cIj-mU-ilP">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cIj-mU-ilP" id="bqT-O6-7aq">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yXq-mg-9aC">
-                                <rect key="frame" x="0.0" y="512" width="393" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notcurrentcell" editingAccessoryType="detailButton" id="YtV-Db-rOx">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YtV-Db-rOx" id="F4b-Ah-8U7">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="1ej-4p-A28"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Allergies" id="3fs-HM-kKP">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="BBN-bc-kic"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="currentAllergenTableView" destination="ysm-c3-GC0" id="ajh-jp-eXN"/>
-                        <outlet property="discontinuedAllergenTableView" destination="yXq-mg-9aC" id="c3r-xb-F8m"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Phr-K6-p5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="10369" y="-1582"/>
         </scene>
         <!--Allergies -->
         <scene sceneID="aoE-he-YPi">
@@ -1724,7 +1673,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MnX-IL-AQn">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="MnX-IL-AQn">
                                 <rect key="frame" x="16" y="525" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Allergy Discontinued?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-RG-c9f">
@@ -2030,7 +1979,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-9g-Jnk">
-                                <rect key="frame" x="228" y="446" width="59" height="35"/>
+                                <rect key="frame" x="202" y="446" width="59" height="35"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                 <menu key="menu" id="gdM-qV-orB">
                                     <children>
@@ -2043,12 +1992,12 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-bc-qSi">
-                                <rect key="frame" x="228.33333333333337" y="556" width="111" height="34"/>
+                                <rect key="frame" x="202" y="556" width="111" height="34"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-ga-kIO">
-                                <rect key="frame" x="228" y="497" width="111" height="34"/>
+                                <rect key="frame" x="202" y="497" width="111" height="34"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
@@ -2065,7 +2014,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-0P-R0e">
-                                <rect key="frame" x="228" y="403.33333333333331" width="94" height="35"/>
+                                <rect key="frame" x="202" y="403.33333333333331" width="94" height="35"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                 <menu key="menu" id="a4d-ck-cnT">
                                     <children>
@@ -2078,12 +2027,12 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                     <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w5X-f2-QqY">
-                                <rect key="frame" x="221" y="354" width="154" height="34.333333333333314"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w5X-f2-QqY">
+                                <rect key="frame" x="202" y="354" width="154" height="34.333333333333314"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                             </datePicker>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-4c-qrH">
-                                <rect key="frame" x="46" y="117.66666666666669" width="322" height="152"/>
+                                <rect key="frame" x="46" y="140.66666666666669" width="322" height="152"/>
                                 <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="153.33333333333331" id="iUS-YI-sp9"/>
@@ -2100,10 +2049,11 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             <constraint firstItem="TEh-IJ-2BA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUg-EG-Vhk" secondAttribute="leading" id="CsE-JR-uMd"/>
                             <constraint firstItem="Hu0-bc-qSi" firstAttribute="top" secondItem="rm6-ga-kIO" secondAttribute="bottom" constant="25" id="Dsj-fE-bRn"/>
                             <constraint firstItem="4fF-0Q-6sL" firstAttribute="centerX" secondItem="TEh-IJ-2BA" secondAttribute="centerX" id="GMw-id-DFp"/>
-                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="rm6-ga-kIO" secondAttribute="trailing" constant="74.670000000000002" id="Gwf-GM-3zV"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="rm6-ga-kIO" secondAttribute="trailing" constant="101" id="Gwf-GM-3zV"/>
+                            <constraint firstItem="Sfv-9g-Jnk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ium-PL-3MJ" secondAttribute="trailing" constant="8" symbolic="YES" id="Io3-Qo-HbL"/>
                             <constraint firstItem="XVz-kG-GYg" firstAttribute="top" secondItem="Hu0-bc-qSi" secondAttribute="bottom" constant="212" id="MzT-Kp-8ig"/>
                             <constraint firstItem="ium-PL-3MJ" firstAttribute="top" secondItem="ehQ-Bk-o9C" secondAttribute="bottom" constant="19.666666666666686" id="OEu-Ic-WwG"/>
-                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="Sfv-9g-Jnk" secondAttribute="trailing" constant="127" id="OWG-nf-D0R"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="Sfv-9g-Jnk" secondAttribute="trailing" constant="153" id="OWG-nf-D0R"/>
                             <constraint firstAttribute="bottom" secondItem="ium-PL-3MJ" secondAttribute="bottom" constant="420" id="P3D-tL-ba7"/>
                             <constraint firstItem="ium-PL-3MJ" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="58" id="Q3j-uf-7R1"/>
                             <constraint firstItem="4fF-0Q-6sL" firstAttribute="top" secondItem="utk-6x-4PF" secondAttribute="bottom" constant="25" id="RPN-u4-RVY"/>
@@ -2112,28 +2062,28 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             <constraint firstItem="w5X-f2-QqY" firstAttribute="top" secondItem="utk-6x-4PF" secondAttribute="bottom" constant="19" id="T9r-eH-hiV"/>
                             <constraint firstItem="rm6-ga-kIO" firstAttribute="top" secondItem="Sfv-9g-Jnk" secondAttribute="bottom" constant="16" id="UbI-zq-Wh2"/>
                             <constraint firstItem="4fF-0Q-6sL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ehQ-Bk-o9C" secondAttribute="leading" id="VxF-ay-zg0"/>
-                            <constraint firstItem="utk-6x-4PF" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="95" id="WhU-fP-ZiJ"/>
+                            <constraint firstItem="utk-6x-4PF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUg-EG-Vhk" secondAttribute="leading" id="WhU-fP-ZiJ"/>
                             <constraint firstItem="ium-PL-3MJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TEh-IJ-2BA" secondAttribute="leading" id="X92-pm-uZD"/>
-                            <constraint firstItem="3da-0P-R0e" firstAttribute="leading" secondItem="ehQ-Bk-o9C" secondAttribute="trailing" constant="87.666666666666686" id="ag1-6B-8tz"/>
-                            <constraint firstItem="Hu0-bc-qSi" firstAttribute="leading" secondItem="h6i-KX-s2p" secondAttribute="trailing" constant="82.666666666666686" id="bEy-Fu-Dxn"/>
+                            <constraint firstItem="3da-0P-R0e" firstAttribute="leading" secondItem="ehQ-Bk-o9C" secondAttribute="trailing" constant="61.666666666666686" id="ag1-6B-8tz"/>
+                            <constraint firstItem="Hu0-bc-qSi" firstAttribute="leading" secondItem="h6i-KX-s2p" secondAttribute="trailing" constant="56.333333333333343" id="bEy-Fu-Dxn"/>
                             <constraint firstItem="3da-0P-R0e" firstAttribute="top" secondItem="w5X-f2-QqY" secondAttribute="bottom" constant="15" id="bcg-Le-tYS"/>
                             <constraint firstItem="ehQ-Bk-o9C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUg-EG-Vhk" secondAttribute="leading" id="cYX-rZ-eVa"/>
                             <constraint firstItem="y1d-4c-qrH" firstAttribute="centerX" secondItem="vUg-EG-Vhk" secondAttribute="centerX" id="cfr-Kk-BhJ"/>
                             <constraint firstItem="w5X-f2-QqY" firstAttribute="leading" secondItem="4fF-0Q-6sL" secondAttribute="trailing" constant="80.666666666666686" id="dmr-AC-onO"/>
-                            <constraint firstItem="utk-6x-4PF" firstAttribute="top" secondItem="y1d-4c-qrH" secondAttribute="bottom" constant="31.666666666666686" id="eJR-Tm-vl2"/>
+                            <constraint firstItem="utk-6x-4PF" firstAttribute="top" secondItem="y1d-4c-qrH" secondAttribute="bottom" constant="8.6666666666666288" id="eJR-Tm-vl2"/>
                             <constraint firstItem="TEh-IJ-2BA" firstAttribute="top" secondItem="ium-PL-3MJ" secondAttribute="bottom" constant="27" id="eQw-SP-Mp7"/>
                             <constraint firstItem="vUg-EG-Vhk" firstAttribute="bottom" secondItem="XVz-kG-GYg" secondAttribute="bottom" constant="25" id="fF9-XL-l6N"/>
                             <constraint firstItem="y1d-4c-qrH" firstAttribute="centerX" secondItem="XVz-kG-GYg" secondAttribute="centerX" id="hPZ-Vn-mJp"/>
-                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="3da-0P-R0e" secondAttribute="trailing" constant="92" id="j8f-Vg-tg9"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="3da-0P-R0e" secondAttribute="trailing" constant="118" id="j8f-Vg-tg9"/>
                             <constraint firstItem="4fF-0Q-6sL" firstAttribute="centerX" secondItem="ehQ-Bk-o9C" secondAttribute="centerX" id="jGb-Rt-LN3"/>
                             <constraint firstItem="4fF-0Q-6sL" firstAttribute="centerX" secondItem="h6i-KX-s2p" secondAttribute="centerX" id="l8x-GE-wxB"/>
                             <constraint firstItem="XVz-kG-GYg" firstAttribute="top" secondItem="h6i-KX-s2p" secondAttribute="bottom" constant="217.66666666666663" id="mHY-Du-B9X"/>
                             <constraint firstItem="ehQ-Bk-o9C" firstAttribute="top" secondItem="4fF-0Q-6sL" secondAttribute="bottom" constant="27" id="nmI-D2-8mU"/>
                             <constraint firstItem="XVz-kG-GYg" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="58" id="rHK-q3-ieo"/>
                             <constraint firstItem="4fF-0Q-6sL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TEh-IJ-2BA" secondAttribute="leading" id="rJf-yp-06M"/>
-                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="Hu0-bc-qSi" secondAttribute="trailing" constant="74.670000000000002" id="rLz-dN-9Zh"/>
+                            <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="Hu0-bc-qSi" secondAttribute="trailing" constant="101" id="rLz-dN-9Zh"/>
                             <constraint firstItem="vUg-EG-Vhk" firstAttribute="trailing" secondItem="w5X-f2-QqY" secondAttribute="trailing" constant="39" id="ri2-F7-NbK"/>
-                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="58" id="s19-Xl-OFa"/>
+                            <constraint firstItem="4fF-0Q-6sL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUg-EG-Vhk" secondAttribute="leading" id="s19-Xl-OFa"/>
                             <constraint firstItem="h6i-KX-s2p" firstAttribute="top" secondItem="TEh-IJ-2BA" secondAttribute="bottom" constant="36.666666666666742" id="uWh-iB-S6j"/>
                             <constraint firstItem="y1d-4c-qrH" firstAttribute="centerX" secondItem="utk-6x-4PF" secondAttribute="centerX" id="ybt-ll-mmp"/>
                             <constraint firstItem="y1d-4c-qrH" firstAttribute="leading" secondItem="vUg-EG-Vhk" secondAttribute="leading" constant="46" id="yzv-Zu-hxL"/>
@@ -2775,15 +2725,15 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SCL-TY-StQ">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="103" width="414" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreIdentifier" id="UMX-2G-9XM">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UMX-2G-9XM" id="90a-CW-Vep">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2819,125 +2769,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqD-7i-VKt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7053" y="1380"/>
-        </scene>
-        <!--Allergies -->
-        <scene sceneID="ucS-Fd-Kn1">
-            <objects>
-                <viewController id="8gq-uO-laR" userLabel="Allergies " customClass="AllergenViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fe9-cd-pAj" customClass="Aller">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLG-TB-gqD">
-                                <rect key="frame" x="16" y="64" width="112" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="pqx-ja-Vfe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-l4-9RW">
-                                <rect key="frame" x="16" y="93" width="382" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="T6R-lx-Oov"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-Ci-FaU">
-                                <rect key="frame" x="16" y="149" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qjr-3h-HQy">
-                                <rect key="frame" x="14" y="186" width="386" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="tLP-KB-g2h"/>
-                                </constraints>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-se-aJ8">
-                                <rect key="frame" x="16" y="244" width="135" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="mzi-fS-fi3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type of Allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJK-as-KHG">
-                                <rect key="frame" x="16" y="371" width="114" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="8WS-0H-bbC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rah-fJ-l10">
-                                <rect key="frame" x="16" y="419" width="139" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="pgX-4a-sw3"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="IgE"/>
-                                    <segment title="Non-IgE"/>
-                                </segments>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Discontinue the Allergen?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJa-3X-xjk">
-                                <rect key="frame" x="16" y="492" width="195" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Kbn-PP-w1E"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KY3-D1-IdS">
-                                <rect key="frame" x="16" y="521" width="51" height="31"/>
-                            </switch>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="KRe-iN-zeZ">
-                                <rect key="frame" x="16" y="286" width="160" height="40"/>
-                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="heB-ia-heQ"/>
-                                    <constraint firstAttribute="height" constant="40" id="ieP-aG-Ukp"/>
-                                </constraints>
-                            </datePicker>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Dz3-PI-BBf"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Wvw-l4-9RW" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="3aQ-tP-8m7"/>
-                            <constraint firstItem="fdV-se-aJ8" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="APG-hP-DM2"/>
-                            <constraint firstItem="Rah-fJ-l10" firstAttribute="top" secondItem="TJK-as-KHG" secondAttribute="bottom" constant="27" id="HL2-17-U7G"/>
-                            <constraint firstItem="KRe-iN-zeZ" firstAttribute="top" secondItem="fdV-se-aJ8" secondAttribute="bottom" constant="21" id="Lbp-LH-ABU"/>
-                            <constraint firstItem="Rah-fJ-l10" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="Oz5-Ae-U82"/>
-                            <constraint firstItem="rLG-TB-gqD" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="QfH-h7-cCr"/>
-                            <constraint firstItem="qjr-3h-HQy" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="SBx-OW-HQ5"/>
-                            <constraint firstItem="Lvg-Ci-FaU" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="TVP-cR-VxZ"/>
-                            <constraint firstItem="BJa-3X-xjk" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="aFW-Hc-fug"/>
-                            <constraint firstItem="TJK-as-KHG" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="bxa-g6-fas"/>
-                            <constraint firstItem="Dz3-PI-BBf" firstAttribute="trailing" secondItem="Wvw-l4-9RW" secondAttribute="trailing" constant="16" id="dCq-sG-MPk"/>
-                            <constraint firstItem="KRe-iN-zeZ" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="dur-gd-srl"/>
-                            <constraint firstItem="fdV-se-aJ8" firstAttribute="top" secondItem="qjr-3h-HQy" secondAttribute="bottom" constant="18" id="eQm-gd-lfL"/>
-                            <constraint firstItem="Lvg-Ci-FaU" firstAttribute="top" secondItem="Wvw-l4-9RW" secondAttribute="bottom" constant="16" id="f4O-1R-m5k"/>
-                            <constraint firstItem="rLG-TB-gqD" firstAttribute="top" secondItem="Dz3-PI-BBf" secondAttribute="top" constant="20" id="imN-6g-5n2"/>
-                            <constraint firstItem="KY3-D1-IdS" firstAttribute="top" secondItem="BJa-3X-xjk" secondAttribute="bottom" constant="8" id="nU5-9U-8Ys"/>
-                            <constraint firstItem="Wvw-l4-9RW" firstAttribute="top" secondItem="rLG-TB-gqD" secondAttribute="bottom" constant="8" symbolic="YES" id="neV-OK-Gi9"/>
-                            <constraint firstItem="BJa-3X-xjk" firstAttribute="top" secondItem="Rah-fJ-l10" secondAttribute="bottom" constant="33" id="qrv-Oy-D5o"/>
-                            <constraint firstItem="qjr-3h-HQy" firstAttribute="top" secondItem="Lvg-Ci-FaU" secondAttribute="bottom" constant="16" id="snN-uv-7KU"/>
-                            <constraint firstItem="Dz3-PI-BBf" firstAttribute="trailing" secondItem="qjr-3h-HQy" secondAttribute="trailing" constant="16" id="ylH-Xu-V3Y"/>
-                            <constraint firstItem="KY3-D1-IdS" firstAttribute="leading" secondItem="Dz3-PI-BBf" secondAttribute="leading" constant="16" id="zKc-JN-yqa"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Allergies" id="neR-5i-Qrt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cVh-eu-Cwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8712" y="-1213"/>
+            <point key="canvasLocation" x="7052.1739130434789" y="1379.4642857142856"/>
         </scene>
         <!--Add Allergies-->
         <scene sceneID="cfu-vI-ejE">
@@ -2952,56 +2784,33 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CurrentAllergenCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllergenCell" id="iCN-Oi-ktM" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iCN-Oi-ktM" id="Kq9-MV-zb1" customClass="AllergenCell" customModule="Testing_Ground" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDa-IE-mBR">
-                                                    <rect key="frame" x="36" y="11.333333333333334" width="133" height="21.333333333333329"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="7rc-ZB-QS1"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDa-IE-mBR">
+                                                    <rect key="frame" x="36" y="11.333333333333336" width="133" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skQ-Fx-tkJ">
-                                                    <rect key="frame" x="319" y="4.6666666666666679" width="79" height="35"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skQ-Fx-tkJ">
+                                                    <rect key="frame" x="319" y="4.3333333333333321" width="79" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f66-Fi-f6D">
-                                                    <rect key="frame" x="208" y="11.666666666666664" width="105" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="81p-dI-C96"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergen Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f66-Fi-f6D">
+                                                    <rect key="frame" x="208" y="11.000000000000002" width="105" height="21.666666666666671"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="f66-Fi-f6D" secondAttribute="trailing" constant="101" id="4Qk-am-RS6"/>
-                                                <constraint firstItem="f66-Fi-f6D" firstAttribute="leading" secondItem="gDa-IE-mBR" secondAttribute="trailing" constant="39" id="5rw-vJ-OM8"/>
-                                                <constraint firstAttribute="trailing" secondItem="gDa-IE-mBR" secondAttribute="trailing" constant="245" id="7Du-7r-a3v"/>
-                                                <constraint firstItem="gDa-IE-mBR" firstAttribute="centerY" secondItem="Kq9-MV-zb1" secondAttribute="centerY" id="7pX-pd-2vB"/>
-                                                <constraint firstItem="gDa-IE-mBR" firstAttribute="leading" secondItem="Kq9-MV-zb1" secondAttribute="leadingMargin" constant="16" id="9nG-6F-ycw"/>
-                                                <constraint firstItem="skQ-Fx-tkJ" firstAttribute="centerY" secondItem="Kq9-MV-zb1" secondAttribute="centerY" id="G2Z-SY-vp3"/>
-                                                <constraint firstItem="f66-Fi-f6D" firstAttribute="leading" secondItem="gDa-IE-mBR" secondAttribute="trailing" constant="39" id="Kwc-XT-U1y"/>
-                                                <constraint firstItem="gDa-IE-mBR" firstAttribute="leading" secondItem="Kq9-MV-zb1" secondAttribute="leading" constant="36" id="LU3-6f-01r"/>
-                                                <constraint firstItem="f66-Fi-f6D" firstAttribute="top" secondItem="Kq9-MV-zb1" secondAttribute="topMargin" id="Nrk-Tr-IPs"/>
-                                                <constraint firstItem="gDa-IE-mBR" firstAttribute="top" secondItem="Kq9-MV-zb1" secondAttribute="top" constant="11.33" id="OAM-hJ-9tm"/>
-                                                <constraint firstAttribute="trailing" secondItem="skQ-Fx-tkJ" secondAttribute="trailing" constant="16" id="PRO-TO-4LI"/>
-                                                <constraint firstItem="skQ-Fx-tkJ" firstAttribute="leading" secondItem="f66-Fi-f6D" secondAttribute="trailing" constant="27" id="RTB-6W-CXO"/>
-                                                <constraint firstAttribute="trailing" secondItem="skQ-Fx-tkJ" secondAttribute="trailing" constant="16" id="YdY-hJ-ndB"/>
-                                                <constraint firstItem="gDa-IE-mBR" firstAttribute="leading" secondItem="Kq9-MV-zb1" secondAttribute="leadingMargin" constant="16" id="b3h-7x-6oK"/>
-                                                <constraint firstItem="skQ-Fx-tkJ" firstAttribute="leading" secondItem="Kq9-MV-zb1" secondAttribute="leading" constant="319" id="dyA-5u-yEv"/>
-                                                <constraint firstItem="skQ-Fx-tkJ" firstAttribute="leading" secondItem="f66-Fi-f6D" secondAttribute="trailing" constant="27" id="l1Q-tr-iPq"/>
-                                                <constraint firstItem="f66-Fi-f6D" firstAttribute="centerY" secondItem="Kq9-MV-zb1" secondAttribute="centerY" id="oPp-hr-lTY"/>
-                                                <constraint firstItem="f66-Fi-f6D" firstAttribute="centerY" secondItem="gDa-IE-mBR" secondAttribute="centerY" id="sOt-4R-Bj1"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="allergenNameLabel" destination="gDa-IE-mBR" id="X4W-3N-3dO"/>
@@ -3022,33 +2831,27 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ox-77-v1f">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ox-77-v1f">
                                                     <rect key="frame" x="36" y="11.333333333333336" width="112" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwI-Ss-emv">
-                                                    <rect key="frame" x="144" y="12" width="105" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDM-z7-oLc">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDM-z7-oLc">
                                                     <rect key="frame" x="319" y="4.3333333333333321" width="79" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergen Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwI-Ss-emv">
+                                                    <rect key="frame" x="206" y="11" width="105" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="BDM-z7-oLc" firstAttribute="leading" secondItem="ZwI-Ss-emv" secondAttribute="trailing" constant="70" id="CCj-CW-ivY"/>
-                                                <constraint firstItem="ZwI-Ss-emv" firstAttribute="centerY" secondItem="8Ms-7b-cMv" secondAttribute="centerY" id="Y1L-7h-78J"/>
-                                                <constraint firstItem="BDM-z7-oLc" firstAttribute="centerY" secondItem="8Ms-7b-cMv" secondAttribute="centerY" id="dOT-i7-5Vg"/>
-                                                <constraint firstItem="ZwI-Ss-emv" firstAttribute="leading" secondItem="6ox-77-v1f" secondAttribute="trailing" constant="-4" id="faY-fl-Ca4"/>
-                                                <constraint firstItem="6ox-77-v1f" firstAttribute="centerY" secondItem="8Ms-7b-cMv" secondAttribute="centerY" id="md4-7c-Lo1"/>
-                                                <constraint firstItem="6ox-77-v1f" firstAttribute="leading" secondItem="8Ms-7b-cMv" secondAttribute="leadingMargin" constant="16" id="owW-hZ-u4z"/>
-                                                <constraint firstAttribute="trailing" secondItem="BDM-z7-oLc" secondAttribute="trailing" constant="16" id="v3V-kl-yyl"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="allergenNameLabel" destination="6ox-77-v1f" id="qka-gX-89H"/>
@@ -3327,7 +3130,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="4wo-Sa-6ub"/>
-        <segue reference="fCh-ok-CUd"/>
+        <segue reference="3WP-uQ-JyG"/>
         <segue reference="yOw-6k-zAp"/>
     </inferredMetricsTieBreakers>
     <resources>
