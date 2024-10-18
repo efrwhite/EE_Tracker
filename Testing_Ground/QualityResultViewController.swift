@@ -37,11 +37,32 @@ class QualityResultViewController: UIViewController, UITableViewDataSource, UITa
             mailComposeVC.setMessageBody(composeEmailBody(), isHTML: false)
             present(mailComposeVC, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Error", message: "Mail services are not available", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            if let emailURL = createEmailUrl(to: "provider@example.com", subject: "Quality of Life Survey Results", body: composeEmailBody()) {
+                UIApplication.shared.open(emailURL)
+            } else {
+                let alert = UIAlertController(title: "Error", message: "Mail services are not available. Please set up a mail account in Settings.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+            }
         }
     }
+
+    func createEmailUrl(to: String, subject: String, body: String) -> URL? {
+        let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let gmailURL = URL(string: "googlegmail://co?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
+        let outlookURL = URL(string: "ms-outlook://compose?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
+        let defaultMailURL = URL(string: "mailto:\(to)?subject=\(subjectEncoded)&body=\(bodyEncoded)")
+        
+        if let gmailURL = gmailURL, UIApplication.shared.canOpenURL(gmailURL) {
+            return gmailURL
+        } else if let outlookURL = outlookURL, UIApplication.shared.canOpenURL(outlookURL) {
+            return outlookURL
+        } else {
+            return defaultMailURL
+        }
+    }
+
     
     func composeEmailBody() -> String {
         var emailBody = "Here are the Quality of Life survey results:\n\n"

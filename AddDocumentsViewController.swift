@@ -10,6 +10,7 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
     var childName: String = "" // Child's name
     var photoNames: [String] = []
     var selectedImageData: Data?
+    var selectedIndexPath: IndexPath? // Index of the document being edited
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +71,7 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
     
-    // MARK: - Edit Document
+    // MARK: - Update Document (Edit Name)
     
     func updateDocument(at indexPath: IndexPath, newTitle: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -95,94 +96,6 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
     
-    // MARK: - Delete Document
-    
-    func deleteDocument(at indexPath: IndexPath) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Documents")
-        fetchRequest.predicate = NSPredicate(format: "userName == %@ AND childName == %@ AND title == %@", user, childName, photoNames[indexPath.row])
-        
-        do {
-            let documents = try context.fetch(fetchRequest)
-            if let documentToDelete = documents.first {
-                context.delete(documentToDelete)
-                try context.save()
-                
-                photoNames.remove(at: indexPath.row)
-                savePhotoNamesToUserDefaults()
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-                print("Document deleted: \(photoNames[indexPath.row])")
-            }
-        } catch {
-            print("Failed to delete document: \(error.localizedDescription)")
-        }
-    }
-    
-    // MARK: - TableView DataSource
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return photoNames.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DocumentTableViewCell", for: indexPath) as? DocumentTableViewCell else {
-            return UITableViewCell()
-        }
-        
-        let photoName = photoNames[indexPath.row]
-        cell.textLabel?.text = photoName
-        cell.editButtonAction = { [weak self] in
-            self?.editButtonTappedForRow(at: indexPath)
-        }
-        
-        return cell
-    }
-    
-    // MARK: - Edit Photo Alert
-    
-    func editButtonTappedForRow(at indexPath: IndexPath) {
-        let alertController = UIAlertController(title: "Edit Photo Name", message: nil, preferredStyle: .alert)
-        alertController.addTextField { textField in
-            textField.text = self.photoNames[indexPath.row]
-        }
-
-        let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self, weak alertController] _ in
-            guard let newName = alertController?.textFields?.first?.text, !newName.isEmpty else { return }
-            self?.updateDocument(at: indexPath, newTitle: newName)
-        }
-
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-
-        alertController.addAction(saveAction)
-        alertController.addAction(cancelAction)
-
-        present(alertController, animated: true, completion: nil)
-    }
-    
-    // MARK: - Add New Photo
-    
-    @objc func plusButtonTapped() {
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default) { _ in
-            self.openCamera()
-        }
-        
-        let chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { _ in
-            self.openPhotoLibrary()
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        actionSheet.addAction(takePhotoAction)
-        actionSheet.addAction(chooseFromLibraryAction)
-        actionSheet.addAction(cancelAction)
-        
-        present(actionSheet, animated: true, completion: nil)
-    }
-    
     // MARK: - Image Picker
     
     func openCamera() {
@@ -190,7 +103,9 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = .camera
-            present(imagePicker, animated: true, completion: nil)
+            present(imagePicker, animated: true, completion: {
+                print("Camera opened.")
+            })
         } else {
             print("Camera not available.")
         }
@@ -200,13 +115,22 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: {
+            print("Photo library opened.")
+        })
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             picker.dismiss(animated: true) {
-                self.showNameInputAlert(for: pickedImage)
+                if let indexPath = self.selectedIndexPath { // If editing, update the document
+                    self.updateDocumentImage(at: indexPath, newImage: pickedImage)
+                    self.updateDocument(at: indexPath, newTitle: "New image file updated")
+                    print("File replaced.")
+                } else {
+                    self.showNameInputAlert(for: pickedImage)
+                }
+                print("Photo taken.")
             }
         }
     }
@@ -236,16 +160,177 @@ class AddDocumentsViewController: UIViewController, UIImagePickerControllerDeleg
         present(alertController, animated: true, completion: nil)
     }
     
-    // MARK: - UserDefaults for Photo Names
+    // MARK: - Edit Document Menu
     
-    func savePhotoNamesToUserDefaults() {
-        UserDefaults.standard.set(photoNames, forKey: "SavedPhotoNames")
+    func editButtonTappedForRow(at indexPath: IndexPath) {
+        let editMenu = UIAlertController(title: "Edit Document", message: nil, preferredStyle: .actionSheet)
+        
+        let editNameAction = UIAlertAction(title: "Edit Name", style: .default) { [weak self] _ in
+            self?.promptForEditName(at: indexPath)
+        }
+        
+        let editFileAction = UIAlertAction(title: "Change File", style: .default) { [weak self] _ in
+            self?.selectedIndexPath = indexPath
+            self?.openPhotoLibrary()
+        }
+        
+        let viewImageAction = UIAlertAction(title: "View Image", style: .default) { [weak self] _ in
+            self?.viewImage(at: indexPath)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        editMenu.addAction(editNameAction)
+        editMenu.addAction(editFileAction)
+        editMenu.addAction(viewImageAction)
+        editMenu.addAction(cancelAction)
+        
+        present(editMenu, animated: true, completion: nil)
     }
-    
-    func loadPhotoNamesFromUserDefaults() {
-        if let savedPhotoNames = UserDefaults.standard.stringArray(forKey: "SavedPhotoNames") {
-            photoNames = savedPhotoNames
+
+    func viewImage(at indexPath: IndexPath) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Documents")
+        fetchRequest.predicate = NSPredicate(format: "userName == %@ AND childName == %@ AND title == %@", user, childName, photoNames[indexPath.row])
+        
+        do {
+            let documents = try context.fetch(fetchRequest)
+            if let document = documents.first, let imageData = document.value(forKey: "storedImage") as? Data, let image = UIImage(data: imageData) {
+                
+                // Push to a new view controller with the image
+                let imageViewController = UIViewController()
+                let imageView = UIImageView(image: image)
+                imageView.frame = imageViewController.view.bounds
+                imageView.contentMode = .scaleAspectFit
+                imageViewController.view.addSubview(imageView)
+                self.navigationController?.pushViewController(imageViewController, animated: true)
+            }
+        } catch {
+            print("Failed to fetch and display image: \(error.localizedDescription)")
         }
     }
+
+    // MARK: - TableView DataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return photoNames.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DocumentTableViewCell", for: indexPath) as? DocumentTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let photoName = photoNames[indexPath.row]
+        cell.textLabel?.text = photoName
+        cell.editButtonTapped = { [weak self] in
+            self?.editButtonTappedForRow(at: indexPath)
+        }
+        
+        return cell
+    }
+    
+    // MARK: - UserDefaults
+    
+    func savePhotoNamesToUserDefaults() {
+        UserDefaults.standard.set(photoNames, forKey: "document_titles_\(user)_\(childName)")
+    }
+    
+    @objc func plusButtonTapped() {
+        print("Add document button tapped.")
+        
+        // Create an action sheet to give the user options to either open the camera or photo library
+        let actionSheet = UIAlertController(title: "Add Document", message: "Take a photo or import one", preferredStyle: .actionSheet)
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { [weak self] _ in
+            self?.openCamera()
+        }
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { [weak self] _ in
+            self?.openPhotoLibrary()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        actionSheet.addAction(cameraAction)
+        actionSheet.addAction(photoLibraryAction)
+        actionSheet.addAction(cancelAction)
+        
+        
+        present(actionSheet, animated: true, completion: nil)
+    }
+
+    
+    func promptForEditName(at indexPath: IndexPath) {
+        let alertController = UIAlertController(title: "Edit Photo Name", message: nil, preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.text = self.photoNames[indexPath.row]
+        }
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self, weak alertController] _ in
+            guard let newTitle = alertController?.textFields?.first?.text, !newTitle.isEmpty else { return }
+            self?.updateDocument(at: indexPath, newTitle: newTitle)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func updateDocumentImage(at indexPath: IndexPath, newImage: UIImage) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Documents")
+        fetchRequest.predicate = NSPredicate(format: "userName == %@ AND childName == %@ AND title == %@", user, childName, photoNames[indexPath.row])
+        
+        do {
+            let documents = try context.fetch(fetchRequest)
+            if let document = documents.first {
+                let imageData = newImage.jpegData(compressionQuality: 1.0)
+                document.setValue(imageData, forKey: "storedImage")
+                try context.save()
+                print("Document image updated.")
+            }
+        } catch {
+            print("Failed to update document image: \(error.localizedDescription)")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Deletion from Core Data and update the table view
+            deleteDocument(at: indexPath)
+        }
+    }
+
+    func deleteDocument(at indexPath: IndexPath) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Documents")
+        fetchRequest.predicate = NSPredicate(format: "userName == %@ AND childName == %@ AND title == %@", user, childName, photoNames[indexPath.row])
+        
+        do {
+            let documents = try context.fetch(fetchRequest)
+            if let document = documents.first {
+                context.delete(document)
+                try context.save()
+                photoNames.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                print("Document deleted.")
+            }
+        } catch {
+            print("Failed to delete document: \(error.localizedDescription)")
+        }
+    }
+
+
 }
 
+    

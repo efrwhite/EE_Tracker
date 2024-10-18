@@ -18,11 +18,62 @@ class Diet4TestViewController: UIViewController, UITableViewDataSource, UITableV
     
     // Foods data source
     var foods = [
-        "Dairy: Milk, Butter, Cream, Buttermilk, Half & half, Yogurt, Cheese, Ice cream, Sour cream, Cottage cheese, Chocolates and candy, “Whey” listed in ingredients, “Casein” listed in ingredients",
-        "Gluten: Flour, Bread and bread products, Baked goods like muffins, biscuits, cakes, cookies, Pasta, Couscous, Oats *due to cross-contamination with wheat, Soy sauce, Gravy and other sauces containing a roux, Breaded/battered fried foods, Foods containing wheat, rye, or barley",
-        "Egg: Eggs and egg products, Baked goods containing egg or with egg washes, Pancakes and waffles, Battered fried foods, Mayonnaise, Meatloaf and meatballs, Marshmallow, Some ice creams, Some salad dressings",
-        "Soy: Tofu and tempeh, Edamame, Soy milk and products made from soymilk (yogurt, ice cream, etc.), Soy sauce, Teriyaki sauce, Many processed/packaged foods"
+        // Dairy items
+        "Milk",
+        "Butter",
+        "Cream",
+        "Buttermilk",
+        "Half & half",
+        "Yogurt",
+        "Cheese",
+        "Ice cream",
+        "Sour cream",
+        "Cottage cheese",
+        "Chocolates",
+        "Candy",
+        "Whey (listed in ingredients)",
+        "Casein (listed in ingredients)",
+
+        // Gluten items
+        "Flour",
+        "Bread",
+        "Bread products",
+        "Baked goods (muffins, biscuits, cakes, cookies)",
+        "Pasta",
+        "Couscous",
+        "Oats (due to cross-contamination with wheat)",
+        "Soy sauce",
+        "Gravy",
+        "Sauces containing roux",
+        "Breaded/battered fried foods",
+        "Foods containing wheat, rye, or barley",
+
+        // Egg items
+        "Eggs",
+        "Egg products",
+        "Baked goods containing egg",
+        "Baked goods with egg washes",
+        "Pancakes",
+        "Waffles",
+        "Battered fried foods",
+        "Mayonnaise",
+        "Meatloaf",
+        "Meatballs",
+        "Marshmallow",
+        "Some ice creams",
+        "Some salad dressings",
+
+        // Soy items
+        "Tofu",
+        "Tempeh",
+        "Edamame",
+        "Soy milk",
+        "Soy products (yogurt, ice cream, etc.)",
+        "Soy sauce",
+        "Teriyaki sauce",
+        "Many processed/packaged foods"
     ]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
