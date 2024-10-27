@@ -266,149 +266,194 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var symptomTableView: UITableView!
     @IBOutlet weak var yesNoTableView: UITableView!
-        
-        var responses: [String?] = []
-        var yesnoResponses: [Bool] = []
-        var totalSymptomScore: Int64 = 0
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            setupTables()
-            responses = Array(repeating: nil, count: questions.count)
-            yesnoResponses = Array(repeating: false, count: yesnoquestions.count)
-            
-            let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-            view.addGestureRecognizer(tap)
-            
-            // Set up keyboard observers
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        }
-        
-        deinit {
-            NotificationCenter.default.removeObserver(self)
-        }
-        
-        @objc func keyboardWillShow(notification: NSNotification) {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                print("Keyboard will show with height: \(keyboardSize.height)")
+    @IBOutlet weak var saveButton: UIButton!
+    
+    var responses: [String?] = []
+    var yesnoResponses: [Bool] = []
+    var totalSymptomScore: Int64 = 0
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SymptomResultSegue" {
+            if let scoreVC = segue.destination as? ScoreViewController {
+                scoreVC.totalSymptomScore = self.totalSymptomScore
+                
+                // Also pass the responses if needed to update any other details in ScoreViewController
+                let date = Date() // Set the current date
+                scoreVC.symptomSumScores.append(ScoreViewController.SurveyEntry(sum: Int(totalSymptomScore), date: date))
             }
-        }
-        
-        @objc func keyboardWillHide(notification: NSNotification) {
-            print("Keyboard will hide")
-        }
-        
-        func setupTables() {
-            let symptomNib = UINib(nibName: "SymptomTableViewCell", bundle: nil)
-            symptomTableView.register(symptomNib, forCellReuseIdentifier: "SymptomTableViewCell")
-            symptomTableView.delegate = self
-            symptomTableView.dataSource = self
-            symptomTableView.estimatedRowHeight = 100
-            symptomTableView.rowHeight = UITableView.automaticDimension
-            
-            let yesNoNib = UINib(nibName: "YesNoTableViewCell", bundle: nil)
-            yesNoTableView.register(yesNoNib, forCellReuseIdentifier: "YesNoTableViewCell")
-            yesNoTableView.delegate = self
-            yesNoTableView.dataSource = self
-            yesNoTableView.estimatedRowHeight = 100
-            yesNoTableView.rowHeight = UITableView.automaticDimension
-        }
-        
-        @objc func dismissKeyboard() {
-            view.endEditing(true)
-        }
-        
-        // MARK: - UITableViewDataSource Methods
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 2
-        }
-        
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return section == 0 ? questions.count : yesnoquestions.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            return indexPath.section == 0 ? setupSymptomTableViewCell(indexPath: indexPath) : setupYesNoTableViewCell(indexPath: indexPath)
-        }
-        
-        func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-            let headerView = CustomHeaderView()
-            headerView.titleLabel.text = section == 0
-                ? "For the questions below, insert a value from 0-5\n0 = No pain, 5 = Excruciating pain"
-                : "For the following questions, use the switch to indicate Yes or No"
-            return headerView
-        }
-        
-        func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return UITableView.automaticDimension
-        }
-        
-        func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-            return 60
-        }
-        
-        func setupSymptomTableViewCell(indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = symptomTableView.dequeueReusableCell(withIdentifier: "SymptomTableViewCell", for: indexPath) as? SymTableViewCell else {
-                fatalError("Expected SymptomTableViewCell")
-            }
-            cell.questionLabel.text = questions[indexPath.row]
-            cell.Ratingtext.text = responses[indexPath.row]
-            cell.delegate = self
-            cell.indexPath = indexPath
-            return cell
-        }
-        
-        func setupYesNoTableViewCell(indexPath: IndexPath) -> UITableViewCell {
-            guard let yesNoCell = yesNoTableView.dequeueReusableCell(withIdentifier: "YesNoTableViewCell", for: indexPath) as? YesNoTableViewCell else {
-                fatalError("Expected YesNoTableViewCell")
-            }
-            yesNoCell.questionLabel.text = yesnoquestions[indexPath.row]
-            yesNoCell.yesNoSwitch.isOn = yesnoResponses[indexPath.row]
-            yesNoCell.indexPath = indexPath
-            return yesNoCell
-        }
-        
-        func didEditTextField(_ text: String, atIndexPath indexPath: IndexPath) {
-            guard !text.isEmpty else {
-                showAlertForEmptyInput()
-                responses[indexPath.row] = nil
-                return
-            }
-            
-            if let value = Int(text), value >= 0, value <= 5 {
-                responses[indexPath.row] = text
-            } else {
-                showAlertForInvalidInput()
-                responses[indexPath.row] = nil
-            }
-        }
-        
-        @IBAction func saveButtonTapped(_ sender: UIButton) {
-            calculateTotalSymptomScore()
-            performSegue(withIdentifier: "SymptomResultSegue", sender: self) // Programmatic segue
-        }
-        
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "SymptomResultSegue", let destinationVC = segue.destination as? ScoreViewController {
-                destinationVC.totalSymptomScore = totalSymptomScore
-            }
-        }
-        
-        func calculateTotalSymptomScore() {
-            totalSymptomScore = responses.compactMap { Int64($0 ?? "0") }.reduce(0, +)
-        }
-        
-        private func showAlertForEmptyInput() {
-            let alert = UIAlertController(title: "Invalid Input", message: "Please enter a value between 0-5.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true)
-        }
-        
-        private func showAlertForInvalidInput() {
-            let alert = UIAlertController(title: "Invalid Input", message: "Please enter a valid number between 0 and 5.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true)
         }
     }
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+        setupTables()
+        responses = Array(repeating: nil, count: questions.count)
+        yesnoResponses = Array(repeating: false, count: yesnoquestions.count)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        // Set up keyboard observers
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+
+        updateSaveButtonState() // Check the initial state of the Save button
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            print("Keyboard will show with height: \(keyboardSize.height)")
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        print("Keyboard will hide")
+    }
+    
+    func setupTables() {
+        let symptomNib = UINib(nibName: "SymptomTableViewCell", bundle: nil)
+        symptomTableView.register(symptomNib, forCellReuseIdentifier: "SymptomTableViewCell")
+        symptomTableView.delegate = self
+        symptomTableView.dataSource = self
+        symptomTableView.estimatedRowHeight = 100
+        symptomTableView.rowHeight = UITableView.automaticDimension
+        
+        let yesNoNib = UINib(nibName: "YesNoTableViewCell", bundle: nil)
+        yesNoTableView.register(yesNoNib, forCellReuseIdentifier: "YesNoTableViewCell")
+        yesNoTableView.delegate = self
+        yesNoTableView.dataSource = self
+        yesNoTableView.estimatedRowHeight = 100
+        yesNoTableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    // MARK: - UITableViewDataSource Methods
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return section == 0 ? questions.count : yesnoquestions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return indexPath.section == 0 ? setupSymptomTableViewCell(indexPath: indexPath) : setupYesNoTableViewCell(indexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = CustomHeaderView()
+        headerView.titleLabel.text = section == 0
+            ? "For the questions below, insert a value from 0-5\n0 = No pain, 5 = Excruciating pain"
+            : "For the following questions, use the switch to indicate Yes or No"
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
+    
+    func setupSymptomTableViewCell(indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = symptomTableView.dequeueReusableCell(withIdentifier: "SymptomTableViewCell", for: indexPath) as? SymTableViewCell else {
+            fatalError("Expected SymptomTableViewCell")
+        }
+        cell.questionLabel.text = questions[indexPath.row]
+        cell.Ratingtext.text = responses[indexPath.row]
+        cell.delegate = self
+        cell.indexPath = indexPath
+        return cell
+    }
+    
+    func setupYesNoTableViewCell(indexPath: IndexPath) -> UITableViewCell {
+        guard let yesNoCell = yesNoTableView.dequeueReusableCell(withIdentifier: "YesNoTableViewCell", for: indexPath) as? YesNoTableViewCell else {
+            fatalError("Expected YesNoTableViewCell")
+        }
+        yesNoCell.questionLabel.text = yesnoquestions[indexPath.row]
+        yesNoCell.yesNoSwitch.isOn = yesnoResponses[indexPath.row]
+        yesNoCell.indexPath = indexPath
+        return yesNoCell
+    }
+    
+    func didEditTextField(_ text: String, atIndexPath indexPath: IndexPath) {
+        guard !text.isEmpty else {
+            showAlertForEmptyInput()
+            responses[indexPath.row] = nil
+            updateSaveButtonState() // Update the save button state
+            return
+        }
+        
+        if let value = Int(text), value >= 0, value <= 5 {
+            responses[indexPath.row] = text
+        } else {
+            showAlertForInvalidInput()
+            responses[indexPath.row] = nil
+        }
+        
+        updateSaveButtonState() // Update the save button state
+    }
+    
+    func showAlertForEmptyInput() {
+        let alert = UIAlertController(title: "Error", message: "Please fill in all fields.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+    
+    func showAlertForInvalidInput() {
+        let alert = UIAlertController(title: "Invalid Input", message: "Please enter a valid number between 0 and 5.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+    
+    func toggleSwitch(value: Bool, atIndexPath indexPath: IndexPath) {
+        yesnoResponses[indexPath.row] = value
+        updateSaveButtonState() // Update the save button state
+    }
+
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        // Step 1: Calculate the total score
+        totalSymptomScore = calculateTotalScore()
+
+        print("Total Symptom Score: \(totalSymptomScore)")
+
+        let validResponses = responses.compactMap { $0 != nil ? Int64($0!) : nil }
+        
+        print("Valid responses: \(validResponses)")
+        
+        if validResponses.isEmpty {
+            print("No valid responses found, cannot save.")
+            return
+        }
+        
+        delegate?.symptomScoreViewController(self, didUpdateSymptomEntries: validResponses)
+
+        performSegue(withIdentifier: "SymptomResultSegue", sender: self)
+        
+        print("Segue to SymptomResultViewController triggered.")
+    }
+
+    
+    private func calculateTotalScore() -> Int64 {
+        let symptomScores = responses.compactMap { $0 != nil ? Int64($0!) : nil }
+        return symptomScores.reduce(0, +)
+    }
+    
+    private func updateSaveButtonState() {
+        let allFieldsFilled = !responses.contains(where: { $0 == nil }) // Check if any responses are nil
+        saveButton.isEnabled = allFieldsFilled
+        saveButton.alpha = allFieldsFilled ? 1.0 : 0.5 // Grayed out when disabled
+    }
+}

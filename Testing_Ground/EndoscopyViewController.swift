@@ -7,6 +7,18 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     var user = ""
     var childName = ""
     
+    let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
+    
+    let contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     let mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -20,6 +32,21 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         label.text = "EoE"
         label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
         return label
+    }()
+    
+    let procedureDateLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Procedure Date:"
+        label.textColor = .black
+        return label
+    }()
+    
+    let procedureDatePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
+        return datePicker
     }()
     
     let proximateTextField: UITextField = {
@@ -124,9 +151,14 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     func setupUI() {
         view.backgroundColor = .white
         
-        view.addSubview(mainStackView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(mainStackView)
+        
         mainStackView.addArrangedSubview(eoELabel)
-        mainStackView.addArrangedSubview(proximateTextField)
+        mainStackView.addArrangedSubview(procedureDateLabel)
+        mainStackView.addArrangedSubview(procedureDatePicker)
+        mainStackView.addArrangedSubview(proximateTextField) // Changed to "Proximate"
         mainStackView.addArrangedSubview(middleTextField)
         mainStackView.addArrangedSubview(lowerTextField)
         mainStackView.addArrangedSubview(stomachLabel)
@@ -137,11 +169,24 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         mainStackView.addArrangedSubview(rightColonTextField)
         mainStackView.addArrangedSubview(middleColonTextField)
         mainStackView.addArrangedSubview(leftColonTextField)
+        mainStackView.addArrangedSubview(saveButton)
         
         NSLayoutConstraint.activate([
-            mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            
+            mainStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            mainStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            mainStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
         ])
         
         // Gesture to dismiss keyboard on tap outside
@@ -161,10 +206,9 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         
         let keyboardHeight = keyboardFrame.height
         let bottomSafeAreaInset = view.safeAreaInsets.bottom
-        let topOffset = eoELabel.frame.maxY + 200 // Adjust this value as needed
         
         UIView.animate(withDuration: duration) {
-            self.view.frame.origin.y = -keyboardHeight + bottomSafeAreaInset + topOffset
+            self.scrollView.contentInset.bottom = keyboardHeight - bottomSafeAreaInset
         }
     }
     
@@ -173,7 +217,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
               let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
         
         UIView.animate(withDuration: duration) {
-            self.view.frame.origin.y = 0
+            self.scrollView.contentInset.bottom = 0
         }
     }
     
@@ -186,53 +230,39 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         saveEndoscopyResults()
     }
-    //Brianna is editting this area, no user or childname to tie this data too
+    
     func saveEndoscopyResults() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext
 
-        // Create a new NSManagedObject for the 'Endoscopy' entity
+       
         let entity = NSEntityDescription.entity(forEntityName: "Endoscopy", in: context)!
         let newEndoscopyResult = NSManagedObject(entity: entity, insertInto: context)
 
-        // Use setValue(_:forKey:) to set values for each attribute
-        newEndoscopyResult.setValue(user, forKey: "username") // Corrected this line
-        newEndoscopyResult.setValue(childName, forKey: "childName") // Corrected this line
-        newEndoscopyResult.setValue(Date(), forKey: "date") // Use the current date or a date picker
+        // Set the values
+        newEndoscopyResult.setValue(childName, forKey: "childName")
+        newEndoscopyResult.setValue(user, forKey: "user")
+        newEndoscopyResult.setValue(procedureDatePicker.date, forKey: "date")
+        newEndoscopyResult.setValue(Int(proximateTextField.text ?? "0"), forKey: "proximate")
+        newEndoscopyResult.setValue(Int(middleTextField.text ?? "0"), forKey: "middle")
+        newEndoscopyResult.setValue(Int(lowerTextField.text ?? "0"), forKey: "lower")
+        newEndoscopyResult.setValue(Int(stomachTextField.text ?? "0"), forKey: "stomach")
+        newEndoscopyResult.setValue(Int(duodenumTextField.text ?? "0"), forKey: "duodenum")
+        newEndoscopyResult.setValue(Int(rightColonTextField.text ?? "0"), forKey: "rightColon")
+        newEndoscopyResult.setValue(Int(middleColonTextField.text ?? "0"), forKey: "middleColon")
+        newEndoscopyResult.setValue(Int(leftColonTextField.text ?? "0"), forKey: "leftColon")
 
-        let proximateValue = Int32(proximateTextField.text ?? "0") ?? 0
-        let middleValue = Int32(middleTextField.text ?? "0") ?? 0
-        let lowerValue = Int32(lowerTextField.text ?? "0") ?? 0
-        let stomachValue = Int32(stomachTextField.text ?? "0") ?? 0
-        let duodenumValue = Int32(duodenumTextField.text ?? "0") ?? 0
-        let rightColonValue = Int32(rightColonTextField.text ?? "0") ?? 0
-        let middleColonValue = Int32(middleColonTextField.text ?? "0") ?? 0
-        let leftColonValue = Int32(leftColonTextField.text ?? "0") ?? 0
-        let sum = proximateValue + middleValue + lowerValue + stomachValue + duodenumValue + rightColonValue + middleColonValue + leftColonValue
-        newEndoscopyResult.setValue(sum, forKey: "sum")
-
-        print("Attempting to save Endoscopy result with sum: \(sum)")
-
+        // Save the context
         do {
             try context.save()
-            print("Endoscopy result saved successfully.")
-            navigateToResultsViewController()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-    }
+            print("Endoscopy results saved successfully.")
 
-
-    func navigateToResultsViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let resultsVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as? ResultsViewController {
-            
-            // Pass user and childName to ResultsViewController
+            let resultsVC = EndoscopyResultsViewController()
             resultsVC.user = user
             resultsVC.childName = childName
-
             navigationController?.pushViewController(resultsVC, animated: true)
+        } catch {
+            print("Failed to save endoscopy results: \(error.localizedDescription)")
         }
     }
-
 }

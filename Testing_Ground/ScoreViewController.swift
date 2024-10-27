@@ -183,6 +183,7 @@ import CoreData
 import MessageUI
 
 class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate {
+
     @IBOutlet weak var tableView: UITableView!
 
     struct SurveyEntry {
@@ -190,11 +191,9 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         var date: Date
     }
 
-    var qualitySumScores: [SurveyEntry] = []
     var symptomSumScores: [SurveyEntry] = []
     var selectedSurveyEntry: SurveyEntry?
     var totalSymptomScore: Int64 = 0
-    var surveyEntries: [SurveyEntry] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -202,52 +201,49 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         setupView()
         setupNavBarButtons()
         fetchSurveySumScores()
+        tableView.reloadData()
     }
 
     func setupNavBarButtons() {
         // Create the email button
         let emailButton = UIBarButtonItem(title: "Email Results", style: .plain, target: self, action: #selector(emailButtonTapped))
-
-        // Create flexible space to adjust positioning
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-
-        // Add the email button next to the flexible space, so it's not fully to the right
-        navigationItem.rightBarButtonItems = [flexibleSpace, emailButton]
+        // Add the email button to the right
+        navigationItem.rightBarButtonItem = emailButton
     }
     
     func setupView() {
         tableView.dataSource = self
         tableView.delegate = self
         
-        surveyEntries = loadSurveyEntries()
-        tableView.reloadData()
-
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ScoreCell")
         tableView.allowsMultipleSelectionDuringEditing = true
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped))
     }
 
     @objc func editTapped() {
         tableView.setEditing(!tableView.isEditing, animated: true)
-        navigationItem.rightBarButtonItem?.title = tableView.isEditing ? "Done" : "Edit"
+        navigationItem.leftBarButtonItem?.title = tableView.isEditing ? "Done" : "Edit"
     }
+
+    // MARK: - TableView DataSource & Delegate Methods
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return symptomSumScores.count
     }
     
-    private func loadSurveyEntries() -> [SurveyEntry] {
-        print("Total Symptom Score: \(totalSymptomScore)")
-        return []
-    }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreCell", for: indexPath)
-        let entry = symptomSumScores[indexPath.row]
-        cell.textLabel?.text = "Date: \(formattedDate(entry.date)) - Score: \(entry.sum)"
+        
+        let surveyEntry = symptomSumScores[indexPath.row]
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short // Display the date in a short format
+        
+        // Set the text of the cell to show the date and total score
+        cell.textLabel?.text = "Date: \(formatter.string(from: surveyEntry.date)), Total Score: \(surveyEntry.sum)"
+        
         return cell
     }
+
 
     func formattedDate(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -256,11 +252,50 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func fetchSurveySumScores() {
-        symptomSumScores = [
-            SurveyEntry(sum: 100, date: Date()),
-            SurveyEntry(sum: 25, date: Date())
-        ]
-        tableView.reloadData()
+        _ = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        // Fetching data from Core Data
+        fetchSumScoresFromEntity(entityName: "Symptom") { entries in
+            self.symptomSumScores = entries
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+
+    func fetchSumScoresFromEntity(entityName: String, completion: @escaping ([SurveyEntry]) -> Void) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        var entries: [SurveyEntry] = []
+
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
+        fetchRequest.resultType = .dictionaryResultType
+
+        let sumAttribute = "symptomSum"
+
+        let sumExpressionDesc = NSExpressionDescription()
+        sumExpressionDesc.name = "sum"
+        sumExpressionDesc.expression = NSExpression(forFunction: "sum:", arguments: [NSExpression(forKeyPath: sumAttribute)])
+        sumExpressionDesc.expressionResultType = .integer64AttributeType
+
+        let dateExpression = NSExpressionDescription()
+        dateExpression.name = "date"
+        dateExpression.expression = NSExpression(forKeyPath: "date")
+        dateExpression.expressionResultType = .dateAttributeType
+
+        fetchRequest.propertiesToFetch = [sumExpressionDesc, dateExpression]
+        fetchRequest.propertiesToGroupBy = ["date"]
+
+        do {
+            let results = try context.fetch(fetchRequest) as! [NSDictionary]
+            for result in results {
+                if let sum = result["sum"] as? Int, let date = result["date"] as? Date {
+                    entries.append(SurveyEntry(sum: sum, date: date))
+                }
+            }
+            completion(entries)
+        } catch {
+            print("Error fetching \(entityName) sum scores: \(error)")
+        }
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -292,7 +327,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
             mailComposeVC.setMessageBody(composeEmailBody(), isHTML: false)
             present(mailComposeVC, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Error", message: "Mail services are not available", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Error", message: "Mail services are not available. Please set up an account in Settings.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
@@ -307,6 +342,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     // MARK: - MFMailComposeViewControllerDelegate
+
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
