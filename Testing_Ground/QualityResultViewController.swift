@@ -1,9 +1,17 @@
 import UIKit
 import MessageUI
 
+extension UIView {
+    func asImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: bounds.size)
+        return renderer.image { context in
+            layer.render(in: context.cgContext)
+        }
+    }
+}
+
 class QualityResultViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var emailButton: UIButton! // Outlet for the email button
     
     var qualityEntries: [QualityEntry] = []
     
@@ -14,15 +22,18 @@ class QualityResultViewController: UIViewController, UITableViewDataSource, UITa
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "QualityResultCell")
         tableView.reloadData()
         
-        setupEmailButton() // Setup the email button
+        setupNavBarButtons()
     }
     
-    func setupEmailButton() {
-        emailButton.setTitle("Email history to provider", for: .normal)
-        emailButton.backgroundColor = .systemBlue
-        emailButton.setTitleColor(.white, for: .normal)
-        emailButton.layer.cornerRadius = 10
-        emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
+    func setupNavBarButtons() {
+        // Create the email button
+        let emailButton = UIBarButtonItem(title: "Email Results", style: .plain, target: self, action: #selector(emailButtonTapped))
+        
+        // Create flexible space to adjust positioning
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        // Add the email button next to the flexible space, so it's not fully to the right
+        navigationItem.rightBarButtonItems = [flexibleSpace, emailButton]
     }
     
     @objc func emailButtonTapped() {
@@ -46,7 +57,7 @@ class QualityResultViewController: UIViewController, UITableViewDataSource, UITa
             }
         }
     }
-
+    
     func createEmailUrl(to: String, subject: String, body: String) -> URL? {
         let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -62,7 +73,6 @@ class QualityResultViewController: UIViewController, UITableViewDataSource, UITa
             return defaultMailURL
         }
     }
-
     
     func composeEmailBody() -> String {
         var emailBody = "Here are the Quality of Life survey results:\n\n"
@@ -87,5 +97,15 @@ class QualityResultViewController: UIViewController, UITableViewDataSource, UITa
         let entry = qualityEntries[indexPath.row]
         cell.textLabel?.text = "Sum: \(entry.sum) - Date: \(entry.date)"
         return cell
+    }
+    
+    @IBAction func goToGenerateReport(_ sender: Any) {
+        let generateReportVC = GenerateReportViewController()
+        
+        // Pass the table view reference to GenerateReportViewController
+        generateReportVC.tableViewsToCapture.append(self.tableView)
+        
+        // Navigate to GenerateReportViewController
+        navigationController?.pushViewController(generateReportVC, animated: true)
     }
 }

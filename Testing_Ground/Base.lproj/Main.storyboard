@@ -167,7 +167,7 @@
                                                     <constraint firstAttribute="height" constant="42" id="2rj-q7-evj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evy-te-cBa">
                                                 <rect key="frame" x="0.0" y="85" width="300" height="42"/>
@@ -175,7 +175,7 @@
                                                     <constraint firstAttribute="height" constant="42" id="y1H-ti-ek9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B76-AE-uCN">
                                                 <rect key="frame" x="0.0" y="170" width="300" height="42"/>
@@ -183,7 +183,7 @@
                                                     <constraint firstAttribute="height" constant="42" id="Amh-Lb-xe7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-N5-7LG">
                                                 <rect key="frame" x="0.0" y="255" width="300" height="42"/>
@@ -191,7 +191,7 @@
                                                     <constraint firstAttribute="height" constant="42" id="Cb8-fM-yzY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile No." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lan-Bk-9cY">
                                                 <rect key="frame" x="0.0" y="340" width="300" height="42"/>
@@ -199,7 +199,7 @@
                                                     <constraint firstAttribute="height" constant="42" id="e5w-cj-N2V"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgA-9X-tp2">
                                                 <rect key="frame" x="0.0" y="425" width="300" height="42"/>
@@ -453,7 +453,7 @@
                                             <constraint firstAttribute="height" constant="34" id="SgE-kH-MbW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcM-bo-bmJ">
                                         <rect key="frame" x="0.0" y="82.333333333333314" width="300" height="17.666666666666671"/>
@@ -468,7 +468,7 @@
                                             <constraint firstAttribute="height" constant="34" id="qZ7-21-m2Y"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1019,6 +1019,7 @@
                                         <connections>
                                             <action selector="saveButton:" destination="0M3-RU-tSB" eventType="touchUpInside" id="m3m-Xd-lrz"/>
                                             <action selector="saveButtonTapped:" destination="R0p-2j-gF8" eventType="touchUpInside" id="eS2-Xh-vQb"/>
+                                            <segue destination="31q-pd-UHR" kind="show" identifier="showResults" id="HZj-3q-2Ia"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1038,6 +1039,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Olh-zk-cER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8033.3333333333339" y="-171.42857142857142"/>
+        </scene>
+        <!--EndoscopyResultsViewController-->
+        <scene sceneID="Pyr-em-phU">
+            <objects>
+                <viewController title="EndoscopyResultsViewController" id="31q-pd-UHR" customClass="EndoscopyResultsViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KFV-O4-siP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Caq-nU-7u7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vjl-v0-QLq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDa-q3-Pah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9314" y="-303"/>
         </scene>
         <!--Accidental Exposure-->
         <scene sceneID="Tyn-AQ-sOF">
@@ -1125,6 +1142,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="saveButton" destination="ovz-n3-8eE" id="R7o-cb-Y8s"/>
                         <outlet property="symptomTableView" destination="16U-LS-7js" id="nO4-pN-X7n"/>
                         <outlet property="yesNoTableView" destination="16U-LS-7js" id="aLH-nj-Vg0"/>
                     </connections>
@@ -1263,7 +1281,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailButton" destination="Xkb-Ki-117" id="RIe-lT-eak"/>
                         <outlet property="tableView" destination="4SI-lb-YFi" id="hyf-45-zWA"/>
                     </connections>
                 </viewController>
@@ -1564,7 +1581,7 @@ Infants and young children may present with food refusal and poor weight gain an
         <scene sceneID="V42-cc-i9r">
             <objects>
                 <viewController storyboardIdentifier="WhatCausesEOEViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GpN-11-xz6" userLabel="What Causes EOE" customClass="WhatCausesEOEViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PYa-Ys-ZQw">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="PYa-Ys-ZQw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1624,7 +1641,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                     <constraint firstAttribute="height" constant="40" id="EZj-6w-XD3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1y-MK-OhC">
                                 <rect key="frame" x="16" y="106" width="70" height="22.333333333333343"/>
@@ -1653,7 +1670,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cRS-3b-Qjj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date of Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rF-xQ-IVG">
                                 <rect key="frame" x="16" y="192" width="149" height="21"/>
@@ -1709,7 +1726,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveButton:" destination="hMn-Qp-YDe" eventType="touchUpInside" id="nAm-yh-HYw"/>
-                                    <segue destination="S0T-J4-89a" kind="show" id="mYa-xe-H3Z"/>
+                                    <segue destination="S0T-J4-89a" kind="show" identifier="AllergiesTable" id="mYa-xe-H3Z"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rvq-pO-biQ">
@@ -1798,7 +1815,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dit-B9-fFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7725.9541984732823" y="-1213.3802816901409"/>
+            <point key="canvasLocation" x="7916" y="-1288"/>
         </scene>
         <!--ResultsViewController-->
         <scene sceneID="ut2-EN-THR">
@@ -1834,7 +1851,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hx-PO-HWW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8973.9130434782619" y="-171.42857142857142"/>
+            <point key="canvasLocation" x="13316" y="-909"/>
         </scene>
         <!--More Info-->
         <scene sceneID="oDe-iT-s4u">
@@ -1994,12 +2011,12 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-bc-qSi">
                                 <rect key="frame" x="202" y="556" width="111" height="34"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-ga-kIO">
                                 <rect key="frame" x="202" y="497" width="111" height="34"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-KX-s2p">
                                 <rect key="frame" x="52.666666666666657" y="562" width="93" height="22.333333333333371"/>
@@ -2032,7 +2049,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                             </datePicker>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-4c-qrH">
-                                <rect key="frame" x="46" y="140.66666666666669" width="322" height="152"/>
+                                <rect key="frame" x="46" y="140.66666666666666" width="322" height="151.99999999999997"/>
                                 <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="153.33333333333331" id="iUS-YI-sp9"/>
@@ -2878,7 +2895,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                     <navigationItem key="navigationItem" title="Add Allergies" id="Fon-Sn-JEC">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="2CM-7B-0lg">
                             <connections>
-                                <segue destination="hMn-Qp-YDe" kind="show" id="4wo-Sa-6ub"/>
+                                <segue destination="hMn-Qp-YDe" kind="show" identifier="AddAllergySegue" id="4wo-Sa-6ub"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2889,179 +2906,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWw-1n-6ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6962.3188405797109" y="-1213.3928571428571"/>
-        </scene>
-        <!--Child Profile TEST-->
-        <scene sceneID="o0T-VI-8E5">
-            <objects>
-                <viewController storyboardIdentifier="ChildViewControllerTEST" title="Child Profile TEST" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tdc-eg-3fv" customClass="ChildViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dhc-jH-g2n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-iQ-YcK">
-                                <rect key="frame" x="96" y="362.33333333333331" width="94.333333333333314" height="22.333333333333314"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJz-dD-9XV">
-                                <rect key="frame" x="94" y="320" width="82.333333333333314" height="22.333333333333314"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-EY-8N4">
-                                <rect key="frame" x="58" y="802" width="298" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="XrC-Go-2gv"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Save and Continue">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="saveButton:" destination="tdc-eg-3fv" eventType="touchUpInside" id="XQA-3L-ivt"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-ra-MFt">
-                                <rect key="frame" x="45" y="44.666666666666657" width="322" height="154"/>
-                                <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="155.33333333333331" id="oEs-yT-lo5"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGc-5Q-otk">
-                                <rect key="frame" x="95" y="207" width="224" height="33"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Select Image" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="selectImage:" destination="tdc-eg-3fv" eventType="touchUpInside" id="UL2-JK-9xt"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipk-o4-PSF">
-                                <rect key="frame" x="96" y="478" width="222" height="34"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-8Y-CZF">
-                                <rect key="frame" x="96" y="421" width="222" height="34"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q37-nc-gk4">
-                                <rect key="frame" x="230" y="314" width="220" height="35"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
-                                <menu key="menu" id="2ja-zf-puS">
-                                    <children>
-                                        <command title="Diet Type 1" id="2az-5u-ApH"/>
-                                        <command title="Diet Type 2" id="SNY-4n-xvR"/>
-                                        <command title="Diet Type 3" id="tLL-BV-dui"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Select Diet">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="iQd-3k-yzK">
-                                <rect key="frame" x="230" y="270" width="89" height="34"/>
-                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="T2j-aw-ST2"/>
-                                    <constraint firstAttribute="height" constant="34" id="i5l-pv-Onw"/>
-                                </constraints>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IN1-Us-uS1">
-                                <rect key="frame" x="229" y="356" width="221" height="35"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
-                                <menu key="menu" id="0C9-2x-Dic">
-                                    <children>
-                                        <command title="Female" id="mDe-un-lGS"/>
-                                        <command title="Male" id="wNL-WJ-pGU"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Select Gender">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfx-4J-L06">
-                                <rect key="frame" x="94" y="276" width="82.333333333333314" height="22.333333333333314"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ufc-CP-FS3"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="IN1-Us-uS1" firstAttribute="centerY" secondItem="H6n-iQ-YcK" secondAttribute="centerY" id="2RL-gG-bLQ"/>
-                            <constraint firstItem="IN1-Us-uS1" firstAttribute="trailing" secondItem="Q37-nc-gk4" secondAttribute="trailing" id="3dj-z0-icI"/>
-                            <constraint firstItem="iQd-3k-yzK" firstAttribute="trailing" secondItem="pGc-5Q-otk" secondAttribute="trailing" id="59C-po-vOW"/>
-                            <constraint firstItem="PIq-ra-MFt" firstAttribute="centerX" secondItem="C1L-EY-8N4" secondAttribute="centerX" constant="-1" id="5cp-ly-N7Q"/>
-                            <constraint firstItem="mJz-dD-9XV" firstAttribute="leading" secondItem="Ufc-CP-FS3" secondAttribute="leading" constant="94" id="6Ex-hX-pX1"/>
-                            <constraint firstItem="Ipk-o4-PSF" firstAttribute="top" secondItem="KD3-8Y-CZF" secondAttribute="bottom" constant="23" id="9MV-Yb-WMw"/>
-                            <constraint firstItem="Ufc-CP-FS3" firstAttribute="trailing" secondItem="Ipk-o4-PSF" secondAttribute="trailing" constant="96" id="A4f-2j-UoM"/>
-                            <constraint firstItem="KD3-8Y-CZF" firstAttribute="leading" secondItem="Ufc-CP-FS3" secondAttribute="leading" constant="96" id="FCJ-hd-mFu"/>
-                            <constraint firstItem="Ufc-CP-FS3" firstAttribute="trailing" secondItem="pGc-5Q-otk" secondAttribute="trailing" constant="95" id="GZv-Bm-YER"/>
-                            <constraint firstItem="iQd-3k-yzK" firstAttribute="centerY" secondItem="Cfx-4J-L06" secondAttribute="centerY" id="KTG-Bl-dEj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IN1-Us-uS1" secondAttribute="trailing" constant="-56" id="LZ5-gL-vFy"/>
-                            <constraint firstItem="PIq-ra-MFt" firstAttribute="centerX" secondItem="dhc-jH-g2n" secondAttribute="centerX" constant="-1" id="LZW-1U-z3p"/>
-                            <constraint firstItem="pGc-5Q-otk" firstAttribute="leading" secondItem="Ufc-CP-FS3" secondAttribute="leading" constant="95" id="Qh4-nO-lu1"/>
-                            <constraint firstItem="Q37-nc-gk4" firstAttribute="top" secondItem="iQd-3k-yzK" secondAttribute="bottom" constant="10" id="RAq-8a-pJr"/>
-                            <constraint firstItem="mJz-dD-9XV" firstAttribute="top" secondItem="Cfx-4J-L06" secondAttribute="bottom" constant="21.666666666666686" id="TRI-U0-nfT"/>
-                            <constraint firstItem="pGc-5Q-otk" firstAttribute="top" secondItem="PIq-ra-MFt" secondAttribute="bottom" constant="7.6666666666666856" id="UOx-lR-Poj"/>
-                            <constraint firstItem="KD3-8Y-CZF" firstAttribute="trailing" secondItem="Ipk-o4-PSF" secondAttribute="trailing" id="V4A-p0-Cqb"/>
-                            <constraint firstItem="KD3-8Y-CZF" firstAttribute="centerX" secondItem="pGc-5Q-otk" secondAttribute="centerX" id="VKt-3N-e3S"/>
-                            <constraint firstItem="iQd-3k-yzK" firstAttribute="top" secondItem="dhc-jH-g2n" secondAttribute="top" constant="270" id="X8k-6N-vZn"/>
-                            <constraint firstItem="iQd-3k-yzK" firstAttribute="leading" secondItem="Q37-nc-gk4" secondAttribute="leading" id="b8R-wP-pHH"/>
-                            <constraint firstItem="Ufc-CP-FS3" firstAttribute="trailing" secondItem="KD3-8Y-CZF" secondAttribute="trailing" constant="96" id="dgs-7h-tgR"/>
-                            <constraint firstItem="IN1-Us-uS1" firstAttribute="top" secondItem="Q37-nc-gk4" secondAttribute="bottom" constant="7" id="dii-ba-iAQ"/>
-                            <constraint firstItem="PIq-ra-MFt" firstAttribute="leading" secondItem="Ufc-CP-FS3" secondAttribute="leading" constant="45" id="euD-Qc-yMg"/>
-                            <constraint firstItem="IN1-Us-uS1" firstAttribute="leading" secondItem="H6n-iQ-YcK" secondAttribute="trailing" constant="38.666666666666515" id="kCh-Ft-Sfz"/>
-                            <constraint firstItem="H6n-iQ-YcK" firstAttribute="leading" secondItem="Ufc-CP-FS3" secondAttribute="leading" constant="96" id="lsd-RI-y7x"/>
-                            <constraint firstItem="C1L-EY-8N4" firstAttribute="leading" secondItem="Ufc-CP-FS3" secondAttribute="leading" constant="58" id="mNd-ao-ffu"/>
-                            <constraint firstItem="iQd-3k-yzK" firstAttribute="top" secondItem="pGc-5Q-otk" secondAttribute="bottom" constant="30" id="n8j-oU-vbz"/>
-                            <constraint firstItem="KD3-8Y-CZF" firstAttribute="leading" secondItem="Ipk-o4-PSF" secondAttribute="leading" id="pNt-Ov-EUG"/>
-                            <constraint firstItem="Cfx-4J-L06" firstAttribute="leading" secondItem="Ufc-CP-FS3" secondAttribute="leading" constant="94" id="qG0-vX-kU1"/>
-                            <constraint firstItem="KD3-8Y-CZF" firstAttribute="top" secondItem="IN1-Us-uS1" secondAttribute="bottom" constant="30" id="rta-D8-bbZ"/>
-                            <constraint firstItem="Ipk-o4-PSF" firstAttribute="leading" secondItem="Ufc-CP-FS3" secondAttribute="leading" constant="96" id="ruI-S1-AKa"/>
-                            <constraint firstItem="Ufc-CP-FS3" firstAttribute="bottom" secondItem="C1L-EY-8N4" secondAttribute="bottom" constant="25" id="rwL-DZ-tbt"/>
-                            <constraint firstItem="iQd-3k-yzK" firstAttribute="leading" secondItem="IN1-Us-uS1" secondAttribute="leading" constant="1" id="uit-Pn-Exo"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Child Profile" id="BML-rB-TTy"/>
-                    <connections>
-                        <outlet property="birthdate" destination="iQd-3k-yzK" id="pk0-Rv-nv7"/>
-                        <outlet property="childFirstName" destination="KD3-8Y-CZF" id="VcP-wj-nDx"/>
-                        <outlet property="childimage" destination="PIq-ra-MFt" id="tTf-FH-Mkg"/>
-                        <outlet property="diettype" destination="Q37-nc-gk4" id="j1O-r5-YCj"/>
-                        <outlet property="gender" destination="IN1-Us-uS1" id="W8E-Ch-ZRe"/>
-                        <outlet property="lastName" destination="Ipk-o4-PSF" id="ywN-Ng-3tb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lIm-IL-j9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="kN2-K4-0mW">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <viewLayoutGuide key="safeArea" id="9bS-Jx-hln"/>
-                    <viewLayoutGuide key="contentLayoutGuide" id="HWX-Wz-4G4"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="wK3-x3-gTN"/>
-                </scrollView>
-            </objects>
-            <point key="canvasLocation" x="3053.6231884057975" y="424.55357142857139"/>
+            <point key="canvasLocation" x="6891" y="-1200"/>
         </scene>
         <!--Diet 1 View Test-->
         <scene sceneID="VZZ-Dq-weO">
@@ -3131,7 +2976,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
     <inferredMetricsTieBreakers>
         <segue reference="4wo-Sa-6ub"/>
         <segue reference="3WP-uQ-JyG"/>
-        <segue reference="yOw-6k-zAp"/>
+        <segue reference="Khq-b6-X4a"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EGID app graphic white line art masked" width="1024" height="1024"/>

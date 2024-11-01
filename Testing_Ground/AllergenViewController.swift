@@ -52,7 +52,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
         endDateLabel.isHidden = !sender.isOn
         enddate.isHidden = !sender.isOn
     }
-    
+    //child name needs to be added to the fetch request
     func populateDataForEditing() {
         let fetchRequest: NSFetchRequest<Allergies> = Allergies.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@ AND name == %@", user, allergenName)
@@ -90,6 +90,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveButton(_ sender: Any) {
         print("Save button tapped")
         
+        //put in its own fetch function
         if isEditMode {
             // Fetch request to find the existing allergen
             let fetchRequest: NSFetchRequest<Allergies> = Allergies.fetchRequest()
@@ -150,7 +151,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
                 delegate?.didSaveNewAllergen()
                 
                 // Use completion block to ensure data reload before dismissing
-                self.navigationController?.popViewController(animated: true)
+//                self.navigationController?.popViewController(animated: true)
             } catch {
                 print("Error saving allergen: \(error)")
             }
