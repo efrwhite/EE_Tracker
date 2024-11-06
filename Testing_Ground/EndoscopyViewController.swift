@@ -51,7 +51,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     
     let proximateTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Proximate:"
+        textField.placeholder = "Upper:"
         textField.borderStyle = .roundedRect
         textField.keyboardType = .numberPad
         return textField
@@ -140,6 +140,9 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         setupKeyboardObservers()
         print("Child Name in Endoscopy View: ", childName)
         print("User in Endoscopy View: ", user)
+        
+        // Add "Results" button to the navigation bar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Results", style: .plain, target: self, action: #selector(resultsButtonTapped))
     }
     
     deinit {
@@ -158,7 +161,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         mainStackView.addArrangedSubview(eoELabel)
         mainStackView.addArrangedSubview(procedureDateLabel)
         mainStackView.addArrangedSubview(procedureDatePicker)
-        mainStackView.addArrangedSubview(proximateTextField) // Changed to "Proximate"
+        mainStackView.addArrangedSubview(proximateTextField)
         mainStackView.addArrangedSubview(middleTextField)
         mainStackView.addArrangedSubview(lowerTextField)
         mainStackView.addArrangedSubview(stomachLabel)
@@ -189,7 +192,6 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
             mainStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
         ])
         
-        // Gesture to dismiss keyboard on tap outside
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
@@ -225,7 +227,14 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    // MARK: - Button Action
+    // MARK: - Button Actions
+    
+    @objc func resultsButtonTapped() {
+        let resultsVC = EndoscopyResultsViewController()
+        resultsVC.user = user
+        resultsVC.childName = childName
+        navigationController?.pushViewController(resultsVC, animated: true)
+    }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         saveEndoscopyResults()
@@ -235,14 +244,12 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext
 
-       
         let entity = NSEntityDescription.entity(forEntityName: "Endoscopy", in: context)!
         let newEndoscopyResult = NSManagedObject(entity: entity, insertInto: context)
 
-        // Set the values
         newEndoscopyResult.setValue(childName, forKey: "childName")
         newEndoscopyResult.setValue(user, forKey: "user")
-        newEndoscopyResult.setValue(procedureDatePicker.date, forKey: "date")
+        newEndoscopyResult.setValue(procedureDatePicker.date, forKey: "procedureDate")
         newEndoscopyResult.setValue(Int(proximateTextField.text ?? "0"), forKey: "proximate")
         newEndoscopyResult.setValue(Int(middleTextField.text ?? "0"), forKey: "middle")
         newEndoscopyResult.setValue(Int(lowerTextField.text ?? "0"), forKey: "lower")
@@ -252,17 +259,11 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         newEndoscopyResult.setValue(Int(middleColonTextField.text ?? "0"), forKey: "middleColon")
         newEndoscopyResult.setValue(Int(leftColonTextField.text ?? "0"), forKey: "leftColon")
 
-        // Save the context
         do {
             try context.save()
             print("Endoscopy results saved successfully.")
-
-            let resultsVC = EndoscopyResultsViewController()
-            resultsVC.user = user
-            resultsVC.childName = childName
-            navigationController?.pushViewController(resultsVC, animated: true)
         } catch {
-            print("Failed to save endoscopy results: \(error.localizedDescription)")
+            print("Failed to save endoscopy results: \(error)")
         }
     }
 }
