@@ -354,7 +354,7 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = CustomHeaderView()
         headerView.titleLabel.text = section == 0
-            ? "For the questions below, insert a value from 0-5\n0 = No pain, 5 = Excruciating pain"
+            ? "For the questions below, insert a value from 0-5\n0 = Not at all, 5 = Very often"
             : "For the following questions, use the switch to indicate Yes or No"
         return headerView
     }

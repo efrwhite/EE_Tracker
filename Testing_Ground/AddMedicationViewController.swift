@@ -30,8 +30,11 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     let endDateLabel = UILabel()
     let enddate = UIDatePicker()
-    
+        
     let saveButton = UIButton(type: .system)
+    
+    let notesButton = UIButton(type: .system)
+    let notesTextField = UITextField()
     
     let dosageUnits = ["mg", "ml", "tablet", "capsule"]
     
@@ -65,6 +68,7 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
+    
         
         medicationNameLabel.text = "Medication Name"
         medicationNameLabel.font = UIFont(name: "Lato", size: 17.0)
@@ -75,6 +79,18 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
         medicationname.borderStyle = .roundedRect
         medicationname.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(medicationname)
+        
+        notesButton.setTitle("Notes", for: .normal)
+        notesButton.addTarget(self, action: #selector(notesButtonTapped), for: .touchUpInside)
+        notesButton.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(notesButton)
+        
+            // Setup Notes text field
+        notesTextField.borderStyle = .roundedRect
+        notesTextField.placeholder = "Enter your notes here..."
+        notesTextField.translatesAutoresizingMaskIntoConstraints = false
+        notesTextField.isHidden = true  // Initially hidden
+            contentView.addSubview(notesTextField)
         
         dosageLabel.text = "Dosage"
         dosageLabel.font = UIFont(name: "Lato", size: 17.0)
@@ -208,6 +224,15 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
             enddate.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             enddate.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             
+            notesButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+                    notesButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+
+                    // Notes text field constraints
+                    notesTextField.topAnchor.constraint(equalTo: notesButton.bottomAnchor, constant: 10),
+                    notesTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+                    notesTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+                    notesTextField.heightAnchor.constraint(equalToConstant: 40),
+            
             saveButton.topAnchor.constraint(equalTo: enddate.bottomAnchor, constant: 40),
             saveButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             saveButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
@@ -228,6 +253,10 @@ class AddMedicationViewController: UIViewController, UIPickerViewDelegate, UIPic
             scrollView.contentInset = contentInsets
             scrollView.scrollIndicatorInsets = contentInsets
         }
+    }
+    
+    @objc func notesButtonTapped() {
+        notesTextField.isHidden = !notesTextField.isHidden
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
