@@ -20,7 +20,6 @@ class EducationViewController: UIViewController {
             "Who is Affected?",
             "What are Symptoms?",
             "What Causes EOE?",
-            "EGID Information",
             "Where Can I Find More Information?"
         ]
 
@@ -77,8 +76,6 @@ class EducationViewController: UIViewController {
             destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WhatAreSymptomsViewController")
         case "What Causes EOE?":
             destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WhatCausesEOEViewController")
-        case "EGID Information":
-            destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EGIDInfoViewController")
         case "Where Can I Find More Information?":
             destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MoreInfoViewController")
         default:
