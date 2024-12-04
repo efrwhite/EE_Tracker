@@ -29,8 +29,14 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //add an update to coredata on load
+        
+        print("I'm in Allergies TableView")
+        
         // Set up the fetched results controllers
         setupFetchedResultsControllers()
+        print("Current IgE Allergens: \(currentIgEAllergens.count)")
+        print("Cleared Allergens: \(clearedIgEAllergens.count)")
         
         // Configure table views and set delegates
         currentAllergenTableView.delegate = self
@@ -49,6 +55,8 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         setupFetchedResultsControllers()
         currentAllergenTableView.reloadData()
         discontinuedAllergenTableView.reloadData()
+        
+        checkEmptyState()
     }
     
     // MARK: - Data Fetching and Filtering
@@ -93,6 +101,21 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         return 0
     }
     
+    func checkEmptyState() {
+        if currentIgEAllergens.isEmpty && currentNonIgEAllergens.isEmpty && clearedIgEAllergens.isEmpty && clearedNonIgEAllergens.isEmpty {
+            let emptyLabel = UILabel()
+            emptyLabel.text = "No allergens added yet. Tap '+' to add an allergen."
+            emptyLabel.textAlignment = .center
+            emptyLabel.numberOfLines = 0
+            emptyLabel.font = UIFont.systemFont(ofSize: 16)
+            emptyLabel.textColor = .gray
+            
+            currentAllergenTableView.backgroundView = emptyLabel
+        } else {
+            currentAllergenTableView.backgroundView = nil
+        }
+        
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllergenCell", for: indexPath) as! AllergenCell
         
@@ -122,6 +145,76 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         cell.editButton.addTarget(self, action: #selector(editButtonTapped), for: .touchUpInside)
         
         return cell
+    }
+
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Identify the allergen to delete
+            let allergen: Allergies
+            if tableView == currentAllergenTableView {
+                if indexPath.row < currentIgEAllergens.count {
+                    allergen = currentIgEAllergens[indexPath.row]
+                    currentIgEAllergens.remove(at: indexPath.row)
+                } else {
+                    allergen = currentNonIgEAllergens[indexPath.row - currentIgEAllergens.count]
+                    currentNonIgEAllergens.remove(at: indexPath.row - currentIgEAllergens.count)
+                }
+            } else {
+                if indexPath.row < clearedIgEAllergens.count {
+                    allergen = clearedIgEAllergens[indexPath.row]
+                    clearedIgEAllergens.remove(at: indexPath.row)
+                } else {
+                    allergen = clearedNonIgEAllergens[indexPath.row - clearedIgEAllergens.count]
+                    clearedNonIgEAllergens.remove(at: indexPath.row - clearedIgEAllergens.count)
+                }
+            }
+            
+            // Delete from Core Data
+            managedObjectContext.delete(allergen)
+            do {
+                try managedObjectContext.save()
+                print("Allergen deleted successfully")
+            } catch {
+                print("Error deleting allergen: \(error)")
+            }
+            
+            // Update table view
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+
+    
+    // MARK: - Table View Header
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.systemGray5 // Background color of the header
+
+        let titleLabel = UILabel()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        titleLabel.textColor = .darkGray
+
+        if tableView == currentAllergenTableView {
+            titleLabel.text = "Current Allergens"
+        } else if tableView == discontinuedAllergenTableView {
+            titleLabel.text = "Discontinued Allergens"
+        }
+
+        headerView.addSubview(titleLabel)
+
+        // Constraints for title label
+        NSLayoutConstraint.activate([
+            titleLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -16),
+            titleLabel.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
+        ])
+
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40 // Adjust height as needed
     }
 
     
