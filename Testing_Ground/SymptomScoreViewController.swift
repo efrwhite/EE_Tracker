@@ -273,13 +273,19 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
     var totalSymptomScore: Int64 = 0
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SymptomResultSegue" {
-            if let scoreVC = segue.destination as? ScoreViewController {
+        if let scoreVC = segue.destination as? ScoreViewController {
+            if segue.identifier == "SymptomResultSegue" {
+                // Pass the total symptom score
                 scoreVC.totalSymptomScore = self.totalSymptomScore
                 
-                // Also pass the responses if needed to update any other details in ScoreViewController
+                // Create a SurveyEntry with the current date and score, and append it to the array
                 let date = Date() // Set the current date
-                scoreVC.symptomSumScores.append(ScoreViewController.SurveyEntry(sum: Int(totalSymptomScore), date: date))
+                let newEntry = ScoreViewController.SurveyEntry(sum: Int(totalSymptomScore), date: date)
+                scoreVC.symptomSumScores.append(newEntry)
+                
+            } else if segue.identifier == "ShowResultsSegue" {
+                // Handle data transfer for the "Results" button if needed
+                // For now, no additional data is being passed here.
             }
         }
     }
@@ -287,8 +293,6 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         setupTables()
         responses = Array(repeating: nil, count: questions.count)
@@ -444,6 +448,10 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
         
         print("Segue to SymptomResultViewController triggered.")
     }
+    
+    @IBAction func resultsButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "ShowResultsSegue", sender: self)
+    }
 
     
     private func calculateTotalScore() -> Int64 {
@@ -457,3 +465,4 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
         saveButton.alpha = allFieldsFilled ? 1.0 : 0.5 // Grayed out when disabled
     }
 }
+

@@ -27,7 +27,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+   
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
@@ -151,7 +151,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
                 delegate?.didSaveNewAllergen()
                 
                 // Use completion block to ensure data reload before dismissing
-//                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
             } catch {
                 print("Error saving allergen: \(error)")
             }
