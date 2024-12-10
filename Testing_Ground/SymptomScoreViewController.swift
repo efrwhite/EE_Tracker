@@ -1,186 +1,3 @@
-//import UIKit
-//import CoreData
-//
-//protocol SymptomScoreViewControllerDelegate: AnyObject {
-//    func symptomScoreViewController(_ controller: SymptomScoreViewController, didUpdateSymptomEntries entries: [SymptomScoreViewController.SymptomEntry])
-//}
-//
-//class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SymTableViewCellDelegate {
-//    weak var delegate: SymptomScoreViewControllerDelegate?
-//    var capturedData: [[String: Any]] = []
-//    
-//    let questions = [
-//        "Visit date",
-//        "How often does your child have trouble swallowing?",
-//        "How bad is your child's trouble swallowing?",
-//        "How often does your child feel like food gets stuck in their throat or chest?",
-//        "How bad is it when your child gets food stuck in their throat or chest?",
-//        "How often does your child need to drink a lot to help them swallow food?",
-//        "How bad is it when your child needs to drink a lot to help them swallow food?",
-//        "How often does your child eat less than others?",
-//        "How often does your child need more time to eat than others?",
-//        "How often does your child have heartburn?",
-//        "How bad is your child's heartburn (burning in the chest, mouth, or throat)?",
-//        "How often does your child have food come back up in their throat when eating?",
-//        "How bad is it when food comes back up in your child's throat?",
-//        "How often does your child vomit (throw up)?",
-//        "How bad is your child's vomiting?",
-//        "How often does your child feel nauseous (feel like throwing up, but doesn't)?",
-//        "How bad is your child's nausea (feel like throwing up, but doesn't)?",
-//        "How often does your child have chest pain, ache, or hurt?",
-//        "How bad is your child's chest pain, ache, or hurt?",
-//        "How often does your child have stomach aches or belly aches?",
-//        "How bad are your child's stomach aches or belly aches?"
-//    ]
-//    
-//    let yesnoquestions = [
-//        "Feeding is difficult/refuses food?",
-//        "Slow eating",
-//        "Prolonged chewing",
-//        "Swallowing liquids with solid food",
-//        "Avoidance of solid food",
-//        "Retching",
-//        "Choking",
-//        "Food Impaction",
-//        "Hoarseness",
-//        "Constipation",
-//        "Poor weight gain",
-//        "Diarrhea"
-//    ]
-//    
-//    let sections = [
-//        "For the questions below, insert a value from 0-5\n0 = No pain, 5 = Excruciating pain",
-//        "For the following questions, use the switch to indicate Yes or No"
-//    ]
-//    
-//    @IBOutlet weak var tableView: UITableView!
-//    var responses: [[String?]] = []
-//    var yesnoResponses: [Bool] = []
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//        let nib = UINib(nibName: "SymptomTableViewCell", bundle: nil)
-//        tableView.register(nib, forCellReuseIdentifier: "SymptomTableViewCell")
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.estimatedRowHeight = 100
-//        tableView.rowHeight = UITableView.automaticDimension
-//        
-//        responses = [Array(repeating: nil, count: questions.count), Array(repeating: nil, count: yesnoquestions.count)]
-//        yesnoResponses = Array(repeating: false, count: yesnoquestions.count)
-//    }
-//    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return sections.count
-//    }
-//    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return sections[section]
-//    }
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return section == 0 ? questions.count : yesnoquestions.count
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SymptomTableViewCell", for: indexPath) as? SymTableViewCell else {
-//            fatalError("Expected SymptomTableViewCell")
-//        }
-//        
-//        let question = indexPath.section == 0 ? questions[indexPath.row] : yesnoquestions[indexPath.row]
-//        cell.questionLabel.text = question
-//        cell.configureCell(for: indexPath.section)
-//        
-//        if indexPath.section == 0 {
-//            cell.Ratingtext.text = responses[indexPath.section][indexPath.row]
-//        } else {
-//            cell.yesNoSwitch.isOn = yesnoResponses[indexPath.row]
-//            cell.yesNoSwitch.tag = indexPath.row
-//            cell.yesNoSwitch.addTarget(self, action: #selector(switchChanged(_:)), for: .valueChanged)
-//        }
-//        
-//        cell.delegate = self
-//        cell.indexPath = indexPath
-//        
-//        return cell
-//    }
-//    
-//    func didEditTextField(_ text: String, atIndexPath indexPath: IndexPath) {
-//        responses[indexPath.section][indexPath.row] = text
-//    }
-//    
-//    @objc func switchChanged(_ sender: UISwitch) {
-//        yesnoResponses[sender.tag] = sender.isOn
-//    }
-//    
-//    @IBAction func saveButtonTapped(_ sender: Any) {
-//        print("Save button tapped in SymptomScoreViewController")
-//        
-//        captureData()
-//        
-//        let entries = saveDataToCoreData()
-//        if !entries.isEmpty {
-//            delegate?.symptomScoreViewController(self, didUpdateSymptomEntries: entries)
-//            performSegue(withIdentifier: "SymptomResultSegue", sender: self)
-//        } else {
-//            print("Failed to save data or no entries to update.")
-//        }
-//    }
-//
-//    func captureData() {
-//        var sum = 0
-//
-//        for response in responses[0] where response != nil {
-//            if let intValue = Int(response!) {
-//                sum += intValue
-//            }
-//        }
-//
-//        for (index, _) in yesnoquestions.enumerated() {
-//            if yesnoResponses[index] {
-//                sum += 1
-//            }
-//        }
-//
-//        capturedData = [["sum": sum, "date": Date()]]
-//    }
-//
-//    func saveDataToCoreData() -> [SymptomEntry] {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//            print("Could not get appDelegate")
-//            return []
-//        }
-//        
-//        let context = appDelegate.persistentContainer.viewContext
-//        
-//        let sumOfResponses = responses.flatMap { $0 }.compactMap { Int($0 ?? "0") }.reduce(0, +) + yesnoResponses.filter { $0 }.count
-//        
-//        let newSymptom = Symptom(context: context)
-//        newSymptom.symptomSum = Int64(sumOfResponses)
-//        newSymptom.date = Date()
-//        
-//        var entries: [SymptomEntry] = []
-//        
-//        do {
-//            try context.save()
-//            let entry = SymptomEntry(sum: sumOfResponses, date: newSymptom.date!)
-//            entries.append(entry)
-//            
-//            print("Data saved successfully")
-//        } catch let error as NSError {
-//            print("Could not save. \(error), \(error.userInfo)")
-//        }
-//        
-//        return entries
-//    }
-//
-//    struct SymptomEntry {
-//        let sum: Int
-//        let date: Date
-//    }
-//}
-
 import UIKit
 import CoreData
 
@@ -199,9 +16,9 @@ class CustomHeaderView: UIView {
     
     private func setupView() {
         titleLabel.numberOfLines = 0 // Allows multiple lines
-        titleLabel.font = UIFont(name: "Times New Roman", size: 17) // Set your desired font and size
+        titleLabel.font = UIFont(name: "Times New Roman", size: 17)
         titleLabel.textColor = .black // Adjust as necessary
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false // Use Auto Layout
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(titleLabel)
 
@@ -214,7 +31,7 @@ class CustomHeaderView: UIView {
         ])
         
         // Set the background color for better visibility
-        backgroundColor = .lightGray // Adjust as necessary
+        backgroundColor = .lightGray
     }
 }
 
@@ -271,23 +88,57 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
     var responses: [String?] = []
     var yesnoResponses: [Bool] = []
     var totalSymptomScore: Int64 = 0
+    var selectedDate: Date?
+    
+    private var isSegueInProgress = false
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let scoreVC = segue.destination as? ScoreViewController, segue.identifier == "SymptomResultSegue" else { return }
+        
+        let date = selectedDate ?? Date()
+        let newEntry = ScoreViewController.SurveyEntry(sum: totalSymptomScore, date: date)
+        
+        // Clear any existing entries for the same date to prevent duplicates
+        scoreVC.symptomSumScores.removeAll { $0.date == date }
+        scoreVC.symptomSumScores.append(newEntry)
+
         if let scoreVC = segue.destination as? ScoreViewController {
             if segue.identifier == "SymptomResultSegue" {
-                // Pass the total symptom score
-                scoreVC.totalSymptomScore = self.totalSymptomScore
+                // Use selectedDate for the entry or fallback to the current date
+                let date = self.selectedDate ?? Date()
                 
-                // Create a SurveyEntry with the current date and score, and append it to the array
-                let date = Date() // Set the current date
-                let newEntry = ScoreViewController.SurveyEntry(sum: Int(totalSymptomScore), date: date)
+                print("Segue to ScoreViewController triggered.")
+                        
+                // Safely cast the destination to ScoreViewController
+                        if let destination = segue.destination as? ScoreViewController {
+                            // Map capturedData to the SurveyEntry type
+                            destination.symptomSumScores = capturedData.compactMap { dict in
+                                guard
+                                    let sum = dict["sum"] as? Int64,
+                                    let date = dict["date"] as? Date
+                                else {
+                                    return nil
+                                }
+                                return ScoreViewController.SurveyEntry(sum: sum, date: date)
+                            }
+                            print("Data passed to ScoreViewController: \(destination.symptomSumScores)")
+                        }
+                // Create a SurveyEntry with the selected date and score
+                let newEntry = ScoreViewController.SurveyEntry(sum: totalSymptomScore, date: date)
+
+                // Append the new entry to the ScoreViewController's symptomSumScores
                 scoreVC.symptomSumScores.append(newEntry)
-                
             } else if segue.identifier == "ShowResultsSegue" {
                 // Handle data transfer for the "Results" button if needed
-                // For now, no additional data is being passed here.
+                // No additional data transfer here for now.
             }
         }
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        isSegueInProgress = false
     }
 
     
@@ -306,6 +157,8 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         updateSaveButtonState() // Check the initial state of the Save button
+        
+        showDatePickerPopup()
     }
     
     deinit {
@@ -342,6 +195,35 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
         view.endEditing(true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadSavedData()
+        symptomTableView.reloadData()
+    }
+
+    func loadSavedData() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<Symptom>(entityName: "Symptom")
+        
+        do {
+            let savedEntries = try context.fetch(fetchRequest)
+            capturedData = savedEntries.map { entry in
+                [
+                    "date": entry.date,
+                    "symptomSum": entry.symptomSum,
+                    "response": entry.response
+                ]
+            }
+        } catch {
+            print("Failed to fetch saved data: \(error)")
+        }
+
+    }
+    
+    
+
+    
     // MARK: - UITableViewDataSource Methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -358,7 +240,7 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = CustomHeaderView()
         headerView.titleLabel.text = section == 0
-            ? "For the questions below, insert a value from 0-5\n0 = Not at all, 5 = Very often"
+            ? "For the questions below, insert a value from 0-4\n0 = Not at all, 4 = Very often"
             : "For the following questions, use the switch to indicate Yes or No"
         return headerView
     }
@@ -392,6 +274,87 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
         return yesNoCell
     }
     
+    func showDatePickerPopup() {
+        // Create a custom view controller to host the date picker
+        let popupVC = UIViewController()
+        popupVC.preferredContentSize = CGSize(width: UIScreen.main.bounds.width * 0.9, height: 300)
+        
+        // Create the container view to hold the date picker
+        let containerView = UIView()
+        containerView.backgroundColor = .white
+        containerView.layer.cornerRadius = 10
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        popupVC.view.addSubview(containerView)
+        
+        NSLayoutConstraint.activate([
+            containerView.centerXAnchor.constraint(equalTo: popupVC.view.centerXAnchor),
+            containerView.centerYAnchor.constraint(equalTo: popupVC.view.centerYAnchor),
+            containerView.widthAnchor.constraint(equalTo: popupVC.view.widthAnchor, multiplier: 0.9),
+            containerView.heightAnchor.constraint(equalTo: popupVC.view.heightAnchor, multiplier: 0.8)
+        ])
+        
+        // Add the title label
+        let titleLabel = UILabel()
+        titleLabel.text = "Date"
+        titleLabel.font = UIFont(name: "Lato-Bold", size: 20) ?? UIFont.boldSystemFont(ofSize: 20)
+        titleLabel.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0) // RGB #394390
+        titleLabel.textAlignment = .center
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(titleLabel)
+        
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
+            titleLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.9)
+        ])
+        
+        // Add the UIDatePicker below the title
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(datePicker)
+        
+        NSLayoutConstraint.activate([
+            datePicker.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            datePicker.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
+            datePicker.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.9),
+            datePicker.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 0.6)
+        ])
+        
+        // Add OK button below the date picker
+        let okButton = UIButton(type: .system)
+        okButton.setTitle("OK", for: .normal)
+        okButton.titleLabel?.font = UIFont(name: "Lato-Bold", size: 35) ?? UIFont.boldSystemFont(ofSize: 10)
+        okButton.setTitleColor(UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0), for: .normal) // RGB #394390
+        okButton.addTarget(self, action: #selector(datePickerOkTapped(_:)), for: .touchUpInside)
+        okButton.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(okButton)
+        
+        NSLayoutConstraint.activate([
+            okButton.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            okButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16)
+        ])
+        
+        // Present the popup as a modal
+        popupVC.modalPresentationStyle = .popover
+        popupVC.popoverPresentationController?.sourceView = self.view
+        popupVC.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+        popupVC.popoverPresentationController?.permittedArrowDirections = []
+        present(popupVC, animated: true, completion: nil)
+    }
+
+    @objc func datePickerOkTapped(_ sender: UIButton) {
+        guard let containerView = sender.superview,
+              let datePicker = containerView.subviews.compactMap({ $0 as? UIDatePicker }).first else {
+            return
+        }
+        self.selectedDate = datePicker.date
+        dismiss(animated: true)
+    }
+
+
+
     func didEditTextField(_ text: String, atIndexPath indexPath: IndexPath) {
         guard !text.isEmpty else {
             showAlertForEmptyInput()
@@ -400,7 +363,7 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
             return
         }
         
-        if let value = Int(text), value >= 0, value <= 5 {
+        if let value = Int(text), value >= 0, value <= 4 {
             responses[indexPath.row] = text
         } else {
             showAlertForInvalidInput()
@@ -417,7 +380,7 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func showAlertForInvalidInput() {
-        let alert = UIAlertController(title: "Invalid Input", message: "Please enter a valid number between 0 and 5.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Invalid Input", message: "Please enter a valid number between 0 and 4.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
@@ -426,25 +389,104 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
         yesnoResponses[indexPath.row] = value
         updateSaveButtonState() // Update the save button state
     }
+    
+    func showAlertForEmptyDate() {
+        let alert = UIAlertController(title: "Error", message: "Please select a date before saving.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-        // Step 1: Calculate the total score
-        totalSymptomScore = calculateTotalScore()
-
-        print("Total Symptom Score: \(totalSymptomScore)")
-
-        let validResponses = responses.compactMap { $0 != nil ? Int64($0!) : nil }
-        
-        print("Valid responses: \(validResponses)")
-        
-        if validResponses.isEmpty {
-            print("No valid responses found, cannot save.")
+        guard let date = selectedDate else {
+            showAlertForEmptyDate()
             return
         }
         
-        delegate?.symptomScoreViewController(self, didUpdateSymptomEntries: validResponses)
+        if isSegueInProgress {
+                print("Segue already in progress, skipping.")
+                return
+            }
+        
+        isSegueInProgress = true // Set the flag
+        saveButton.isEnabled = false
+
+        saveSurveyData(date: date)
+        totalSymptomScore = calculateTotalScore()
 
         performSegue(withIdentifier: "SymptomResultSegue", sender: self)
+        
+        func saveSurveyData(date: Date) {
+            // Avoid duplicate entries
+            if capturedData.contains(where: { ($0["date"] as? Date) == date }) {
+                print("Data for this date already exists.")
+                return
+            }
+            
+            // Save new data
+            let newEntry: [String: Any] = ["date": date, "symptomSum": totalSymptomScore, "response": responses]
+            capturedData.append(newEntry)
+        }
+
+
+        // Calculate the total symptom score
+        totalSymptomScore = calculateTotalScore()
+        print("Total Symptom Score: \(totalSymptomScore)")
+
+        // Validate responses
+        let validResponses = responses.compactMap { $0 != nil ? Int64($0!) : nil }
+        print("Valid responses: \(validResponses)")
+
+        if validResponses.isEmpty {
+            print("No valid responses found, cannot save.")
+            showAlert(message: "Please complete all survey questions before saving.")
+            return
+        }
+
+        // Save data to Core Data
+        saveDataToCoreData(date: date, symptomSum: totalSymptomScore, validResponses: validResponses)
+
+        // Notify delegate if applicable
+        delegate?.symptomScoreViewController(self, didUpdateSymptomEntries: validResponses)
+    }
+
+
+    // Helper function to show alerts
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+
+    // Core Data saving logic
+    func saveDataToCoreData(date: Date, symptomSum: Int64, validResponses: [Int64]) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            print("Unable to access AppDelegate.")
+            return
+        }
+
+        
+        let context = appDelegate.persistentContainer.viewContext
+
+        // Save each response as a separate Symptom entity
+        for (index, response) in validResponses.enumerated() {
+            let newSymptom = Symptom(context: context)
+            newSymptom.date = date
+            newSymptom.symptomSum = symptomSum
+            newSymptom.question = "Question \(index + 1)" // Replace with actual question text if available
+            newSymptom.response = String(response) // Store response as a String
+        }
+
+        // Save the context
+        do {
+            try context.save()
+            print("Data saved successfully.")
+        } catch {
+            print("Failed to save data: \(error)")
+            showAlert(message: "An error occurred while saving data. Please try again.")
+        }
+
+        
+        delegate?.symptomScoreViewController(self, didUpdateSymptomEntries: validResponses)
         
         print("Segue to SymptomResultViewController triggered.")
     }
@@ -458,6 +500,8 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
         let symptomScores = responses.compactMap { $0 != nil ? Int64($0!) : nil }
         return symptomScores.reduce(0, +)
     }
+    
+    
     
     private func updateSaveButtonState() {
         let allFieldsFilled = !responses.contains(where: { $0 == nil }) // Check if any responses are nil

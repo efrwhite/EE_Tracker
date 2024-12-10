@@ -1,10 +1,3 @@
-//
-//  MoreInfoViewController.swift
-//  Testing_Ground
-//
-//  Created by Vivek Vangala on 7/10/23.
-//
-
 import Foundation
 import UIKit
 
@@ -94,7 +87,7 @@ class MoreInfoViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             customResourceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            customResourceButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            customResourceButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             customResourceButton.widthAnchor.constraint(equalToConstant: buttonWidth)
         ])
     }
@@ -251,7 +244,7 @@ class MoreInfoViewController: UIViewController {
         let label = UILabel()
         label.text = text
         label.textColor = UIColor(red: 57.0/255.0, green: 67.0/255.0, blue: 144.0/255.0, alpha: 1)
-        label.font = UIFont(name: "Lato", size: 11.0)
+        label.font = UIFont(name: "Lato", size: 20.0)
         label.textAlignment = .center
         label.numberOfLines = 3
         return label

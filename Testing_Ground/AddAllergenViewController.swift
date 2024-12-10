@@ -198,7 +198,7 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         if tableView == currentAllergenTableView {
             titleLabel.text = "Current Allergens"
         } else if tableView == discontinuedAllergenTableView {
-            titleLabel.text = "Discontinued Allergens"
+            titleLabel.text = "Cleared Allergens"
         }
 
         headerView.addSubview(titleLabel)
