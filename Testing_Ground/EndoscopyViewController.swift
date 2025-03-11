@@ -29,7 +29,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     
     let eoELabel: UILabel = {
         let label = UILabel()
-        label.text = "EoE"
+        label.text = "EoE: "
         label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
         return label
     }()
@@ -75,7 +75,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     
     let stomachLabel: UILabel = {
         let label = UILabel()
-        label.text = "Stomach"
+        label.text = "Stomach: "
         label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
         return label
     }()
@@ -89,7 +89,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     
     let duodenumLabel: UILabel = {
         let label = UILabel()
-        label.text = "Duodenum"
+        label.text = "Duodenum: "
         label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
         return label
     }()
@@ -103,10 +103,27 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     
     let colonLabel: UILabel = {
         let label = UILabel()
-        label.text = "Colon"
+        label.text = "Colon: "
         label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
         return label
     }()
+    let noteLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Notes: "
+        label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
+        return label
+    }()
+    let notesField: UITextView = {
+        let textview = UITextView()
+        textview.isEditable = true
+        textview.isScrollEnabled = true
+        textview.layer.borderWidth = 1
+        textview.layer.borderColor = UIColor.lightGray.cgColor
+        textview.layer.cornerRadius = 5
+        textview.translatesAutoresizingMaskIntoConstraints = false
+        return textview
+    }()
+
     
     let rightColonTextField: UITextField = {
         let textField = UITextField()
@@ -158,9 +175,10 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         scrollView.addSubview(contentView)
         contentView.addSubview(mainStackView)
         
-        mainStackView.addArrangedSubview(eoELabel)
+        
         mainStackView.addArrangedSubview(procedureDateLabel)
         mainStackView.addArrangedSubview(procedureDatePicker)
+        mainStackView.addArrangedSubview(eoELabel)
         mainStackView.addArrangedSubview(proximateTextField)
         mainStackView.addArrangedSubview(middleTextField)
         mainStackView.addArrangedSubview(lowerTextField)
@@ -172,6 +190,8 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         mainStackView.addArrangedSubview(rightColonTextField)
         mainStackView.addArrangedSubview(middleColonTextField)
         mainStackView.addArrangedSubview(leftColonTextField)
+        mainStackView.addArrangedSubview(noteLabel)
+        mainStackView.addArrangedSubview(notesField) //why not showing?
         mainStackView.addArrangedSubview(saveButton)
         
         NSLayoutConstraint.activate([
@@ -189,7 +209,8 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
             mainStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             mainStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            mainStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
+            mainStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+            notesField.heightAnchor.constraint(equalToConstant: 100)
         ])
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -239,7 +260,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         saveEndoscopyResults()
     }
-    
+    //CORE DATA SAVE
     func saveEndoscopyResults() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext
@@ -258,6 +279,8 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         newEndoscopyResult.setValue(Int(rightColonTextField.text ?? "0"), forKey: "rightColon")
         newEndoscopyResult.setValue(Int(middleColonTextField.text ?? "0"), forKey: "middleColon")
         newEndoscopyResult.setValue(Int(leftColonTextField.text ?? "0"), forKey: "leftColon")
+        //notes add to core data
+        newEndoscopyResult.setValue(notesField.text, forKey: "notes")
 
         do {
             try context.save()

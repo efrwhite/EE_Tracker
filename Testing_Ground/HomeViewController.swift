@@ -256,6 +256,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         print("Home Username: ", user)
         print("Home Childuser: ", childselected)
+        childsimage.contentMode = .scaleAspectFill
+        //childsimage.layer.cornerRadius = 5
+        childsimage.layer.cornerRadius = 5
+        
 
         // Check if childselected is provided, otherwise fetch first child
         if !childselected.isEmpty {
@@ -283,11 +287,11 @@ class HomeViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: false)
         
         // Setup the child views layout
-        setupChildViews()
+//        setupChildViews()
 
         // Add the logout button
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "person.circle"), for: .normal)
+        button.setImage(UIImage(systemName: "rectangle.portrait.and.arrow.right"), for: .normal)
         button.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItem = barButton
@@ -337,35 +341,35 @@ class HomeViewController: UIViewController {
         }
     }
 
-    func setupChildViews() {
-        childnames.translatesAutoresizingMaskIntoConstraints = false
-        childsimage.translatesAutoresizingMaskIntoConstraints = false
-        childsdiet.translatesAutoresizingMaskIntoConstraints = false
-
-        // Assuming you want to maintain the aspect ratio of the image
-        let imageAspectRatioConstraint = childsimage.widthAnchor.constraint(equalTo: childsimage.heightAnchor, multiplier: 1.0)
-
-        // Set a fixed height for the image view
-        let imageHeightConstraint = childsimage.heightAnchor.constraint(equalToConstant: 90)
-
-        NSLayoutConstraint.activate([imageAspectRatioConstraint, imageHeightConstraint])
-
-        let stackView = UIStackView(arrangedSubviews: [childnames, childsimage, childsdiet])
-        stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
-        stackView.alignment = .center
-        stackView.spacing = 20
-
-        view.addSubview(stackView)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 20),
-            stackView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -20),
-        ])
-    }
+//    func setupChildViews() {
+//        childnames.translatesAutoresizingMaskIntoConstraints = false
+//        childsimage.translatesAutoresizingMaskIntoConstraints = false
+//        childsdiet.translatesAutoresizingMaskIntoConstraints = false
+//
+//        // Assuming you want to maintain the aspect ratio of the image
+//        let imageAspectRatioConstraint = childsimage.widthAnchor.constraint(equalTo: childsimage.heightAnchor, multiplier: 1.0)
+//
+//        // Set a fixed height for the image view
+//        let imageHeightConstraint = childsimage.heightAnchor.constraint(equalToConstant: 90)
+//
+//        NSLayoutConstraint.activate([imageAspectRatioConstraint, imageHeightConstraint])
+//
+//        let stackView = UIStackView(arrangedSubviews: [childnames, childsimage, childsdiet])
+//        stackView.axis = .vertical
+//        stackView.distribution = .equalSpacing
+//        stackView.alignment = .center
+//        stackView.spacing = 20
+//
+//        view.addSubview(stackView)
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        NSLayoutConstraint.activate([
+//            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+//            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            stackView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 20),
+//            stackView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -20),
+//        ])
+//    }
 
     @objc func showAlert() {
         let alertController = UIAlertController(title: "Logout", message: "Are you sure you want to log out?", preferredStyle: .alert)

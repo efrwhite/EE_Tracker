@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, AddMedicationDelegate {
+class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     var user = ""
     var childName = ""
     @IBOutlet weak var currentTableView: UITableView!
@@ -91,7 +91,7 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         if tableView == currentTableView {
             label.text = "Current Medications"
         } else if tableView == discontinuedTableView {
-            label.text = "Discontinued Medications"
+            label.text = "Cleared Medications"
         }
         
         headerView.addSubview(label)
@@ -181,7 +181,7 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
                 displayVC.childName = childName // added since it will clash with multiple children/patients without a composite key of (user, child)
             }
             
-            displayVC.delegate = self
+            //displayVC.delegate = self
         }
     }
 }
