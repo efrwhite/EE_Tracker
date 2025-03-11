@@ -21,6 +21,10 @@ class ChildViewController: UIViewController {
         //NSLog("Session ID in viewDidLoad: ", mySessionID);
         print("You are on Child")
         print("Child User: ", user)
+        childimage.layer.cornerRadius = 5
+        childimage.layer.borderWidth = 1
+        childimage.contentMode = .scaleAspectFill
+        childimage.layer.borderColor = UIColor.lightGray.cgColor
         if childName != nil {
             print("Child name:", childName!)
         } else {

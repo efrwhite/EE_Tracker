@@ -22,6 +22,10 @@ class ParentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("User in Parent",user)
+        parentimage.layer.cornerRadius = 5
+        parentimage.layer.borderWidth = 1
+        parentimage.contentMode = .scaleAspectFill
+        parentimage.layer.borderColor = UIColor.lightGray.cgColor
         // Disable user interaction for the parentUserName text field
         parentUserName.isUserInteractionEnabled = false
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))

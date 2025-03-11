@@ -84,6 +84,10 @@ class AccidentalExposureViewController: UIViewController, UITableViewDelegate, U
     let historyTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        //notes layer
+        tableView.layer.cornerRadius = 5
+        tableView.layer.borderWidth = 1
+        tableView.layer.borderColor = UIColor.lightGray.cgColor
         return tableView
     }()
     

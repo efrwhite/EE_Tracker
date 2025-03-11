@@ -89,7 +89,7 @@ class Diet2TestViewController: UIViewController, UITableViewDataSource, UITableV
         
         // Set up navigation bar
         navigationItem.title = "Diet 2"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationController?.navigationBar.prefersLargeTitles = true
         
         // Add plus button to navigation bar
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFood))

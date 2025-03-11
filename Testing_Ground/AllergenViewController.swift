@@ -11,6 +11,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var allergyname: UITextField!
     @IBOutlet weak var severity: UITextField! // Severity Field
+    @IBOutlet weak var notes: UITextView!
     @IBOutlet weak var startdate: UIDatePicker!
     @IBOutlet weak var enddate: UIDatePicker!
     @IBOutlet weak var endDateLabel: UILabel!
@@ -32,9 +33,12 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tapGesture)
         
         // Set initial visibility of the enddate picker and label
-        endDateLabel.isHidden = !offonswitch.isOn
-        enddate.isHidden = !offonswitch.isOn
-        
+         endDateLabel.isHidden = !offonswitch.isOn
+         enddate.isHidden = !offonswitch.isOn
+        //notes layer (making the notes field more presentable)
+        notes.layer.cornerRadius = 5
+        notes.layer.borderWidth = 1
+        notes.layer.borderColor = UIColor.lightGray.cgColor
         // Connect the switch to the value changed method
         offonswitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
         
