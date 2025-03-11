@@ -64,7 +64,7 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         let fetchRequest: NSFetchRequest<Allergies> = Allergies.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
-        // Filter for allergens for a specific user
+        // Filter for allergens for a specific user //
         let userPredicate = NSPredicate(format: "username == %@", user)
         fetchRequest.predicate = userPredicate
         
@@ -198,7 +198,7 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         if tableView == currentAllergenTableView {
             titleLabel.text = "Current Allergens"
         } else if tableView == discontinuedAllergenTableView {
-            titleLabel.text = "Discontinued Allergens"
+            titleLabel.text = "Cleared Allergens"
         }
 
         headerView.addSubview(titleLabel)
