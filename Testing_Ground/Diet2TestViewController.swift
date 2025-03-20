@@ -179,6 +179,7 @@ class Diet2TestViewController: UIViewController, UITableViewDataSource, UITableV
             
             // Optionally pass any data if needed
             allergiesVC.user = user ?? ""
+            allergiesVC.childName = childName ?? ""
             
             // Navigate to the AllergiesViewController
             navigationController?.pushViewController(allergiesVC, animated: true)

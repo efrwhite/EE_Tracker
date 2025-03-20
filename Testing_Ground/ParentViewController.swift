@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 import CoreData
-class ParentViewController: UIViewController {
+class ParentViewController: UIViewController, UITextFieldDelegate {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var profiles = [Parent]()
     var receivedString = ""
@@ -18,40 +18,80 @@ class ParentViewController: UIViewController {
     @IBOutlet weak var parentUserName: UITextField!
     @IBOutlet weak var parentimage: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var scrollView: UIScrollView!
+   
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        print("User in Parent",user)
+//        parentimage.layer.cornerRadius = 5
+//        parentimage.layer.borderWidth = 1
+//        parentimage.contentMode = .scaleAspectFill
+//        parentimage.layer.borderColor = UIColor.lightGray.cgColor
+//        // Disable user interaction for the parentUserName text field
+//        parentUserName.isUserInteractionEnabled = false
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//            view.addGestureRecognizer(tapGesture)
+//        
+//        if isEditingParent {
+//            print("editing parent")
+//            //editing parent through profiles
+//            if let parentName = parentName, !parentName.isEmpty {
+//                loadParentProfile(parentName: parentName, usernamep: user)
+//            }
+//        } else if isAddingParent{
+//            //adding parent through profiles
+//            print("new parent check me")
+//            parentUserName.text = user
+//            print("username",user)
+//        }else{
+//            print("else statement parent")
+//            //creating new parent statement
+//            parentUserName.text = user
+//            print("you are in the else block of this for parent!")
+//        }
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("User in Parent",user)
+        print("User in Parent", user)
         parentimage.layer.cornerRadius = 5
         parentimage.layer.borderWidth = 1
         parentimage.contentMode = .scaleAspectFill
         parentimage.layer.borderColor = UIColor.lightGray.cgColor
-        // Disable user interaction for the parentUserName text field
         parentUserName.isUserInteractionEnabled = false
+        
+        // Set the delegate for the text fields
+            parentFirstName.delegate = self
+            parentLastName.delegate = self
+            parentUserName.delegate = self
+        
+        // Add tap gesture recognizer to dismiss keyboard on tap outside text field
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-            view.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture)
         
         if isEditingParent {
-            //editing parent through profiles
+            print("editing parent")
+            // Editing parent through profiles
             if let parentName = parentName, !parentName.isEmpty {
                 loadParentProfile(parentName: parentName, usernamep: user)
             }
-        } else if isAddingParent{
-            //adding parent through profiles
+        } else if isAddingParent {
+            // Adding parent through profiles
             print("new parent check me")
             parentUserName.text = user
-            print("username",user)
-        }else{
-            //creating new parent statement
+            print("username", user)
+        } else {
+            print("else statement parent")
+            // Creating new parent statement
             parentUserName.text = user
             print("you are in the else block of this for parent!")
         }
     }
-    
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Dismiss the keyboard when the Return key is pressed
+        textField.resignFirstResponder()
+        return true
     }
+
+  
     @IBAction func saveButton(_ sender: Any) {
         guard let lastName = parentLastName.text, !lastName.isEmpty,
               let firstName = parentFirstName.text, !firstName.isEmpty,
@@ -81,12 +121,14 @@ class ParentViewController: UIViewController {
             }
         }
     }
-    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Register keyboard notifications
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+     
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -94,32 +136,8 @@ class ParentViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    @objc func keyboardWillShow(notification: NSNotification) {
-        guard let userInfo = notification.userInfo,
-              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-        
-        // Capture keyboard height
-        let keyboardHeight = keyboardFrame.height
-        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
-        
-        // Adjust scroll view insets dynamically
-        scrollView.contentInset = contentInsets
-        scrollView.scrollIndicatorInsets = contentInsets
-        
-        // If active text field is hidden by keyboard, scroll so it's visible
-        var visibleRect = self.view.frame
-        visibleRect.size.height -= keyboardHeight
-        
-        if let activeField = getActiveTextField(), !visibleRect.contains(activeField.frame.origin) {
-            scrollView.scrollRectToVisible(activeField.frame, animated: true)
-        }
-    }
-    @objc func keyboardWillHide(notification: NSNotification) {
-        // Reset scroll view insets
-        let contentInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInsets
-        scrollView.scrollIndicatorInsets = contentInsets
-    }
+   
+  
     // find the active text field
     func getActiveTextField() -> UITextField? {
         if parentUserName.isFirstResponder {
