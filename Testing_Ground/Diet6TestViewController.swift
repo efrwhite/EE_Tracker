@@ -99,7 +99,7 @@ class Diet6TestViewController: UIViewController, UITableViewDataSource, UITableV
         
         // Set up navigation bar
         navigationItem.title = "Diet 6"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationController?.navigationBar.prefersLargeTitles = true
         
         // Add plus button to navigation bar
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFood))
@@ -189,6 +189,7 @@ class Diet6TestViewController: UIViewController, UITableViewDataSource, UITableV
             
             // Optionally pass any data if needed
             allergiesVC.user = user ?? ""
+            allergiesVC.childName = childName ?? ""
             
             // Navigate to the AllergiesViewController
             navigationController?.pushViewController(allergiesVC, animated: true)

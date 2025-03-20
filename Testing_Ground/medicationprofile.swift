@@ -53,7 +53,7 @@ class MedicationProfile: UIViewController, UITextFieldDelegate, UITableViewDeleg
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "medName", ascending: true)]
         
         // Filter for medications for a specific user
-        let userPredicate = NSPredicate(format: "userName == %@ AND childName ==%@ ", user, childName)
+        let userPredicate = NSPredicate(format: "username == %@ AND childName ==%@ ", user, childName)
         fetchRequest.predicate = userPredicate
         
         allFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,

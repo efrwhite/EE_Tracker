@@ -10,6 +10,7 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
 
     // MARK: - Properties
     var user = ""
+    var childName = ""
     let currentCellIdentifier = "AllergenCell"
     let discontinuedCellIdentifier = "AllergenCell"
     
@@ -37,6 +38,7 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         setupFetchedResultsControllers()
         print("Current IgE Allergens: \(currentIgEAllergens.count)")
         print("Cleared Allergens: \(clearedIgEAllergens.count)")
+        print("Child Name Allergen: ", childName, "User Name Allergen: ", user)
         
         // Configure table views and set delegates
         currentAllergenTableView.delegate = self
@@ -65,7 +67,11 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         // Filter for allergens for a specific user //
-        let userPredicate = NSPredicate(format: "username == %@", user)
+        let userPredicate = NSPredicate(
+            format: "childname == %@ AND username == %@",
+            childName,
+            user
+        )
         fetchRequest.predicate = userPredicate
         
         allFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
@@ -243,13 +249,18 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
         if segue.identifier == "addAllergenSegue",
            let displayVC = segue.destination as? AllergenViewController {
             displayVC.user = user
+            displayVC.childName = childName
             
             if let (isEdit, allergenName) = sender as? (Bool, String) {
                 displayVC.isEditMode = isEdit
                 displayVC.allergenName = allergenName
+                displayVC.childName = childName
+                displayVC.user = user
             } else {
                 displayVC.isEditMode = false
                 displayVC.allergenName = ""
+                displayVC.childName = childName
+                displayVC.user = user
             }
             
             displayVC.delegate = self

@@ -1,6 +1,6 @@
 import UIKit
 import CoreData
-class ChildViewController: UIViewController {
+class ChildViewController: UIViewController,UITextFieldDelegate  {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var user = ""
     var isEditingChild: Bool = false
@@ -30,7 +30,11 @@ class ChildViewController: UIViewController {
         } else {
             print("No Child name")
         }
-        //delete this bitch
+        //user textfields to delegate
+        childFirstName.delegate = self
+        lastName.delegate = self
+        
+        
         usernamec = user
         setPopupButton()
         // Check if it's editing mode and load data if needed
@@ -93,7 +97,12 @@ class ChildViewController: UIViewController {
         }
     }
     
-//deleted a lot of functions
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Dismiss the keyboard when the Return key is pressed
+        textField.resignFirstResponder()
+        return true
+    }
+
     
     func addChildProfile() {
         // Handle adding a new profile
@@ -103,6 +112,7 @@ class ChildViewController: UIViewController {
         newChild.username = user
         newChild.diettype = diettype.currentTitle
         newChild.gender = gender.currentTitle ?? "" // Set the gender using selectedGender
+        newChild.birthday = birthdate.date
         if let selectedImage = childimage.image {
             // Convert the UIImage to Data
             if let imageData = selectedImage.pngData() {
@@ -126,6 +136,7 @@ class ChildViewController: UIViewController {
             profileToEdit.username = user // Make sure `user` is correctly set
             profileToEdit.diettype = diettype.currentTitle ?? "" // Safely unwrap button title
             profileToEdit.gender = gender.currentTitle ?? "" // Safely unwrap button title
+            profileToEdit.birthday = birthdate.date
             if let selectedImage = childimage.image {
                 if let imageData = selectedImage.pngData() {
                     profileToEdit.image = imageData

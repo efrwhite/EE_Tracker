@@ -21,6 +21,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
     var user = ""
     var allergenName = ""
     var isEditMode = false
+    var childName = ""
     
     weak var delegate: AddAllergenDelegate?
     
@@ -59,7 +60,12 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
     //child name needs to be added to the fetch request
     func populateDataForEditing() {
         let fetchRequest: NSFetchRequest<Allergies> = Allergies.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "username == %@ AND name == %@", user, allergenName)
+        fetchRequest.predicate = NSPredicate(
+            format: "childname == %@  AND username == %@ AND name == %@",
+            childName,
+            user,
+            allergenName
+        )
         do {
             let allergens = try managedObjectContext.fetch(fetchRequest)
             if let existingAllergen = allergens.first {
@@ -68,6 +74,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
                 allergyname.text = existingAllergen.name
                 severity.text = existingAllergen.severity // Severity field
                 startdate.date = existingAllergen.startdate ?? Date()
+                notes.text = existingAllergen.notes
                 
                 if let enddate = existingAllergen.enddate {
                     offonswitch.isOn = true
@@ -98,14 +105,18 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
         if isEditMode {
             // Fetch request to find the existing allergen
             let fetchRequest: NSFetchRequest<Allergies> = Allergies.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "username == %@ AND name == %@", user, allergenName)
+            fetchRequest.predicate = NSPredicate(
+                format: "childname == %@ AND username == %@ AND name == %@",
+                childName, user,
+                allergenName
+            )
             
             do {
                 let allergens = try managedObjectContext.fetch(fetchRequest)
                 if let existingAllergen = allergens.first {
                     // Update existing allergen details
                     print("Updating existing allergen: \(existingAllergen.name ?? "No name")")
-                    
+                    existingAllergen.childname = childName
                     existingAllergen.username = user
                     existingAllergen.name = allergyname.text
                     existingAllergen.severity = severity.text // Severity field
@@ -129,6 +140,7 @@ class AllergenViewController: UIViewController, UITextFieldDelegate {
             // Create a new allergen object
             let newAllergen = Allergies(context: managedObjectContext)
             newAllergen.username = user
+            newAllergen.childname = childName
             newAllergen.name = allergyname.text
             newAllergen.severity = severity.text // Severity field
             newAllergen.startdate = startdate.date

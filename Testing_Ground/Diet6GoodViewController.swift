@@ -1,71 +1,288 @@
-import UIKit
 
-class Diet6GoodViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+import UIKit
+import CoreData
+
+class Diet6GoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+
+    var user = ""
+    var childName = ""
+
+    let categories = ["Endoscopy", "Allergies", "Medication", "Accidental Exposure"]
+    var selectedCategory: String?
+
+    var tableViewData: [(date: String, descriptor: String)] = []
+
+    let categoryPicker: UIPickerView = {
+        let picker = UIPickerView()
+        picker.translatesAutoresizingMaskIntoConstraints = false
+        return picker
+    }()
     
-    let sectionTitle = "Foods Okay to Eat"
-    let items = [
-        "Dairy alternatives that do not contain nuts or soy",
-        "Milk alternatives like coconut, oat, and rice",
-        "Yogurt made from milk alternatives as listed above",
-        "Ice cream made from milk alternatives as listed above",
-        "Dairy-free cheese",
-        "Plant-based butter made from oat",
-        "Dairy-free sour cream",
-        "Foods labeled “Vegan”, “Plant Based” or “Dairy Free”",
-        "Rice *check ingredients on boxed rice mixes",
-        "Rice crackers and rice cakes",
-        "Potato chips",
-        "Popcorn",
-        "Corn tortillas",
-        "Gluten-free oats",
-        "Gluten-free pasta made from rice, chickpea, and lentil",
-        "Gluten-free bread",
-        "Gluten-free wraps made from chickpea, cassava",
-        "Gluten-free flours like oat, coconut, and gluten-free all-purpose flour",
-        "Foods labeled “Gluten Free” or “Grain Free”",
-        "*Fried foods may be cross-contaminated with gluten in a shared deep fryer",
-        "Sunflower seed butter",
-        "Seeds",
-        "Meats including beef, pork, and poultry"
-    ]
-    
-    
-    @IBOutlet weak var tableView: UITableView!
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "HistoryCell")
+        return table
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("In Journal, ",user, childName)
+        view.backgroundColor = .white
+        setupPicker()
+        setupTableView()
+    }
+    
+    func setupPicker() {
+        categoryPicker.delegate = self
+        categoryPicker.dataSource = self
+        view.addSubview(categoryPicker)
         
-        tableView.dataSource = self
+        NSLayoutConstraint.activate([
+            categoryPicker.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            categoryPicker.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            categoryPicker.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            categoryPicker.heightAnchor.constraint(equalToConstant: 150)
+        ])
+    }
+    
+    func setupTableView() {
+        view.addSubview(tableView)
         tableView.delegate = self
+        tableView.dataSource = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        
-        // Set up automatic row height
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 44
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: categoryPicker.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+        ])
     }
 
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
+    // MARK: - UIPickerView DataSource & Delegate
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitle
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        cell.textLabel?.text = items[indexPath.row]
-        cell.textLabel?.numberOfLines = 0 // Allow unlimited lines
-        cell.textLabel?.lineBreakMode = .byWordWrapping 
-        
-        return cell
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categories.count
     }
 
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categories[row]
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedCategory = categories[row]
+        fetchData(for: selectedCategory!)
+    }
+    
+    // MARK: - Fetch Data from Core Data
+//    func fetchData(for category: String) {
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//        let context = appDelegate.persistentContainer.viewContext
+//
+//        var fetchRequest: NSFetchRequest<NSManagedObject>?
+//        
+//        switch category {
+//        case "Endoscopy":
+//            fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Endoscopy")
+//        case "Allergies":
+//            fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Allergies")
+//        case "Medication":
+//            fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Medication")
+//        case "Accidental Exposure":
+//            fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "AccidentalExposure")
+//        default:
+//            return
+//        }
+//
+//        // Apply predicates for filtering by user and childName
+//        let userPredicate = NSPredicate(format: " username == %@", user)
+//        let childPredicate = NSPredicate(format: "childname == %@ OR childName == %@", childName, childName)
+//
+//        fetchRequest?.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [userPredicate, childPredicate])
+//
+//        do {
+//            let results = try context.fetch(fetchRequest!)
+//            let formatter = DateFormatter()
+//            formatter.dateStyle = .short
+//
+//            tableViewData = results.map {
+//                var dateString = "N/A"
+//                var descriptor = "N/A"
+//                
+//                switch category {
+//                case "Endoscopy":
+//                                    if let procedureDate = $0.value(forKey: "procedureDate") as? Date {
+//                                        dateString = formatter.string(from: procedureDate)
+//                                    }
+//                                    
+//                                    let duodenum = $0.value(forKey: "duodenum") as? String ?? ""
+//                                    let stomach = $0.value(forKey: "stomach") as? String ?? ""
+//                                    let leftColon = $0.value(forKey: "leftColon") as? String ?? ""
+//                                    let middleColon = $0.value(forKey: "middleColon") as? String ?? ""
+//                                    let rightColon = $0.value(forKey: "rightColon") as? String ?? ""
+//                                    
+//                                    if !leftColon.isEmpty || !middleColon.isEmpty || !rightColon.isEmpty {
+//                                        descriptor = "Endoscopy Colon"
+//                                    } else if !duodenum.isEmpty {
+//                                        descriptor = "Endoscopy Duodenum"
+//                                    } else if !stomach.isEmpty {
+//                                        descriptor = "Endoscopy Stomach"
+//                                    } else {
+//                                        descriptor = "Endoscopy EoE"
+//                                    }
+//
+//                case "Allergies":
+//                    let startDate = $0.value(forKey: "startDate") as? Date
+//                    let endDate = $0.value(forKey: "endDate") as? Date
+//                    let start = startDate != nil ? formatter.string(from: startDate!) : "N/A"
+//                    let end = endDate != nil ? formatter.string(from: endDate!) : "N/A"
+//                    dateString = "Start: \(start), End: \(end)"
+//                    descriptor = $0.value(forKey: "name") as? String ?? "Unknown Allergen"
+//
+//                case "Medication":
+//                    let startDate = $0.value(forKey: "startDate") as? Date
+//                    let endDate = $0.value(forKey: "endDate") as? Date
+//                    let start = startDate != nil ? formatter.string(from: startDate!) : "N/A"
+//                    let end = endDate != nil ? formatter.string(from: endDate!) : "N/A"
+//                    dateString = "Start: \(start), End: \(end)"
+//                    descriptor = $0.value(forKey: "medName") as? String ?? "Unknown Medication"
+//
+//                case "Accidental Exposure":
+//                    if let exposureDate = $0.value(forKey: "date") as? Date {
+//                        dateString = formatter.string(from: exposureDate)
+//                    }
+//                    descriptor = $0.value(forKey: "item") as? String ?? "Unknown Substance"
+//
+//                default:
+//                    break
+//                }
+//
+//                return (dateString, descriptor)
+//            }
+//            tableView.reloadData()
+//        } catch {
+//            print("Error fetching \(category) data: \(error)")
+//        }
+//    }
+    func fetchData(for category: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let context = appDelegate.persistentContainer.viewContext
+
+        var fetchRequest: NSFetchRequest<NSManagedObject>?
+
+        switch category {
+        case "Endoscopy":
+            fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Endoscopy")
+        case "Allergies":
+            fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Allergies")
+        case "Medication":
+            fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Medication")
+        case "Accidental Exposure":
+            fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "AccidentalExposure")
+        default:
+            return
+        }
+
+        // Apply correct predicates based on entity type
+        let userPredicate = NSPredicate(format: "username == %@", user)
+        var childPredicate: NSPredicate?
+
+        switch category {
+        case "Endoscopy", "Medication":
+            
+            childPredicate = NSPredicate(format: "childName == %@", childName)
+        case "Allergies", "Accidental Exposure":
+            childPredicate = NSPredicate(format: "childname == %@", childName) // Lowercase "childname"
+        default:
+            break
+        }
+
+        if let childPredicate = childPredicate {
+            fetchRequest?.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [userPredicate, childPredicate])
+        } else {
+            fetchRequest?.predicate = userPredicate
+        }
+
+        do {
+            let results = try context.fetch(fetchRequest!)
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+
+            tableViewData = results.map {
+                var dateString = "N/A"
+                var descriptor = "N/A"
+
+                switch category {
+                case "Endoscopy":
+                    if let procedureDate = $0.value(forKey: "procedureDate") as? Date {
+                        dateString = formatter.string(from: procedureDate)
+                    }
+
+                    let duodenum = $0.value(forKey: "duodenum") as? String ?? ""
+                    let stomach = $0.value(forKey: "stomach") as? String ?? ""
+                    let leftColon = $0.value(forKey: "leftColon") as? String ?? ""
+                    let middleColon = $0.value(forKey: "middleColon") as? String ?? ""
+                    let rightColon = $0.value(forKey: "rightColon") as? String ?? ""
+
+                    if !leftColon.isEmpty || !middleColon.isEmpty || !rightColon.isEmpty {
+                        descriptor = "Endoscopy Colon"
+                    } else if !duodenum.isEmpty {
+                        descriptor = "Endoscopy Duodenum"
+                    } else if !stomach.isEmpty {
+                        descriptor = "Endoscopy Stomach"
+                    } else {
+                        descriptor = "Endoscopy EoE"
+                    }
+
+                case "Allergies":
+                    let startDate = $0.value(forKey: "startdate") as? Date
+                    let endDate = $0.value(forKey: "enddate") as? Date
+                    let start = startDate != nil ? formatter.string(from: startDate!) : "N/A"
+                    let end = endDate != nil ? formatter.string(from: endDate!) : "N/A"
+                    dateString = "Start: \(start), End: \(end)"
+                    descriptor = $0.value(forKey: "name") as? String ?? "Unknown Allergen"
+
+                case "Medication":
+                    let startDate = $0.value(forKey: "startdate") as? Date
+                    let endDate = $0.value(forKey: "enddate") as? Date
+                    let start = startDate != nil ? formatter.string(from: startDate!) : "N/A"
+                    let end = endDate != nil ? formatter.string(from: endDate!) : "N/A"
+                    dateString = "Start: \(start), End: \(end)"
+                    descriptor = $0.value(forKey: "medName") as? String ?? "Unknown Medication"
+
+                case "Accidental Exposure":
+                    if let exposureDate = $0.value(forKey: "date") as? Date {
+                        dateString = formatter.string(from: exposureDate)
+                    }
+                    descriptor = $0.value(forKey: "item") as? String ?? "Unknown Substance"
+
+                default:
+                    break
+                }
+
+                return (dateString, descriptor)
+            }
+            tableView.reloadData()
+        } catch {
+            print("Error fetching \(category) data: \(error)")
+        }
+    }
+
+    // MARK: - UITableView DataSource & Delegate
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableViewData.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath)
+        let entry = tableViewData[indexPath.row]
+
+        cell.textLabel?.text = "Date: \(entry.date) | Info: \(entry.descriptor)"
+        cell.textLabel?.numberOfLines = 0
+
+        return cell
+    }
 }

@@ -259,7 +259,19 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         saveEndoscopyResults()
+        
+        // Perform the segue to the next screen and pass data
+//        performSegue(withIdentifier: "showResults", sender: self)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResults" {
+            if let resultsVC = segue.destination as? EndoscopyResultsViewController {
+                resultsVC.user = user
+                resultsVC.childName = childName
+            }
+        }
+    }
+
     //CORE DATA SAVE
     func saveEndoscopyResults() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -271,7 +283,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
         newEndoscopyResult.setValue(childName, forKey: "childName")
         newEndoscopyResult.setValue(user, forKey: "user")
         newEndoscopyResult.setValue(procedureDatePicker.date, forKey: "procedureDate")
-        newEndoscopyResult.setValue(Int(proximateTextField.text ?? "0"), forKey: "proximate")
+        newEndoscopyResult.setValue(Int(proximateTextField.text ?? "0"), forKey: "upper")
         newEndoscopyResult.setValue(Int(middleTextField.text ?? "0"), forKey: "middle")
         newEndoscopyResult.setValue(Int(lowerTextField.text ?? "0"), forKey: "lower")
         newEndoscopyResult.setValue(Int(stomachTextField.text ?? "0"), forKey: "stomach")

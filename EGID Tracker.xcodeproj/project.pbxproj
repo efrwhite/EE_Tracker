@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16295E352D8617D70020B3A9 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 16295E342D8617D70020B3A9 /* DGCharts */; };
 		1D6E2B8493F0F8EC7166E30D /* Pods_Testing_Ground_Testing_GroundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A706EB30345EC5DB39F7AD04 /* Pods_Testing_Ground_Testing_GroundUITests.framework */; };
 		38B773612C463A54008BDEA6 /* QualityResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B773602C463A54008BDEA6 /* QualityResultViewController.swift */; };
 		8A0BEFE12C7595B800296FEC /* AllergenCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BEFE02C7595B800296FEC /* AllergenCellTableViewCell.swift */; };
@@ -236,6 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16295E352D8617D70020B3A9 /* DGCharts in Frameworks */,
 				D7C9C89D9745B1C413D5252C /* Pods_Testing_Ground.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +522,9 @@
 				Base,
 			);
 			mainGroup = A40988752A1BF9CC0041BBC7;
+			packageReferences = (
+				16295E332D8617D70020B3A9 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = A409887F2A1BF9CC0041BBC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -930,7 +935,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = G9Z6TQ3GHH;
+				DEVELOPMENT_TEAM = AJ84Q69AHZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Testing_Ground/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos of documents and upload.";
@@ -962,7 +967,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = G9Z6TQ3GHH;
+				DEVELOPMENT_TEAM = AJ84Q69AHZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Testing_Ground/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos of documents and upload.";
@@ -1106,6 +1111,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16295E332D8617D70020B3A9 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16295E342D8617D70020B3A9 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16295E332D8617D70020B3A9 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A409888A2A1BF9CC0041BBC7 /* Testing_Ground.xcdatamodeld */ = {

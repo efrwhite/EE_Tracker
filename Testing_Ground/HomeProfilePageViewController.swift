@@ -76,6 +76,124 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         }
         return 0
     }
+    
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if tableView == self.tableView {
+//            selectedChild = childProfiles[indexPath.row]
+//            
+//            // Print the selected child's name to the debug console
+//            if let child = selectedChild, let childName = child.firstName {
+//                print("Selected Child: \(childName)")
+//            }
+//            
+//            // Reload the table view to apply the new selection style
+//            tableView.reloadData()
+//            
+//            // Show a popup message with the selected child's name
+//            if let child = selectedChild, let childName = child.firstName {
+//                let alertController = UIAlertController(
+//                    title: "Main Patient Selection",
+//                    message: "\(childName) is chosen as the Active Patient.",
+//                    preferredStyle: .alert
+//                )
+//                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                present(alertController, animated: true, completion: nil)
+//            }
+//        }
+//    }
+
+  
+
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if tableView == self.tableView {
+//            selectedChild = childProfiles[indexPath.row]
+//            
+//            // Print the selected child's name to the debug console
+//            if let child = selectedChild, let childName = child.firstName {
+//                print("Selected Child: \(childName)")
+//                //this is where we fire off the childname segue
+//            }
+//            
+//            // Reload the table view to apply the new selection style
+//            tableView.reloadData()
+//            
+//            // Show a popup message with the selected child's name
+//            if let child = selectedChild, let childName = child.firstName {
+//                let alertController = UIAlertController(title: "Main Patient Selection", message: "\(childName) is chosen as the Active Patient.", preferredStyle: .alert)
+//                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                present(alertController, animated: true, completion: nil)
+//            }
+//        }
+//    }
+//
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if tableView == self.tableView {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: TableviewOne, for: indexPath) as! ProfilesTableviewcell
+//            let childProfile = childProfiles[indexPath.row]
+//            
+//            cell.namelabel.text = childProfile.firstName // Update the label using your IBOutlet
+//            
+//            // Check if the current child profile is the selected one
+//            if childProfile == selectedChild {
+//                // Highlight the cell if it's the selected child
+//                cell.backgroundColor = .lightGray
+//            } else {
+//                // Reset the cell's appearance for unselected children
+//                cell.backgroundColor = .white
+//            }
+//            
+//            cell.editbutton.tag = indexPath.row
+//            cell.editbutton.addTarget(self, action: #selector(editButtonPressed(_:)), for: .touchUpInside)
+//            
+//            return cell
+//        } else if tableView == self.tableView2 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: TableviewTwo, for: indexPath) as! ParentTableViewCell
+//            let parentProfile = parentProfiles[indexPath.row]
+//            
+//            cell.parentname.text = parentProfile.firstname // Update the label using your IBOutlet
+//            
+//            cell.editbutton.tag = indexPath.row
+//            cell.editbutton.addTarget(self, action: #selector(editParentButtonPressed(_:)), for: .touchUpInside)
+//            
+//            return cell
+//        }
+//        
+//        // This should not happen, return an empty cell if it does
+//        return UITableViewCell()
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 40  // Adjust the height to add space above the header
+//    }
+
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
+//
+//        let label = UILabel(frame: CGRect(x: 15, y: 10, width: tableView.frame.size.width - 30, height: 20))
+//
+//        if tableView == self.tableView {
+//            label.text = "Patient"
+//        } else if tableView == self.tableView2 {
+//            label.text = "Caregiver"
+//        }
+//
+//        headerView.backgroundColor = UIColor.white
+//        label.textColor = UIColor.black
+//        label.font = UIFont.boldSystemFont(ofSize: 18)
+//        headerView.addSubview(label)
+//
+//        let addButton = UIButton(type: .system)
+//        addButton.setTitle("Add", for: .normal)
+//        addButton.frame = CGRect(x: tableView.frame.size.width - 75, y: 10, width: 40, height: 20)
+//        addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchUpInside)
+//        addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18) // Change font and size
+//        headerView.addSubview(addButton)
+//
+//        return headerView
+//    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == self.tableView {
             selectedChild = childProfiles[indexPath.row]
@@ -83,7 +201,7 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
             // Print the selected child's name to the debug console
             if let child = selectedChild, let childName = child.firstName {
                 print("Selected Child: \(childName)")
-                //this is where we fire off the childname segue
+                // This is where we fire off the child name segue
             }
             
             // Reload the table view to apply the new selection style
@@ -91,28 +209,27 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
             
             // Show a popup message with the selected child's name
             if let child = selectedChild, let childName = child.firstName {
-                let alertController = UIAlertController(title: "Main Patient Selection", message: "\(childName) is chosen as the Active Patient.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Main Patient Selection",
+                                                        message: "\(childName) is chosen as the Active Patient.",
+                                                        preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 present(alertController, animated: true, completion: nil)
             }
         }
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == self.tableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableviewOne, for: indexPath) as! ProfilesTableviewcell
             let childProfile = childProfiles[indexPath.row]
             
-            cell.namelabel.text = childProfile.firstName // Update the label using your IBOutlet
+            cell.namelabel.text = childProfile.firstName // Update the label using IBOutlet
             
             // Check if the current child profile is the selected one
             if childProfile == selectedChild {
-                // Highlight the cell if it's the selected child
-                cell.backgroundColor = .lightGray
+                cell.backgroundColor = .lightGray // Highlight selection
             } else {
-                // Reset the cell's appearance for unselected children
-                cell.backgroundColor = .white
+                cell.backgroundColor = .white // Default color
             }
             
             cell.editbutton.tag = indexPath.row
@@ -123,7 +240,7 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
             let cell = tableView.dequeueReusableCell(withIdentifier: TableviewTwo, for: indexPath) as! ParentTableViewCell
             let parentProfile = parentProfiles[indexPath.row]
             
-            cell.parentname.text = parentProfile.firstname // Update the label using your IBOutlet
+            cell.parentname.text = parentProfile.firstname // Update the label
             
             cell.editbutton.tag = indexPath.row
             cell.editbutton.addTarget(self, action: #selector(editParentButtonPressed(_:)), for: .touchUpInside)
@@ -136,35 +253,75 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40  // Adjust the height to add space above the header
+        return 50  // Adjust the height to add space above the header
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
+        headerView.backgroundColor = UIColor.white
 
         let label = UILabel(frame: CGRect(x: 15, y: 10, width: tableView.frame.size.width - 30, height: 20))
-
-        if tableView == self.tableView {
-            label.text = "Patient"
-        } else if tableView == self.tableView2 {
-            label.text = "Caregiver"
-        }
-
-        headerView.backgroundColor = UIColor.white
         label.textColor = UIColor.black
         label.font = UIFont.boldSystemFont(ofSize: 18)
-        headerView.addSubview(label)
 
-        let addButton = UIButton(type: .system)
-        addButton.setTitle("Add", for: .normal)
-        addButton.frame = CGRect(x: tableView.frame.size.width - 75, y: 10, width: 40, height: 20)
-        addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchUpInside)
-        addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18) // Change font and size
-        headerView.addSubview(addButton)
+        // First Section: "Please select a patient"
+        if section == 0 {
+            label.text = "Please select a patient"
+            headerView.addSubview(label)
+            return headerView
+        }
+
+        // Second Section: "Patients" + Add Button
+        if section == 1 && tableView == self.tableView {
+            label.text = "Patients"
+            headerView.addSubview(label)
+
+            let addButton = UIButton(type: .system)
+            addButton.setTitle("Add", for: .normal)
+            addButton.frame = CGRect(x: tableView.frame.size.width - 75, y: 10, width: 40, height: 20)
+            addButton.addTarget(self, action: #selector(addChildButtonPressed), for: .touchUpInside)
+            addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+            headerView.addSubview(addButton)
+            
+            return headerView
+        }
+
+        // Third Section: "Caregivers" + Add Button
+        if section == 1 && tableView == self.tableView2 {
+            label.text = "Caregivers"
+            headerView.addSubview(label)
+
+            let addButton = UIButton(type: .system)
+            addButton.setTitle("Add", for: .normal)
+            addButton.frame = CGRect(x: tableView.frame.size.width - 75, y: 10, width: 40, height: 20)
+            addButton.addTarget(self, action: #selector(addParentButtonPressed), for: .touchUpInside)
+            addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+            headerView.addSubview(addButton)
+
+            return headerView
+        }
 
         return headerView
     }
 
+
+
+    // MARK: - Add Button Actions
+    @objc func addChildButtonPressed() {
+        let childViewController = storyboard?.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
+        childViewController.isAddingChild = true
+        childViewController.user = user
+        navigationController?.pushViewController(childViewController, animated: true)
+    }
+
+    @objc func addParentButtonPressed() {
+        let parentViewController = storyboard?.instantiateViewController(withIdentifier: "ParentViewController") as! ParentViewController
+        parentViewController.isAddingParent = true
+        parentViewController.user = user
+        navigationController?.pushViewController(parentViewController, animated: true)
+    }
+
+    // MARK: - End of new functionality
     @objc func addButtonPressed(_ sender: UIButton) {
         // Determine which table view's "Add" button was pressed
         if let tableView = sender.superview?.superview as? UITableView {

@@ -67,7 +67,7 @@
         <attribute name="medunits" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="startdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="userName" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Parent" representedClassName="Parent" syncable="YES" codeGenerationType="class">
         <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -80,15 +80,20 @@
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Quality" representedClassName="Quality" syncable="YES" codeGenerationType="class">
+        <attribute name="childName" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="qualitySum" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="question" optional="YES" attributeType="String"/>
-        <attribute name="response" optional="YES" attributeType="String"/>
+        <attribute name="response" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="user" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Symptom" representedClassName="Symptom" syncable="YES" codeGenerationType="class">
+        <attribute name="childName" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="question" optional="YES" attributeType="String"/>
         <attribute name="response" optional="YES" attributeType="String"/>
         <attribute name="symptomSum" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="user" optional="YES" attributeType="String"/>
+        <attribute name="yesnoquestion" optional="YES" attributeType="String"/>
     </entity>
 </model>
