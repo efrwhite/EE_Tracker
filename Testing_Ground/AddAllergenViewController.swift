@@ -225,18 +225,45 @@ class AddAllergenViewController: UIViewController, UITextFieldDelegate, UITableV
 
     
     // MARK: - Button Actions
+//    @objc func editButtonTapped(sender: UIButton) {
+//        var selectedAllergen: String?
+//        
+//        if let cell = sender.superview?.superview as? AllergenCell,
+//           let indexPath = currentAllergenTableView.indexPath(for: cell) {
+//            selectedAllergen = currentIgEAllergens[indexPath.row].name
+//        } else if let cell = sender.superview?.superview as? AllergenCell,
+//                  let indexPath = discontinuedAllergenTableView.indexPath(for: cell) {
+//            selectedAllergen = clearedIgEAllergens[indexPath.row].name
+//        }
+//        
+//        performSegue(withIdentifier: "addAllergenSegue", sender: (true, selectedAllergen))
+//    }
     @objc func editButtonTapped(sender: UIButton) {
         var selectedAllergen: String?
-        
-        if let cell = sender.superview?.superview as? AllergenCell,
-           let indexPath = currentAllergenTableView.indexPath(for: cell) {
-            selectedAllergen = currentIgEAllergens[indexPath.row].name
-        } else if let cell = sender.superview?.superview as? AllergenCell,
-                  let indexPath = discontinuedAllergenTableView.indexPath(for: cell) {
-            selectedAllergen = clearedIgEAllergens[indexPath.row].name
+
+        // Determine which tableView the cell belongs to
+        if let cell = sender.superview?.superview as? AllergenCell {
+            
+            if let indexPath = currentAllergenTableView.indexPath(for: cell) {
+                if indexPath.row < currentIgEAllergens.count {
+                    selectedAllergen = currentIgEAllergens[indexPath.row].name
+                } else {
+                    let adjustedIndex = indexPath.row - currentIgEAllergens.count
+                    selectedAllergen = currentNonIgEAllergens[adjustedIndex].name
+                }
+            } else if let indexPath = discontinuedAllergenTableView.indexPath(for: cell) {
+                if indexPath.row < clearedIgEAllergens.count {
+                    selectedAllergen = clearedIgEAllergens[indexPath.row].name
+                } else {
+                    let adjustedIndex = indexPath.row - clearedIgEAllergens.count
+                    selectedAllergen = clearedNonIgEAllergens[adjustedIndex].name
+                }
+            }
         }
-        
-        performSegue(withIdentifier: "addAllergenSegue", sender: (true, selectedAllergen))
+
+        if let name = selectedAllergen {
+            performSegue(withIdentifier: "addAllergenSegue", sender: (true, name))
+        }
     }
 
     // MARK: - Add Allergen Button Action

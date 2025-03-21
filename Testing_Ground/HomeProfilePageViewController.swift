@@ -67,15 +67,17 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         tableView.reloadData()
         tableView2.reloadData()
     }
+   
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == self.tableView {
-            return childProfiles.count
-        } else if tableView == self.tableView2 {
-            return parentProfiles.count
-        }
-        return 0
-    }
+
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if tableView == self.tableView {
+//            return childProfiles.count
+//        } else if tableView == self.tableView2 {
+//            return parentProfiles.count
+//        }
+//        return 0
+//    }
     
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -193,6 +195,14 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
 //
 //        return headerView
 //    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if tableView == self.tableView {
+            return 2 // [0: "Please select", 1: Patient List]
+        } else if tableView == self.tableView2 {
+            return 1 // [0: Caregiver List]
+        }
+        return 0
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == self.tableView {
@@ -218,91 +228,186 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         }
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == self.tableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: TableviewOne, for: indexPath) as! ProfilesTableviewcell
-            let childProfile = childProfiles[indexPath.row]
-            
-            cell.namelabel.text = childProfile.firstName // Update the label using IBOutlet
-            
-            // Check if the current child profile is the selected one
-            if childProfile == selectedChild {
-                cell.backgroundColor = .lightGray // Highlight selection
-            } else {
-                cell.backgroundColor = .white // Default color
-            }
-            
-            cell.editbutton.tag = indexPath.row
-            cell.editbutton.addTarget(self, action: #selector(editButtonPressed(_:)), for: .touchUpInside)
-            
-            return cell
-        } else if tableView == self.tableView2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: TableviewTwo, for: indexPath) as! ParentTableViewCell
-            let parentProfile = parentProfiles[indexPath.row]
-            
-            cell.parentname.text = parentProfile.firstname // Update the label
-            
-            cell.editbutton.tag = indexPath.row
-            cell.editbutton.addTarget(self, action: #selector(editParentButtonPressed(_:)), for: .touchUpInside)
-            
-            return cell
-        }
-        
-        // This should not happen, return an empty cell if it does
-        return UITableViewCell()
-    }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if tableView == self.tableView {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: TableviewOne, for: indexPath) as! ProfilesTableviewcell
+//            let childProfile = childProfiles[indexPath.row]
+//            
+//            cell.namelabel.text = childProfile.firstName // Update the label using IBOutlet
+//            
+//            // Check if the current child profile is the selected one
+//            if childProfile == selectedChild {
+//                cell.backgroundColor = .lightGray // Highlight selection
+//            } else {
+//                cell.backgroundColor = .white // Default color
+//            }
+//            
+//            cell.editbutton.tag = indexPath.row
+//            cell.editbutton.addTarget(self, action: #selector(editButtonPressed(_:)), for: .touchUpInside)
+//            
+//            return cell
+//        } else if tableView == self.tableView2 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: TableviewTwo, for: indexPath) as! ParentTableViewCell
+//            let parentProfile = parentProfiles[indexPath.row]
+//            
+//            cell.parentname.text = parentProfile.firstname // Update the label
+//            
+//            cell.editbutton.tag = indexPath.row
+//            cell.editbutton.addTarget(self, action: #selector(editParentButtonPressed(_:)), for: .touchUpInside)
+//            
+//            
+//            return cell
+//        }
+//        
+//        // This should not happen, return an empty cell if it does
+//        return UITableViewCell()
+//    }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50  // Adjust the height to add space above the header
     }
-
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
-        headerView.backgroundColor = UIColor.white
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
+        headerView.backgroundColor = .white
 
-        let label = UILabel(frame: CGRect(x: 15, y: 10, width: tableView.frame.size.width - 30, height: 20))
-        label.textColor = UIColor.black
+        let label = UILabel(frame: CGRect(x: 15, y: 10, width: 200, height: 20))
         label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textColor = .black
+        headerView.addSubview(label)
 
-        // First Section: "Please select a patient"
-        if section == 0 {
-            label.text = "Please select a patient"
-            headerView.addSubview(label)
-            return headerView
+        let addButton = UIButton(type: .system)
+        addButton.setTitle("Add", for: .normal)
+        addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        addButton.frame = CGRect(x: tableView.frame.width - 60, y: 5, width: 50, height: 30)
+
+        if tableView == self.tableView {
+            if section == 0 {
+                label.text = "Please select a patient"
+            } else if section == 1 {
+                label.text = "Patient"
+                addButton.addTarget(self, action: #selector(addChildButtonPressed), for: .touchUpInside)
+                headerView.addSubview(addButton)
+            }
         }
 
-        // Second Section: "Patients" + Add Button
-        if section == 1 && tableView == self.tableView {
-            label.text = "Patients"
-            headerView.addSubview(label)
-
-            let addButton = UIButton(type: .system)
-            addButton.setTitle("Add", for: .normal)
-            addButton.frame = CGRect(x: tableView.frame.size.width - 75, y: 10, width: 40, height: 20)
-            addButton.addTarget(self, action: #selector(addChildButtonPressed), for: .touchUpInside)
-            addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-            headerView.addSubview(addButton)
-            
-            return headerView
-        }
-
-        // Third Section: "Caregivers" + Add Button
-        if section == 1 && tableView == self.tableView2 {
-            label.text = "Caregivers"
-            headerView.addSubview(label)
-
-            let addButton = UIButton(type: .system)
-            addButton.setTitle("Add", for: .normal)
-            addButton.frame = CGRect(x: tableView.frame.size.width - 75, y: 10, width: 40, height: 20)
-            addButton.addTarget(self, action: #selector(addParentButtonPressed), for: .touchUpInside)
-            addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-            headerView.addSubview(addButton)
-
-            return headerView
+        if tableView == self.tableView2 {
+            if section == 0 {
+                label.text = "Caregiver"
+                addButton.addTarget(self, action: #selector(addParentButtonPressed), for: .touchUpInside)
+                headerView.addSubview(addButton)
+            }
         }
 
         return headerView
     }
+
+
+  
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        switch indexPath.section {
+//        case 1: // children
+//            let cell = tableView.dequeueReusableCell(withIdentifier: TableviewOne, for: indexPath) as! ProfilesTableviewcell
+//            let child = childProfiles[indexPath.row]
+//            cell.namelabel.text = child.firstName
+//            cell.editbutton.tag = indexPath.row
+//            cell.editbutton.addTarget(self, action: #selector(editButtonPressed(_:)), for: .touchUpInside)
+//            return cell
+//        case 2: // parents
+//            let cell = tableView.dequeueReusableCell(withIdentifier: TableviewTwo, for: indexPath) as! ParentTableViewCell
+//            let parent = parentProfiles[indexPath.row]
+//            cell.parentname.text = parent.firstname
+//            cell.editbutton.tag = indexPath.row
+//            cell.editbutton.addTarget(self, action: #selector(editParentButtonPressed(_:)), for: .touchUpInside)
+//            return cell
+//        default:
+//            return UITableViewCell()
+//        }
+//    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if tableView == self.tableView {
+            // For child/patient tableView
+            if indexPath.section == 1 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: TableviewOne, for: indexPath) as! ProfilesTableviewcell
+                let childProfile = childProfiles[indexPath.row]
+                cell.namelabel.text = childProfile.firstName
+                cell.editbutton.tag = indexPath.row
+                cell.editbutton.addTarget(self, action: #selector(editButtonPressed(_:)), for: .touchUpInside)
+                return cell
+            }
+        } else if tableView == self.tableView2 {
+            // For caregiver tableView2
+            if indexPath.section == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: TableviewTwo, for: indexPath) as! ParentTableViewCell
+                let parentProfile = parentProfiles[indexPath.row]
+                cell.parentname.text = parentProfile.firstname // ✅ Make sure this IBOutlet exists in your XIB
+                cell.editbutton.tag = indexPath.row
+                cell.editbutton.addTarget(self, action: #selector(editParentButtonPressed(_:)), for: .touchUpInside)
+                return cell
+            }
+        }
+
+        return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == self.tableView {
+            return section == 1 ? childProfiles.count : 0
+        } else if tableView == self.tableView2 {
+            return section == 0 ? parentProfiles.count : 0
+        }
+        return 0
+    }
+
+
+    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
+//        headerView.backgroundColor = UIColor.white
+//
+//        let label = UILabel(frame: CGRect(x: 15, y: 10, width: tableView.frame.size.width - 30, height: 20))
+//        label.textColor = UIColor.black
+//        label.font = UIFont.boldSystemFont(ofSize: 18)
+//
+//        // First Section: "Please select a patient"
+//        if section == 0 {
+//            label.text = "Please select a patient"
+//            headerView.addSubview(label)
+//            return headerView
+//        }
+//
+//        // Second Section: "Patients" + Add Button + edit button
+//        if section == 1 && tableView == self.tableView {
+//            label.text = "Patients"
+//            headerView.addSubview(label)
+//
+//            let addButton = UIButton(type: .system)
+//            addButton.setTitle("Add", for: .normal)
+//            addButton.frame = CGRect(x: tableView.frame.size.width - 75, y: 10, width: 40, height: 20)
+//            addButton.addTarget(self, action: #selector(addChildButtonPressed), for: .touchUpInside)
+//            addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+//            headerView.addSubview(addButton)
+//            
+//            return headerView
+//        }
+//
+//        // Third Section: "Caregivers" + Add Button + edit button
+//        if section == 1 && tableView == self.tableView2 {
+//            label.text = "Caregivers"
+//            headerView.addSubview(label)
+//
+//            let addButton = UIButton(type: .system)
+//            addButton.setTitle("Add", for: .normal)
+//            addButton.frame = CGRect(x: tableView.frame.size.width - 75, y: 10, width: 40, height: 20)
+//            addButton.addTarget(self, action: #selector(addParentButtonPressed), for: .touchUpInside)
+//            addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+//            headerView.addSubview(addButton)
+//
+//            return headerView
+//        }
+//
+//        return headerView
+//    }
 
 
 
