@@ -98,6 +98,13 @@ class YourPlanViewController: UIViewController {
         // Perform the segue based on the diet type
         switch diettype {
         
+        case "No Diet Plan":
+            if let diet1 = storyboard!.instantiateViewController(withIdentifier: "NoDietPlan") as? nodietplanviewcontroller {
+                diet1.user = self.user
+                diet1.childName = childName
+                self.navigationController?.pushViewController(diet1, animated: true)
+                
+            }
         case "Diet 1":
             if let diet1 = storyboard!.instantiateViewController(withIdentifier: "Diet1ViewController TEST") as? Diet1TestViewController {
                 diet1.user = self.user

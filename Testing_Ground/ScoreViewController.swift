@@ -366,9 +366,15 @@ class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
 
             // Apply Date Range Filter
-            let startDate = startDatePicker.date
-            let endDate = endDatePicker.date
+            var startDate = startDatePicker.date
+            var endDate = endDatePicker.date
+            let calendar = Calendar.current
 
+            // If start and end are the same day and user hasn't adjusted time range,
+            // expand window back by 1 hour so entries for today can still appear.
+            if calendar.isDate(startDate, inSameDayAs: endDate) {
+                startDate = calendar.date(byAdding: .hour, value: -1, to: Date()) ?? startDate
+            }
             filteredEntries = symptomSumScores.filter { $0.date >= startDate && $0.date <= endDate }
 
             DispatchQueue.main.async {

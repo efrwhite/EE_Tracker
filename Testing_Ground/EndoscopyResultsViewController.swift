@@ -66,8 +66,17 @@ class EndoscopyResultsViewController: UIViewController, UIPickerViewDelegate, UI
         
         startDatePicker.addTarget(self, action: #selector(dateRangeChanged), for: .valueChanged)
         endDatePicker.addTarget(self, action: #selector(dateRangeChanged), for: .valueChanged)
+        // Apply Date Range Filter
+        var startDate = startDatePicker.date
+        var endDate = endDatePicker.date
+        let calendar = Calendar.current
+        // If start and end are the same day and user hasn't adjusted time range,
+        // expand window back by 1 hour so entries for today can still appear.
+        if calendar.isDate(startDate, inSameDayAs: endDate) {
+            startDate = calendar.date(byAdding: .hour, value: -1, to: Date()) ?? startDate
+        }
         
-        fetchEndoscopyResults(startDate: startDatePicker.date, endDate: endDatePicker.date, category: selectedCategory)
+        fetchEndoscopyResults(startDate: startDate, endDate: endDate, category: selectedCategory)
     }
 
 //    func setupUI() {
@@ -214,6 +223,15 @@ class EndoscopyResultsViewController: UIViewController, UIPickerViewDelegate, UI
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Endoscopy")
+        // Apply Date Range Filter
+//        var startDate = startDatePicker.date
+//        var endDate = endDatePicker.date
+//        let calendar = Calendar.current
+//        // If start and end are the same day and user hasn't adjusted time range,
+//        // expand window back by 1 hour so entries for today can still appear.
+//        if calendar.isDate(startDate, inSameDayAs: endDate) {
+//            startDate = calendar.date(byAdding: .hour, value: -1, to: Date()) ?? startDate
+//        }
         
         let predicate = NSPredicate(
             format: "user == %@ AND childName == %@ AND procedureDate >= %@ AND procedureDate <= %@",
@@ -395,10 +413,10 @@ class EndoscopyResultsViewController: UIViewController, UIPickerViewDelegate, UI
         middleDataSet.drawValuesEnabled = true
 
         let lowerDataSet = LineChartDataSet(entries: lowerData, label: "Lower/Left")
-        lowerDataSet.colors = [.yellow]
-        lowerDataSet.circleColors = [.yellow]
+        lowerDataSet.colors = [.blue]
+        lowerDataSet.circleColors = [.blue]
         lowerDataSet.circleRadius = 4
-        lowerDataSet.valueColors = [.yellow]
+        lowerDataSet.valueColors = [.blue]
         lowerDataSet.valueFont = .systemFont(ofSize: 10)
         lowerDataSet.drawValuesEnabled = true
 

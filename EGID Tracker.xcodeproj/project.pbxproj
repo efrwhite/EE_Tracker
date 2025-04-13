@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160EDD532DAA0D9D00D894D7 /* nodietplanviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160EDD522DAA0D9D00D894D7 /* nodietplanviewcontroller.swift */; };
 		16295E352D8617D70020B3A9 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 16295E342D8617D70020B3A9 /* DGCharts */; };
 		1D6E2B8493F0F8EC7166E30D /* Pods_Testing_Ground_Testing_GroundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A706EB30345EC5DB39F7AD04 /* Pods_Testing_Ground_Testing_GroundUITests.framework */; };
 		38B773612C463A54008BDEA6 /* QualityResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B773602C463A54008BDEA6 /* QualityResultViewController.swift */; };
@@ -125,6 +126,7 @@
 
 /* Begin PBXFileReference section */
 		0260ADB4CF7C595059D805CD /* Pods_Testing_GroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Testing_GroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		160EDD522DAA0D9D00D894D7 /* nodietplanviewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nodietplanviewcontroller.swift; sourceTree = "<group>"; };
 		1B165DC99C375B27179EB896 /* Pods-Testing_Ground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testing_Ground.debug.xcconfig"; path = "Target Support Files/Pods-Testing_Ground/Pods-Testing_Ground.debug.xcconfig"; sourceTree = "<group>"; };
 		2CE6E13A99125041F842A20E /* Pods-Testing_GroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testing_GroundTests.debug.xcconfig"; path = "Target Support Files/Pods-Testing_GroundTests/Pods-Testing_GroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38B773602C463A54008BDEA6 /* QualityResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityResultViewController.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				8A3D42392B68026B0013EFE5 /* AddDocumentsViewController.swift */,
 				8A58A1632B7FD98900CC2D44 /* EditDocumentsViewController.swift */,
 				8A5108892B6BF127008206A3 /* Diet1BadViewController.swift */,
+				160EDD522DAA0D9D00D894D7 /* nodietplanviewcontroller.swift */,
 				8A5108872B6BF0FF008206A3 /* Diet1GoodViewController.swift */,
 				8A51088B2B6BF19E008206A3 /* Diet1ViewController.swift */,
 				8A51088D2B6BFD9F008206A3 /* Diet2BadViewController.swift */,
@@ -752,6 +755,7 @@
 				8A5108A42B6C0723008206A3 /* Diet6BadViewController.swift in Sources */,
 				A40988842A1BF9CC0041BBC7 /* SceneDelegate.swift in Sources */,
 				38B773612C463A54008BDEA6 /* QualityResultViewController.swift in Sources */,
+				160EDD532DAA0D9D00D894D7 /* nodietplanviewcontroller.swift in Sources */,
 				A409888C2A1BF9CC0041BBC7 /* Testing_Ground.xcdatamodeld in Sources */,
 				A40883932AD1E0BA006F3871 /* ProfilesTableviewcell.swift in Sources */,
 				A492679D2AB8DB2700D0AD4C /* ParentViewController.swift in Sources */,

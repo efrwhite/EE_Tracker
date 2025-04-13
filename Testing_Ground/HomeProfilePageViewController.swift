@@ -432,7 +432,7 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         if let tableView = sender.superview?.superview as? UITableView {
             if tableView == self.tableView {
                 // Handle the "Add" button press for the child table view
-                let childViewController = storyboard?.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
+                let childViewController = storyboard?.instantiateViewController(withIdentifier: "Patient Profile") as! ChildViewController
                 childViewController.isAddingChild = true
                 childViewController.user = user // Set the user property here
                 navigationController?.pushViewController(childViewController, animated: true)
@@ -450,7 +450,7 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         let indexPath = IndexPath(row: sender.tag, section: 0)
         
         if let childProfile = childProfiles[safe: indexPath.row] {
-            let childViewController = storyboard?.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
+            let childViewController = storyboard?.instantiateViewController(withIdentifier: "Patient Profile") as! ChildViewController
             childViewController.isEditingChild = true
             childViewController.childName = childProfile.firstName ?? "Default Child Name"
             childViewController.user = user
