@@ -266,7 +266,7 @@ class ParentViewController: UIViewController, UITextFieldDelegate {
     }
     func navigateToChildViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let childVC = storyboard.instantiateViewController(withIdentifier: "ChildViewController") as? ChildViewController {
+        if let childVC = storyboard.instantiateViewController(withIdentifier: "Patient Profile") as? ChildViewController {
             childVC.user = self.user
             self.navigationController?.pushViewController(childVC, animated: true)
         }

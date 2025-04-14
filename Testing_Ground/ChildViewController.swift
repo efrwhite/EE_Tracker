@@ -56,10 +56,11 @@ class ChildViewController: UIViewController,UITextFieldDelegate  {
         ])
         let optional2 = { (action: UIAction) in print(action.title) }
         diettype.menu = UIMenu(children:[
-            UIAction(title: "Diet 1", state: .on, handler: optional2),
+            UIAction(title: "No Diet Plan", state: .on, handler: optional2),
+            UIAction(title: "Diet 1", handler: optional2),
             UIAction(title: "Diet 2", handler: optional2),
             UIAction(title: "Diet 4", handler: optional2),
-            UIAction(title: "Diet 6", handler: optional2)
+            UIAction(title:"Diet 6", handler: optional2)
         ])
         diettype.showsMenuAsPrimaryAction = true
         diettype.changesSelectionAsPrimaryAction = true

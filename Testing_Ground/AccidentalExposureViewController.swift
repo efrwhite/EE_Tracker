@@ -68,9 +68,13 @@ class AccidentalExposureViewController: UIViewController, UITableViewDelegate, U
         let button = UIButton(type: .system)
         button.setTitle("Add Exposure", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(addExposure), for: .touchUpInside)  // Target instance, not class
+        button.backgroundColor = UIColor(red: 0x39/255, green: 0x43/255, blue: 0x90/255, alpha: 1.0) // #394390
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 8 // Optional for rounded corners
+        button.addTarget(self, action: #selector(addExposure), for: .touchUpInside)
         return button
     }()
+
 
     // History UI elements
     let historyLabel: UILabel = {
@@ -115,6 +119,11 @@ class AccidentalExposureViewController: UIViewController, UITableViewDelegate, U
         // Dismiss keyboard on tap outside
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
+        NSLayoutConstraint.activate([
+            addButton.widthAnchor.constraint(equalToConstant: 350),
+            // Add other constraints like top, leading, etc.
+        ])
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

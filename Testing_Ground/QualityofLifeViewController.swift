@@ -535,8 +535,11 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
         var sum = 0
         
         // Iterate over each section and row to calculate the sum of all responses
+        print("PRINTING SECTION DATA, \(sectionResponses) and \(sectionData)")
         for sectionIndex in 0..<sectionResponses.count {
+            print("section",sectionIndex)
             for rowIndex in 0..<sectionResponses[sectionIndex].count {
+                print("row",rowIndex)
                 if let response = sectionResponses[sectionIndex][rowIndex], let intValue = Int(response) {
                     sum += intValue  // Add the response value to the sum
                 }
@@ -553,6 +556,17 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
         var entries: [QualityEntry] = []
         print("In core data save function: ", entries)
         // Get the sum and date from capturedData
+        let sectionResponsesCopy = sectionResponses.map { $0 }
+        let flattened = sectionResponsesCopy.flatMap { $0 }
+        let sumSymptomsOne = flattened[0..<min(flattened.count, 5)].compactMap { Int($0 ?? "") }.reduce(0, +)
+        let sumSymptomsTwo = flattened[6..<min(flattened.count, 10)].compactMap { Int($0 ?? "") }.reduce(0, +)
+        let sumTreatment = flattened[11..<min(flattened.count, 15)].compactMap { Int($0 ?? "") }.reduce(0, +)
+        let sumWorry = flattened[16..<min(flattened.count, 19)].compactMap { Int($0 ?? "") }.reduce(0, +)
+        let sumCommunication = flattened[20..<min(flattened.count, 24)].compactMap { Int($0 ?? "") }.reduce(0, +)
+        let sumFoodAndEating = flattened[25..<min(flattened.count, 28)].compactMap { Int($0 ?? "") }.reduce(0, +)
+        let sumFoodFeelings = flattened[29..<min(flattened.count, 31)].compactMap { Int($0 ?? "") }.reduce(0, +)
+
+        print("COPY OF Section Responses, \(sectionResponsesCopy)")
         if let data = capturedData.first {
             let sum = data["sum"] as? Int ?? 0
             let currentDate = data["date"] as? Date ?? Date()
@@ -560,7 +574,17 @@ class QualityofLifeViewController: UIViewController, UITableViewDelegate, UITabl
             print("date in save function", currentDate)
             // Create a new Quality object in Core Data
             let newQuality = NSEntityDescription.insertNewObject(forEntityName: "Quality", into: context!)
+            //adding subsections lazy method
+            // Step 3: Save to Core Data
+            newQuality.setValue(sumSymptomsOne, forKey: "symptomsone")
+            newQuality.setValue(sumSymptomsTwo, forKey: "symptomstwo")
+            newQuality.setValue(sumTreatment, forKey: "treatment")
+            newQuality.setValue(sumWorry, forKey: "worry")
+            newQuality.setValue(sumCommunication, forKey: "communication")
+            newQuality.setValue(sumFoodAndEating, forKey: "foodandeating")
+            newQuality.setValue(sumFoodFeelings, forKey: "foodfeelings")
             
+
             // Save the sum and date to Core Data
             newQuality.setValue(user, forKey: "user")
             newQuality.setValue(childName, forKey: "childName")

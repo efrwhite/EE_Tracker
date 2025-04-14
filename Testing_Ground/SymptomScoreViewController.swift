@@ -404,7 +404,7 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
         delegate?.symptomScoreViewController(self, didUpdateSymptomEntries: responses.compactMap { Int64($0 ?? "") })
         
         // ✅ Ensure user and childName are correctly passed
-        performSegue(withIdentifier: "ScoreResultSegue", sender: self)
+        //performSegue(withIdentifier: "SymptomResultSegue", sender: self)
     }
     
     
@@ -425,7 +425,7 @@ class SymptomScoreViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ScoreResultSegue",
+        if segue.identifier == "SymptomResultSegue",
            let destinationVC = segue.destination as? ScoreViewController {
             destinationVC.user = user
             destinationVC.childName = childName

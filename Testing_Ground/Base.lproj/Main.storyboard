@@ -282,7 +282,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUm-uS-Uam">
-                                <rect key="frame" x="0.0" y="126" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="162"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmZ-CL-1BS">
                                         <rect key="frame" x="92" y="1.5" width="230" height="128.5"/>
@@ -464,7 +464,7 @@
                             <constraint firstItem="D9h-R0-i1G" firstAttribute="trailing" secondItem="FMc-dt-oh1" secondAttribute="trailing" id="zPV-1x-9hs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Caregiver Profile" prompt="Create your profile" id="jR5-0g-90f"/>
+                    <navigationItem key="navigationItem" title="Caregiver Profile" id="jR5-0g-90f"/>
                     <connections>
                         <outlet property="parentFirstName" destination="zfd-Aw-Rc7" id="7Qs-Lr-m1g"/>
                         <outlet property="parentLastName" destination="EOK-Ey-BCC" id="vel-6Z-ipd"/>
@@ -1312,7 +1312,7 @@
                                         <color key="tintColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save">
-                                            <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.22352941176470587" green="0.2627450980392157" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="savebutton:" destination="0M3-RU-tSB" eventType="touchUpInside" id="duB-oX-zHw"/>
@@ -2032,13 +2032,13 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOv-C7-0YA">
-                                <rect key="frame" x="0.0" y="0.0" width="543.5" height="886"/>
+                                <rect key="frame" x="0.0" y="0.0" width="434" height="886"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="6nn-X0-xxI">
-                                        <rect key="frame" x="42" y="0.0" width="459.5" height="894"/>
+                                        <rect key="frame" x="42" y="0.0" width="350" height="894"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igq-Fi-dhY">
-                                                <rect key="frame" x="0.0" y="0.0" width="459.5" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Allergen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxA-oE-VfJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="175" height="42"/>
@@ -2051,7 +2051,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Allergen Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24O-n7-DJc">
-                                                        <rect key="frame" x="175" y="0.0" width="284.5" height="42"/>
+                                                        <rect key="frame" x="175" y="0.0" width="175" height="42"/>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
                                                     </textField>
@@ -2062,7 +2062,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4T-p5-Dz2">
-                                                <rect key="frame" x="0.0" y="102" width="459.5" height="42"/>
+                                                <rect key="frame" x="0.0" y="102" width="350" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1y-MK-OhC">
                                                         <rect key="frame" x="0.0" y="0.0" width="175" height="42"/>
@@ -2074,14 +2074,23 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How Severe? 1-10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XxY-kJ-fyS">
-                                                        <rect key="frame" x="175" y="0.0" width="284.5" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abt-bQ-rdD">
+                                                        <rect key="frame" x="175" y="0.0" width="175" height="42"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="42" id="g9m-xa-LRY"/>
+                                                            <constraint firstAttribute="height" constant="42" id="l70-Dl-jjs"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                    </textField>
+                                                        <menu key="menu" id="uoM-xJ-KGA">
+                                                            <children>
+                                                                <command title="Mild" id="CZx-Rz-iQA"/>
+                                                                <command title="Moderate" id="7J0-2Q-iki"/>
+                                                                <command title="Severe" id="VLi-4C-KO0"/>
+                                                            </children>
+                                                        </menu>
+                                                        <state key="normal" title="Severity"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="Severity">
+                                                            <color key="baseBackgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="350" id="2bG-Hi-o2l"/>
@@ -2089,7 +2098,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-iJ-Hpi">
-                                                <rect key="frame" x="0.0" y="204" width="459.5" height="42"/>
+                                                <rect key="frame" x="0.0" y="204" width="350" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date of Diagnosis: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rF-xQ-IVG">
                                                         <rect key="frame" x="0.0" y="0.0" width="161" height="42"/>
@@ -2098,7 +2107,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-7C-kbt">
-                                                        <rect key="frame" x="161" y="0.0" width="298.5" height="42"/>
+                                                        <rect key="frame" x="161" y="0.0" width="189" height="42"/>
                                                         <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                                     </datePicker>
                                                 </subviews>
@@ -2107,16 +2116,16 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d22-Mu-Ivv">
-                                                <rect key="frame" x="0.0" y="306" width="459.5" height="42"/>
+                                                <rect key="frame" x="0.0" y="306" width="350" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Allergy Cleared?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-RG-c9f">
-                                                        <rect key="frame" x="0.0" y="0.0" width="410.5" height="42"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="301" height="42"/>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                                         <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="MnX-IL-AQn">
-                                                        <rect key="frame" x="410.5" y="0.0" width="51" height="42"/>
+                                                        <rect key="frame" x="301" y="0.0" width="51" height="42"/>
                                                     </switch>
                                                 </subviews>
                                                 <constraints>
@@ -2124,7 +2133,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuS-Ra-HSz">
-                                                <rect key="frame" x="0.0" y="408" width="459.5" height="42"/>
+                                                <rect key="frame" x="0.0" y="408" width="350" height="42"/>
                                                 <subviews>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="End Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifF-R4-67f">
                                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="42"/>
@@ -2145,7 +2154,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQE-jY-Ia9">
-                                                <rect key="frame" x="0.0" y="510" width="459.5" height="42"/>
+                                                <rect key="frame" x="0.0" y="510" width="350" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Type of Allergy: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2k-6B-80w">
                                                         <rect key="frame" x="0.0" y="0.0" width="142.5" height="42"/>
@@ -2157,7 +2166,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rvq-pO-biQ">
-                                                        <rect key="frame" x="142.5" y="0.0" width="317" height="43"/>
+                                                        <rect key="frame" x="142.5" y="0.0" width="207.5" height="43"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Ohs-mg-tiV"/>
                                                         </constraints>
@@ -2173,7 +2182,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KH7-jQ-cml">
-                                                <rect key="frame" x="0.0" y="612" width="459.5" height="20"/>
+                                                <rect key="frame" x="0.0" y="612" width="350" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="g8s-Vt-ihx"/>
                                                 </constraints>
@@ -2187,7 +2196,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Nt-DP-12b">
-                                                <rect key="frame" x="0.0" y="692" width="459.5" height="100"/>
+                                                <rect key="frame" x="0.0" y="692" width="350" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="F7o-NB-stN"/>
@@ -2197,7 +2206,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHl-gp-d6w">
-                                                <rect key="frame" x="0.0" y="852" width="459.5" height="42"/>
+                                                <rect key="frame" x="0.0" y="852" width="350" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="NM5-Cv-x78"/>
                                                 </constraints>
@@ -2241,7 +2250,6 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <constraints>
                             <constraint firstItem="sOv-C7-0YA" firstAttribute="leading" secondItem="dQs-8w-HFY" secondAttribute="leading" id="Hys-Mt-d3Z"/>
                             <constraint firstItem="sOv-C7-0YA" firstAttribute="top" secondItem="dQs-8w-HFY" secondAttribute="top" id="SDC-uq-qL0"/>
-                            <constraint firstItem="sOv-C7-0YA" firstAttribute="trailing" secondItem="dQs-8w-HFY" secondAttribute="trailing" id="fDJ-K8-G00"/>
                             <constraint firstItem="6nn-X0-xxI" firstAttribute="width" secondItem="2Ty-p7-eQ3" secondAttribute="width" multiplier="0.845411" id="q6S-Tl-alo"/>
                             <constraint firstItem="sOv-C7-0YA" firstAttribute="bottom" secondItem="dQs-8w-HFY" secondAttribute="bottom" id="tJ8-d4-8US"/>
                         </constraints>
@@ -2255,7 +2263,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <outlet property="enddate" destination="sUf-Eq-WX4" id="01f-SL-IoW"/>
                         <outlet property="notes" destination="5Nt-DP-12b" id="7aX-l4-Ttk"/>
                         <outlet property="offonswitch" destination="MnX-IL-AQn" id="alH-dS-NwB"/>
-                        <outlet property="severity" destination="XxY-kJ-fyS" id="k5x-7R-CuK"/>
+                        <outlet property="severity" destination="abt-bQ-rdD" id="j6Y-kY-joc"/>
                         <outlet property="startdate" destination="QsK-7C-kbt" id="5cS-xu-ZXs"/>
                     </connections>
                 </viewController>
@@ -2380,272 +2388,6 @@ Unlike many well known food allergens which causes symptoms right after exposure
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egg-bF-RVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5296.9465648854957" y="1921.8309859154931"/>
-        </scene>
-        <!--Child Profile-->
-        <scene sceneID="ETq-UD-pOw">
-            <objects>
-                <viewController storyboardIdentifier="ChildViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7AB-bm-094" customClass="ChildViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JHw-3M-loH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-W0-guu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s13-MZ-5SQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wqb-33-AWh">
-                                                <rect key="frame" x="92" y="78" width="230" height="173"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-4c-qrH">
-                                                        <rect key="frame" x="0.0" y="1" width="230" height="128.5"/>
-                                                        <color key="backgroundColor" red="0.99591253219999998" green="0.99591253219999998" blue="0.99591253219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="131" id="0G3-Qi-jfn"/>
-                                                        </constraints>
-                                                        <imageReference key="image" image="person" catalog="system" symbolScale="default"/>
-                                                    </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utk-6x-4PF">
-                                                        <rect key="frame" x="0.0" y="131" width="230" height="42"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="42" id="1SI-In-EYz"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" title="Select Image" cornerStyle="large">
-                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                                            <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                                            <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="selectImage:" destination="7AB-bm-094" eventType="touchUpInside" id="JEF-eg-aFp"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="230" id="3ag-Qj-mK7"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="Wqb-33-AWh" firstAttribute="top" secondItem="s13-MZ-5SQ" secondAttribute="top" constant="78" id="0cI-SP-BL8"/>
-                                            <constraint firstItem="Wqb-33-AWh" firstAttribute="centerX" secondItem="s13-MZ-5SQ" secondAttribute="centerX" id="6vv-49-cDh"/>
-                                            <constraint firstItem="Wqb-33-AWh" firstAttribute="leading" secondItem="s13-MZ-5SQ" secondAttribute="leading" constant="92" id="EPW-5H-Bne"/>
-                                            <constraint firstAttribute="trailing" secondItem="Wqb-33-AWh" secondAttribute="trailing" constant="92" id="a9u-4d-1tw"/>
-                                            <constraint firstAttribute="bottom" secondItem="Wqb-33-AWh" secondAttribute="bottom" constant="24" id="abW-KI-z8Z"/>
-                                            <constraint firstItem="Wqb-33-AWh" firstAttribute="top" secondItem="s13-MZ-5SQ" secondAttribute="top" constant="78" id="cW0-p8-Ev4"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMe-66-I8n">
-                                        <rect key="frame" x="0.0" y="275" width="414" height="501"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="0h1-5j-kYU">
-                                                <rect key="frame" x="32" y="34" width="350" height="434"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="142" translatesAutoresizingMaskIntoConstraints="NO" id="La8-LI-l9q">
-                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ium-PL-3MJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="66" height="42"/>
-                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-9g-Jnk">
-                                                                <rect key="frame" x="208" y="0.0" width="142" height="42"/>
-                                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
-                                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <menu key="menu" id="gdM-qV-orB">
-                                                                    <children>
-                                                                        <command title="Female" id="x7E-72-bsn"/>
-                                                                        <command title="Male" id="s2h-A9-wGp"/>
-                                                                    </children>
-                                                                </menu>
-                                                                <state key="normal" title="Select Gender">
-                                                                    <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <color key="titleShadowColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                </state>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="42" id="gmX-tg-R4z"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="KWm-5H-42u">
-                                                        <rect key="frame" x="0.0" y="98" width="350" height="42"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEh-IJ-2BA">
-                                                                <rect key="frame" x="0.0" y="0.0" width="98" height="42"/>
-                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-ga-kIO">
-                                                                <rect key="frame" x="167" y="0.0" width="183" height="42"/>
-                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
-                                                            </textField>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="42" id="FLQ-Ys-dNy"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="PR9-fj-THx">
-                                                        <rect key="frame" x="0.0" y="196" width="350" height="42"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-KX-s2p">
-                                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="42"/>
-                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-bc-qSi">
-                                                                <rect key="frame" x="169.5" y="0.0" width="180.5" height="42"/>
-                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
-                                                            </textField>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="42" id="hEo-2s-krS"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="3A6-GZ-EvB">
-                                                        <rect key="frame" x="0.0" y="294" width="350" height="42"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fF-0Q-6sL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="84" height="42"/>
-                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w5X-f2-QqY">
-                                                                <rect key="frame" x="161" y="0.0" width="189" height="42"/>
-                                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
-                                                            </datePicker>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="42" id="MWq-WM-n8V"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="96" translatesAutoresizingMaskIntoConstraints="NO" id="UTs-zq-HAk">
-                                                        <rect key="frame" x="0.0" y="392" width="350" height="42"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehQ-Bk-o9C">
-                                                                <rect key="frame" x="0.0" y="0.0" width="85.5" height="42"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="42" id="Bsm-Qx-Can"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-0P-R0e">
-                                                                <rect key="frame" x="181.5" y="0.0" width="168.5" height="42"/>
-                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
-                                                                <menu key="menu" id="a4d-ck-cnT">
-                                                                    <children>
-                                                                        <command title="Diet Type 1" id="f2i-Y8-umh"/>
-                                                                        <command title="Diet Type 2" id="g5c-Rw-Ssm"/>
-                                                                        <command title="Diet Type 3" id="PdO-5L-fwx"/>
-                                                                    </children>
-                                                                </menu>
-                                                                <state key="normal" title="Select Diet">
-                                                                    <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="42" id="aoG-oW-VsG"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="350" id="cMB-kM-sfz"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="0h1-5j-kYU" firstAttribute="centerX" secondItem="oMe-66-I8n" secondAttribute="centerX" id="GMf-0N-3Tl"/>
-                                            <constraint firstItem="0h1-5j-kYU" firstAttribute="top" secondItem="oMe-66-I8n" secondAttribute="top" constant="34" id="P4h-BG-sSb"/>
-                                            <constraint firstAttribute="trailing" secondItem="0h1-5j-kYU" secondAttribute="trailing" constant="32" id="mvW-Jx-fy3"/>
-                                            <constraint firstItem="0h1-5j-kYU" firstAttribute="leading" secondItem="oMe-66-I8n" secondAttribute="leading" constant="32" id="rOk-k2-eWN"/>
-                                            <constraint firstAttribute="bottom" secondItem="0h1-5j-kYU" secondAttribute="bottom" constant="33" id="vrN-eM-5bf"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aR7-LX-cOq">
-                                        <rect key="frame" x="0.0" y="776" width="414" height="120"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVz-kG-GYg">
-                                                <rect key="frame" x="45" y="39" width="324" height="42"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="42" id="KPp-nf-fJ0"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="kBe-xw-oDk"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Save ">
-                                                            <attributes>
-                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="saveButton:" destination="7AB-bm-094" eventType="touchUpInside" id="5Gf-de-cJb"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="XVz-kG-GYg" secondAttribute="trailing" constant="45" id="VjL-fv-wEy"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="ibd-B0-SY8"/>
-                                            <constraint firstItem="XVz-kG-GYg" firstAttribute="leading" secondItem="aR7-LX-cOq" secondAttribute="leading" constant="45" id="pIj-qU-aIx"/>
-                                            <constraint firstItem="XVz-kG-GYg" firstAttribute="centerX" secondItem="aR7-LX-cOq" secondAttribute="centerX" id="qba-Gu-YZ0"/>
-                                            <constraint firstItem="XVz-kG-GYg" firstAttribute="centerY" secondItem="aR7-LX-cOq" secondAttribute="centerY" id="tJp-bq-5Zi"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="vUg-EG-Vhk"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Yfw-W0-guu" firstAttribute="leading" secondItem="JHw-3M-loH" secondAttribute="leading" id="7gH-HP-SSE"/>
-                            <constraint firstItem="Yfw-W0-guu" firstAttribute="top" secondItem="JHw-3M-loH" secondAttribute="top" id="JlF-mB-eDc"/>
-                            <constraint firstAttribute="bottom" secondItem="Yfw-W0-guu" secondAttribute="bottom" id="eSb-ln-2r4"/>
-                            <constraint firstAttribute="trailing" secondItem="Yfw-W0-guu" secondAttribute="trailing" id="iLK-7d-CD8"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Child Profile" id="fJx-Bq-A8i"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="birthdate" destination="w5X-f2-QqY" id="V0R-de-jlv"/>
-                        <outlet property="childFirstName" destination="rm6-ga-kIO" id="h9c-nC-d5K"/>
-                        <outlet property="childimage" destination="y1d-4c-qrH" id="bWX-QZ-7U7"/>
-                        <outlet property="diettype" destination="3da-0P-R0e" id="Ida-3x-7ft"/>
-                        <outlet property="gender" destination="Sfv-9g-Jnk" id="iQg-Yy-t3k"/>
-                        <outlet property="lastName" destination="Hu0-bc-qSi" id="5Py-6A-WNg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GRq-J7-Eqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="bjj-BS-x1i">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <viewLayoutGuide key="safeArea" id="FDY-ax-LS4"/>
-                    <viewLayoutGuide key="contentLayoutGuide" id="FF3-Hb-Ywg"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="ekP-Yg-Er4"/>
-                </scrollView>
-            </objects>
-            <point key="canvasLocation" x="2252.1739130434785" y="423.88392857142856"/>
         </scene>
         <!--Diet6GoodViewController-->
         <scene sceneID="lRo-se-VmP">
@@ -2877,7 +2619,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2w-ue-Sjd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7768" y="1519"/>
+            <point key="canvasLocation" x="7804" y="1738"/>
         </scene>
         <!--Add Allergies-->
         <scene sceneID="cfu-vI-ejE">
@@ -3014,6 +2756,21 @@ Unlike many well known food allergens which causes symptoms right after exposure
             </objects>
             <point key="canvasLocation" x="5779.7101449275369" y="-1260.2678571428571"/>
         </scene>
+        <!--Nodietplanviewcontroller-->
+        <scene sceneID="diI-yv-FsV">
+            <objects>
+                <viewController storyboardIdentifier="NoDietPlan" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f4o-Ur-u1s" customClass="nodietplanviewcontroller" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YQK-rn-Bkq" customClass="NoDietViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1Db-O2-5EE"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="df6-iw-Zh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3494" y="-2336"/>
+        </scene>
         <!--Diet 1 View Test-->
         <scene sceneID="VZZ-Dq-weO">
             <objects>
@@ -3078,6 +2835,270 @@ Unlike many well known food allergens which causes symptoms right after exposure
             </objects>
             <point key="canvasLocation" x="5420" y="-2336"/>
         </scene>
+        <!--Patient Profile-->
+        <scene sceneID="gBB-b8-yx0">
+            <objects>
+                <viewController storyboardIdentifier="Patient Profile" title="Patient Profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="th8-Qc-l31" customClass="ChildViewController" customModule="Testing_Ground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OfB-WS-XXF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="IBx-ES-TIM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Buz-2q-TCv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m59-MS-7Ts">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hRc-Ve-NWX">
+                                                        <rect key="frame" x="92" y="78" width="230" height="173"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ScQ-4D-blb">
+                                                                <rect key="frame" x="0.0" y="1" width="230" height="128.5"/>
+                                                                <color key="backgroundColor" red="0.99591253219999998" green="0.99591253219999998" blue="0.99591253219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="131" id="vJf-Lt-xDt"/>
+                                                                </constraints>
+                                                                <imageReference key="image" image="person" catalog="system" symbolScale="default"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5G-hp-hst">
+                                                                <rect key="frame" x="0.0" y="131" width="230" height="42"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="zar-Ox-j5U"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="tinted" title="Select Image" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="selectImage:" destination="th8-Qc-l31" eventType="touchUpInside" id="Mdv-zm-oAY"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="230" id="kKI-4s-3qX"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="hRc-Ve-NWX" firstAttribute="leading" secondItem="m59-MS-7Ts" secondAttribute="leading" constant="92" id="5oj-Jk-gWu"/>
+                                                    <constraint firstItem="hRc-Ve-NWX" firstAttribute="top" secondItem="m59-MS-7Ts" secondAttribute="top" constant="78" id="C3J-E4-WfA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hRc-Ve-NWX" secondAttribute="trailing" constant="92" id="fwD-lL-VuB"/>
+                                                    <constraint firstItem="hRc-Ve-NWX" firstAttribute="top" secondItem="m59-MS-7Ts" secondAttribute="top" constant="78" id="iQZ-zc-MXs"/>
+                                                    <constraint firstItem="hRc-Ve-NWX" firstAttribute="centerX" secondItem="m59-MS-7Ts" secondAttribute="centerX" id="iWx-h9-iF5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hRc-Ve-NWX" secondAttribute="bottom" constant="24" id="tUH-Oe-hrY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-Qj-U8n">
+                                                <rect key="frame" x="0.0" y="275" width="414" height="501"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="5hp-1y-lHA">
+                                                        <rect key="frame" x="32" y="34" width="350" height="434"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="142" translatesAutoresizingMaskIntoConstraints="NO" id="JSR-Cf-xRX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK6-fD-58l">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8f-6U-izB">
+                                                                        <rect key="frame" x="208" y="0.0" width="142" height="42"/>
+                                                                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <menu key="menu" id="CSj-6t-uam">
+                                                                            <children>
+                                                                                <command title="Female" id="ZAW-8k-3Ug"/>
+                                                                                <command title="Male" id="83T-bf-qrO"/>
+                                                                            </children>
+                                                                        </menu>
+                                                                        <state key="normal" title="Select Gender">
+                                                                            <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="titleShadowColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="d9E-b3-jqL"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="8FU-dP-X2d">
+                                                                <rect key="frame" x="0.0" y="98" width="350" height="42"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDu-iO-ZSH">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="khp-SH-Lnf">
+                                                                        <rect key="frame" x="167" y="0.0" width="183" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="2vc-bS-5xf"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="1N0-4T-9HH">
+                                                                <rect key="frame" x="0.0" y="196" width="350" height="42"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUA-xR-oxZ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieb-ts-HSO">
+                                                                        <rect key="frame" x="169.5" y="0.0" width="180.5" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="OtX-qe-4In"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="xKm-9Q-VXq">
+                                                                <rect key="frame" x="0.0" y="294" width="350" height="42"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYQ-n0-DTc">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="bdH-no-2hP">
+                                                                        <rect key="frame" x="161" y="0.0" width="189" height="42"/>
+                                                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                                    </datePicker>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="sFA-Hx-YBM"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="96" translatesAutoresizingMaskIntoConstraints="NO" id="4Ln-oy-fYL">
+                                                                <rect key="frame" x="0.0" y="392" width="350" height="42"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZB-cD-0ok">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="42"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="42" id="srK-zh-YNX"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iUf-tI-Fy3">
+                                                                        <rect key="frame" x="181.5" y="0.0" width="168.5" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                                                        <menu key="menu" id="sgi-aC-uQo">
+                                                                            <children>
+                                                                                <command title="Diet Type 1" id="ihu-se-AJH"/>
+                                                                                <command title="Diet Type 2" id="vof-sK-i1U"/>
+                                                                                <command title="Diet Type 3" id="etd-EJ-B0V"/>
+                                                                            </children>
+                                                                        </menu>
+                                                                        <state key="normal" title="Select Diet">
+                                                                            <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="pqk-L5-GfT"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="350" id="SgQ-F7-cpi"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="5hp-1y-lHA" firstAttribute="leading" secondItem="2kh-Qj-U8n" secondAttribute="leading" constant="32" id="ZvR-zO-T2N"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5hp-1y-lHA" secondAttribute="trailing" constant="32" id="eb2-iq-Kl5"/>
+                                                    <constraint firstItem="5hp-1y-lHA" firstAttribute="top" secondItem="2kh-Qj-U8n" secondAttribute="top" constant="34" id="hJR-Mw-zpb"/>
+                                                    <constraint firstItem="5hp-1y-lHA" firstAttribute="centerX" secondItem="2kh-Qj-U8n" secondAttribute="centerX" id="uqN-NY-LRj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="5hp-1y-lHA" secondAttribute="bottom" constant="33" id="ywf-yo-GbP"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjq-Uo-dgX">
+                                                <rect key="frame" x="0.0" y="776" width="414" height="120"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaO-TM-EWs">
+                                                        <rect key="frame" x="45" y="39" width="324" height="42"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="42" id="OeQ-Y2-bN6"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="Z7x-G9-lxv"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Save ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="17" name="TimesNewRomanPSMT"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="saveButton:" destination="th8-Qc-l31" eventType="touchUpInside" id="jwZ-50-s7a"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="AaO-TM-EWs" firstAttribute="centerY" secondItem="wjq-Uo-dgX" secondAttribute="centerY" id="6nS-Sx-bzz"/>
+                                                    <constraint firstItem="AaO-TM-EWs" firstAttribute="centerX" secondItem="wjq-Uo-dgX" secondAttribute="centerX" id="7qN-PV-Yz0"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="K4S-ui-ppX"/>
+                                                    <constraint firstItem="AaO-TM-EWs" firstAttribute="leading" secondItem="wjq-Uo-dgX" secondAttribute="leading" constant="45" id="fof-RC-W7l"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AaO-TM-EWs" secondAttribute="trailing" constant="45" id="vb5-th-s3t"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="PY3-lS-DdB"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Buz-2q-TCv" secondAttribute="trailing" id="OoJ-34-qw7"/>
+                                    <constraint firstAttribute="bottom" secondItem="Buz-2q-TCv" secondAttribute="bottom" id="Ta8-4X-HMG"/>
+                                    <constraint firstItem="Buz-2q-TCv" firstAttribute="top" secondItem="IBx-ES-TIM" secondAttribute="top" id="b1C-Zm-LLS"/>
+                                    <constraint firstItem="Buz-2q-TCv" firstAttribute="leading" secondItem="IBx-ES-TIM" secondAttribute="leading" id="ppT-4c-avN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IFh-LU-ufh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="birthdate" destination="bdH-no-2hP" id="eIU-c9-5ef"/>
+                        <outlet property="childFirstName" destination="khp-SH-Lnf" id="nWA-ee-Q7I"/>
+                        <outlet property="childimage" destination="ScQ-4D-blb" id="fCx-SI-H49"/>
+                        <outlet property="diettype" destination="iUf-tI-Fy3" id="ajN-xS-Lqj"/>
+                        <outlet property="gender" destination="b8f-6U-izB" id="AyT-sq-a1f"/>
+                        <outlet property="lastName" destination="ieb-ts-HSO" id="1AU-be-Zwu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="roZ-Ba-ZT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="1019"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="p1Z-5W-dqx"/>
@@ -3096,6 +3117,9 @@ Unlike many well known food allergens which causes symptoms right after exposure
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
