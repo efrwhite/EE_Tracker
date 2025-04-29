@@ -413,7 +413,7 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
 
     // MARK: - Add Button Actions
     @objc func addChildButtonPressed() {
-        let childViewController = storyboard?.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
+        let childViewController = storyboard?.instantiateViewController(withIdentifier: "Patient Profile") as! ChildViewController
         childViewController.isAddingChild = true
         childViewController.user = user
         navigationController?.pushViewController(childViewController, animated: true)
@@ -432,6 +432,7 @@ class HomeProfilePageViewController: UIViewController, UITableViewDataSource, UI
         if let tableView = sender.superview?.superview as? UITableView {
             if tableView == self.tableView {
                 // Handle the "Add" button press for the child table view
+                print("add button pressed")
                 let childViewController = storyboard?.instantiateViewController(withIdentifier: "Patient Profile") as! ChildViewController
                 childViewController.isAddingChild = true
                 childViewController.user = user // Set the user property here

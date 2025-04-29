@@ -11,9 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Lato-Bold.ttf">
-            <string>Lato-Bold</string>
-        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
@@ -30,7 +27,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGID Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="jd0-Mf-CvO">
                                 <rect key="frame" x="112.5" y="157" width="189" height="42"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.86666666670000003" green="0.87058823529999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.92941176469999998" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
@@ -52,7 +49,8 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseForegroundColor" red="0.92941176469999998" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="IvN-OH-f0M" kind="show" id="t6J-o9-vhm"/>
@@ -76,7 +74,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseForegroundColor" red="0.92941176469999998" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="tnS-He-ia0" kind="show" id="yOw-6k-zAp"/>
@@ -105,7 +103,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNs-mu-yu9">
                                 <rect key="frame" x="123.5" y="487" width="167" height="42"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.86666666670000003" green="0.87058823529999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.92941176469999998" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
@@ -117,7 +115,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LpS-rw-g48"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.14509806040000001" green="0.26274511220000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="cWb-U4-hMz" firstAttribute="centerX" secondItem="gZz-tc-zwT" secondAttribute="centerX" id="2NV-7S-FhF"/>
@@ -172,6 +170,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74K-Ig-P7B">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215686274506" green="0.97254901960784312" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="2rj-q7-evj"/>
                                                 </constraints>
@@ -180,6 +179,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evy-te-cBa">
                                                 <rect key="frame" x="0.0" y="85" width="300" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="y1H-ti-ek9"/>
                                                 </constraints>
@@ -188,6 +188,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B76-AE-uCN">
                                                 <rect key="frame" x="0.0" y="170" width="300" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="Amh-Lb-xe7"/>
                                                 </constraints>
@@ -196,6 +197,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-N5-7LG">
                                                 <rect key="frame" x="0.0" y="255" width="300" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="Cb8-fM-yzY"/>
                                                 </constraints>
@@ -204,6 +206,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile No." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lan-Bk-9cY">
                                                 <rect key="frame" x="0.0" y="340" width="300" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="e5w-cj-N2V"/>
                                                 </constraints>
@@ -225,6 +228,7 @@
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
+                                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -239,6 +243,8 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ryX-Rz-0ci" secondAttribute="bottom" constant="192" id="BEf-fU-Qo8"/>
                                     <constraint firstItem="ryX-Rz-0ci" firstAttribute="centerX" secondItem="yML-ci-XSe" secondAttribute="centerX" constant="-0.5" id="BQN-TP-Mk7"/>
@@ -250,7 +256,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vb3-UV-M8T"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="yML-ci-XSe" firstAttribute="leading" secondItem="vb3-UV-M8T" secondAttribute="leading" constant="16" id="6Kb-7R-o83"/>
                             <constraint firstItem="yML-ci-XSe" firstAttribute="centerX" secondItem="hwW-d4-GPj" secondAttribute="centerX" id="D12-Fj-tWC"/>
@@ -286,7 +292,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmZ-CL-1BS">
                                         <rect key="frame" x="92" y="1.5" width="230" height="128.5"/>
-                                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="131.33000000000001" id="569-l8-u8a"/>
@@ -294,7 +300,7 @@
                                         <imageReference key="image" image="person" catalog="system" symbolScale="default"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="LmZ-CL-1BS" firstAttribute="leading" secondItem="WUm-uS-Uam" secondAttribute="leading" constant="92" id="MQF-aq-f4g"/>
                                     <constraint firstItem="LmZ-CL-1BS" firstAttribute="centerX" secondItem="WUm-uS-Uam" secondAttribute="centerX" id="Otz-dC-JcR"/>
@@ -315,11 +321,12 @@
                                                     <constraint firstAttribute="height" constant="22.329999999999998" id="vSe-rr-h1Z"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-hA-wjp">
                                                 <rect key="frame" x="0.0" y="28.5" width="350" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="P8B-b8-QCX"/>
                                                 </constraints>
@@ -332,11 +339,12 @@
                                                     <constraint firstAttribute="height" constant="22.329999999999998" id="FSr-fb-MFo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-Aw-Rc7">
                                                 <rect key="frame" x="0.0" y="104.5" width="350" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="f1X-43-ojq"/>
                                                 </constraints>
@@ -349,11 +357,12 @@
                                                     <constraint firstAttribute="height" constant="22.329999999999998" id="J1E-JF-6Pg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOK-Ey-BCC">
                                                 <rect key="frame" x="0.0" y="181" width="350" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="LSt-Y4-g93"/>
                                                 </constraints>
@@ -365,22 +374,11 @@
                                             <constraint firstAttribute="width" constant="350" id="qbe-RG-zsv"/>
                                         </constraints>
                                     </stackView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="iqZ-he-wh6" firstAttribute="top" secondItem="D9h-R0-i1G" secondAttribute="top" constant="71" id="CXw-sx-T7P"/>
-                                    <constraint firstItem="iqZ-he-wh6" firstAttribute="centerX" secondItem="D9h-R0-i1G" secondAttribute="centerX" id="qKz-nV-ux5"/>
-                                    <constraint firstAttribute="bottom" secondItem="iqZ-he-wh6" secondAttribute="bottom" constant="126" id="spg-Ef-reQ"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hs-og-irp">
-                                <rect key="frame" x="0.0" y="766" width="414" height="114"/>
-                                <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-Ol-WIz">
-                                        <rect key="frame" x="32" y="33" width="350" height="42"/>
+                                        <rect key="frame" x="32" y="352" width="350" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="N57-dP-oSg"/>
-                                            <constraint firstAttribute="height" constant="42" id="tSi-UX-I1F"/>
+                                            <constraint firstAttribute="width" constant="350" id="3ci-OU-8id"/>
+                                            <constraint firstAttribute="height" constant="48" id="vHx-4M-R4n"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
@@ -393,6 +391,7 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -400,11 +399,17 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="mmC-Ol-WIz" firstAttribute="top" secondItem="8hs-og-irp" secondAttribute="top" constant="33" id="5Z5-WH-Ucy"/>
-                                    <constraint firstAttribute="bottom" secondItem="mmC-Ol-WIz" secondAttribute="bottom" constant="39" id="cev-zO-OBP"/>
-                                    <constraint firstItem="mmC-Ol-WIz" firstAttribute="centerX" secondItem="8hs-og-irp" secondAttribute="centerX" id="dTf-oy-dSg"/>
+                                    <constraint firstAttribute="trailing" secondItem="mmC-Ol-WIz" secondAttribute="trailing" constant="32" id="38m-u0-LAy"/>
+                                    <constraint firstItem="mmC-Ol-WIz" firstAttribute="leading" secondItem="D9h-R0-i1G" secondAttribute="leading" constant="32" id="3lU-42-KVg"/>
+                                    <constraint firstItem="iqZ-he-wh6" firstAttribute="top" secondItem="D9h-R0-i1G" secondAttribute="top" constant="71" id="CXw-sx-T7P"/>
+                                    <constraint firstItem="mmC-Ol-WIz" firstAttribute="centerY" secondItem="D9h-R0-i1G" secondAttribute="centerY" constant="166" id="Em0-7Z-vyq"/>
+                                    <constraint firstItem="mmC-Ol-WIz" firstAttribute="top" secondItem="iqZ-he-wh6" secondAttribute="bottom" constant="58" id="PmQ-15-jOo"/>
+                                    <constraint firstItem="iqZ-he-wh6" firstAttribute="centerX" secondItem="D9h-R0-i1G" secondAttribute="centerX" id="qKz-nV-ux5"/>
+                                    <constraint firstAttribute="bottom" secondItem="iqZ-he-wh6" secondAttribute="bottom" constant="126" id="spg-Ef-reQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="mmC-Ol-WIz" secondAttribute="bottom" constant="20" symbolic="YES" id="w47-9Q-mcc"/>
+                                    <constraint firstAttribute="bottom" secondItem="mmC-Ol-WIz" secondAttribute="bottom" constant="20" id="wO3-f3-QDx"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1i-6X-bgZ">
@@ -433,19 +438,24 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="eXM-3V-gTd" secondAttribute="bottom" constant="25" id="61F-IL-L7Q"/>
                                     <constraint firstAttribute="trailing" secondItem="eXM-3V-gTd" secondAttribute="trailing" constant="39" id="Dyj-hN-1zm"/>
                                     <constraint firstItem="eXM-3V-gTd" firstAttribute="top" secondItem="J1i-6X-bgZ" secondAttribute="top" constant="25" id="u4g-Nt-Fjb"/>
-                                    <constraint firstItem="eXM-3V-gTd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J1i-6X-bgZ" secondAttribute="leading" symbolic="YES" id="wby-Fi-iag"/>
+                                    <constraint firstItem="eXM-3V-gTd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J1i-6X-bgZ" secondAttribute="leading" constant="20" symbolic="YES" id="wby-Fi-iag"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hs-og-irp">
+                                <rect key="frame" x="0.0" y="766" width="414" height="114"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FMc-dt-oh1"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="D9h-R0-i1G" firstAttribute="top" secondItem="J1i-6X-bgZ" secondAttribute="bottom" constant="-22" id="1LV-H1-Yr5"/>
+                            <constraint firstItem="8hs-og-irp" firstAttribute="leading" secondItem="FMc-dt-oh1" secondAttribute="leading" id="4pF-c5-uhy"/>
                             <constraint firstItem="J1i-6X-bgZ" firstAttribute="top" secondItem="WUm-uS-Uam" secondAttribute="bottom" constant="22" id="4xw-z0-w97"/>
                             <constraint firstItem="WUm-uS-Uam" firstAttribute="trailing" secondItem="FMc-dt-oh1" secondAttribute="trailing" id="E3j-tN-gQt"/>
                             <constraint firstItem="D9h-R0-i1G" firstAttribute="top" secondItem="J1i-6X-bgZ" secondAttribute="bottom" constant="-22" id="Ewu-6Y-CUO"/>
@@ -454,6 +464,7 @@
                             <constraint firstItem="D9h-R0-i1G" firstAttribute="leading" secondItem="FMc-dt-oh1" secondAttribute="leading" id="OLc-Yh-ra4"/>
                             <constraint firstItem="8hs-og-irp" firstAttribute="top" secondItem="D9h-R0-i1G" secondAttribute="bottom" id="RGO-79-uPF"/>
                             <constraint firstItem="WUm-uS-Uam" firstAttribute="top" secondItem="FMc-dt-oh1" secondAttribute="top" id="So2-rY-64A"/>
+                            <constraint firstItem="8hs-og-irp" firstAttribute="trailing" secondItem="FMc-dt-oh1" secondAttribute="trailing" id="ZLE-jq-57D"/>
                             <constraint firstItem="WUm-uS-Uam" firstAttribute="top" secondItem="FMc-dt-oh1" secondAttribute="top" id="cIa-Hh-kEO"/>
                             <constraint firstItem="8hs-og-irp" firstAttribute="top" secondItem="D9h-R0-i1G" secondAttribute="bottom" id="gJe-Rn-GT6"/>
                             <constraint firstAttribute="bottom" secondItem="8hs-og-irp" secondAttribute="bottom" constant="16" id="hSK-xQ-Y8X"/>
@@ -489,13 +500,14 @@
                                 <rect key="frame" x="32" y="322" width="350" height="171.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w4-7P-2qG">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="26"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="25"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="21"/>
+                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="highlightedColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-sF-vF9">
-                                        <rect key="frame" x="0.0" y="39" width="350" height="42"/>
+                                        <rect key="frame" x="0.0" y="38" width="350" height="42"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="azM-cY-rST"/>
                                         </constraints>
@@ -503,13 +515,14 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcM-bo-bmJ">
-                                        <rect key="frame" x="0.0" y="94" width="350" height="22.5"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
+                                        <rect key="frame" x="0.0" y="93" width="350" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="21"/>
+                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="highlightedColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGb-8H-fRv">
                                         <rect key="frame" x="0.0" y="129.5" width="350" height="42"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="kQu-Bb-CAZ"/>
                                         </constraints>
@@ -517,7 +530,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ldj-tI-0cv" secondAttribute="height" multiplier="100:49" id="gxx-Dd-aMk"/>
                                     <constraint firstAttribute="width" constant="350" id="yOd-cO-hTr"/>
@@ -532,6 +545,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Enter">
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -540,14 +554,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywc-VM-a5O">
-                                <rect key="frame" x="32" y="651" width="350" height="42"/>
+                                <rect key="frame" x="32" y="653" width="350" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="G4o-xa-B1B"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="mgR-Vk-wvs"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up">
-                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="tnS-He-ia0" kind="show" id="Khq-b6-X4a"/>
@@ -555,13 +570,13 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIg-6v-Sj7">
                                 <rect key="frame" x="65" y="613" width="292" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.29106727774435043" green="0.31719717603874475" blue="0.93439916237113407" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.61960784313725492" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gHH-So-0IY"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.6705882353" green="0.7725490196" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="AIg-6v-Sj7" firstAttribute="centerX" secondItem="Gjn-xW-rGQ" secondAttribute="centerX" id="IPh-H0-khm"/>
@@ -574,7 +589,7 @@
                             <constraint firstItem="2Ya-r0-Mpd" firstAttribute="centerY" secondItem="Gjn-xW-rGQ" secondAttribute="centerY" constant="111" id="xxx-HF-XKU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In" prompt="Add your details to login" id="fmw-WA-JkD"/>
+                    <navigationItem key="navigationItem" title="Sign In" id="fmw-WA-JkD"/>
                     <connections>
                         <outlet property="Password" destination="rGb-8H-fRv" id="gc7-DT-Lw5"/>
                         <outlet property="Username" destination="4Wd-sF-vF9" id="yeC-Tj-kIQ"/>
@@ -634,7 +649,7 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gN2-Xy-Ezt">
                                                         <rect key="frame" x="0.0" y="2.5" width="230" height="155.5"/>
-                                                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="160" id="D7F-bd-opM"/>
@@ -648,25 +663,25 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Welcome: Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPe-30-0sX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="166" height="22"/>
                                                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                                <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet: Diet Type" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upb-cS-fwP">
                                                                 <rect key="frame" x="0.0" y="37" width="166" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                                <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="59.670000000000002" id="2T3-Nu-ghI"/>
                                                             <constraint firstItem="upb-cS-fwP" firstAttribute="centerX" secondItem="NMs-xk-Fzm" secondAttribute="centerX" id="6rr-dN-wgL"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <color key="tintColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="gN2-Xy-Ezt" firstAttribute="centerX" secondItem="m2g-sp-CbT" secondAttribute="centerX" id="3fq-I3-0eU"/>
                                                     <constraint firstItem="gN2-Xy-Ezt" firstAttribute="leading" secondItem="m2g-sp-CbT" secondAttribute="leading" id="H8B-Hp-O0J"/>
@@ -704,7 +719,8 @@
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
-                                                                    <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <segue destination="SPM-L8-qId" kind="show" identifier="profilessegue" id="iHN-gt-7bE"/>
@@ -726,6 +742,7 @@
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
+                                                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
@@ -747,6 +764,7 @@
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
+                                                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
                                                             </button>
@@ -765,6 +783,7 @@
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
+                                                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
@@ -786,6 +805,7 @@
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
+                                                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
@@ -807,6 +827,7 @@
                                                                             </attributes>
                                                                         </fragment>
                                                                     </attributedString>
+                                                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
@@ -821,7 +842,7 @@
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="Le7-wn-9XV" firstAttribute="top" secondItem="e5k-5A-wIw" secondAttribute="topMargin" id="AVq-NB-n3n"/>
                                                     <constraint firstItem="Le7-wn-9XV" firstAttribute="centerX" secondItem="e5k-5A-wIw" secondAttribute="centerX" id="AYJ-Ma-Okf"/>
@@ -841,7 +862,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LCy-ff-13d"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.6705882353" green="0.7725490196" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="61l-i0-0LM" firstAttribute="top" secondItem="LCy-ff-13d" secondAttribute="top" id="NNA-kg-GLl"/>
@@ -907,7 +928,8 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="dietButtonTapped:" destination="N9R-bu-SFT" eventType="touchUpInside" id="bQM-pT-Jh8"/>
@@ -929,7 +951,8 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="AXc-mm-K9j" kind="show" identifier="expsegue" id="Rxm-BY-TOl"/>
@@ -951,7 +974,8 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="1m8-Tx-fd1" kind="show" identifier="medsegue" id="lm1-N8-bMD"/>
@@ -973,7 +997,8 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="Ili-yx-Uxi" kind="show" identifier="docsegue" id="I9d-vS-CRE"/>
@@ -995,7 +1020,8 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseBackgroundColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="R0p-2j-gF8" kind="show" identifier="edosegue" id="o15-5f-oIG"/>
@@ -1012,20 +1038,20 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Plan For: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-0m-vQa">
                                         <rect key="frame" x="0.0" y="0.0" width="153.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="21"/>
-                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-5T-cOd">
                                         <rect key="frame" x="0.0" y="23.5" width="153.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="21"/>
-                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rwa-0l-hYZ"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="vaU-JW-Z8q" firstAttribute="centerY" secondItem="Sbk-c7-IJk" secondAttribute="centerY" id="F4S-g5-4ml"/>
                             <constraint firstItem="RYe-Ps-43e" firstAttribute="centerY" secondItem="Sbk-c7-IJk" secondAttribute="centerY" constant="-239.66666666666669" id="QhV-fL-les"/>
@@ -1060,6 +1086,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="377" id="xiV-VY-c2b"/>
                                         </constraints>
+                                        <color key="sectionIndexBackgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="discontinuedcell" editingAccessoryType="detailButton" id="uyO-ap-6nd">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
@@ -1078,6 +1105,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xCn-dt-j37">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="376"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="sectionIndexBackgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="currentcell1" editingAccessoryType="detailButton" id="jI6-tD-e4Q">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
@@ -1107,7 +1135,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UaS-Uh-cB7"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Iup-IQ-i4o" firstAttribute="top" secondItem="UaS-Uh-cB7" secondAttribute="top" id="3GR-4R-hOq"/>
                             <constraint firstAttribute="bottom" secondItem="Iup-IQ-i4o" secondAttribute="bottom" constant="51" id="Ii7-Ge-uLV"/>
@@ -1147,12 +1175,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="31K-TK-ibu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medication name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNX-Z6-XBJ">
                                         <rect key="frame" x="0.0" y="56" width="350" height="42"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="6DQ-Av-iHI"/>
                                         </constraints>
@@ -1164,8 +1193,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="5Ta-kf-Ugv"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haS-zz-VON">
@@ -1173,6 +1202,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dosage amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nTa-jT-6K6">
                                                 <rect key="frame" x="0.0" y="0.0" width="175" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="175" id="xwd-UG-0yu"/>
@@ -1180,10 +1210,10 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM8-NA-Gwv">
+                                            <pickerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM8-NA-Gwv">
                                                 <rect key="frame" x="175" y="0.0" width="175" height="42"/>
-                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <color key="tintColor" systemColor="underPageBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="175" id="oWg-3R-KrV"/>
                                                 </constraints>
@@ -1203,12 +1233,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="175" id="bcg-NR-Yby"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="jNr-2w-Sge">
                                                 <rect key="frame" x="175" y="0.0" width="175" height="42"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="175" id="KSd-BO-Vq0"/>
                                                 </constraints>
@@ -1227,12 +1258,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="175" id="A07-eM-SeZ"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="frequency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H8u-Nx-fyh">
                                                 <rect key="frame" x="175" y="0.0" width="175" height="42"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1256,13 +1288,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discontinued Medication?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWc-ep-GKh">
                                                 <rect key="frame" x="0.0" y="0.0" width="301" height="42"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="fill" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVj-L0-crf">
                                                 <rect key="frame" x="301" y="0.0" width="51" height="42"/>
-                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -1292,14 +1324,14 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0j-HT-7uL">
-                                        <rect key="frame" x="0.0" y="472" width="350" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="472" width="350" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdy-Kd-p52">
-                                        <rect key="frame" x="0.0" y="506.5" width="350" height="124"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="508.5" width="350" height="122"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1312,6 +1344,7 @@
                                         <color key="tintColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save">
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="baseBackgroundColor" red="0.22352941176470587" green="0.2627450980392157" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -1325,7 +1358,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gQD-qF-hf6"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="kYX-SC-5d1" firstAttribute="top" secondItem="gQD-qF-hf6" secondAttribute="top" constant="31" id="IjA-1o-o9b"/>
                             <constraint firstItem="kYX-SC-5d1" firstAttribute="leading" secondItem="gQD-qF-hf6" secondAttribute="leading" constant="32" id="gpg-rw-c8L"/>
@@ -1378,7 +1411,7 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -1389,7 +1422,7 @@
                                     </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="gF3-pb-Mz1"/>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -1433,7 +1466,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="safeArea" id="9Yf-HT-5pJ"/>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -1470,6 +1503,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -1479,7 +1513,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KM0-yb-JX7"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ovz-n3-8eE" firstAttribute="top" secondItem="16U-LS-7js" secondAttribute="bottom" constant="8" symbolic="YES" id="7UX-6e-k1H"/>
                             <constraint firstItem="16U-LS-7js" firstAttribute="top" secondItem="KM0-yb-JX7" secondAttribute="top" constant="11" id="8Rt-O8-H47"/>
@@ -1563,6 +1597,7 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -1581,7 +1616,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JVb-93-QaV"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="RCV-sF-zri" firstAttribute="top" secondItem="JVb-93-QaV" secondAttribute="top" constant="15" id="7KF-Q9-9TB"/>
                             <constraint firstItem="RCV-sF-zri" firstAttribute="leading" secondItem="JVb-93-QaV" secondAttribute="leading" id="8XN-G8-w9j"/>
@@ -1628,7 +1663,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4SI-lb-YFi">
                                 <rect key="frame" x="0.0" y="103" width="414" height="659"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreIdentifier" id="S4q-nI-qjy">
                                         <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
@@ -1656,6 +1691,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -1664,7 +1700,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MJZ-EE-dfr"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Jy3-dF-D0R" firstAttribute="centerX" secondItem="k8h-jU-nxg" secondAttribute="centerX" id="E5L-vf-EkG"/>
                             <constraint firstItem="Jy3-dF-D0R" firstAttribute="leading" secondItem="MJZ-EE-dfr" secondAttribute="leading" constant="94" id="KPg-GR-8ez"/>
@@ -1693,7 +1729,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bPf-SX-zub"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Survey Report" id="Idy-Zj-yGJ"/>
                 </viewController>
@@ -1750,7 +1786,7 @@ Eosinophilic esophagitis (EoE), also known as allergic esophagitis is a chronic 
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EpR-D3-JDY"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SAb-Y6-gUo" firstAttribute="trailing" secondItem="EpR-D3-JDY" secondAttribute="trailing" id="4mZ-nA-1GG"/>
@@ -1807,7 +1843,7 @@ EoE is diagnosed by performing an upper endoscopy with biopsies. Upper endoscopy
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rLu-y5-Pbr"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="How is it Diagnosed?" id="i7b-Aq-Wyw">
@@ -1850,7 +1886,7 @@ c. Elemental diet</string>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rrs-xw-rm5"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="x8b-fn-H3s" firstAttribute="trailing" secondItem="Rrs-xw-rm5" secondAttribute="trailing" id="0E4-pC-ZLH"/>
@@ -1900,7 +1936,7 @@ EE appears to be more common in white males but is being increasingly recognized
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="btP-es-aCL"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mmk-pX-dbl" firstAttribute="trailing" secondItem="btP-es-aCL" secondAttribute="trailing" id="0QL-ES-mpQ"/>
@@ -1950,7 +1986,7 @@ Infants and young children may present with food refusal and poor weight gain an
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lyu-1R-Qzs"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eW1-Fo-mut" firstAttribute="leading" secondItem="lyu-1R-Qzs" secondAttribute="leading" id="Fxd-dJ-V9B"/>
@@ -2001,7 +2037,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3qD-wz-ZHA"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ASH-Xg-q7y" firstAttribute="top" secondItem="3qD-wz-ZHA" secondAttribute="top" id="BIY-J5-qIi"/>
@@ -2047,11 +2083,12 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="rGQ-3j-M0o"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Allergen Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24O-n7-DJc">
                                                         <rect key="frame" x="175" y="0.0" width="175" height="42"/>
+                                                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
                                                     </textField>
@@ -2071,7 +2108,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="gBa-8o-iFY"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abt-bQ-rdD">
@@ -2088,7 +2125,8 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         </menu>
                                                         <state key="normal" title="Severity"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="Severity">
-                                                            <color key="baseBackgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                                            <color key="baseForegroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                     </button>
                                                 </subviews>
@@ -2103,12 +2141,12 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date of Diagnosis: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rF-xQ-IVG">
                                                         <rect key="frame" x="0.0" y="0.0" width="161" height="42"/>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-7C-kbt">
                                                         <rect key="frame" x="161" y="0.0" width="189" height="42"/>
-                                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </datePicker>
                                                 </subviews>
                                                 <constraints>
@@ -2121,7 +2159,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Allergy Cleared?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-RG-c9f">
                                                         <rect key="frame" x="0.0" y="0.0" width="301" height="42"/>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="MnX-IL-AQn">
@@ -2162,7 +2200,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="JGZ-ZW-gWE"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                                        <color key="textColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rvq-pO-biQ">
@@ -2176,7 +2214,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         </segments>
                                                     </segmentedControl>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="3Nj-Ib-xgi"/>
                                                 </constraints>
@@ -2189,7 +2227,8 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 <attributedString key="attributedText">
                                                     <fragment content="Notes:">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <color key="NSColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="20" name="TimesNewRomanPS-BoldMT"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -2197,7 +2236,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Nt-DP-12b">
                                                 <rect key="frame" x="0.0" y="692" width="350" height="100"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="F7o-NB-stN"/>
                                                 </constraints>
@@ -2228,7 +2267,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="894" id="4Bf-Og-vn5"/>
                                         </constraints>
@@ -2246,7 +2285,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dQs-8w-HFY"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="sOv-C7-0YA" firstAttribute="leading" secondItem="dQs-8w-HFY" secondAttribute="leading" id="Hys-Mt-d3Z"/>
                             <constraint firstItem="sOv-C7-0YA" firstAttribute="top" secondItem="dQs-8w-HFY" secondAttribute="top" id="SDC-uq-qL0"/>
@@ -2296,7 +2335,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gNe-Yi-fZI"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Endoscopy Results: History" id="uFX-FQ-yg8"/>
                     <connections>
@@ -2322,7 +2361,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="afC-tF-2jP"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3vB-58-Y3P" firstAttribute="top" secondItem="afC-tF-2jP" secondAttribute="top" id="86N-vn-DNB"/>
@@ -2367,7 +2406,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ykg-iw-0ju"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eHl-gy-eP3" firstAttribute="top" secondItem="ykg-iw-0ju" secondAttribute="top" id="1CI-rT-253"/>
@@ -2397,7 +2436,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="zYg-Ll-jPa"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Journal" id="FfM-Cf-nU0"/>
                 </viewController>
@@ -2415,7 +2454,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qbj-11-VBa">
                                 <rect key="frame" x="0.0" y="92" width="414" height="422"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfilesTableviewcell" id="ts4-0l-66N" customClass="ProfilesTableviewcell" customModule="Testing_Ground" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
@@ -2429,7 +2468,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jRR-nN-EUb">
                                 <rect key="frame" x="0.0" y="452" width="414" height="444"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ParentTableViewCell" id="zt8-oK-buR" customClass="ParentTableViewCell" customModule="Testing_Ground" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
@@ -2443,7 +2482,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WUB-mt-3Z9"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jRR-nN-EUb" firstAttribute="trailing" secondItem="WUB-mt-3Z9" secondAttribute="trailing" id="363-Px-aiL"/>
                             <constraint firstItem="Qbj-11-VBa" firstAttribute="top" secondItem="WUB-mt-3Z9" secondAttribute="top" id="AGk-b6-Zen"/>
@@ -2473,7 +2512,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="RbQ-9b-A4l"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="EGID Education" id="iVu-9m-Xbj">
@@ -2517,7 +2556,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AWM-ov-ifr"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="dZJ-qy-QSf" firstAttribute="top" secondItem="AWM-ov-ifr" secondAttribute="top" constant="15" id="2g1-W5-wA9"/>
                             <constraint firstItem="dZJ-qy-QSf" firstAttribute="leading" secondItem="AWM-ov-ifr" secondAttribute="leading" id="BBN-9B-8Q9"/>
@@ -2549,7 +2588,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SCL-TY-StQ">
                                 <rect key="frame" x="0.0" y="103" width="414" height="659"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScoreIdentifier" id="UMX-2G-9XM">
                                         <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
@@ -2577,6 +2616,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -2585,7 +2625,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KTa-TB-ozc"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="KTa-TB-ozc" firstAttribute="bottom" secondItem="8mv-b0-1Hx" secondAttribute="bottom" constant="1" id="4PC-FV-NPC"/>
                             <constraint firstItem="SCL-TY-StQ" firstAttribute="leading" secondItem="k1x-AJ-UL2" secondAttribute="leading" id="7VE-8z-BFK"/>
@@ -2647,9 +2687,9 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDa-IE-mBR">
-                                                            <rect key="frame" x="36" y="11" width="112" height="21"/>
+                                                            <rect key="frame" x="36" y="11" width="110" height="19"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -2688,9 +2728,9 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ox-77-v1f">
-                                                            <rect key="frame" x="36" y="11.333333333333336" width="112" height="21"/>
+                                                            <rect key="frame" x="36" y="11.333333333333336" width="110" height="19"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -2732,7 +2772,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aWN-pt-KE8"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="DUZ-3p-58j" firstAttribute="top" secondItem="aWN-pt-KE8" secondAttribute="top" id="3dj-r0-8zW"/>
                             <constraint firstItem="DUZ-3p-58j" firstAttribute="bottom" secondItem="aWN-pt-KE8" secondAttribute="bottom" id="I2Z-Gs-zFI"/>
@@ -2764,7 +2804,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="1Db-O2-5EE"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="df6-iw-Zh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2779,7 +2819,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="eNt-gz-CpH"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Diet 1" largeTitleDisplayMode="never" id="7AJ-02-bIv"/>
                 </viewController>
@@ -2795,7 +2835,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="kaa-cW-aTR"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Diet 1" largeTitleDisplayMode="never" id="dDt-YK-KMz"/>
                 </viewController>
@@ -2811,7 +2851,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="i3H-vb-LIm"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Diet 1" largeTitleDisplayMode="never" id="MNt-LU-eDn"/>
                 </viewController>
@@ -2827,7 +2867,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3lk-a9-kuI"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Diet 2" largeTitleDisplayMode="never" id="IaN-oN-qnp"/>
                 </viewController>
@@ -2858,7 +2898,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ScQ-4D-blb">
                                                                 <rect key="frame" x="0.0" y="1" width="230" height="128.5"/>
-                                                                <color key="backgroundColor" red="0.99591253219999998" green="0.99591253219999998" blue="0.99591253219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <color key="tintColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="131" id="vJf-Lt-xDt"/>
@@ -2886,7 +2926,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="hRc-Ve-NWX" firstAttribute="leading" secondItem="m59-MS-7Ts" secondAttribute="leading" constant="92" id="5oj-Jk-gWu"/>
                                                     <constraint firstItem="hRc-Ve-NWX" firstAttribute="top" secondItem="m59-MS-7Ts" secondAttribute="top" constant="78" id="C3J-E4-WfA"/>
@@ -2906,16 +2946,16 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK6-fD-58l">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="42"/>
-                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8f-6U-izB">
-                                                                        <rect key="frame" x="208" y="0.0" width="142" height="42"/>
-                                                                        <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
-                                                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8f-6U-izB">
+                                                                        <rect key="frame" x="206.5" y="0.0" width="143.5" height="42"/>
+                                                                        <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <menu key="menu" id="CSj-6t-uam">
                                                                             <children>
                                                                                 <command title="Female" id="ZAW-8k-3Ug"/>
@@ -2923,9 +2963,12 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                                             </children>
                                                                         </menu>
                                                                         <state key="normal" title="Select Gender">
-                                                                            <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                            <color key="titleShadowColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="titleColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         </state>
+                                                                        <buttonConfiguration key="configuration" style="tinted" title="Select Gender">
+                                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                                            <color key="baseForegroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        </buttonConfiguration>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
@@ -2936,13 +2979,14 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                                 <rect key="frame" x="0.0" y="98" width="350" height="42"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDu-iO-ZSH">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="42"/>
-                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="khp-SH-Lnf">
-                                                                        <rect key="frame" x="167" y="0.0" width="183" height="42"/>
+                                                                        <rect key="frame" x="165.5" y="0.0" width="184.5" height="42"/>
+                                                                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                                                     </textField>
@@ -2955,13 +2999,14 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                                 <rect key="frame" x="0.0" y="196" width="350" height="42"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUA-xR-oxZ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="42"/>
-                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieb-ts-HSO">
-                                                                        <rect key="frame" x="169.5" y="0.0" width="180.5" height="42"/>
+                                                                        <rect key="frame" x="168" y="0.0" width="182" height="42"/>
+                                                                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                                                     </textField>
@@ -2974,14 +3019,14 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                                 <rect key="frame" x="0.0" y="294" width="350" height="42"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYQ-n0-DTc">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="42"/>
-                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="bdH-no-2hP">
-                                                                        <rect key="frame" x="161" y="0.0" width="189" height="42"/>
-                                                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                                        <rect key="frame" x="159.5" y="0.0" width="190.5" height="42"/>
+                                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </datePicker>
                                                                 </subviews>
                                                                 <constraints>
@@ -2992,17 +3037,18 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                                 <rect key="frame" x="0.0" y="392" width="350" height="42"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZB-cD-0ok">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="42"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="42"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="42" id="srK-zh-YNX"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
-                                                                        <color key="textColor" red="0.2235293984" green="0.26666668059999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                                                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iUf-tI-Fy3">
-                                                                        <rect key="frame" x="181.5" y="0.0" width="168.5" height="42"/>
-                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                                                        <rect key="frame" x="178.5" y="0.0" width="171.5" height="42"/>
+                                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <menu key="menu" id="sgi-aC-uQo">
                                                                             <children>
                                                                                 <command title="Diet Type 1" id="ihu-se-AJH"/>
@@ -3011,8 +3057,13 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                                             </children>
                                                                         </menu>
                                                                         <state key="normal" title="Select Diet">
-                                                                            <color key="titleColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="titleColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                                         </state>
+                                                                        <buttonConfiguration key="configuration" style="tinted" title="Select Diet">
+                                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                                            <color key="baseForegroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        </buttonConfiguration>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
@@ -3025,7 +3076,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="5hp-1y-lHA" firstAttribute="leading" secondItem="2kh-Qj-U8n" secondAttribute="leading" constant="32" id="ZvR-zO-T2N"/>
                                                     <constraint firstAttribute="trailing" secondItem="5hp-1y-lHA" secondAttribute="trailing" constant="32" id="eb2-iq-Kl5"/>
@@ -3038,10 +3089,10 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                 <rect key="frame" x="0.0" y="776" width="414" height="120"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaO-TM-EWs">
-                                                        <rect key="frame" x="45" y="39" width="324" height="42"/>
+                                                        <rect key="frame" x="32" y="8" width="350" height="49"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="42" id="OeQ-Y2-bN6"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="Z7x-G9-lxv"/>
+                                                            <constraint firstAttribute="width" constant="350" id="MJK-aV-ntz"/>
+                                                            <constraint firstAttribute="height" constant="49" id="MeQ-gV-tTy"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled">
@@ -3054,6 +3105,7 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
+                                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <color key="baseBackgroundColor" red="0.22352941179999999" green="0.26274509800000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -3061,13 +3113,11 @@ Unlike many well known food allergens which causes symptoms right after exposure
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.87843137250000003" green="0.78823529410000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.94117647059999998" green="0.89019607840000003" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstItem="AaO-TM-EWs" firstAttribute="centerY" secondItem="wjq-Uo-dgX" secondAttribute="centerY" id="6nS-Sx-bzz"/>
-                                                    <constraint firstItem="AaO-TM-EWs" firstAttribute="centerX" secondItem="wjq-Uo-dgX" secondAttribute="centerX" id="7qN-PV-Yz0"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="K4S-ui-ppX"/>
-                                                    <constraint firstItem="AaO-TM-EWs" firstAttribute="leading" secondItem="wjq-Uo-dgX" secondAttribute="leading" constant="45" id="fof-RC-W7l"/>
-                                                    <constraint firstAttribute="trailing" secondItem="AaO-TM-EWs" secondAttribute="trailing" constant="45" id="vb5-th-s3t"/>
+                                                    <constraint firstItem="AaO-TM-EWs" firstAttribute="centerX" secondItem="wjq-Uo-dgX" secondAttribute="centerX" id="HhV-zY-PTL"/>
+                                                    <constraint firstItem="AaO-TM-EWs" firstAttribute="top" secondItem="wjq-Uo-dgX" secondAttribute="top" constant="8" id="WAn-y0-6en"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AaO-TM-EWs" secondAttribute="bottom" constant="63" id="Zff-CH-K0d"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -3097,12 +3147,12 @@ Unlike many well known food allergens which causes symptoms right after exposure
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roZ-Ba-ZT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="1019"/>
+            <point key="canvasLocation" x="2037.68115942029" y="1018.5267857142857"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="p1Z-5W-dqx"/>
-        <segue reference="3WP-uQ-JyG"/>
+        <segue reference="fCh-ok-CUd"/>
         <segue reference="6LV-Zu-3gd"/>
         <segue reference="Khq-b6-X4a"/>
     </inferredMetricsTieBreakers>
@@ -3118,17 +3168,14 @@ Unlike many well known food allergens which causes symptoms right after exposure
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="scrollViewTexturedBackgroundColor">
-            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="underPageBackgroundColor">
-            <color red="0.70980392156862748" green="0.71764705882352942" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
