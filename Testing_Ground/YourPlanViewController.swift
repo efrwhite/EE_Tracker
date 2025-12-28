@@ -13,28 +13,105 @@ class YourPlanViewController: UIViewController {
     
     @IBOutlet weak var childNameLabel: UILabel!
     
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        
+//        // Debugging print
+//        print("Fetching for user: \(user) and childName: \(childName)")
+//        
+//        // Attempt to fetch the specific child profile
+//        selectedChildProfile = fetchChildProfile(username: user, childName: childName)
+//        
+//        // Fallback to main child profile if the specific child profile is not found
+//        if selectedChildProfile == nil {
+//            print("Specific child profile not found, attempting to fetch main child profile.")
+//            selectedChildProfile = fetchMainChildProfile(username: user)
+//        }
+//        
+//        // Update the UI with the child's profile
+//        updateUIWithChildProfile()
+//        
+//        print("User: ", user)
+//        print("Child in Your Plan", childName)
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Debugging print
+
         print("Fetching for user: \(user) and childName: \(childName)")
-        
-        // Attempt to fetch the specific child profile
+
         selectedChildProfile = fetchChildProfile(username: user, childName: childName)
-        
-        // Fallback to main child profile if the specific child profile is not found
         if selectedChildProfile == nil {
             print("Specific child profile not found, attempting to fetch main child profile.")
             selectedChildProfile = fetchMainChildProfile(username: user)
         }
-        
-        // Update the UI with the child's profile
+
         updateUIWithChildProfile()
-        
+        stylePage()
+
         print("User: ", user)
         print("Child in Your Plan", childName)
     }
+
+    private func stylePage() {
+        // page background (soft warm off-white)
+        view.backgroundColor = UIColor(red: 0.96, green: 0.95, blue: 0.94, alpha: 1)
+
+        // header label styling
+        childNameLabel.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+        childNameLabel.textColor = UIColor.black.withAlphaComponent(0.85)
+
+        // style all your buttons by tag (set these tags in storyboard)
+        let tags = [101, 102, 103, 104, 105]
+        for tag in tags {
+            if let button = view.viewWithTag(tag) as? UIButton {
+                stylePlanButton(button)
+                addTapAnimation(button)
+            }
+        }
+    }
+
+    private func stylePlanButton(_ button: UIButton) {
+        let purple = UIColor(red: 138/255, green: 96/255, blue: 176/255, alpha: 1) // #8A60B0
+
+        button.backgroundColor = purple
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+
+        // more premium pill shape
+        button.layer.cornerRadius = 26
+        button.clipsToBounds = false
+
+        // subtle shadow (premium feel)
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.10
+        button.layer.shadowRadius = 10
+        button.layer.shadowOffset = CGSize(width: 0, height: 6)
+
+        // better internal spacing
+        button.contentEdgeInsets = UIEdgeInsets(top: 14, left: 20, bottom: 14, right: 20)
+    }
+
+    private func addTapAnimation(_ button: UIButton) {
+        button.addTarget(self, action: #selector(buttonTouchDown(_:)), for: [.touchDown])
+        button.addTarget(self, action: #selector(buttonTouchUp(_:)), for: [.touchUpInside, .touchCancel, .touchDragExit])
+    }
+
+    @objc private func buttonTouchDown(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.12) {
+            sender.transform = CGAffineTransform(scaleX: 0.98, y: 0.98)
+            sender.layer.shadowOpacity = 0.06
+        }
+    }
+
+    @objc private func buttonTouchUp(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.12) {
+            sender.transform = .identity
+            sender.layer.shadowOpacity = 0.10
+        }
+    }
+
     
     func fetchChildProfile(username: String, childName: String) -> Child? {
         // Fetch logic for a specific child profile
@@ -83,8 +160,6 @@ class YourPlanViewController: UIViewController {
         }
     }
     
-    //edited by brianna for dynamic segues to controllers
-    //added this dietButtonTapped method to try to create a way for the segue to be performed based on the diet type, i was looking at the other segues and since they're not dynamic (only one possible outcome) the button-tapped method wasn't necessary. but i added it here
     @IBAction func dietButtonTapped(_ sender: UIButton) {
         // Determine the diet type from the selected child's profile
         guard let diettype = selectedChildProfile?.diettype else {

@@ -30,7 +30,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     let eoELabel: UILabel = {
         let label = UILabel()
         label.text = "EoE: "
-        label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
+        label.textColor = .black
         return label
     }()
     
@@ -76,7 +76,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     let stomachLabel: UILabel = {
         let label = UILabel()
         label.text = "Stomach: "
-        label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
+        label.textColor = .black
         return label
     }()
     
@@ -90,7 +90,7 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     let duodenumLabel: UILabel = {
         let label = UILabel()
         label.text = "Duodenum: "
-        label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
+        label.textColor = .black
         return label
     }()
     
@@ -104,13 +104,13 @@ class EndoscopyViewController: UIViewController, UITextFieldDelegate {
     let colonLabel: UILabel = {
         let label = UILabel()
         label.text = "Colon: "
-        label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
+        label.textColor = .black
         return label
     }()
     let noteLabel: UILabel = {
         let label = UILabel()
         label.text = "Notes: "
-        label.textColor = UIColor(red: 57/255, green: 67/255, blue: 144/255, alpha: 1.0)
+        label.textColor = .black
         return label
     }()
     let notesField: UITextView = {
