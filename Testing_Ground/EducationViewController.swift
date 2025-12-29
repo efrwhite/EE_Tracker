@@ -31,7 +31,12 @@ class EducationViewController: UIViewController {
             let button = UIButton()
             button.setTitle(title, for: .normal)
             button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = UIColor(red: 57.0/255.0, green: 67.0/255.0, blue: 144.0/255.0, alpha: 1)
+            button.backgroundColor = UIColor(
+                red: 138.0/255.0,
+                green: 96.0/255.0,
+                blue: 176.0/255.0,
+                alpha: 1.0
+            )
             
            
             button.layer.cornerRadius = 10

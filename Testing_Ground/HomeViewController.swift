@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         print("Home Username: ", user)
         print("Home Childuser: ", childselected)
-        childsimage.contentMode = .scaleAspectFill
+        //childsimage.contentMode = .scaleAspectFill
         //childsimage.layer.cornerRadius = 5
         childsimage.layer.cornerRadius = 5
         
@@ -56,6 +56,8 @@ class HomeViewController: UIViewController {
         button.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItem = barButton
+        styleHomeButtons()
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -101,36 +103,6 @@ class HomeViewController: UIViewController {
             }
         }
     }
-
-//    func setupChildViews() {
-//        childnames.translatesAutoresizingMaskIntoConstraints = false
-//        childsimage.translatesAutoresizingMaskIntoConstraints = false
-//        childsdiet.translatesAutoresizingMaskIntoConstraints = false
-//
-//        // Assuming you want to maintain the aspect ratio of the image
-//        let imageAspectRatioConstraint = childsimage.widthAnchor.constraint(equalTo: childsimage.heightAnchor, multiplier: 1.0)
-//
-//        // Set a fixed height for the image view
-//        let imageHeightConstraint = childsimage.heightAnchor.constraint(equalToConstant: 90)
-//
-//        NSLayoutConstraint.activate([imageAspectRatioConstraint, imageHeightConstraint])
-//
-//        let stackView = UIStackView(arrangedSubviews: [childnames, childsimage, childsdiet])
-//        stackView.axis = .vertical
-//        stackView.distribution = .equalSpacing
-//        stackView.alignment = .center
-//        stackView.spacing = 20
-//
-//        view.addSubview(stackView)
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        NSLayoutConstraint.activate([
-//            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-//            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            stackView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 20),
-//            stackView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -20),
-//        ])
-//    }
 
     @objc func showAlert() {
         let alertController = UIAlertController(title: "Logout", message: "Are you sure you want to log out?", preferredStyle: .alert)
@@ -188,6 +160,48 @@ class HomeViewController: UIViewController {
 
         childsdiet.text = "Diet: \(String(describing: childProfile.diettype!))"
         // Update other UI elements as needed
+    }
+    private func styleHomeButtons() {
+        // style buttons by tags so you don’t need outlets
+        let tags = [101, 102, 103, 104, 105, 106]
+        for tag in tags {
+            if let button = view.viewWithTag(tag) as? UIButton {
+                stylePrimaryHomeButton(button)
+            }
+        }
+    }
+
+    private func stylePrimaryHomeButton(_ button: UIButton) {
+        let purple = UIColor(red: 138/255, green: 96/255, blue: 176/255, alpha: 1) // #8A60B0
+
+        button.backgroundColor = purple
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+
+        // pill shape (works even if height changes on different devices)
+        button.layer.cornerRadius = button.bounds.height / 2
+        button.layer.masksToBounds = false
+
+        // soft shadow for “lift”
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.14
+        button.layer.shadowRadius = 10
+        button.layer.shadowOffset = CGSize(width: 0, height: 6)
+
+        // nicer tap feel
+        button.configuration = nil // prevents modern UIButton config from overriding styling (iOS 15+)
+        button.showsTouchWhenHighlighted = false
+    }
+
+    // keep pill shape correct after autolayout
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let tags = [101, 102, 103, 104, 105, 106]
+        for tag in tags {
+            if let button = view.viewWithTag(tag) as? UIButton {
+                button.layer.cornerRadius = button.bounds.height / 2
+            }
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
