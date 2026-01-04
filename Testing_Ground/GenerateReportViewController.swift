@@ -235,7 +235,7 @@
 import UIKit
 import CoreData
 import PDFKit
-import Charts
+import DGCharts
 import MessageUI
 
 class GenerateReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate {
@@ -299,12 +299,33 @@ class GenerateReportViewController: UIViewController, UITableViewDelegate, UITab
         view.backgroundColor = .white
         setupUI()
 
+        // ✅ Normalize date range so "same day" includes everything on that day
+        let calendar = Calendar.current
+
+        if let start = startDate {
+            startDate = calendar.startOfDay(for: start)
+        } else {
+            // If startDate wasn't set, default to yesterday
+            startDate = calendar.date(byAdding: .day, value: -1, to: calendar.startOfDay(for: Date()))
+        }
+
+        if let end = endDate {
+            // end = end of the selected day (23:59:59)
+            let startOfEndDay = calendar.startOfDay(for: end)
+            endDate = calendar.date(byAdding: DateComponents(day: 1, second: -1), to: startOfEndDay)
+        } else {
+            // If endDate wasn't set, default to end of today
+            let startOfToday = calendar.startOfDay(for: Date())
+            endDate = calendar.date(byAdding: DateComponents(day: 1, second: -1), to: startOfToday)
+        }
+
         if viewdata == "symptom" {
             fetchSymptomData()
         } else if viewdata == "quality" {
             fetchQualityData()
         }
     }
+
 
     func setupUI() {
         view.addSubview(chartView)

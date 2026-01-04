@@ -4,31 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Charts.xcscheme_^#shared#^_</key>
+		<key>DGCharts-DGCharts.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>Pods-Testing_Ground-Testing_GroundUITests.xcscheme_^#shared#^_</key>
+		<key>DGCharts.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>Pods-Testing_Ground.xcscheme_^#shared#^_</key>
+		<key>Pods-Testing_Ground.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>Pods-Testing_GroundTests.xcscheme_^#shared#^_</key>
+		<key>Pods-Testing_GroundTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>SwiftAlgorithms.xcscheme_^#shared#^_</key>
+		<key>Pods-Testing_GroundUITests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict/>
 </dict>
 </plist>
